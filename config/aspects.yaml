@@ -1,0 +1,22 @@
+aspects:
+  Food:
+    cues: ["breakfast", "khanapaana", "buffet", "room service", "cold food", "chai"]
+    definition: "Quality of culinary preparation, speed of room dining, and morning buffet inclusions."
+  Maintenance:
+    cues: ["geyser", "thanda paani", "heater", "silan", "wifi", "power backup", "light chali gayi"]
+    definition: "Hot water availability, structural room heating, dampness levels, and utility stability."
+  Logistics:
+    cues: ["parking", "gaadi", "mall road congestion", "overcharging", "kathgodam transit", "climb"]
+    definition: "Vehicle accessibility, municipal parking space, route traffic, and terminal transit costs."
+  Value_for_Money:
+    cues: ["paisa vasool", "expensive", "loot", "cheap", "sasta", "worth it"]
+    definition: "Pricing evaluation relative to regional seasonal baseline metrics."
+  Cleanliness:
+    cues: ["ganda", "dust", "smell", "spotless", "safai"]
+    definition: "Hygiene standards of rooms, linens, and public areas."
+  Staff:
+    cues: ["rude", "helpful", "service", "bhaiya", "manager", "slow"]
+    definition: "Courtesy, responsiveness, and problem-resolution efficiency of personnel."
+  Location:
+    cues: ["view", "lake facing", "distance", "steep", "mall road walking"]
+    definition: "Proximity to key attractions, views, and physical accessibility constraints."

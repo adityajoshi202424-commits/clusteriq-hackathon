@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.env
+scratch/
+scratch_test.pdf
+test_report.pdf
+*.log
+.DS_Store

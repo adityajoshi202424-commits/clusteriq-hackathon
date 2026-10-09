@@ -1,0 +1,52 @@
+# Analysis and Statistical Benchmarking Thresholds
+# All statistical constants, thresholds, and mappings configured here. NO hard-coded values in code.
+
+benchmarking:
+  min_mentions_per_aspect: 5        # Aspects with fewer mentions are greyed out as insufficient sample
+  significance_level_alpha: 0.05    # 95% confidence interval for statistical gap verdicts
+  human_reading_speed_wpm: 200      # Standard operational benchmark (words per minute)
+  gm_hourly_rate_inr: 500           # Estimated operational labor value (₹500 / hr)
+
+verdicts:
+  lead_gap_threshold: 8.0           # Property > cluster + 8% -> LEAD
+  lag_gap_threshold: -8.0           # Property < cluster - 8% -> LAG
+  market_problem_cluster_max: -5.0  # Cluster median < -5% -> CLUSTER-WIDE WEAKNESS ("Market Opportunity")
+  property_problem_cluster_min: 10.0 # Cluster is healthy (>10%) but property is poor (< -10%) -> PROPERTY-SPECIFIC PROBLEM
+
+trends:
+  changepoint_penalty: 3.0          # Sensitivity penalty for PELT algorithm
+  changepoint_min_size_months: 2    # Minimum months between changepoints
+  emerging_issue_window_days: 30    # Recent window for emerging friction spikes
+  emerging_baseline_window_days: 90 # Historical window for baseline calculation
+  emerging_growth_multiplier: 1.8   # 80% spike over baseline triggers emerging alert
+
+rating_scale_mappings:
+  # Converts platform-specific raw ratings to standard 5.0 scale
+  google_places:
+    raw_min: 1.0
+    raw_max: 5.0
+    target_scale: 5.0
+  tripadvisor:
+    raw_min: 1.0
+    raw_max: 5.0
+    target_scale: 5.0
+  booking_com:
+    raw_min: 1.0
+    raw_max: 10.0
+    # Standard formula: (raw / 10.0) * 5.0
+    target_scale: 5.0
+    conversion_factor: 0.5
+  makemytrip:
+    raw_min: 1.0
+    raw_max: 5.0
+    target_scale: 5.0
+  agoda:
+    raw_min: 1.0
+    raw_max: 10.0
+    target_scale: 5.0
+    conversion_factor: 0.5
+
+storage:
+  database_path: "data/cluster_reviews.db"
+  cache_dir: "data/raw_cache"
+  discovered_properties_path: "data/discovered_properties.json"

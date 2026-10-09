@@ -1,0 +1,818 @@
+{
+  "cluster_name": "Mussoorie & Dehradun Hospitality Corridor",
+  "state": "Uttarakhand",
+  "last_updated": "2026-10-09T19:43:24.866421",
+  "total_properties": 13,
+  "total_reviews": 61,
+  "properties": [
+    {
+      "id": "welcomhotel_savoy",
+      "name": "Welcomhotel by ITC Hotels, The Savoy",
+      "category": "Luxury Heritage (5-Star)",
+      "location": "Library Bazar, Gandhi Chowk, Mussoorie",
+      "distance_to_mall_road_m": 150,
+      "total_rooms": 121,
+      "price_range": "₹22,000 - ₹45,000",
+      "platforms": [
+        "MakeMyTrip",
+        "TripAdvisor",
+        "Google",
+        "Booking.com"
+      ],
+      "hero_image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "jw_marriott",
+      "name": "JW Marriott Mussoorie Walnut Grove Resort & Spa",
+      "category": "Ultra Luxury Resort (5-Star)",
+      "location": "Village Siya, Kempty Fall Road, Mussoorie",
+      "distance_to_mall_road_m": 14000,
+      "total_rooms": 115,
+      "price_range": "₹28,000 - ₹55,000",
+      "platforms": [
+        "MakeMyTrip",
+        "TripAdvisor",
+        "Google",
+        "Booking.com"
+      ],
+      "hero_image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "jaypee_residency",
+      "name": "Jaypee Residency Manor",
+      "category": "Luxury Resort (5-Star)",
+      "location": "Barlow Ganj, Mussoorie",
+      "distance_to_mall_road_m": 4200,
+      "total_rooms": 135,
+      "price_range": "₹16,000 - ₹32,000",
+      "platforms": [
+        "MakeMyTrip",
+        "TripAdvisor",
+        "Google",
+        "Booking.com"
+      ],
+      "hero_image": "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "fortune_resort_grace",
+      "name": "Fortune Resort Grace (Member ITC)",
+      "category": "Upper Upscale (4-Star)",
+      "location": "Library Bazaar, Mussoorie",
+      "distance_to_mall_road_m": 350,
+      "total_rooms": 74,
+      "price_range": "₹8,500 - ₹16,000",
+      "platforms": [
+        "MakeMyTrip",
+        "TripAdvisor",
+        "Google",
+        "Booking.com"
+      ],
+      "hero_image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "claridges_nabha",
+      "name": "The Claridges Nabha Residence",
+      "category": "Heritage Boutique (4-Star)",
+      "location": "Airfield, Barlowganj, Mussoorie",
+      "distance_to_mall_road_m": 3800,
+      "total_rooms": 22,
+      "price_range": "₹11,000 - ₹22,000",
+      "platforms": [
+        "MakeMyTrip",
+        "TripAdvisor",
+        "Google"
+      ],
+      "hero_image": "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "sterling_mussoorie",
+      "name": "Sterling Mussoorie",
+      "category": "Leisure Resort (4-Star)",
+      "location": "Radha Bhawan Estate, Circular Road, Mussoorie",
+      "distance_to_mall_road_m": 2200,
+      "total_rooms": 111,
+      "price_range": "₹6,500 - ₹14,000",
+      "platforms": [
+        "MakeMyTrip",
+        "TripAdvisor",
+        "Google",
+        "Booking.com"
+      ],
+      "hero_image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "hotel_sungrace",
+      "name": "Hotel SunGrace",
+      "category": "Midscale Boutique (3-Star)",
+      "location": "Hill Crest, Charleville, Mussoorie",
+      "distance_to_mall_road_m": 2600,
+      "total_rooms": 32,
+      "price_range": "₹3,800 - ₹7,500",
+      "platforms": [
+        "MakeMyTrip",
+        "Google",
+        "Goibibo"
+      ],
+      "hero_image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "hotel_vishnu_palace",
+      "name": "Hotel Vishnu Palace",
+      "category": "Midscale Family (3-Star)",
+      "location": "Near Library Bus Stand, The Mall, Mussoorie",
+      "distance_to_mall_road_m": 100,
+      "total_rooms": 60,
+      "price_range": "₹3,200 - ₹6,500",
+      "platforms": [
+        "MakeMyTrip",
+        "TripAdvisor",
+        "Google"
+      ],
+      "hero_image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "tulip_inn",
+      "name": "Tulip Inn Green Castle",
+      "category": "Midscale Mall Road (3-Star)",
+      "location": "The Mall Road, Near SDM Court, Mussoorie",
+      "distance_to_mall_road_m": 0,
+      "total_rooms": 45,
+      "price_range": "₹3,500 - ₹7,000",
+      "platforms": [
+        "MakeMyTrip",
+        "TripAdvisor",
+        "Google"
+      ],
+      "hero_image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "hotel_mall_palace",
+      "name": "Hotel Mall Palace",
+      "category": "Budget Economy (2-Star)",
+      "location": "Main Mall Road, Mussoorie",
+      "distance_to_mall_road_m": 0,
+      "total_rooms": 28,
+      "price_range": "₹2,200 - ₹4,500",
+      "platforms": [
+        "MakeMyTrip",
+        "Google",
+        "Agoda"
+      ],
+      "hero_image": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "manu_maharani_nainital",
+      "name": "The Manu Maharani",
+      "category": "Luxury Resort (5-Star)",
+      "location": "Mallital, Nainital",
+      "distance_to_mall_road_m": 800,
+      "total_rooms": 67,
+      "price_range": "₹12,000 - ₹25,000",
+      "platforms": [
+        "MakeMyTrip",
+        "TripAdvisor"
+      ],
+      "hero_image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "fishermans_lodge_bhimtal",
+      "name": "Fishermen's Lodge",
+      "category": "Boutique Resort (4-Star)",
+      "location": "Mandir Marg, Bhimtal",
+      "distance_to_mall_road_m": 0,
+      "total_rooms": 20,
+      "price_range": "₹8,000 - ₹15,000",
+      "platforms": [
+        "MakeMyTrip",
+        "Google"
+      ],
+      "hero_image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "kumaon_mandal_haldwani",
+      "name": "KMVN Tourist Rest House",
+      "category": "Budget Economy (2-Star)",
+      "location": "Kathgodam, Haldwani",
+      "distance_to_mall_road_m": 0,
+      "total_rooms": 30,
+      "price_range": "₹1,500 - ₹3,500",
+      "platforms": [
+        "MakeMyTrip",
+        "Google"
+      ],
+      "hero_image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "reviews": [
+    {
+      "hotel_id": "welcomhotel_savoy",
+      "platform": "TripAdvisor",
+      "date": "2026-02-05",
+      "rating": 5.0,
+      "reviewer_type": "Family",
+      "text": "Best heritage stay in Mussoorie. Hot water in bathrooms was instant 24 hours, fireplaces lit in evenings. Mr. Rawat at front desk arranged everything for our elderly parents without any fuss.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d302488"
+    },
+    {
+      "hotel_id": "welcomhotel_savoy",
+      "platform": "TripAdvisor",
+      "date": "2026-01-18",
+      "rating": 5.0,
+      "reviewer_type": "Couple",
+      "text": "Living history at The Savoy! The Victorian Gothic architecture and misty winter views of the Doon valley took our breath away. Central heating in the Heritage Room was spotless, very cozy even when temperatures dipped to 2 degrees outside. Royal Afghan dinner was divine.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d302488"
+    },
+    {
+      "hotel_id": "welcomhotel_savoy",
+      "platform": "MakeMyTrip",
+      "date": "2025-12-28",
+      "rating": 4.0,
+      "reviewer_type": "Family",
+      "text": "Savoy is majestic and staff hospitality is top notch. But reaching the hotel in evening was a huge headache because Mall Road barrier was closed for vehicles from 4:30 PM. We had to wait at Library Chowk and hotel sent their golf buggy, but traffic in Mussoorie during New Year week was nightmare.",
+      "url": "https://www.makemytrip.com/hotels/welcomhotel_savoy-mussoorie.html"
+    },
+    {
+      "hotel_id": "welcomhotel_savoy",
+      "platform": "Google",
+      "date": "2025-10-12",
+      "rating": 5.0,
+      "reviewer_type": "Solo",
+      "text": "Staff behavior is unmatched. From check-in to checkout, every staff member was polite and attentive. High tea at the lawn while watching winter line sunset was memorable. Valet parking handled my car smoothly.",
+      "url": "https://maps.google.com/?cid=savoy_mussoorie"
+    },
+    {
+      "hotel_id": "welcomhotel_savoy",
+      "platform": "Booking.com",
+      "date": "2025-06-15",
+      "rating": 4.5,
+      "reviewer_type": "Family",
+      "text": "Breakfast buffet spread is huge with live counter for dosas and fresh mountain bakery. Linen and bathroom cleanliness is 10/10. Highly recommend for families who want heritage luxury close to Mall Road.",
+      "url": "https://www.booking.com/hotel/in/the-savoy-mussoorie.html"
+    },
+    {
+      "hotel_id": "welcomhotel_savoy",
+      "platform": "MakeMyTrip",
+      "date": "2025-05-24",
+      "rating": 3.0,
+      "reviewer_type": "Couple",
+      "text": "Property bahut sundar hai, history is incredible. But check-in ke time peak rush mein 45 minutes wait karna pada. Restaurant service on Saturday night was extremely slow, table milne mein time lag gaya.",
+      "url": "https://www.makemytrip.com/hotels/welcomhotel_savoy-mussoorie.html"
+    },
+    {
+      "hotel_id": "welcomhotel_savoy",
+      "platform": "TripAdvisor",
+      "date": "2025-04-12",
+      "rating": 5.0,
+      "reviewer_type": "Couple",
+      "text": "Writer's Bar cocktails are exquisite. The heritage wooden flooring and antique furniture made our anniversary special. Valet took care of parking without hassle.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d302488"
+    },
+    {
+      "hotel_id": "welcomhotel_savoy",
+      "platform": "Google",
+      "date": "2025-03-02",
+      "rating": 4.5,
+      "reviewer_type": "Friends",
+      "text": "Room amenities are top grade. Housekeeping cleaned the room twice a day. Only minor issue was the steep approach road from Library Chowk when walking back late at night.",
+      "url": "https://maps.google.com/?cid=savoy_mussoorie"
+    },
+    {
+      "hotel_id": "jw_marriott",
+      "platform": "TripAdvisor",
+      "date": "2026-02-14",
+      "rating": 5.0,
+      "reviewer_type": "Couple",
+      "text": "Unparalleled luxury in the Himalayas. The heated indoor pool overlooking the pine valley is paradise in cold weather. Teppanyaki dinner at JW Cafe was outstanding. Every penny spent is worth it.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d6874837"
+    },
+    {
+      "hotel_id": "jw_marriott",
+      "platform": "MakeMyTrip",
+      "date": "2026-01-22",
+      "rating": 5.0,
+      "reviewer_type": "Family",
+      "text": "Kids had the time of their life at The Den entertainment zone with bowling and games. Staff provided room heaters, warm milk for toddler at midnight, and extraordinary housekeeping. True 5-star hospitality.",
+      "url": "https://www.makemytrip.com/hotels/jw_marriott_mussoorie.html"
+    },
+    {
+      "hotel_id": "jw_marriott",
+      "platform": "Google",
+      "date": "2025-11-04",
+      "rating": 4.0,
+      "reviewer_type": "Couple",
+      "text": "Resort itself is 10/10 in terms of amenities, food and cleanliness. Only drawback is location distance—it is 14 km away from Mall Road towards Kempty. Taxi charges ₹2500 for a simple round trip to Mussoorie town.",
+      "url": "https://maps.google.com/?cid=jw_marriott_mussoorie"
+    },
+    {
+      "hotel_id": "jw_marriott",
+      "platform": "Booking.com",
+      "date": "2025-06-20",
+      "rating": 5.0,
+      "reviewer_type": "Family",
+      "text": "Outstanding mountain view balcony, plush bed, and rainfall shower. Breakfast buffet with Garhwali dishes like chainssoo and jhangore ki kheer was delicious. Safe private parking and EV charger on site.",
+      "url": "https://www.booking.com/hotel/in/jw-marriott-mussoorie.html"
+    },
+    {
+      "hotel_id": "jw_marriott",
+      "platform": "MakeMyTrip",
+      "date": "2025-05-18",
+      "rating": 4.0,
+      "reviewer_type": "Friends",
+      "text": "Service and ambiance lajawab. But peak season weekend mein Kempty road pe traffic jam bohot zyada tha. Took 2.5 hours just to reach resort from Dehradun toll due to tourist rush.",
+      "url": "https://www.makemytrip.com/hotels/jw_marriott_mussoorie.html"
+    },
+    {
+      "hotel_id": "jw_marriott",
+      "platform": "TripAdvisor",
+      "date": "2025-09-10",
+      "reviewer_type": "Couple",
+      "rating": 5.0,
+      "text": "Cedar Spa treatment followed by sunset walk in the organic walnut garden. Staff courtesy is unmatched in North India. Luxury at its absolute peak.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d6874837"
+    },
+    {
+      "hotel_id": "jw_marriott",
+      "platform": "Google",
+      "date": "2025-08-03",
+      "rating": 4.5,
+      "reviewer_type": "Family",
+      "text": "Monsoon clouds literally entered our balcony! Food options are superlative, breakfast had gluten-free and vegan options. Price is very high, but the luxury delivered justifies it.",
+      "url": "https://maps.google.com/?cid=jw_marriott_mussoorie"
+    },
+    {
+      "hotel_id": "jaypee_residency",
+      "platform": "MakeMyTrip",
+      "date": "2026-01-30",
+      "rating": 5.0,
+      "reviewer_type": "Family",
+      "text": "The 360-degree hilltop view of Doon Valley and snow peaks from Jaypee Manor is breathtaking. Indoor heated swimming pool kept our kids entertained in January chill. Free spacious on-site parking made driving easy.",
+      "url": "https://www.makemytrip.com/hotels/jaypee_residency_manor.html"
+    },
+    {
+      "hotel_id": "jaypee_residency",
+      "platform": "TripAdvisor",
+      "date": "2025-12-19",
+      "rating": 4.0,
+      "reviewer_type": "Couple",
+      "text": "Cozy room with central heating that worked perfectly through the freezing night. The Regency restaurant food is very tasty. However Barlowganj location means you need cabs to visit Mall Road shopping.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d301015"
+    },
+    {
+      "hotel_id": "jaypee_residency",
+      "platform": "Google",
+      "date": "2025-08-14",
+      "rating": 4.5,
+      "reviewer_type": "Friends",
+      "text": "Great property for monsoon getaway. Lush greenery all around. Housekeeping and front desk were very prompt. Tamari cafe coffee and pastries were delicious.",
+      "url": "https://maps.google.com/?cid=jaypee_mussoorie"
+    },
+    {
+      "hotel_id": "jaypee_residency",
+      "platform": "Booking.com",
+      "date": "2025-05-29",
+      "rating": 4.0,
+      "reviewer_type": "Family",
+      "text": "Extremely courteous staff. But during Sunday peak breakfast, dining hall was packed and we had to wait 20 minutes for a table. Buffet refilling was slightly delayed.",
+      "url": "https://www.booking.com/hotel/in/jaypee-residency-manor.html"
+    },
+    {
+      "hotel_id": "jaypee_residency",
+      "platform": "MakeMyTrip",
+      "date": "2025-04-10",
+      "rating": 5.0,
+      "reviewer_type": "Couple",
+      "text": "Room view bohot pyara tha, bathroom spotless clean tha aur linen crisp fresh. Breakfast mein variety acchi thi. Valet parking service was very smooth.",
+      "url": "https://www.makemytrip.com/hotels/jaypee_residency_manor.html"
+    },
+    {
+      "hotel_id": "jaypee_residency",
+      "platform": "TripAdvisor",
+      "date": "2025-10-21",
+      "rating": 4.5,
+      "reviewer_type": "Family",
+      "text": "Huge open lawns where children can run freely without any city noise. Front desk manager was very kind. Bowling alley in the basement is a great entertainment addition.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d301015"
+    },
+    {
+      "hotel_id": "fortune_resort_grace",
+      "platform": "TripAdvisor",
+      "date": "2026-02-10",
+      "rating": 4.0,
+      "reviewer_type": "Family",
+      "text": "Very convenient location just 5 minutes walk below Library Bazaar. Rooms are spacious with pine valley views. Hot water in geysers was available throughout. Good homestyle food at Orchid restaurant.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d1196417"
+    },
+    {
+      "hotel_id": "fortune_resort_grace",
+      "platform": "MakeMyTrip",
+      "date": "2025-12-25",
+      "rating": 3.0,
+      "reviewer_type": "Couple",
+      "text": "Hotel staff is polite but parking space is quite limited on busy weekends. The approach slope from Library Chowk is very steep, driving an automatic car was tricky during rush hour.",
+      "url": "https://www.makemytrip.com/hotels/fortune_resort_grace.html"
+    },
+    {
+      "hotel_id": "fortune_resort_grace",
+      "platform": "Google",
+      "date": "2025-10-05",
+      "rating": 4.0,
+      "reviewer_type": "Family",
+      "text": "Khana accha tha aur staff ka behavior helpful tha. Location is great since Mall Road is walking distance. Room heating blower provided on request kept room warm.",
+      "url": "https://maps.google.com/?cid=fortune_grace_mussoorie"
+    },
+    {
+      "hotel_id": "fortune_resort_grace",
+      "platform": "Booking.com",
+      "date": "2025-06-11",
+      "rating": 4.0,
+      "reviewer_type": "Solo",
+      "text": "Clean rooms, good Wi-Fi for workation, and pleasant balcony view. Breakfast was good though limited seating in restaurant during peak morning hours.",
+      "url": "https://www.booking.com/hotel/in/fortune-resort-grace.html"
+    },
+    {
+      "hotel_id": "fortune_resort_grace",
+      "platform": "TripAdvisor",
+      "date": "2025-04-18",
+      "rating": 4.5,
+      "reviewer_type": "Couple",
+      "text": "Orchid dining serves hot, authentic North Indian meals. Rooms have wooden floors and clean bathrooms. Walk to Gandhi Chowk is short.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d1196417"
+    },
+    {
+      "hotel_id": "claridges_nabha",
+      "platform": "TripAdvisor",
+      "date": "2026-01-15",
+      "rating": 5.0,
+      "reviewer_type": "Couple",
+      "text": "Nabha Residence feels like stepping into a peaceful colonial estate. Surrounded by deodar and cedar trees, away from the loud chaos of Mall Road. Room heaters kept the room very warm and cozy.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d302489"
+    },
+    {
+      "hotel_id": "claridges_nabha",
+      "platform": "MakeMyTrip",
+      "date": "2025-11-18",
+      "rating": 4.0,
+      "reviewer_type": "Family",
+      "text": "Heritage single-storey architecture with wooden ceilings. Staff took great care of our elderly mother. The complimentary shuttle to Mall Road was very convenient so we didn't have to hire cabs.",
+      "url": "https://www.makemytrip.com/hotels/claridges_nabha_residence.html"
+    },
+    {
+      "hotel_id": "claridges_nabha",
+      "platform": "Google",
+      "date": "2025-07-22",
+      "rating": 4.5,
+      "reviewer_type": "Couple",
+      "text": "Pure serenity. Food at The Pavilion restaurant was cooked with fresh ingredients. Only thing to note is that property has only 22 rooms, so you need to book months in advance.",
+      "url": "https://maps.google.com/?cid=claridges_nabha_mussoorie"
+    },
+    {
+      "hotel_id": "claridges_nabha",
+      "platform": "TripAdvisor",
+      "date": "2025-05-14",
+      "rating": 4.0,
+      "reviewer_type": "Solo",
+      "text": "Quiet library corner with vintage books. Perfect for peaceful reading retreat. Evening bonfire in courtyard was cozy. Food quality is consistently high.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d302489"
+    },
+    {
+      "hotel_id": "sterling_mussoorie",
+      "platform": "TripAdvisor",
+      "date": "2026-02-01",
+      "rating": 4.0,
+      "reviewer_type": "Family",
+      "text": "Stunning cliffside view of Doon Valley. Doon Diner restaurant served incredible Garhwali thali with aloo ke gutke. Kids loved Discovery Central play area with table tennis and air hockey.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d304918"
+    },
+    {
+      "hotel_id": "sterling_mussoorie",
+      "platform": "MakeMyTrip",
+      "date": "2026-01-10",
+      "rating": 3.0,
+      "reviewer_type": "Family",
+      "text": "View is 5-star, but accessibility is a big struggle! Property is built on steep slope with more than 80 stairs to reach lower rooms. Lift does not go to all floors. Senior citizens ke liye bohot mushkil hai.",
+      "url": "https://www.makemytrip.com/hotels/sterling_mussoorie.html"
+    },
+    {
+      "hotel_id": "sterling_mussoorie",
+      "platform": "MakeMyTrip",
+      "date": "2025-12-22",
+      "rating": 3.0,
+      "reviewer_type": "Couple",
+      "text": "Room view mast tha, lekin winter mein geyser pani sirf thoda gunguna kar raha tha, hot water issue subah 8 baje hua. Room heater ke extra charges mang rahe the jo booking mein clear nahi tha.",
+      "url": "https://www.makemytrip.com/hotels/sterling_mussoorie.html"
+    },
+    {
+      "hotel_id": "sterling_mussoorie",
+      "platform": "Google",
+      "date": "2025-09-28",
+      "rating": 4.0,
+      "reviewer_type": "Friends",
+      "text": "Staff behavior was polite and supportive. Buffet breakfast had great variety. Wi-Fi signal in corner rooms was weak, had trouble taking Zoom calls.",
+      "url": "https://maps.google.com/?cid=sterling_mussoorie"
+    },
+    {
+      "hotel_id": "sterling_mussoorie",
+      "platform": "Booking.com",
+      "date": "2025-06-18",
+      "rating": 4.0,
+      "reviewer_type": "Family",
+      "text": "Beautiful location away from noise. Ample parking space inside premises which is a blessing in Mussoorie. Food taste was very good.",
+      "url": "https://www.booking.com/hotel/in/sterling-mussoorie.html"
+    },
+    {
+      "hotel_id": "sterling_mussoorie",
+      "platform": "TripAdvisor",
+      "date": "2025-04-05",
+      "rating": 4.5,
+      "reviewer_type": "Couple",
+      "text": "The sunrise over the valley from our room was unforgettable. Room service was swift. Good hospitality overall.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d304918"
+    },
+    {
+      "hotel_id": "hotel_sungrace",
+      "platform": "MakeMyTrip",
+      "date": "2026-01-25",
+      "rating": 4.5,
+      "reviewer_type": "Couple",
+      "text": "Hidden gem in Charleville area! Peaceful environment with direct sunset mountain views. Staff is super courteous and cooperative. Rooftop cafe serves piping hot delicious parathas and ginger tea.",
+      "url": "https://www.makemytrip.com/hotels/hotel_sungrace_mussoorie.html"
+    },
+    {
+      "hotel_id": "hotel_sungrace",
+      "platform": "Google",
+      "date": "2025-12-14",
+      "rating": 3.5,
+      "reviewer_type": "Friends",
+      "text": "Clean rooms and good food. In December cold weather, room heating blower was slightly noisy but kept room manageable. Geyser worked well. Free shuttle to Library Chowk was helpful.",
+      "url": "https://maps.google.com/?cid=hotel_sungrace_mussoorie"
+    },
+    {
+      "hotel_id": "hotel_sungrace",
+      "platform": "MakeMyTrip",
+      "date": "2025-10-19",
+      "rating": 4.0,
+      "reviewer_type": "Family",
+      "text": "Family rooms are spacious and bathroom hygiene was well-maintained. Parking space available for cars. Value for money compared to expensive Mall Road properties.",
+      "url": "https://www.makemytrip.com/hotels/hotel_sungrace_mussoorie.html"
+    },
+    {
+      "hotel_id": "hotel_sungrace",
+      "platform": "Goibibo",
+      "date": "2025-05-12",
+      "rating": 4.0,
+      "reviewer_type": "Couple",
+      "text": "Staff behavior ekdum polite aur helpful tha. Room service prompt tha. Only thing is distance from Mall Road is 2.5 km, so walking at night is not possible, need car or hotel shuttle.",
+      "url": "https://www.goibibo.com/hotels/hotel-sungrace-mussoorie/"
+    },
+    {
+      "hotel_id": "hotel_sungrace",
+      "platform": "Google",
+      "date": "2025-03-18",
+      "rating": 4.5,
+      "reviewer_type": "Family",
+      "text": "Owner personally asked if we needed extra blankets. Very cozy stay. Good homemade food.",
+      "url": "https://maps.google.com/?cid=hotel_sungrace_mussoorie"
+    },
+    {
+      "hotel_id": "hotel_vishnu_palace",
+      "platform": "TripAdvisor",
+      "date": "2026-02-08",
+      "rating": 4.0,
+      "reviewer_type": "Family",
+      "text": "Biggest plus point of Vishnu Palace is on-site parking near Library Chowk. In Mussoorie where parking is a nightmare, this is a lifesaver. Pure vegetarian Shivalik restaurant serves fresh hot food.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d1200057"
+    },
+    {
+      "hotel_id": "hotel_vishnu_palace",
+      "platform": "MakeMyTrip",
+      "date": "2026-01-05",
+      "rating": 3.0,
+      "reviewer_type": "Family",
+      "text": "Location is right near Library Bus Stand, walking distance to Mall Road. Geyser was working fine with hot water. However, room furniture and bathroom fittings look aged and need renovation.",
+      "url": "https://www.makemytrip.com/hotels/hotel_vishnu_palace.html"
+    },
+    {
+      "hotel_id": "hotel_vishnu_palace",
+      "platform": "Google",
+      "date": "2025-11-20",
+      "rating": 4.0,
+      "reviewer_type": "Couple",
+      "text": "Staff bohot polite aur cooperative hai. Pure vegetarian food quality was very good. Rooms were clean. Decent budget option for families visiting Char Dham transit.",
+      "url": "https://maps.google.com/?cid=vishnu_palace_mussoorie"
+    },
+    {
+      "hotel_id": "hotel_vishnu_palace",
+      "platform": "MakeMyTrip",
+      "date": "2025-06-25",
+      "rating": 3.0,
+      "reviewer_type": "Friends",
+      "text": "Peak summer mein weekend rush tha. Mall Road barrier ke paas hone se traffic noise raat 10 baje tak rehta hai. Otherwise parking facility was great and food was decent.",
+      "url": "https://www.makemytrip.com/hotels/hotel_vishnu_palace.html"
+    },
+    {
+      "hotel_id": "hotel_vishnu_palace",
+      "platform": "TripAdvisor",
+      "date": "2025-04-14",
+      "rating": 4.0,
+      "reviewer_type": "Family",
+      "text": "Value for money in prime location. Food in pure veg restaurant is clean and light. Staff helped carry bags.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d1200057"
+    },
+    {
+      "hotel_id": "tulip_inn",
+      "platform": "MakeMyTrip",
+      "date": "2026-01-12",
+      "rating": 2.0,
+      "reviewer_type": "Couple",
+      "text": "Room accha tha view bhi decent tha, but geyser ne bilkul kaam nahi kiya subah 7 baje! Temperature zero tha aur bathroom mein geyser sirf lukewarm water de raha tha. Staff ko 3 baar bola tab bucket mein garam pani bheja.",
+      "url": "https://www.makemytrip.com/hotels/tulip_inn_mussoorie.html"
+    },
+    {
+      "hotel_id": "tulip_inn",
+      "platform": "TripAdvisor",
+      "date": "2025-12-30",
+      "rating": 3.0,
+      "reviewer_type": "Family",
+      "text": "Prime location directly on Mall Road is the only saving grace. You step out right into the shops. But vehicle access was blocked due to Mall Road evening barrier from 4:30 PM. We had to carry luggage with kids.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d2153549"
+    },
+    {
+      "hotel_id": "tulip_inn",
+      "platform": "Google",
+      "date": "2025-10-24",
+      "rating": 3.5,
+      "reviewer_type": "Friends",
+      "text": "Aroma restaurant breakfast was average, tea was cold on Sunday morning. Rooms are spacious but bathroom tiles had seepage marks. Service is slow during peak check-in hours.",
+      "url": "https://maps.google.com/?cid=tulip_inn_mussoorie"
+    },
+    {
+      "hotel_id": "tulip_inn",
+      "platform": "MakeMyTrip",
+      "date": "2025-05-30",
+      "rating": 3.0,
+      "reviewer_type": "Family",
+      "text": "Location unbeatable hai, Gun Hill ropeway pass mein hai. Parking space hotel ke paas hai lekin Mall road pe car entry permission ka issue rehta hai. Food taste was okay.",
+      "url": "https://www.makemytrip.com/hotels/tulip_inn_mussoorie.html"
+    },
+    {
+      "hotel_id": "tulip_inn",
+      "platform": "TripAdvisor",
+      "date": "2025-08-16",
+      "rating": 2.5,
+      "reviewer_type": "Couple",
+      "text": "Damp smell in the room due to monsoon rain. Linen felt slightly moist. Staff changed the sheets when requested. For ₹5000 a night, expected better maintenance and hygiene.",
+      "url": "https://www.tripadvisor.in/Hotel_Review-d2153549"
+    },
+    {
+      "hotel_id": "tulip_inn",
+      "platform": "Booking.com",
+      "date": "2025-04-20",
+      "rating": 3.0,
+      "reviewer_type": "Solo",
+      "text": "Noisy at night because of Mall Road crowds till late night. Room was clean enough, shower had warm water during day time.",
+      "url": "https://www.booking.com/hotel/in/tulip-inn-green-castle.html"
+    },
+    {
+      "hotel_id": "hotel_mall_palace",
+      "platform": "MakeMyTrip",
+      "date": "2026-01-20",
+      "rating": 2.5,
+      "reviewer_type": "Friends",
+      "text": "Cheap stay right on Mall Road. But January winter mein room freezing tha aur room heater ke extra ₹400 per night charge kiya. Geyser water took 30 minutes to heat up. Value for money only if on strict budget.",
+      "url": "https://www.makemytrip.com/hotels/hotel_mall_palace.html"
+    },
+    {
+      "hotel_id": "hotel_mall_palace",
+      "platform": "Google",
+      "date": "2025-11-15",
+      "rating": 3.5,
+      "reviewer_type": "Couple",
+      "text": "Balcony view of valley and sunset is surprisingly good for the price. Food ordered in room was hot and tasty. But no dedicated parking—had to park at Library multi-level parking and walk with bags.",
+      "url": "https://maps.google.com/?cid=hotel_mall_palace_mussoorie"
+    },
+    {
+      "hotel_id": "hotel_mall_palace",
+      "platform": "MakeMyTrip",
+      "date": "2025-06-08",
+      "rating": 3.0,
+      "reviewer_type": "Family",
+      "text": "Staff cooperative hai, manager bhaiya ne check-in jaldi kara diya. Par bathroom thoda chota hai aur towels old the. Mall Road barrier ke time gaadi hotel tak nahi aa sakti.",
+      "url": "https://www.makemytrip.com/hotels/hotel_mall_palace.html"
+    },
+    {
+      "hotel_id": "hotel_mall_palace",
+      "platform": "Agoda",
+      "date": "2025-07-14",
+      "rating": 2.0,
+      "reviewer_type": "Solo",
+      "text": "Poor Wi-Fi connection, kept dropping every 10 minutes. Water pressure in shower was very weak. Only positive is you step right onto Mall Road shopping lane.",
+      "url": "https://www.agoda.com/hotel-mall-palace/hotel/mussoorie-in.html"
+    },
+    {
+      "hotel_id": "hotel_mall_palace",
+      "platform": "MakeMyTrip",
+      "date": "2025-03-25",
+      "rating": 3.0,
+      "reviewer_type": "Friends",
+      "text": "Decent place for bachelor trip. Budget friendly, near Tibetan market. Rooms are average, don't expect 3-star comfort.",
+      "url": "https://www.makemytrip.com/hotels/hotel_mall_palace.html"
+    },
+    {
+      "hotel_id": "manu_maharani_nainital",
+      "platform": "TripAdvisor",
+      "date": "2026-02-10",
+      "rating": 4.5,
+      "reviewer_type": "Family",
+      "text": "The pool was amazing and the breakfast buffet was huge! Quality of the rooms is definitely 5-star, but the price is very expensive. Parking in Nainital is tough.",
+      "url": "https://www.tripadvisor.in"
+    },
+    {
+      "hotel_id": "manu_maharani_nainital",
+      "platform": "MakeMyTrip",
+      "date": "2026-01-15",
+      "rating": 5.0,
+      "reviewer_type": "Couple",
+      "text": "Premium quality experience. Breakfast near the pool is highly recommended. Worth the high price. Value for money.",
+      "url": "https://www.makemytrip.com"
+    },
+    {
+      "hotel_id": "fishermans_lodge_bhimtal",
+      "platform": "Google",
+      "date": "2026-01-20",
+      "rating": 4.0,
+      "reviewer_type": "Friends",
+      "text": "Great view of Bhimtal lake. Price is reasonable compared to Nainital hotels. Breakfast could have more options, but the overall quality of stay was excellent.",
+      "url": "https://maps.google.com"
+    },
+    {
+      "hotel_id": "kumaon_mandal_haldwani",
+      "platform": "MakeMyTrip",
+      "date": "2026-02-05",
+      "rating": 3.0,
+      "reviewer_type": "Solo",
+      "text": "Cheap and affordable price. No pool, but the breakfast was decent for a budget property. Cleanliness quality is average.",
+      "url": "https://www.makemytrip.com"
+    }
+  ],
+  "destination_infra_issues": [
+    {
+      "id": "mall_road_barrier",
+      "title": "Mall Road Vehicle Barrier Restriction (4:30 PM - 10:30 PM)",
+      "category": "Traffic & Logistics",
+      "severity": "HIGH",
+      "affected_corridors": [
+        "Library Chowk",
+        "Gandhi Chowk",
+        "Mall Road SDM Court"
+      ],
+      "impact_metric": "34.8% of central Mall Road reviews cite arrival friction",
+      "description": "Daily evening barrier shuts private vehicle access from 4:30 PM to 10:30 PM. Tourists arriving by taxi or car are forced to offload at Library Chowk, causing bottleneck jams and passenger distress (elderly/infants carrying luggage in freezing weather).",
+      "recommended_authority_action": "Introduce electric luggage shuttle carts operated by Municipality at Library & Picture Palace barriers; implement digital QR pass for verified hotel check-ins.",
+      "responsible_body": "Mussoorie Municipal Board (Nagar Palika) & Uttarakhand Traffic Police"
+    },
+    {
+      "id": "parking_gridlock",
+      "title": "Severe Weekend Parking Shortage & Touting at Library Chowk",
+      "category": "Parking Infrastructure",
+      "severity": "CRITICAL",
+      "affected_corridors": [
+        "Library Chowk Multi-Level",
+        "Picture Palace",
+        "Kempty Road Junction"
+      ],
+      "impact_metric": "41.2% of all negative logistics feedback mentions no parking",
+      "description": "Multi-level parking at Library Chowk fills up completely by Friday 6 PM during peak seasons. Overspill parking on narrow hill inclines leads to gridlocks spanning 3+ kilometers from Dehradun-Mussoorie toll gate.",
+      "recommended_authority_action": "Integrate real-time parking occupancy sensors linked to 'Uttarakhand Tourism Smart App'; display electronic vacancy boards at Kolhukhet Toll Gate before vehicles ascend.",
+      "responsible_body": "Uttarakhand Tourism Development Board (UTDB) & Dehradun District Administration"
+    },
+    {
+      "id": "winter_grid_voltage",
+      "title": "Sub-Zero Hill Voltage Fluctuations Impacting Geysers/Heating",
+      "category": "Utility & Maintenance",
+      "severity": "MEDIUM",
+      "affected_corridors": [
+        "Mall Road Upper Tier",
+        "Charleville",
+        "Radha Bhawan Estate"
+      ],
+      "impact_metric": "28.5% spike in heating/geyser complaints between Dec 15 - Feb 10",
+      "description": "Peak winter heating load causes localized line voltage drops across older Mussoorie feeder lines. Budget and midscale properties without industrial diesel generators suffer 30-40% drop in geyser heating efficiency.",
+      "recommended_authority_action": "UPCL (Uttarakhand Power Corporation Limited) winter transformer load balancing & dedicated commercial hospitality power grid feeder lines.",
+      "responsible_body": "Uttarakhand Power Corporation Limited (UPCL)"
+    },
+    {
+      "id": "taxi_cartel_pricing",
+      "title": "Overcharging by Local Taxis for Off-Center Resort Transfers",
+      "category": "Visitor Protection",
+      "severity": "HIGH",
+      "affected_corridors": [
+        "Dehradun Rly Station -> Mussoorie",
+        "Mall Road -> Kempty/Barlowganj"
+      ],
+      "impact_metric": "19.4% of guests staying at out-of-town resorts report taxi friction",
+      "description": "Local taxi unions charging unregulated surge fares (₹2500 - ₹3500) for short 12-14 km trips between Mall Road and Kempty Road resorts (JW Marriott) or Barlowganj (Jaypee).",
+      "recommended_authority_action": "Mandatory prepaid electronic taxi kiosks at Dehradun Station and Library Chowk with fixed per-kilometer GPS meter enforcement.",
+      "responsible_body": "Regional Transport Authority (RTA) & Tourism Police"
+    }
+  ]
+}

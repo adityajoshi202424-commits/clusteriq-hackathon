@@ -1,0 +1,63 @@
+# Data Sources Configuration
+# Configures collection methods, rate limits, and compliance settings per platform
+
+user_agent: "ClusterReviewIntelligence-Bot/1.0 (Academic Research; TBI-GEU; ethical-crawler@clusteriq.org)"
+
+platforms:
+  google_places:
+    name: "Google Maps / Places"
+    enabled: true
+    method: "places_api_or_structured_search"
+    rate_limit_req_per_min: 30
+    timeout_seconds: 15
+    max_reviews_per_property: 100
+    requires_api_key: true
+    api_key_env_var: "GOOGLE_PLACES_API_KEY"
+    robots_compliance: "https://developers.google.com/maps/documentation/places/web-service/policies"
+    manual_export_option: "Google Takeout / Google My Business CSV Export"
+
+  booking_com:
+    name: "Booking.com"
+    enabled: true
+    method: "structured_data_collector"
+    rate_limit_req_per_min: 12
+    timeout_seconds: 20
+    max_reviews_per_property: 100
+    requires_api_key: false
+    robots_url: "https://www.booking.com/robots.txt"
+    licensed_data_option: "Booking.com Demand API / RapidAPI Booking API"
+
+  tripadvisor:
+    name: "TripAdvisor"
+    enabled: true
+    method: "content_api_or_partner"
+    rate_limit_req_per_min: 10
+    timeout_seconds: 20
+    max_reviews_per_property: 100
+    requires_api_key: true
+    api_key_env_var: "TRIPADVISOR_API_KEY"
+    robots_url: "https://www.tripadvisor.in/robots.txt"
+    robots_compliance: "TripAdvisor robots.txt disallows automated scraping for user agents (* / AI bots). Official Content API required."
+    licensed_data_option: "TripAdvisor Content API / ReviewPro syndication"
+
+  makemytrip:
+    name: "MakeMyTrip"
+    enabled: true
+    method: "ota_listing_collector"
+    rate_limit_req_per_min: 10
+    timeout_seconds: 20
+    max_reviews_per_property: 100
+    requires_api_key: false
+    robots_compliance: "Cloudflare Bot Management / WAF protected; requires browser session or MMT Partner Extranet API."
+    licensed_data_option: "MakeMyTrip Hotel Extranet API / licensed data syndication"
+
+  agoda:
+    name: "Agoda"
+    enabled: true
+    method: "affiliate_api"
+    rate_limit_req_per_min: 15
+    timeout_seconds: 20
+    max_reviews_per_property: 100
+    requires_api_key: true
+    api_key_env_var: "AGODA_PARTNER_API_KEY"
+    licensed_data_option: "Agoda Partners API"

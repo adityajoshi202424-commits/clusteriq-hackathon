@@ -1,0 +1,259 @@
+[
+  {
+    "id": "gold_01",
+    "text": "Staff bhaiya bohot polite aur cooperative the, garam chai aur pahadi parathe lajawab the!",
+    "language": "hinglish",
+    "ground_truth": [
+      {"aspect": "Staff", "sentiment": "Positive", "evidence": "Staff bhaiya bohot polite aur cooperative the"},
+      {"aspect": "Food", "sentiment": "Positive", "evidence": "garam chai aur pahadi parathe lajawab the"}
+    ]
+  },
+  {
+    "id": "gold_02",
+    "text": "Geyser paani thanda de raha tha subah 7 baje aur parking ki bohot dikkat thi.",
+    "language": "hinglish",
+    "ground_truth": [
+      {"aspect": "Room", "sentiment": "Negative", "evidence": "Geyser paani thanda de raha tha subah 7 baje"},
+      {"aspect": "Booking Experience", "sentiment": "Negative", "evidence": "parking ki bohot dikkat thi"}
+    ]
+  },
+  {
+    "id": "gold_03",
+    "text": "The view from the balcony was breathtaking and the room was sparkling clean.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Location", "sentiment": "Positive", "evidence": "view from the balcony was breathtaking"},
+      {"aspect": "Cleanliness", "sentiment": "Positive", "evidence": "room was sparkling clean"}
+    ]
+  },
+  {
+    "id": "gold_04",
+    "text": "Room counter pe sharmila naam ka staff tha, check-in me aadha ghanta laga diya, completely third class behavior.",
+    "language": "hinglish",
+    "ground_truth": [
+      {"aspect": "Staff", "sentiment": "Negative", "evidence": "completely third class behavior"},
+      {"aspect": "Booking Experience", "sentiment": "Negative", "evidence": "check-in me aadha ghanta laga diya"}
+    ]
+  },
+  {
+    "id": "gold_05",
+    "text": "January winter mein room freezing tha aur room heater ke extra charge kiya, bilkul paisa vasool nahi.",
+    "language": "hinglish",
+    "ground_truth": [
+      {"aspect": "Room", "sentiment": "Negative", "evidence": "room freezing tha aur room heater ke extra charge"},
+      {"aspect": "Value for Money", "sentiment": "Negative", "evidence": "bilkul paisa vasool nahi"}
+    ]
+  },
+  {
+    "id": "gold_06",
+    "text": "Mall Road barrier band tha to Library Chowk pe traffic jam me 2 ghante fas gaye.",
+    "language": "hinglish",
+    "ground_truth": [
+      {"aspect": "Location", "sentiment": "Negative", "evidence": "traffic jam me 2 ghante fas gaye"},
+      {"aspect": "Booking Experience", "sentiment": "Negative", "evidence": "Mall Road barrier band tha"}
+    ]
+  },
+  {
+    "id": "gold_07",
+    "text": "Delicious breakfast buffet with wide assortment of fresh fruits and hot dosas.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Food", "sentiment": "Positive", "evidence": "Delicious breakfast buffet"}
+    ]
+  },
+  {
+    "id": "gold_08",
+    "text": "Bed linens had visible damp stains and there was a foul seelan smell throughout.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Cleanliness", "sentiment": "Negative", "evidence": "visible damp stains"},
+      {"aspect": "Housekeeping", "sentiment": "Negative", "evidence": "foul seelan smell throughout"}
+    ]
+  },
+  {
+    "id": "gold_09",
+    "text": "Courteous front desk team guided us through the steep hill slope with valet parking.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Staff", "sentiment": "Positive", "evidence": "Courteous front desk team"},
+      {"aspect": "Booking Experience", "sentiment": "Positive", "evidence": "valet parking"}
+    ]
+  },
+  {
+    "id": "gold_10",
+    "text": "Expensive tariff for very mediocre services, felt like a complete rip off.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Value for Money", "sentiment": "Negative", "evidence": "Expensive tariff for very mediocre services"}
+    ]
+  },
+  {
+    "id": "gold_11",
+    "text": "Safai bilkul chaka chak thi aur bathroom me instant 24 hours hot water tha.",
+    "language": "hinglish",
+    "ground_truth": [
+      {"aspect": "Cleanliness", "sentiment": "Positive", "evidence": "Safai bilkul chaka chak thi"},
+      {"aspect": "Room", "sentiment": "Positive", "evidence": "instant 24 hours hot water tha"}
+    ]
+  },
+  {
+    "id": "gold_12",
+    "text": "Room view mast tha aur sunset Himalayas ka nazara unmatchable tha.",
+    "language": "hinglish",
+    "ground_truth": [
+      {"aspect": "Location", "sentiment": "Positive", "evidence": "sunset Himalayas ka nazara unmatchable"}
+    ]
+  },
+  {
+    "id": "gold_13",
+    "text": "Breakfast was completely cold and coffee tasted stale, very disappointing kitchen.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Food", "sentiment": "Negative", "evidence": "Breakfast was completely cold and coffee tasted stale"}
+    ]
+  },
+  {
+    "id": "gold_14",
+    "text": "Housekeeping replaced towels daily and kept room fresh and tidy.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Housekeeping", "sentiment": "Positive", "evidence": "Housekeeping replaced towels daily"}
+    ]
+  },
+  {
+    "id": "gold_15",
+    "text": "Waiters rude the restaurant me aur 45 minute wait karwaya for simple dal roti.",
+    "language": "hinglish",
+    "ground_truth": [
+      {"aspect": "Staff", "sentiment": "Negative", "evidence": "Waiters rude the restaurant me"},
+      {"aspect": "Food", "sentiment": "Negative", "evidence": "45 minute wait karwaya for simple dal roti"}
+    ]
+  },
+  {
+    "id": "gold_16",
+    "text": "Ample on-site parking made our self-drive road trip completely stress-free.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Booking Experience", "sentiment": "Positive", "evidence": "Ample on-site parking"}
+    ]
+  },
+  {
+    "id": "gold_17",
+    "text": "Worth every single rupee spent for this luxury mountain getaway, paisa vasool experience.",
+    "language": "hinglish",
+    "ground_truth": [
+      {"aspect": "Value for Money", "sentiment": "Positive", "evidence": "paisa vasool experience"}
+    ]
+  },
+  {
+    "id": "gold_18",
+    "text": "Bathroom fittings had water leakage and power dropped multiple times at night.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Room", "sentiment": "Negative", "evidence": "fittings had water leakage and power dropped"}
+    ]
+  },
+  {
+    "id": "gold_19",
+    "text": "Daily cleaning was neglected, dust on side tables was not cleared for two days.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Housekeeping", "sentiment": "Negative", "evidence": "Daily cleaning was neglected"}
+    ]
+  },
+  {
+    "id": "gold_20",
+    "text": "Hotel is right on Mall Road near shops, perfect location for family evening strolls.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Location", "sentiment": "Positive", "evidence": "right on Mall Road near shops"}
+    ]
+  },
+  {
+    "id": "gold_21",
+    "text": "Subah ka nasta bilkul thanda tha aur tea bhi bilkul bekaar thi.",
+    "language": "hinglish",
+    "ground_truth": [
+      {"aspect": "Food", "sentiment": "Negative", "evidence": "Subah ka nasta bilkul thanda tha"}
+    ]
+  },
+  {
+    "id": "gold_22",
+    "text": "The reception manager was exceptionally polite and arranged free golf buggy transfer.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Staff", "sentiment": "Positive", "evidence": "reception manager was exceptionally polite"},
+      {"aspect": "Booking Experience", "sentiment": "Positive", "evidence": "free golf buggy transfer"}
+    ]
+  },
+  {
+    "id": "gold_23",
+    "text": "Towels felt moist and room had an unhygienic damp smell due to heavy rains.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Housekeeping", "sentiment": "Negative", "evidence": "Towels felt moist and room had an unhygienic damp smell"},
+      {"aspect": "Cleanliness", "sentiment": "Negative", "evidence": "unhygienic damp smell"}
+    ]
+  },
+  {
+    "id": "gold_24",
+    "text": "Affordable rates with delicious home-cooked Garhwali thali, super value.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Value for Money", "sentiment": "Positive", "evidence": "Affordable rates"},
+      {"aspect": "Food", "sentiment": "Positive", "evidence": "delicious home-cooked Garhwali thali"}
+    ]
+  },
+  {
+    "id": "gold_25",
+    "text": "Wi-Fi was fast and room heating kept us warm through the freezing December frost.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Room", "sentiment": "Positive", "evidence": "room heating kept us warm through the freezing December frost"}
+    ]
+  },
+  {
+    "id": "gold_26",
+    "text": "Library Chowk road was blocked by local taxi cartel charging unreasonable 1500.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Booking Experience", "sentiment": "Negative", "evidence": "Library Chowk road was blocked by local taxi cartel"},
+      {"aspect": "Location", "sentiment": "Negative", "evidence": "road was blocked"}
+    ]
+  },
+  {
+    "id": "gold_27",
+    "text": "Spotless bathroom with sparkling fittings and fresh crisp bedsheets.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Cleanliness", "sentiment": "Positive", "evidence": "Spotless bathroom with sparkling fittings"},
+      {"aspect": "Housekeeping", "sentiment": "Positive", "evidence": "fresh crisp bedsheets"}
+    ]
+  },
+  {
+    "id": "gold_28",
+    "text": "Khana swadist tha aur pahadi paratha ekdum piping hot serve kiya.",
+    "language": "hinglish",
+    "ground_truth": [
+      {"aspect": "Food", "sentiment": "Positive", "evidence": "Khana swadist tha aur pahadi paratha"}
+    ]
+  },
+  {
+    "id": "gold_29",
+    "text": "Extreme check-in delay of 45 minutes at front desk, highly unprofessional staff.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Staff", "sentiment": "Negative", "evidence": "highly unprofessional staff"},
+      {"aspect": "Booking Experience", "sentiment": "Negative", "evidence": "Extreme check-in delay of 45 minutes"}
+    ]
+  },
+  {
+    "id": "gold_30",
+    "text": "Steep 80 stairs climb to reach property with no elevator or coolie assistance.",
+    "language": "english",
+    "ground_truth": [
+      {"aspect": "Location", "sentiment": "Negative", "evidence": "Steep 80 stairs climb to reach property"},
+      {"aspect": "Booking Experience", "sentiment": "Negative", "evidence": "no elevator or coolie assistance"}
+    ]
+  }
+]

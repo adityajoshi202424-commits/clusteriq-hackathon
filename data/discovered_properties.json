@@ -1,0 +1,210 @@
+{
+  "destination": "Mussoorie",
+  "state": "Uttarakhand",
+  "discovered_at": "1791549578.0981245",
+  "total_hotels_discovered": 10,
+  "total_pois_discovered": 7,
+  "hotels": [
+    {
+      "id": "welcomhotel_savoy",
+      "name": "Welcomhotel by ITC Hotels, The Savoy",
+      "category": "Luxury Heritage (5-Star)",
+      "address": "Library Bazar, Gandhi Chowk, Mussoorie, Uttarakhand 248179",
+      "latitude": 30.4589,
+      "longitude": 78.0642,
+      "discovered_via": "Google Places / TripAdvisor / Booking.com",
+      "platforms": [
+        "Google Maps",
+        "TripAdvisor",
+        "Booking.com",
+        "MakeMyTrip"
+      ]
+    },
+    {
+      "id": "jw_marriott_walnut_grove",
+      "name": "JW Marriott Mussoorie Walnut Grove Resort & Spa",
+      "category": "Ultra Luxury Resort (5-Star)",
+      "address": "Village Siya, Kempty Fall Road, Mussoorie, Uttarakhand 248179",
+      "latitude": 30.4912,
+      "longitude": 78.0315,
+      "discovered_via": "Google Places / MakeMyTrip / TripAdvisor",
+      "platforms": [
+        "Google Maps",
+        "TripAdvisor",
+        "Booking.com",
+        "MakeMyTrip"
+      ]
+    },
+    {
+      "id": "jaypee_residency_manor",
+      "name": "Jaypee Residency Manor",
+      "category": "Luxury Resort (5-Star)",
+      "address": "Barlow Ganj, Mussoorie, Uttarakhand 248122",
+      "latitude": 30.4428,
+      "longitude": 78.0825,
+      "discovered_via": "Google Places / Booking.com",
+      "platforms": [
+        "Google Maps",
+        "TripAdvisor",
+        "Booking.com",
+        "MakeMyTrip"
+      ]
+    },
+    {
+      "id": "fortune_resort_grace",
+      "name": "Fortune Resort Grace",
+      "category": "Upper Upscale (4-Star)",
+      "address": "Library Bazaar, Near Gandhi Chowk, Mussoorie, Uttarakhand 248179",
+      "latitude": 30.4578,
+      "longitude": 78.0655,
+      "discovered_via": "Google Places / MakeMyTrip",
+      "platforms": [
+        "Google Maps",
+        "TripAdvisor",
+        "Booking.com",
+        "MakeMyTrip"
+      ]
+    },
+    {
+      "id": "claridges_nabha_residence",
+      "name": "The Claridges Nabha Residence",
+      "category": "Heritage Boutique (4-Star)",
+      "address": "Airfield, Barlowganj, Mussoorie, Uttarakhand 248122",
+      "latitude": 30.441,
+      "longitude": 78.085,
+      "discovered_via": "TripAdvisor / Google Places",
+      "platforms": [
+        "Google Maps",
+        "TripAdvisor",
+        "MakeMyTrip"
+      ]
+    },
+    {
+      "id": "sterling_mussoorie",
+      "name": "Sterling Mussoorie",
+      "category": "Leisure Resort (4-Star)",
+      "address": "Radha Bhawan Estate, Circular Road, Mussoorie, Uttarakhand 248179",
+      "latitude": 30.4615,
+      "longitude": 78.058,
+      "discovered_via": "MakeMyTrip / Google Places",
+      "platforms": [
+        "Google Maps",
+        "TripAdvisor",
+        "Booking.com"
+      ]
+    },
+    {
+      "id": "hotel_vishnu_palace",
+      "name": "Hotel Vishnu Palace",
+      "category": "Midscale Family (3-Star)",
+      "address": "Near Library Bus Stand, The Mall, Mussoorie, Uttarakhand 248179",
+      "latitude": 30.4572,
+      "longitude": 78.0662,
+      "discovered_via": "Google Places / MakeMyTrip",
+      "platforms": [
+        "Google Maps",
+        "TripAdvisor",
+        "MakeMyTrip"
+      ]
+    },
+    {
+      "id": "tulip_inn_green_castle",
+      "name": "Tulip Inn Green Castle",
+      "category": "Midscale Mall Road (3-Star)",
+      "address": "The Mall Road, Near SDM Court, Mussoorie, Uttarakhand 248179",
+      "latitude": 30.456,
+      "longitude": 78.072,
+      "discovered_via": "Google Places / TripAdvisor",
+      "platforms": [
+        "Google Maps",
+        "TripAdvisor",
+        "Booking.com"
+      ]
+    },
+    {
+      "id": "hotel_sungrace",
+      "name": "Hotel SunGrace",
+      "category": "Midscale Boutique (3-Star)",
+      "address": "Hill Crest, Charleville, Mussoorie, Uttarakhand 248179",
+      "latitude": 30.465,
+      "longitude": 78.052,
+      "discovered_via": "Google Places / Goibibo",
+      "platforms": [
+        "Google Maps",
+        "MakeMyTrip"
+      ]
+    },
+    {
+      "id": "hotel_mall_palace",
+      "name": "Hotel Mall Palace",
+      "category": "Budget Economy (2-Star)",
+      "address": "Main Mall Road, Mussoorie, Uttarakhand 248179",
+      "latitude": 30.4565,
+      "longitude": 78.0735,
+      "discovered_via": "Google Places / MakeMyTrip",
+      "platforms": [
+        "Google Maps",
+        "MakeMyTrip",
+        "Agoda"
+      ]
+    }
+  ],
+  "infrastructure_pois": [
+    {
+      "id": "poi_library_chowk_parking",
+      "name": "Library Chowk Multi-Level Parking",
+      "category": "parking",
+      "address": "Library Chowk, Gandhi Ground, Mussoorie",
+      "latitude": 30.4575,
+      "longitude": 78.065
+    },
+    {
+      "id": "poi_picture_palace_parking",
+      "name": "Picture Palace Municipal Parking",
+      "category": "parking",
+      "address": "Kulri Bazaar, Picture Palace Barrier, Mussoorie",
+      "latitude": 30.454,
+      "longitude": 78.081
+    },
+    {
+      "id": "poi_mall_road_barrier",
+      "name": "Mall Road Vehicle Restriction Barrier (SDM Court)",
+      "category": "transport",
+      "address": "Mall Road, Mussoorie",
+      "latitude": 30.4562,
+      "longitude": 78.071
+    },
+    {
+      "id": "poi_kempty_falls",
+      "name": "Kempty Falls Tourist Hub",
+      "category": "attraction",
+      "address": "Lakhwad, Kempty, Mussoorie",
+      "latitude": 30.485,
+      "longitude": 78.042
+    },
+    {
+      "id": "poi_gun_hill_ropeway",
+      "name": "Gun Hill Viewpoint & Ropeway Station",
+      "category": "viewpoint",
+      "address": "The Mall, Mussoorie",
+      "latitude": 30.458,
+      "longitude": 78.075
+    },
+    {
+      "id": "poi_lal_tibba",
+      "name": "Lal Tibba Scenic Viewpoint",
+      "category": "viewpoint",
+      "address": "Bazaar Road, Landour, Mussoorie",
+      "latitude": 30.461,
+      "longitude": 78.102
+    },
+    {
+      "id": "poi_tibetan_market",
+      "name": "Mall Road Tibetan Handloom Market",
+      "category": "market",
+      "address": "Mall Road, Mussoorie",
+      "latitude": 30.4568,
+      "longitude": 78.07
+    }
+  ]
+}
