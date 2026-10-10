@@ -543,6 +543,7 @@ select.hotel-select:focus {
 .timeline-chart-svg {
   width: 100%;
   height: 220px;
+  overflow: visible;
 }
 
 /* Slide-over Evidence Drawer */
