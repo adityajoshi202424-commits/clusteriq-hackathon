@@ -376,6 +376,12 @@ def download_policy_brief_pdf():
 frontend_dir = os.path.join(PROJECT_ROOT, "frontend")
 if os.path.exists(frontend_dir):
     app.mount("/static", StaticFiles(directory=frontend_dir), name="static")
+    images_dir = os.path.join(frontend_dir, "images")
+    if os.path.exists(images_dir):
+        app.mount("/images", StaticFiles(directory=images_dir), name="images")
+    data_dir = os.path.join(frontend_dir, "data")
+    if os.path.exists(data_dir):
+        app.mount("/data", StaticFiles(directory=data_dir), name="data")
 
 @app.get("/")
 def serve_index():
@@ -383,6 +389,20 @@ def serve_index():
     if os.path.exists(index_file):
         return FileResponse(index_file)
     return HTMLResponse("<h1>Cluster Review Intelligence backend running. Build frontend in progress...</h1>")
+
+@app.get("/styles.css")
+def serve_styles():
+    css_file = os.path.join(frontend_dir, "styles.css")
+    if os.path.exists(css_file):
+        return FileResponse(css_file, media_type="text/css")
+    raise HTTPException(status_code=404, detail="CSS not found")
+
+@app.get("/app.js")
+def serve_app_js():
+    js_file = os.path.join(frontend_dir, "app.js")
+    if os.path.exists(js_file):
+        return FileResponse(js_file, media_type="application/javascript")
+    raise HTTPException(status_code=404, detail="JS not found")
 
 @app.get("/privacy")
 def serve_privacy():
@@ -408,4 +428,5 @@ def serve_favicon():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("server:app", host="127.0.0.1", port=8000, reload=True)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("server:app", host="0.0.0.0", port=port, reload=True)

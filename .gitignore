@@ -8,3 +8,5 @@ scratch_test.pdf
 test_report.pdf
 *.log
 .DS_Store
+
+.vercel
