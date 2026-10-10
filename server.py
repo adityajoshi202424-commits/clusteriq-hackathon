@@ -55,6 +55,10 @@ app.add_middleware(
 class LiveAnalysisRequest(BaseModel):
     text: str
 
+class ReplyDraftRequest(BaseModel):
+    review_text: str
+    hotel_name: Optional[str] = "Our Hotel"
+
 class RefreshDataRequest(BaseModel):
     demo_mode: bool = True
     simulate_live_failure: bool = False
@@ -231,6 +235,36 @@ def get_verified_metrics():
         from pipeline.evaluate import evaluate_model
         ev = evaluate_model()
         return compute_system_metrics(bm, trends, dest, ev)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/digest")
+def get_commercial_digest(property: Optional[str] = "welcomhotel_savoy"):
+    """
+    Returns weekly WhatsApp digest, 1-page cold outreach teaser report, and SaaS unit economics.
+    """
+    from pipeline.digest import generate_weekly_whatsapp_digest, generate_one_page_teaser, get_unit_economics_model
+    try:
+        teaser = generate_one_page_teaser(property)
+        wa_digest = generate_weekly_whatsapp_digest(property)
+        econ = get_unit_economics_model()
+        return {
+            "property_id": property,
+            "one_page_teaser": teaser,
+            "whatsapp_digest": wa_digest,
+            "unit_economics": econ
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/reply-draft")
+def draft_review_reply(req: ReplyDraftRequest):
+    """
+    Drafts an authentic, context-aware management reply in the guest's language (Hinglish/English).
+    """
+    from pipeline.digest import generate_review_reply
+    try:
+        return generate_review_reply(req.review_text, req.hotel_name or "Our Hotel")
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
