@@ -1,0 +1,45 @@
+# ClusterIQ Empirical Analytical Thresholds
+# All constants controlling verdicts, Bayesian shrinkage, changepoints, and illusion detection
+
+benchmark:
+  shrinkage_k: 5
+  min_mentions_for_verdict: 8
+  lead_z_threshold: 1.0
+  weakness_z_threshold: -1.0
+  market_wide_cluster_mean_threshold: 0.2
+  cluster_opportunity_mention_rate: 0.15
+  cluster_opportunity_max_score: 0.4
+
+trends:
+  min_monthly_mentions: 8
+  changepoints:
+    min_size: 3
+    penalty: 3.0
+    min_time_points: 12
+  seasonality:
+    winter_multiplier: 1.5
+    min_years: 2
+
+emerging_issues:
+  recent_window_days: 60
+  baseline_window_days: 365
+  two_proportion_z_threshold: 2.0
+  min_recent_negative_mentions: 5
+  rating_decay_window_days: 90
+
+illusion_detector:
+  price_band_rank_z_threshold: 1.0
+  experience_z_threshold: 0.0
+
+destination_themes:
+  - "parking"
+  - "traffic/jams"
+  - "road condition"
+  - "cleanliness of public areas"
+  - "overcharging/taxi fares"
+  - "crowding"
+  - "water supply"
+  - "power cuts"
+  - "noise"
+  - "safety"
+  - "other"

@@ -263,7 +263,7 @@ REVIEWS = [
         "date": "2025-11-04",
         "rating": 4.0,
         "reviewer_type": "Couple",
-        "text": "Resort itself is 10/10 in terms of amenities, food and cleanliness. Only drawback is location distance—it is 14 km away from Mall Road towards Kempty. Taxi charges ₹2500 for a simple round trip to Mussoorie town.",
+        "text": "Resort itself is 10/10 in terms of amenities, food and cleanliness. Only drawback is location distance - it is 14 km away from Mall Road towards Kempty. Taxi charges ₹2500 for a simple round trip to Mussoorie town.",
         "url": "https://maps.google.com/?cid=jw_marriott_mussoorie"
     },
     {
@@ -666,7 +666,7 @@ REVIEWS = [
         "date": "2025-11-15",
         "rating": 3.5,
         "reviewer_type": "Couple",
-        "text": "Balcony view of valley and sunset is surprisingly good for the price. Food ordered in room was hot and tasty. But no dedicated parking—had to park at Library multi-level parking and walk with bags.",
+        "text": "Balcony view of valley and sunset is surprisingly good for the price. Food ordered in room was hot and tasty. But no dedicated parking - had to park at Library multi-level parking and walk with bags.",
         "url": "https://maps.google.com/?cid=hotel_mall_palace_mussoorie"
     },
     {

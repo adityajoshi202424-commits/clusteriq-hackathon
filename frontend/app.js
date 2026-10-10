@@ -898,12 +898,19 @@ function initLiveTester() {
         try {
             let data = null;
             try {
-                const res = await fetch('/api/analyze-live', {
+                let res = await fetch('/api/absa', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ text })
                 });
-                if (res.ok) data = await res.json();
+                if (!res.ok) {
+                    res = await fetch('/api/analyze-live', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ text })
+                    });
+                }
+                if (res && res.ok) data = await res.json();
             } catch (_) {}
 
             if (!data || !data.aspects || data.aspects.length === 0) {

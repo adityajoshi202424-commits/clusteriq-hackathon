@@ -1,0 +1,29 @@
+# Platform sub-score mapping to canonical 8 aspects:
+# Food, Room, Housekeeping, Staff, Location, Value, Cleanliness, Booking
+booking:
+  Staff: Staff
+  Cleanliness: Cleanliness
+  Comfort: Room
+  Location: Location
+  "Value for money": Value
+  Facilities: Room
+
+tripadvisor:
+  Service: Staff
+  Rooms: Room
+  Cleanliness: Cleanliness
+  Location: Location
+  Value: Value
+  Sleep Quality: Room
+
+agoda:
+  Cleanliness: Cleanliness
+  Service: Staff
+  Location: Location
+  "Value for money": Value
+  Facilities: Room
+
+google:
+  Rooms: Room
+  Location: Location
+  Service: Staff

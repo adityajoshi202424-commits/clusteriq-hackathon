@@ -30,6 +30,12 @@ from destination.destination_intel import destination_intelligence
 from trends.trend_detector import trend_detector
 from trends.backtest_engine import backtest_engine
 from extract.absa_pipeline import pipeline
+from pipeline.benchmark import compute_benchmarks
+from pipeline.trends import run_trends_pipeline, detect_emerging_issues
+from pipeline.destination import run_destination_pipeline
+from pipeline.illusion import compute_price_value_illusion
+from pipeline.absa import extract_aspects_heuristic, CANONICAL_ASPECTS
+from pipeline.normalise import detect_language
 
 app = FastAPI(
     title="Cluster Review Intelligence (CRI)",
@@ -67,6 +73,168 @@ def list_properties():
         return JSONResponse(status_code=200, content=[
             {"id": "welcomhotel_savoy", "name": "Welcomhotel by ITC Hotels, The Savoy", "category": "Luxury Heritage (5-Star)", "review_count": 52, "avg_rating": 4.6}
         ])
+
+# -------------------------------------------------------------------------
+# v2.0 Canonical Analytical Endpoints (Pipeline Architecture)
+# -------------------------------------------------------------------------
+
+@app.get("/api/benchmark")
+def get_canonical_benchmark(property: Optional[str] = None):
+    """
+    Returns Bayesian shrinkage benchmark:
+    - If property specified: returns property row, 8 aspects, verdicts, evidence quotes, rating-in-context
+    - If property omitted: returns entire 12-property cluster benchmark heatmap
+    """
+    try:
+        bm = compute_benchmarks()
+        if property:
+            p_clean = property.strip().lower()
+            if p_clean in bm:
+                return bm[p_clean]
+            for pid, data in bm.items():
+                if p_clean in pid.lower() or p_clean in data["property"]["name"].lower():
+                    return data
+            raise HTTPException(status_code=404, detail=f"Property '{property}' not found in cluster")
+        return bm
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/trends")
+def get_canonical_trends(property: Optional[str] = None, aspect: Optional[str] = None):
+    """
+    Returns monthly series, L2 PELT changepoints, cause hypotheses, and winter seasonality.
+    """
+    try:
+        trends_data = run_trends_pipeline()
+        if not property:
+            return trends_data
+        
+        pid_clean = property.strip().lower()
+        matched_pid = None
+        for pid in trends_data["series"]:
+            if pid_clean == pid or pid_clean in pid:
+                matched_pid = pid
+                break
+        
+        if not matched_pid:
+            raise HTTPException(status_code=404, detail=f"Property '{property}' not found")
+
+        prop_series = trends_data["series"].get(matched_pid, {})
+        prop_cps = [cp for cp in trends_data["changepoints"] if cp["property_id"] == matched_pid]
+
+        if aspect:
+            return {
+                "property_id": matched_pid,
+                "aspect": aspect,
+                "series": prop_series.get(aspect, {}),
+                "changepoints": [cp for cp in prop_cps if cp["aspect"] == aspect],
+                "seasonality": trends_data["seasonality"].get(aspect, {})
+            }
+        return {
+            "property_id": matched_pid,
+            "series": prop_series,
+            "changepoints": prop_cps,
+            "seasonality": trends_data["seasonality"]
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/emerging")
+def get_active_emerging_issues(ref_date: Optional[str] = "2026-02-14"):
+    """
+    Two-proportion z-test detector comparing last 60d vs prior 365d baseline.
+    Flags active friction surges before overall star rating decay.
+    """
+    try:
+        import sqlite3
+        db_path = os.path.join(PROJECT_ROOT, "data", "reviews.db")
+        conn = sqlite3.connect(db_path)
+        issues = detect_emerging_issues(conn, ref_date=ref_date)
+        conn.close()
+        return {
+            "reference_checkpoint": ref_date,
+            "active_issues_count": len(issues),
+            "emerging_issues": issues
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/destination")
+def get_destination_view():
+    """
+    Aggregated civic bottleneck board & 1-page administrative memo for Tourism Board / DM.
+    """
+    try:
+        return run_destination_pipeline()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/illusion")
+def get_illusion_detector():
+    """
+    Price-to-value illusion detector: value_gap = price_band_rank_z - experience_z.
+    """
+    try:
+        return compute_price_value_illusion()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/absa")
+def live_absa_extraction(req: LiveAnalysisRequest):
+    """
+    Live ABSA playground endpoint: extracts 8 canonical aspects, language tag, and exact evidence spans.
+    """
+    try:
+        text = (req.text or "").strip()
+        if not text:
+            return {"text": "", "lang_tag": "en", "aspects_count": 0, "aspects": []}
+
+        lang = detect_language(text)
+        aspects = extract_aspects_heuristic(text)
+        return {
+            "text": text,
+            "lang_tag": lang,
+            "aspects_count": len(aspects),
+            "aspects": [
+                {
+                    "aspect": a["aspect"],
+                    "sentiment": a["sentiment"],
+                    "evidence": a["evidence"]
+                }
+                for a in aspects
+            ]
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/api/metrics")
+def get_verified_metrics():
+    """
+    Empirical system metrics: reviews analysed vs read by hand, accuracy, lead time, ROI.
+    """
+    try:
+        metrics_file = os.path.join(PROJECT_ROOT, "frontend", "data", "metrics.js")
+        if os.path.exists(metrics_file):
+            import json
+            with open(metrics_file, "r", encoding="utf-8") as f:
+                content = f.read().replace("window.CLUSTER_METRICS = ", "").rstrip(";\n ")
+                return json.loads(content)
+        # Compute if file missing
+        bm = compute_benchmarks()
+        trends = run_trends_pipeline()
+        dest = run_destination_pipeline()
+        from pipeline.build_static import compute_system_metrics
+        from pipeline.evaluate import evaluate_model
+        ev = evaluate_model()
+        return compute_system_metrics(bm, trends, dest, ev)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+# -------------------------------------------------------------------------
 
 @app.get("/api/benchmark/{property_id}")
 def property_benchmark(property_id: str, reviewer_type: Optional[str] = None, season: Optional[str] = None, weights: Optional[str] = None):
