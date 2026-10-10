@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClusterIQ™ — Cluster Review Intelligence | Mussoorie Corridor</title>
+    <title>ClusterIQ: Cluster Review Intelligence | Mussoorie Corridor</title>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -15,14 +16,20 @@
     <header class="app-header">
         <div class="brand-section">
             <div class="brand-logo">
-                <div class="brand-icon">🏔️</div>
+                <div class="brand-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 22 22 22"/>
+                        <polyline points="12 12 17 22"/>
+                        <line x1="8.5" y1="18.5" x2="15.5" y2="18.5"/>
+                    </svg>
+                </div>
                 <div>
-                    <div class="brand-title">ClusterIQ™</div>
+                    <div class="brand-title">ClusterIQ</div>
                     <div class="brand-subtitle">Cluster Review Intelligence</div>
                 </div>
             </div>
             <div class="geo-badge">
-                <span>📍</span> Mussoorie & Dehradun Corridor (Live TBI-GEU Pilot)
+                Mussoorie and Dehradun Corridor (Live TBI-GEU Pilot)
             </div>
         </div>
 
@@ -30,10 +37,10 @@
         <div class="header-actions">
             <div class="cache-toggle-wrapper">
                 <button id="btn-demo-mode-toggle" class="btn-demo-toggle" title="Click to toggle Air-Gapped Demo Mode vs Live Scraper Mode">
-                    <span>⚡</span> <span id="demo-mode-status-text">Demo Mode: WARM CACHE</span>
+                    <span id="demo-mode-status-text">Demo Mode: WARM CACHE</span>
                 </button>
                 <button id="btn-refresh-cluster" class="btn-refresh-cluster" title="Synchronize cluster reviews">
-                    <span>🔄</span> Refresh Cluster Data
+                    Refresh Cluster Data
                 </button>
             </div>
         </div>
@@ -41,21 +48,21 @@
         <!-- Tri-Mode Switcher Toggle -->
         <div class="mode-switcher">
             <button id="btn-mode-hotel" class="mode-btn active">
-                <span>🏨</span> Hotel Operator Mode (B2B)
+                Hotel Operator Mode (B2B)
             </button>
             <button id="btn-mode-b2g" class="mode-btn">
-                <span>🏛️</span> Tourism Board Mode (B2G)
+                Tourism Board Mode (B2G)
             </button>
             <button id="btn-mode-live" class="mode-btn">
-                <span>⚡</span> Live ABSA Tester
+                Live ABSA Tester
             </button>
         </div>
     </header>
 
-    <!-- Graceful Branded Alert Banner (Part 1 Item 2) -->
+    <!-- Graceful Branded Alert Banner -->
     <div id="branded-alert-banner" class="branded-alert-banner hidden">
         <div class="alert-content">
-            <span class="alert-icon">⚠️</span>
+            <span class="alert-icon" style="font-weight: 700; color: #fbbf24;">[Notice]</span>
             <span id="alert-message">Booking.com API rate limit reached. Auto-switching to locally cached community database.</span>
         </div>
         <button id="btn-dismiss-alert" class="alert-close-btn" title="Dismiss Alert">&times;</button>
@@ -64,17 +71,15 @@
     <!-- Main Content Container -->
     <main class="container">
 
-        <!-- =========================================================
-             MASSIVE "HUMAN VS. AI" EFFICIENCY METRIC PANEL (Part 2 Feature 1)
-             ========================================================= -->
+        <!-- Efficiency Telemetry Panel -->
         <section class="efficiency-hero-panel">
             <div class="efficiency-header">
-                <div class="efficiency-badge">⚡ ROI & OPERATIONAL VELOCITY TELEMETRY</div>
+                <div class="efficiency-badge">OPERATIONAL VELOCITY TELEMETRY</div>
                 <h1 class="efficiency-headline">
-                    ⏱️ Human Reading Time Saved: <span id="hero-hours-saved" class="glow-text">42.4 Hours</span>
+                    Human Reading Time Saved: <span id="hero-hours-saved" class="glow-text">42.4 Hours</span>
                 </h1>
                 <p class="efficiency-formula">
-                    Computation: <code>(508,800 Cluster Words / 200 WPM) − 14.2s CRI AI Run = 42.4 Hours Operational Labor Saved</code>
+                    Computation: <code>(508,800 Cluster Words / 200 WPM) - 14.2s CRI Pipeline Run = 42.4 Hours Operational Labor Saved</code>
                 </p>
             </div>
             <div class="efficiency-stats-grid">
@@ -90,7 +95,7 @@
                 </div>
                 <div class="eff-stat-card">
                     <span class="eff-stat-num highlight-cyan" id="eff-ai-speed">14.2s</span>
-                    <span class="eff-stat-label">CRI Vectorized ABSA Pipeline</span>
+                    <span class="eff-stat-label">Vectorized ABSA Pipeline</span>
                     <span class="eff-stat-sub">10,750x Velocity Multiplier</span>
                 </div>
                 <div class="eff-stat-card">
@@ -101,9 +106,7 @@
             </div>
         </section>
 
-        <!-- =========================================================
-             VIEW 1: B2B HOTEL OPERATOR DASHBOARD
-             ========================================================= -->
+        <!-- VIEW 1: B2B HOTEL OPERATOR DASHBOARD -->
         <div id="view-hotel" class="hotel-view active">
 
             <!-- Property Selector Toolbar -->
@@ -115,10 +118,10 @@
                     </select>
                 </div>
                 <div class="property-meta-tags">
-                    <span class="tag-badge">📍 <span id="meta-location">Library Bazar, Mussoorie</span></span>
-                    <span class="tag-badge">🚪 <span id="meta-rooms">121 Rooms</span></span>
-                    <span class="tag-badge">💵 <span id="meta-price">₹22,000 - ₹45,000</span></span>
-                    <span class="tag-badge">🚶 <span id="meta-mall-dist">150m to Mall Road</span></span>
+                    <span class="tag-badge">Location: <span id="meta-location">Library Bazar, Mussoorie</span></span>
+                    <span class="tag-badge">Rooms: <span id="meta-rooms">121 Rooms</span></span>
+                    <span class="tag-badge">Rate: <span id="meta-price">₹22,000 - ₹45,000</span></span>
+                    <span class="tag-badge">Corridor: <span id="meta-mall-dist">150m to Mall Road</span></span>
                 </div>
             </div>
 
@@ -158,7 +161,7 @@
                 <div class="glass-panel">
                     <div class="card-header">
                         <div class="card-title">
-                            <span>🕸️</span> Comp-Set Benchmark Radar
+                            Comp-Set Benchmark Radar
                         </div>
                         <span style="font-size: 0.78rem; color: #94a3b8;">7 Core Hospitality Pillars</span>
                     </div>
@@ -183,7 +186,7 @@
                 <div class="glass-panel">
                     <div class="card-header">
                         <div class="card-title">
-                            <span>📊</span> Aspect Performance & Opportunity Leaderboard
+                            Aspect Performance & Opportunity Leaderboard
                         </div>
                         <span style="font-size: 0.75rem; color: #94a3b8;">Formula: S = 100 * (P-N)/(P+N)</span>
                     </div>
@@ -211,7 +214,7 @@
             <div class="glass-panel" style="margin-bottom: 2rem;">
                 <div class="card-header">
                     <div class="card-title">
-                        <span>🎯</span> 4-Quadrant Opportunity & Threat Matrix (Kasavana-Smith Model for Reviews)
+                        4-Quadrant Opportunity & Threat Matrix (Kasavana-Smith Model for Reviews)
                     </div>
                     <span style="font-size: 0.78rem; color: #94a3b8;">Click any item to view underlying reviews</span>
                 </div>
@@ -219,7 +222,7 @@
                     <div class="matrix-grid">
                         <div class="matrix-quadrant advantage">
                             <div class="quadrant-header">
-                                <span class="quadrant-title" style="color: #34d399;">🌟 Competitive Advantage</span>
+                                <span class="quadrant-title" style="color: #34d399;">Competitive Advantage</span>
                                 <span style="font-size: 0.72rem; color: #a7f3d0;">Protect & Promote</span>
                             </div>
                             <div id="quadrant-advantage" class="quadrant-items"></div>
@@ -227,7 +230,7 @@
 
                         <div class="matrix-quadrant opportunity">
                             <div class="quadrant-header">
-                                <span class="quadrant-title" style="color: #38bdf8;">💎 Market Opportunity</span>
+                                <span class="quadrant-title" style="color: #38bdf8;">Market Opportunity</span>
                                 <span style="font-size: 0.72rem; color: #bae6fd;">Competitors Fail, You Win</span>
                             </div>
                             <div id="quadrant-opportunity" class="quadrant-items"></div>
@@ -235,7 +238,7 @@
 
                         <div class="matrix-quadrant weakness">
                             <div class="quadrant-header">
-                                <span class="quadrant-title" style="color: #fb7185;">⚠️ Competitive Weakness</span>
+                                <span class="quadrant-title" style="color: #fb7185;">Competitive Weakness</span>
                                 <span style="font-size: 0.72rem; color: #fecdd3;">Critical Operational Fix</span>
                             </div>
                             <div id="quadrant-weakness" class="quadrant-items"></div>
@@ -243,7 +246,7 @@
 
                         <div class="matrix-quadrant market-problem">
                             <div class="quadrant-header">
-                                <span class="quadrant-title" style="color: #fbbf24;">🚧 Market-Wide Problem</span>
+                                <span class="quadrant-title" style="color: #fbbf24;">Market-Wide Problem</span>
                                 <span style="font-size: 0.72rem; color: #fef3c7;">Destination Constraint</span>
                             </div>
                             <div id="quadrant-market-prob" class="quadrant-items"></div>
@@ -256,7 +259,7 @@
             <div class="glass-panel timeline-card">
                 <div class="card-header">
                     <div class="card-title">
-                        <span>📈</span> Changepoint Detection Timeline (Jan 2025 - Feb 2026)
+                        Changepoint Detection Timeline (Jan 2025 - Feb 2026)
                     </div>
                     <span style="font-size: 0.78rem; color: #94a3b8;">Cyan = Property | Dashed Grey = Cluster Average</span>
                 </div>
@@ -265,11 +268,11 @@
                 </div>
             </div>
 
-            <!-- Actionable AI Prescriptions -->
+            <!-- Actionable Recommendations -->
             <div class="glass-panel">
                 <div class="card-header">
                     <div class="card-title">
-                        <span>💡</span> Prescriptive AI Recommendations & Operational ROI
+                        Prescriptive Recommendations & Operational ROI
                     </div>
                     <span style="font-size: 0.78rem; color: #94a3b8;">Algorithmic Interventions</span>
                 </div>
@@ -280,9 +283,7 @@
 
         </div>
 
-        <!-- =========================================================
-             VIEW 2: B2G TOURISM BOARD / MUNICIPAL ADMIN DASHBOARD
-             ========================================================= -->
+        <!-- VIEW 2: B2G TOURISM BOARD / MUNICIPAL ADMIN DASHBOARD -->
         <div id="view-b2g" class="b2g-view">
             
             <!-- Hero Banner with 1-Click PDF Download -->
@@ -297,10 +298,10 @@
                 </div>
                 <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
                     <a id="btn-download-dm-pdf" href="/api/export-policy-brief-pdf" class="btn-export-pdf" download="Mussoorie_Tourism_Infrastructure_Bottleneck_Report_Q1_2026.pdf">
-                        <span>📥</span> Download Official DM Brief (Instant PDF)
+                        Download Official DM Brief (Instant PDF)
                     </a>
                     <button id="btn-export-brief" class="btn-export-brief">
-                        <span>📄</span> View Executive Brief (Markdown)
+                        View Executive Brief (Markdown)
                     </button>
                 </div>
             </div>
@@ -331,7 +332,7 @@
                 <div class="glass-panel">
                     <div class="card-header">
                         <div class="card-title">
-                            <span>🚨</span> Systemic Municipal Friction Register
+                            Systemic Municipal Friction Register
                         </div>
                         <span style="font-size: 0.78rem; color: #fbbf24;">Prioritized for Administrative Action</span>
                     </div>
@@ -346,7 +347,7 @@
                 <div class="glass-panel">
                     <div class="card-header">
                         <div class="card-title">
-                            <span>🗣️</span> Ground-Truth Tourist Citations
+                            Ground-Truth Tourist Citations
                         </div>
                         <span style="font-size: 0.78rem; color: #94a3b8;">Verbatim Citizen Feedback</span>
                     </div>
@@ -361,24 +362,22 @@
 
         </div>
 
-        <!-- =========================================================
-             VIEW 3: LIVE REVIEW ABSA PLAYGROUND (HINGLISH TRANSLATION & CLASSIFICATION)
-             ========================================================= -->
+        <!-- VIEW 3: LIVE REVIEW ABSA PLAYGROUND -->
         <div id="view-live" class="live-view">
             
             <div class="tester-box">
                 <h2 style="font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">
-                    ⚡ Real-Time Hinglish ABSA Engine Playground
+                    Real-Time Hinglish ABSA Engine Playground
                 </h2>
                 <p style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 1.25rem;">
                     Paste any live hotel review in English, Hindi, or transliterated Hinglish. Watch the engine isolate operational aspects, sub-issues, sentiment polarity, and English semantics in real-time.
                 </p>
 
-                <!-- Preset Sample Buttons (Featuring Part 2 Case 2) -->
+                <!-- Preset Sample Buttons -->
                 <div class="preset-pills">
                     <span style="font-size: 0.78rem; color: #64748b; align-self: center;">Quick Test Cases:</span>
                     <button class="preset-pill" data-text="Room counter pe sharmila naam ka staff tha, check-in me aadha ghanta laga diya, completely third class behavior.">
-                        ⭐ Case 1: Hinglish (Staff Delay — Sharmila)
+                        Case 1: Hinglish (Staff Delay: Sharmila)
                     </button>
                     <button class="preset-pill" data-text="Geyser paani thanda de raha tha subah 7 baje aur parking ki bohot dikkat thi.">
                         Case 2: Geyser + Parking Failure
@@ -397,23 +396,23 @@
                 <textarea id="live-review-input" class="tester-textarea" maxlength="300" placeholder="Type or paste a guest review here in English, Hindi, or Hinglish (Strictly Sanitized up to 300 characters)..."></textarea>
                 
                 <div class="textarea-footer">
-                    <span class="sanitization-badge">🛡️ Strict Regex Sanitization Active (Zero Token Overflow Risk)</span>
+                    <span class="sanitization-badge">Strict Regex Sanitization Active (Zero Token Overflow Risk)</span>
                     <span id="char-counter" class="char-counter">0 / 300 characters</span>
                 </div>
 
                 <button id="btn-run-live-absa" class="btn-analyze-live">
-                    <span>⚡</span> Analyze Review in Real-Time
+                    Analyze Review in Real-Time
                 </button>
             </div>
 
-            <!-- Live Analysis Output Row: Side-by-Side Card & JSON Output -->
+            <!-- Live Analysis Output Row -->
             <div class="analytics-row" style="grid-template-columns: 1.3fr 1fr;">
                 <div class="glass-panel">
                     <div class="card-header">
                         <div class="card-title">
-                            <span>🏷️</span> Side-by-Side Hinglish Translation & Aspect Extraction
+                            Side-by-Side Hinglish Translation & Aspect Extraction
                         </div>
-                        <span style="font-size: 0.78rem; color: #34d399;">Localized AI Classifier</span>
+                        <span style="font-size: 0.78rem; color: #34d399;">Localized Classifier</span>
                     </div>
                     <div id="live-absa-results" class="card-body">
                         <p style="color: #64748b; font-style: italic;">Click "Analyze Review" or select a preset to view extracted aspects.</p>
@@ -423,7 +422,7 @@
                 <div class="glass-panel">
                     <div class="card-header">
                         <div class="card-title">
-                            <span>💾</span> Validated JSON Schema Output
+                            Validated JSON Schema Output
                         </div>
                         <span style="font-size: 0.78rem; color: #38bdf8;">Production Payload</span>
                     </div>
@@ -457,7 +456,7 @@
         <div class="modal-dialog">
             <div class="modal-header">
                 <div style="font-weight: 700; font-size: 1.1rem; color: #fff;">
-                    🏛️ Uttarakhand Tourism Development Board (UTDB) — Executive Policy Brief
+                    Uttarakhand Tourism Development Board (UTDB): Executive Policy Brief
                 </div>
                 <button id="btn-close-modal" class="btn-close-drawer">&times;</button>
             </div>
@@ -466,14 +465,26 @@
             </div>
             <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--border-glass); display: flex; justify-content: flex-end; gap: 0.75rem;">
                 <a href="/api/export-policy-brief-pdf" class="btn-export-pdf" style="font-size: 0.82rem; padding: 0.5rem 1rem;" download="Mussoorie_Tourism_Infrastructure_Bottleneck_Report_Q1_2026.pdf">
-                    📥 Download Official PDF
+                    Download Official PDF
                 </a>
                 <button onclick="window.print()" class="btn-export-brief" style="font-size: 0.82rem; padding: 0.5rem 1rem;">
-                    🖨️ Print Document
+                    Print Document
                 </button>
             </div>
         </div>
     </div>
+
+    <footer class="app-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">ClusterIQ: Cluster Review Intelligence</div>
+            <div class="footer-links">
+                <a href="/">Dashboard</a>
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms and Conditions</a>
+            </div>
+            <div class="footer-copy">Mussoorie and Dehradun Corridor Hospitality Telemetry</div>
+        </div>
+    </footer>
 
     <script src="/static/app.js"></script>
 </body>

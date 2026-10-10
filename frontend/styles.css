@@ -23,13 +23,13 @@
   --accent-amber-glow: rgba(245, 158, 11, 0.25);
   --accent-rose: #f43f5e;
   --accent-rose-glow: rgba(244, 63, 94, 0.25);
-  --accent-purple: #a855f7;
+  --accent-slate: #64748b;
 
   --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
-  --radius-full: 9999px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 6px;
   --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -44,7 +44,7 @@ body {
   background: var(--bg-primary);
   background-image: 
     radial-gradient(circle at 15% 10%, rgba(14, 165, 233, 0.08) 0%, transparent 40%),
-    radial-gradient(circle at 85% 80%, rgba(168, 85, 247, 0.06) 0%, transparent 40%);
+    radial-gradient(circle at 85% 80%, rgba(30, 41, 59, 0.25) 0%, transparent 40%);
   color: var(--text-primary);
   line-height: 1.5;
   min-height: 100vh;
@@ -275,7 +275,7 @@ select.hotel-select:focus {
 
 .kpi-card.score::before { background: var(--accent-cyan); }
 .kpi-card.rank::before { background: var(--accent-emerald); }
-.kpi-card.lead::before { background: var(--accent-purple); }
+.kpi-card.lead::before { background: #0284c7; }
 .kpi-card.lag::before { background: var(--accent-rose); }
 .kpi-card.reviews::before { background: var(--accent-amber); }
 
@@ -1206,9 +1206,9 @@ select.hotel-select:focus {
 }
 
 .pill-badge.tag {
-  background: rgba(168, 85, 247, 0.15);
-  color: #c084fc;
-  border: 1px solid rgba(168, 85, 247, 0.3);
+  background: rgba(148, 163, 184, 0.15);
+  color: #cbd5e1;
+  border: 1px solid rgba(148, 163, 184, 0.3);
   font-family: monospace;
 }
 
@@ -1274,4 +1274,50 @@ select.hotel-select:focus {
   display: flex;
   align-items: center;
   gap: 0.35rem;
+}
+
+/* App Footer */
+.app-footer {
+  margin-top: 4rem;
+  border-top: 1px solid var(--border-glass);
+  background: rgba(9, 13, 22, 0.95);
+  padding: 2rem 0;
+}
+
+.footer-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.footer-brand {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #cbd5e1;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+.footer-copy {
+  font-size: 0.78rem;
+  color: var(--text-muted);
 }

@@ -74,7 +74,7 @@ function initWarmCacheControls() {
 
     btnRefresh.addEventListener('click', async () => {
         btnRefresh.classList.add('scanning');
-        btnRefresh.innerHTML = '<span>⏳</span> Refreshing Cluster...';
+        btnRefresh.innerHTML = 'Refreshing Cluster...';
 
         try {
             const res = await fetch('/api/refresh-data', {
@@ -87,7 +87,7 @@ function initWarmCacheControls() {
             if (data.is_fallback) {
                 showBrandedAlert(data.message, 'warning');
             } else {
-                showBrandedAlert(`✅ ${data.message} (${data.total_reviews} reviews loaded in ${data.elapsed_sec}s)`, 'success');
+                showBrandedAlert(`${data.message} (${data.total_reviews} reviews loaded in ${data.elapsed_sec}s)`, 'success');
             }
 
             // Synchronize UI
@@ -95,10 +95,10 @@ function initWarmCacheControls() {
             loadEfficiencyMetrics();
             if (tourismData) loadTourismData();
         } catch (e) {
-            showBrandedAlert("⚠️ Booking.com API rate limit reached. Auto-switching to locally cached community database.", 'warning');
+            showBrandedAlert("Booking.com API rate limit reached. Auto-switching to locally cached community database.", 'warning');
         } finally {
             btnRefresh.classList.remove('scanning');
-            btnRefresh.innerHTML = '<span>🔄</span> Refresh Cluster Data';
+            btnRefresh.innerHTML = 'Refresh Cluster Data';
         }
     });
 
@@ -355,16 +355,6 @@ function renderLeaderboardTable(aspects) {
     const tbody = document.getElementById('aspect-table-body');
     tbody.innerHTML = '';
 
-    const iconMap = {
-        'Cleanliness': '🧹',
-        'Food': '🍲',
-        'Maintenance': '🛠️',
-        'Logistics': '🚗',
-        'Staff': '🤝',
-        'Value': '💰',
-        'Location': '🌄'
-    };
-
     aspects.forEach(asp => {
         const tr = document.createElement('tr');
         const isPos = asp.competitive_gap >= 0;
@@ -372,7 +362,6 @@ function renderLeaderboardTable(aspects) {
         tr.innerHTML = `
             <td>
                 <div class="aspect-name">
-                    <span>${iconMap[asp.category] || '📌'}</span>
                     <span>${asp.category}</span>
                 </div>
             </td>
@@ -537,8 +526,7 @@ function renderTimelineChart(monthlyTrend, propName) {
             annText.setAttribute('text-anchor', 'middle');
             annText.setAttribute('font-size', '10');
             annText.setAttribute('font-weight', '700');
-            annText.setAttribute('fill', '#fb7185');
-            annText.textContent = `⚠️ ${p.ann}`;
+            annText.textContent = p.ann;
             svg.appendChild(annText);
         }
     });
@@ -569,7 +557,7 @@ function renderActionPrescriptions(aspects, prop) {
             </div>
             <p style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 0.75rem;">${w.action_recommendation}</p>
             <div style="font-size: 0.78rem; color: #94a3b8; background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
-                💡 <strong>Audit Insight:</strong> Competitors maintain a <strong>${w.cluster_baseline > 0 ? '+' : ''}${w.cluster_baseline}%</strong> baseline while you lag at <strong>${w.property_score}%</strong>. Inspect specific review citations in the Evidence Drawer.
+                <strong>Audit Insight:</strong> Competitors maintain a <strong>${w.cluster_baseline > 0 ? '+' : ''}${w.cluster_baseline}%</strong> baseline while you lag at <strong>${w.property_score}%</strong>. Inspect specific review citations in the Evidence Drawer.
             </div>
         `;
         container.appendChild(card);
@@ -588,7 +576,7 @@ function renderActionPrescriptions(aspects, prop) {
             </div>
             <p style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 0.75rem;">${o.action_recommendation}</p>
             <div style="font-size: 0.78rem; color: #94a3b8; background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
-                💎 <strong>Commercial Moat:</strong> While competing properties suffer repeated traveler complaints on ${o.category}, your property performs exceptionally well. Highlight this in booking portal badges.
+                <strong>Commercial Moat:</strong> While competing properties suffer repeated traveler complaints on ${o.category}, your property performs exceptionally well. Highlight this in booking portal badges.
             </div>
         `;
         container.appendChild(card);
@@ -617,7 +605,7 @@ function openEvidenceDrawer(category, quotes) {
             card.innerHTML = `
                 <div class="evidence-meta">
                     <span><strong>${q.platform}</strong> • ${q.reviewer_type}</span>
-                    <span>${q.date} • ⭐ ${q.rating}</span>
+                    <span>${q.date} • Rating: ${q.rating} / 5</span>
                 </div>
                 <div class="evidence-quote ${isPos ? '' : 'neg'}">
                     "${q.quote}"
@@ -626,7 +614,7 @@ function openEvidenceDrawer(category, quotes) {
                     <strong>Full Context:</strong> ${q.full_text}
                 </div>
                 <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
-                    <span class="pill-badge ${isPos ? 'positive' : 'negative'}">● ${q.sentiment}</span>
+                    <span class="pill-badge ${isPos ? 'positive' : 'negative'}">${q.sentiment}</span>
                     <span class="pill-badge aspect">Aspect: ${category}</span>
                 </div>
             `;
@@ -683,14 +671,14 @@ function renderTourismDashboard(data) {
                     <span class="severity-pill ${sevClass}">${issue.severity} Priority</span>
                     <h3 style="font-size: 1.1rem; font-weight: 700; margin-top: 0.35rem; color: #fff;">${issue.title}</h3>
                 </div>
-                <span style="font-size: 0.8rem; font-weight: 700; color: #fbbf24; background: rgba(245,158,11,0.15); padding: 0.25rem 0.65rem; border-radius: 999px;">
+                <span style="font-size: 0.8rem; font-weight: 700; color: #fbbf24; background: rgba(245,158,11,0.15); padding: 0.25rem 0.65rem; border-radius: 4px;">
                     ${issue.impact_metric}
                 </span>
             </div>
             <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 1rem;">${issue.description}</p>
             <div style="background: rgba(15,23,42,0.6); padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); margin-bottom: 0.75rem;">
                 <div style="font-size: 0.82rem; color: #38bdf8; font-weight: 600; margin-bottom: 0.25rem;">
-                    🏛️ Recommended Authority Action:
+                    Recommended Authority Action:
                 </div>
                 <div style="font-size: 0.85rem; color: #f1f5f9;">${issue.recommended_authority_action}</div>
             </div>
@@ -805,7 +793,7 @@ function initLiveTester() {
         // Strict Client-Side Sanitization
         text = text.replace(/<[^>]*>/g, '').substring(0, 300);
 
-        btnAnalyze.textContent = '⚡ Analyzing in Real-Time...';
+        btnAnalyze.textContent = 'Analyzing in Real-Time...';
         btnAnalyze.disabled = true;
 
         try {
@@ -821,7 +809,7 @@ function initLiveTester() {
             console.error('Live analysis failed:', err);
             resultsContainer.innerHTML = '<p style="color: #fb7185;">Failed to analyze review.</p>';
         } finally {
-            btnAnalyze.innerHTML = '<span>⚡</span> Analyze Review in Real-Time';
+            btnAnalyze.innerHTML = 'Analyze Review in Real-Time';
             btnAnalyze.disabled = false;
         }
     }
@@ -847,7 +835,7 @@ function initLiveTester() {
             card.innerHTML = `
                 <div class="raw-review-col">
                     <div>
-                        <span class="review-badge-lang">🗣️ Raw Localized Input (Hindi / Hinglish / English)</span>
+                        <span class="review-badge-lang">Raw Localized Input (Hindi / Hinglish / English)</span>
                         <div class="raw-review-text">"${data.input_text}"</div>
                     </div>
                     <div class="translation-box">
@@ -860,11 +848,11 @@ function initLiveTester() {
                         Engine Extracted Metadata:
                     </div>
                     <div class="classification-pills-row">
-                        <span class="pill-badge aspect">📌 Aspect: ${asp.category}</span>
-                        <span class="pill-badge ${sentClass}">● Sentiment: ${asp.sentiment}</span>
-                        <span class="pill-badge sub-issue">⏱️ Sub-Issue: ${asp.sub_issue}</span>
-                        <span class="pill-badge tag">🏷️ Tag: ${asp.extracted_tag}</span>
-                        <span class="pill-badge confidence">🎯 Conf: ${Math.round(asp.confidence * 100)}%</span>
+                        <span class="pill-badge aspect">Aspect: ${asp.category}</span>
+                        <span class="pill-badge ${sentClass}">Sentiment: ${asp.sentiment}</span>
+                        <span class="pill-badge sub-issue">Sub-Issue: ${asp.sub_issue}</span>
+                        <span class="pill-badge tag">Tag: ${asp.extracted_tag}</span>
+                        <span class="pill-badge confidence">Conf: ${Math.round(asp.confidence * 100)}%</span>
                     </div>
                     <div style="font-size: 0.78rem; color: #cbd5e1; background: rgba(0,0,0,0.3); padding: 0.5rem 0.75rem; border-radius: 6px;">
                         <strong>Evidence Citation:</strong> "${asp.evidence_snippet}"

@@ -384,6 +384,28 @@ def serve_index():
         return FileResponse(index_file)
     return HTMLResponse("<h1>Cluster Review Intelligence backend running. Build frontend in progress...</h1>")
 
+@app.get("/privacy")
+def serve_privacy():
+    privacy_file = os.path.join(frontend_dir, "privacy.html")
+    if os.path.exists(privacy_file):
+        return FileResponse(privacy_file)
+    raise HTTPException(status_code=404, detail="Privacy Policy not found")
+
+@app.get("/terms")
+def serve_terms():
+    terms_file = os.path.join(frontend_dir, "terms.html")
+    if os.path.exists(terms_file):
+        return FileResponse(terms_file)
+    raise HTTPException(status_code=404, detail="Terms and Conditions not found")
+
+@app.get("/favicon.ico")
+@app.get("/favicon.svg")
+def serve_favicon():
+    fav_file = os.path.join(frontend_dir, "favicon.svg")
+    if os.path.exists(fav_file):
+        return FileResponse(fav_file, media_type="image/svg+xml")
+    raise HTTPException(status_code=404, detail="Favicon not found")
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("server:app", host="127.0.0.1", port=8000, reload=True)
