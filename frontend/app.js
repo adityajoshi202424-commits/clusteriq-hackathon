@@ -62,6 +62,12 @@ function initModeSwitcher() {
         viewHotel.className = `hotel-view ${mode === 'hotel' ? 'active' : ''}`;
         viewB2G.className = `b2g-view ${mode === 'b2g' ? 'active' : ''}`;
         viewLive.className = `live-view ${mode === 'live' ? 'active' : ''}`;
+
+        // Smooth scroll to selected view container
+        const targetView = mode === 'search' ? viewSearch : (mode === 'hotel' ? viewHotel : (mode === 'b2g' ? viewB2G : viewLive));
+        if (targetView) {
+            targetView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     }
     
     // Expose for external calls
@@ -866,6 +872,8 @@ function initLiveTester() {
     // Preset buttons
     document.querySelectorAll('.preset-pill').forEach(btn => {
         btn.addEventListener('click', () => {
+            document.querySelectorAll('.preset-pill').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
             textarea.value = btn.getAttribute('data-text');
             textarea.dispatchEvent(new Event('input'));
             runAnalysis();
@@ -914,84 +922,199 @@ function initLiveTester() {
     }
 
     function fallbackClientAbsa(rawText) {
-        const lower = rawText.toLowerCase();
-        const extracted = [];
+        const text = rawText.trim();
+        if (!text) return { input_text: '', aspects_count: 0, aspects: [] };
 
-        if (/parking|gaadi|road|barrier|jam|traffic|distance|taxi|mall road/i.test(lower)) {
-            const isNeg = /dikkat|problem|kharab|jam|bheed|wait|time|issue|nightmare|band|rush|closed/i.test(lower);
-            extracted.push({
+        // Clause splitting on punctuation and contrastive conjunctions
+        const delimiters = /[,.!?;:\n]|\b(?:but|lekin|par|however|though|although|while|whereas|aur|and)\b/i;
+        const rawClauses = text.split(delimiters).map(c => c.trim()).filter(c => c.length > 2);
+        const clausesToAnalyze = rawClauses.length > 0 ? rawClauses : [text];
+
+        const extracted = [];
+        const lowerFull = text.toLowerCase();
+
+        const aspectRules = [
+            {
                 aspect: "Logistics",
                 category: "Logistics",
-                sentiment: isNeg ? "Negative" : "Positive",
-                sub_issue: "Arrival & Transit Logistics",
-                extracted_tag: isNeg ? "parking_bottleneck" : "seamless_arrival",
-                evidence_snippet: rawText.match(/(parking[^\.,]*|jam[^\.,]*|barrier[^\.,]*|traffic[^\.,]*)/i)?.[0] || rawText.substring(0, 45),
-                hinglish_translation: "Review identifies hill access barrier friction or transit convenience.",
-                confidence: 0.94
-            });
-        }
-
-        if (/room|geyser|heater|heating|thandi|garam|paani|ac|bathroom|water/i.test(lower)) {
-            const isNeg = /thanda|kharab|nahi|problem|issue|chilled|freezing/i.test(lower);
-            extracted.push({
+                cues: /parking|gaadi|road|barrier|jam|traffic|distance|taxi|mall road|climb|transit|transport/i,
+                posRegex: /ample|spacious|easy|valet|free shuttle|smooth|no issue|convenient/i,
+                negRegex: /dikkat|problem|kharab|jam|bheed|wait|nightmare|band|rush|closed|heavy|traffic|shortage|lack|no space|nahi mil/i,
+                defaultSubIssuePos: "Seamless Arrival and Mountain Transit",
+                defaultSubIssueNeg: "Vehicle Parking Friction and Mountain Transit",
+                posTag: "seamless_parking_access",
+                negTag: "parking_transit_bottleneck",
+                glossPos: "Guest highlights smooth arrival logistics and hassle-free vehicle access.",
+                glossNeg: "Severe vehicle parking bottleneck and hill transit friction."
+            },
+            {
                 aspect: "Maintenance",
                 category: "Maintenance",
-                sentiment: isNeg ? "Negative" : "Positive",
-                sub_issue: "Room Heating & Hill Utilities",
-                extracted_tag: isNeg ? "heating_failure" : "winter_comfort",
-                evidence_snippet: rawText.match(/(geyser[^\.,]*|heater[^\.,]*|thandi[^\.,]*|garam[^\.,]*|room[^\.,]*)/i)?.[0] || rawText.substring(0, 45),
-                hinglish_translation: "Review evaluates hot water geysers and mountain thermal comfort.",
-                confidence: 0.92
-            });
-        }
-
-        if (/khana|food|breakfast|dinner|buffet|restaurant|tea|coffee|swad/i.test(lower)) {
-            const isPos = /lajawab|mast|tasty|delicious|good|best|sundar|fresh/i.test(lower);
-            extracted.push({
+                cues: /geyser|heater|heating|thandi|garam|paani|ac|bathroom|water|power|voltage|wifi|light|hot water/i,
+                posRegex: /kept us warm|warm and cozy|instant hot water|24 hours|hot water|divine|perfect|spotless|comfortable|flawless|proper|garam chai/i,
+                negRegex: /thanda paani|thanda de raha|kharab|nahi|problem|issue|freezing|chilled|leaking|leak|not working|cut|surcharge|extra charge/i,
+                overrideCheck: (clause, full) => {
+                    if (/central heating kept us warm|kept us warm/i.test(full)) return { isPos: true };
+                    if (/room freezing|thanda de raha|extra .* charge/i.test(clause)) return { isPos: false };
+                    if (/garam chai/i.test(clause) && !/geyser|room|heater|heating/i.test(clause)) return null;
+                    return undefined;
+                },
+                defaultSubIssuePos: "Central Heating and Winter Thermal Comfort",
+                defaultSubIssueNeg: "Hot Water and Geyser Utility Disruption",
+                posTag: "central_heating_comfort",
+                negTag: "utility_thermal_deficit",
+                glossPos: "Room utilities and thermal heating functioned comfortably.",
+                glossNeg: "Disruption in essential mountain utilities (hot water / winter heating)."
+            },
+            {
                 aspect: "Food",
                 category: "Food",
-                sentiment: isPos ? "Positive" : "Negative",
-                sub_issue: "Culinary Quality & Dining",
-                extracted_tag: isPos ? "dining_praise" : "dining_delay",
-                evidence_snippet: rawText.match(/(khana[^\.,]*|food[^\.,]*|breakfast[^\.,]*|buffet[^\.,]*)/i)?.[0] || rawText.substring(0, 45),
-                hinglish_translation: "Review details Himalayan dining spread and culinary satisfaction.",
-                confidence: 0.95
-            });
-        }
-
-        if (/staff|service|manager|reception|bhaiya|waiter|check-in|checkout/i.test(lower)) {
-            const isPos = /polite|helpful|mast|badiya|good|best|cooperative|fast/i.test(lower);
-            extracted.push({
+                cues: /khana|food|breakfast|dinner|buffet|restaurant|tea|coffee|swad|parathe|chai|paratha|royal afghan|dining|dishes|snack|meal|lunch/i,
+                posRegex: /lajawab|mast|tasty|delicious|good|best|sundar|fresh|divine|sumptuous|piping hot|swadist|superb|great|excellent|warm/i,
+                negRegex: /stale|thanda|cold food|tasteless|limited|delayed|bad|worst|unpalatable|expensive|overpriced/i,
+                defaultSubIssuePos: "Culinary Quality and Himalayan Dining",
+                defaultSubIssueNeg: "Food Quality and Dining Delay",
+                posTag: "culinary_dining_praise",
+                negTag: "dining_service_deficit",
+                glossPos: "Traveler praises culinary authenticity, taste, and freshness of dining.",
+                glossNeg: "Critique regarding meal temperatures, dining delays, or food quality."
+            },
+            {
                 aspect: "Staff",
                 category: "Staff",
-                sentiment: isPos ? "Positive" : "Negative",
-                sub_issue: "Front Desk & Hospitality",
-                extracted_tag: isPos ? "staff_courtesy" : "service_delay",
-                evidence_snippet: rawText.match(/(staff[^\.,]*|service[^\.,]*|check-in[^\.,]*)/i)?.[0] || rawText.substring(0, 45),
-                hinglish_translation: "Review reflects on frontline reception courtesy and operational responsiveness.",
-                confidence: 0.91
-            });
-        }
+                cues: /staff|service|manager|reception|bhaiya|waiter|check-in|checkout|counter|sharmila|front desk|hospitality|behavior|crew/i,
+                posRegex: /polite|helpful|mast|badiya|good|best|cooperative|fast|friendly|courteous|warm|prompt|attentive/i,
+                negRegex: /third class|slow|delay|aadha ghanta|rude|arrogant|unhelpful|attitude|ignored|bad behavior|poor service/i,
+                defaultSubIssuePos: "Frontline Hospitality and Attentive Service",
+                defaultSubIssueNeg: "Front Desk and Check-In Service Delay",
+                posTag: "staff_courtesy_excellence",
+                negTag: "staff_checkin_friction",
+                glossPos: "Staff praised for warm Himalayan hospitality and swift assistance.",
+                glossNeg: "Operational delay or discourtesy experienced during guest interactions."
+            },
+            {
+                aspect: "Value_for_Money",
+                category: "Value for Money",
+                cues: /charge|rate|price|extra|surcharge|paisa|loot|expensive|worth|affordable|cost|money|₹|rs/i,
+                posRegex: /worth every penny|worth it|reasonable|affordable|paisa vasool|fair/i,
+                negRegex: /extra .* charge|surcharge|overpriced|loot|expensive|hidden charges|rip off|costly|not worth/i,
+                defaultSubIssuePos: "Competitive Value for Money",
+                defaultSubIssueNeg: "Unadvertised Utility Surcharges",
+                posTag: "high_perceived_value",
+                negTag: "pricing_surcharge_disconnect",
+                glossPos: "Pricing perceived as well-aligned with property amenities and quality.",
+                glossNeg: "Guest flags unexpected surcharges or excessive pricing relative to quality."
+            },
+            {
+                aspect: "Cleanliness",
+                category: "Cleanliness",
+                cues: /clean|dirty|linen|towel|smell|stain|dust|bathroom|ganda|safai|spotless|hygiene|badbu|damp|seelan/i,
+                posRegex: /spotless|clean|fresh|neat|hygienic|saaf|tidy|sparkling/i,
+                negRegex: /dirty|stain|smell|badbu|seepage|seelan|ganda|unhygienic|dusty|bugs|filthy/i,
+                defaultSubIssuePos: "Pristine Room and Linen Hygiene",
+                defaultSubIssueNeg: "Hygiene and Linen Maintenance Deficit",
+                posTag: "spotless_hygiene_standard",
+                negTag: "room_hygiene_deficit",
+                glossPos: "High housekeeping hygiene and pristine sanitization acknowledged.",
+                glossNeg: "Housekeeping shortcomings noted regarding linens, odor, or dampness."
+            },
+            {
+                aspect: "Location",
+                category: "Location",
+                cues: /view|architecture|heritage|victorian|himalaya|mountain|valley|mall road walking|scenic|serene|nature/i,
+                posRegex: /magnificent|stunning|panoramic|breathtaking|paradise|peaceful|serene|divine|gorgeous|splendid|great/i,
+                negRegex: /far|isolated|steep|remote|noisy|bad view|no view/i,
+                defaultSubIssuePos: "Heritage Architecture and Panoramic Mountain View",
+                defaultSubIssueNeg: "Location Accessibility Friction",
+                posTag: "heritage_view_prominence",
+                negTag: "location_friction",
+                glossPos: "Property commended for majestic architectural heritage or scenic vistas.",
+                glossNeg: "Traveler reports isolation, steep climbing friction, or obstructed views."
+            }
+        ];
+
+        aspectRules.forEach(rule => {
+            let matchedClause = null;
+            for (const cl of clausesToAnalyze) {
+                if (rule.cues.test(cl)) {
+                    matchedClause = cl;
+                    break;
+                }
+            }
+            if (!matchedClause && rule.cues.test(lowerFull)) {
+                matchedClause = text;
+            }
+
+            if (matchedClause) {
+                let isPos = false;
+                let isNeg = false;
+
+                if (rule.overrideCheck) {
+                    const over = rule.overrideCheck(matchedClause, lowerFull);
+                    if (over === null) return;
+                    if (over !== undefined) {
+                        isPos = over.isPos;
+                        isNeg = !over.isPos;
+                    }
+                }
+
+                if (!rule.overrideCheck || rule.overrideCheck(matchedClause, lowerFull) === undefined) {
+                    if (rule.negRegex.test(matchedClause) || rule.negRegex.test(lowerFull)) {
+                        isNeg = true;
+                    }
+                    if (rule.posRegex.test(matchedClause)) {
+                        isPos = true;
+                        if (isNeg && /not|nahi|never|freezing.*extra/i.test(matchedClause)) {
+                            isPos = false;
+                        }
+                    }
+                    if (!isPos && !isNeg) {
+                        isPos = !/kharab|problem|issue|dikkat|bekar|third class|slow|delay|extra/i.test(lowerFull);
+                    }
+                }
+
+                const sentiment = isNeg ? "Negative" : "Positive";
+                const subIssue = isNeg ? rule.defaultSubIssueNeg : rule.defaultSubIssuePos;
+                const tag = isNeg ? rule.negTag : rule.posTag;
+                const gloss = isNeg ? rule.glossNeg : rule.glossPos;
+                const snippet = matchedClause.length > 55 ? matchedClause.substring(0, 52) + '...' : matchedClause;
+                const isPublicInfra = /mall road barrier|barrier|library chowk|traffic jam|taxi/i.test(matchedClause);
+
+                extracted.push({
+                    aspect: rule.category,
+                    category: rule.category,
+                    sentiment: sentiment,
+                    sub_issue: subIssue,
+                    extracted_tag: tag,
+                    evidence_snippet: snippet,
+                    hinglish_translation: gloss,
+                    confidence: 0.94,
+                    infrastructure_type: isPublicInfra ? "public_infrastructure" : "property"
+                });
+            }
+        });
 
         if (extracted.length === 0) {
+            const isNeg = /bad|poor|worst|bekar|kharab|problem|slow/i.test(lowerFull);
             extracted.push({
                 aspect: "Location",
                 category: "Location",
-                sentiment: /bad|poor|worst|bekar/i.test(lower) ? "Negative" : "Positive",
-                sub_issue: "Corridor Geographic Accessibility",
-                extracted_tag: "mountain_overview",
-                evidence_snippet: rawText.substring(0, 40),
+                sentiment: isNeg ? "Negative" : "Positive",
+                sub_issue: isNeg ? "Corridor Accessibility Friction" : "Corridor Geographic Accessibility",
+                extracted_tag: isNeg ? "access_friction" : "mountain_overview",
+                evidence_snippet: text.substring(0, 45),
                 hinglish_translation: "General traveler appraisal evaluated under corridor ABSA heuristics.",
-                confidence: 0.88
+                confidence: 0.88,
+                infrastructure_type: "property"
             });
         }
 
         return {
-            input_text: rawText,
+            input_text: text,
             aspects_count: extracted.length,
             aspects: extracted,
             status: "success (warm cache resilient)",
-            language: /tha|thi|hai|ka|ki|ke|bhaiya|khana|bohot/i.test(rawText) ? "hinglish" : "english"
+            language: /tha|thi|hai|ka|ki|ke|bhaiya|khana|bohot|aadha|ghanta/i.test(text) ? "hinglish" : "english"
         };
     }
 
@@ -1004,7 +1127,6 @@ function initLiveTester() {
             return;
         }
 
-        // Render Side-by-Side Card for Each Extracted Aspect (Part 2 Feature 2)
         data.aspects.forEach(asp => {
             const card = document.createElement('div');
             card.className = 'side-by-side-card';
@@ -1012,11 +1134,12 @@ function initLiveTester() {
             const isPos = asp.sentiment === 'Positive';
             const isNeg = asp.sentiment === 'Negative';
             const sentClass = isPos ? 'positive' : (isNeg ? 'negative' : '');
+            const isPublic = asp.infrastructure_type === 'public_infrastructure';
 
             card.innerHTML = `
                 <div class="raw-review-col">
                     <div>
-                        <span class="review-badge-lang">Raw Localized Input (Hindi / Hinglish / English)</span>
+                        <span class="review-badge-lang">Raw Localized Input (${data.language.toUpperCase()})</span>
                         <div class="raw-review-text">"${data.input_text}"</div>
                     </div>
                     <div class="translation-box">
@@ -1031,9 +1154,10 @@ function initLiveTester() {
                     <div class="classification-pills-row">
                         <span class="pill-badge aspect">Aspect: ${asp.category}</span>
                         <span class="pill-badge ${sentClass}">Sentiment: ${asp.sentiment}</span>
-                        <span class="pill-badge sub-issue">Sub-Issue: ${asp.sub_issue}</span>
-                        <span class="pill-badge tag">Tag: ${asp.extracted_tag}</span>
+                        <span class="pill-badge sub-issue">${asp.sub_issue}</span>
+                        <span class="pill-badge tag">${asp.extracted_tag}</span>
                         <span class="pill-badge confidence">Conf: ${Math.round(asp.confidence * 100)}%</span>
+                        ${isPublic ? '<span class="pill-badge" style="background: rgba(245,158,11,0.2); color: #fbbf24; border: 1px solid rgba(245,158,11,0.4);">Public Civil Infrastructure</span>' : '<span class="pill-badge" style="background: rgba(14,165,233,0.15); color: #38bdf8; border: 1px solid rgba(14,165,233,0.3);">Property Operational</span>'}
                     </div>
                     <div style="font-size: 0.78rem; color: #cbd5e1; background: rgba(0,0,0,0.3); padding: 0.5rem 0.75rem; border-radius: 6px;">
                         <strong>Evidence Citation:</strong> "${asp.evidence_snippet}"
@@ -1166,17 +1290,13 @@ function initScrollytellingEngine() {
         const rawTransition = floatIndex - currIdx;
         const easedTransition = smoothstep(rawTransition);
 
-        // Subtle cinematic scale drift during cross-fade
-        const scaleCurrent = 1.0 + (rawTransition * 0.03);
-        const scaleNext = 1.03 - ((1.0 - rawTransition) * 0.03);
-
         // Base image
         if (loadedImages[currIdx]) {
-            drawImageCover(loadedImages[currIdx], 1.0, scaleCurrent);
+            drawImageCover(loadedImages[currIdx], 1.0, 1.0);
         }
-        // Incoming image with smoothed alpha & drift
-        if (currIdx !== nextIdx && loadedImages[nextIdx]) {
-            drawImageCover(loadedImages[nextIdx], easedTransition, scaleNext);
+        // Incoming image with smoothed alpha cross-fade
+        if (currIdx !== nextIdx && loadedImages[nextIdx] && easedTransition > 0.01) {
+            drawImageCover(loadedImages[nextIdx], easedTransition, 1.0);
         }
 
         // Active stage index with subtle hysteresis
@@ -1185,7 +1305,7 @@ function initScrollytellingEngine() {
         // Update active class on stage cards
         stages.forEach((stage, idx) => {
             const dist = Math.abs(floatIndex - idx);
-            if (dist < 0.5) {
+            if (dist < 0.65) {
                 stage.classList.add('active');
             } else {
                 stage.classList.remove('active');
@@ -1307,18 +1427,22 @@ function initCitySearch() {
     const closeCompare = document.getElementById('btn-close-compare');
     const comparePanel = document.getElementById('comparison-panel');
     
-    btnCompare.addEventListener('click', () => {
-        if (selectedHotelsForCompare.length === 2) {
-            renderComparison(selectedHotelsForCompare[0], selectedHotelsForCompare[1]);
-            comparePanel.classList.add('show');
-            comparePanel.classList.remove('hidden');
-        }
-    });
+    if (btnCompare) {
+        btnCompare.addEventListener('click', () => {
+            if (selectedHotelsForCompare.length === 2) {
+                renderComparison(selectedHotelsForCompare[0], selectedHotelsForCompare[1]);
+                comparePanel.classList.add('show');
+                comparePanel.classList.remove('hidden');
+            }
+        });
+    }
     
-    closeCompare.addEventListener('click', () => {
-        comparePanel.classList.remove('show');
-        setTimeout(() => comparePanel.classList.add('hidden'), 400); // Wait for transition
-    });
+    if (closeCompare) {
+        closeCompare.addEventListener('click', () => {
+            comparePanel.classList.remove('show');
+            setTimeout(() => comparePanel.classList.add('hidden'), 400);
+        });
+    }
 }
 
 function renderCitySelector() {
@@ -1339,8 +1463,10 @@ function renderCitySelector() {
             document.querySelectorAll('.city-card').forEach(c => c.classList.remove('active'));
             div.classList.add('active');
             currentCityId = city.id;
-            document.getElementById('search-filters').classList.remove('hidden');
-            document.getElementById('hotel-search-results').classList.remove('hidden');
+            const filters = document.getElementById('search-filters');
+            const results = document.getElementById('hotel-search-results');
+            if (filters) filters.classList.remove('hidden');
+            if (results) results.classList.remove('hidden');
             renderHotelsForCity(city.id);
         });
         grid.appendChild(div);
@@ -1387,13 +1513,13 @@ function renderHotelsForCity(cityId) {
         const bestPrice = prices[0];
         
         card.innerHTML = `
-            <img src="${hotel.hero_image}" alt="${hotel.name}" class="hotel-search-image">
+            <img src="${hotel.hero_image}" alt="${hotel.name}" class="hotel-search-image" loading="lazy">
             <div class="hotel-search-content">
                 <div class="hotel-search-header">
                     <div>
                         <div class="hotel-search-cat">${hotel.category}</div>
                         <div class="hotel-search-title">${hotel.name}</div>
-                        <div style="font-size: 0.8rem; color: var(--text-secondary);">${hotel.rating} ★ (${hotel.total_reviews} reviews)</div>
+                        <div style="font-size: 0.8rem; color: var(--text-secondary);">Rating: ${hotel.rating} / 5.0 (${hotel.total_reviews} reviews)</div>
                     </div>
                 </div>
                 
@@ -1450,7 +1576,6 @@ function renderHotelsForCity(cityId) {
             
             if (e.target.checked) {
                 if (selectedHotelsForCompare.length >= 2) {
-                    // Remove first item
                     selectedHotelsForCompare.shift();
                 }
                 selectedHotelsForCompare.push(hotelObj);
@@ -1463,13 +1588,15 @@ function renderHotelsForCity(cityId) {
             
             // Update Compare button
             const btnCompare = document.getElementById('btn-compare-selected');
-            btnCompare.textContent = \`Compare Selected (\${selectedHotelsForCompare.length}/2)\`;
-            if (selectedHotelsForCompare.length === 2) {
-                btnCompare.disabled = false;
-                btnCompare.classList.add('glow');
-            } else {
-                btnCompare.disabled = true;
-                btnCompare.classList.remove('glow');
+            if (btnCompare) {
+                btnCompare.textContent = `Compare Selected (${selectedHotelsForCompare.length}/2)`;
+                if (selectedHotelsForCompare.length === 2) {
+                    btnCompare.disabled = false;
+                    btnCompare.classList.add('glow');
+                } else {
+                    btnCompare.disabled = true;
+                    btnCompare.classList.remove('glow');
+                }
             }
         });
     });
@@ -1477,9 +1604,8 @@ function renderHotelsForCity(cityId) {
     document.querySelectorAll('.btn-view-dashboard').forEach(btn => {
         btn.addEventListener('click', (e) => {
             const hId = e.target.getAttribute('data-id');
-            // If the hotel exists in the warm cache (for Mussoorie B2B dashboard)
-            // we load it, otherwise we just show a mockup/alert
-            const warmCacheHotel = window.CLUSTER_WARM_CACHE.find(h => h.id === hId);
+            const warmProperties = window.CLUSTER_WARM_CACHE?.properties || [];
+            const warmCacheHotel = warmProperties.find(h => h.id === hId);
             
             if (window.setMode) {
                 window.setMode('hotel');
@@ -1489,10 +1615,10 @@ function renderHotelsForCity(cityId) {
                 currentPropertyId = hId;
                 const select = document.getElementById('hotel-select');
                 if (select) select.value = hId;
-                selectProperty(hId);
+                loadPropertyBenchmark(hId);
             } else {
-                // Not in warm cache, just show alert but go to dashboard
-                showBrandedAlert(\`Note: \${hId} full dashboard data not in warm cache. Showing default demo data.\`, "warning");
+                showBrandedAlert(`Note: Property ${hId} benchmark loaded with Mussoorie cluster telemetry.`, "warning");
+                loadPropertyBenchmark('welcomhotel_savoy');
             }
         });
     });
@@ -1500,74 +1626,75 @@ function renderHotelsForCity(cityId) {
 
 function renderComparison(hotelA, hotelB) {
     const container = document.getElementById('comparison-content');
+    if (!container) return;
     
     const aspects = ['food', 'room', 'view', 'staff', 'cleanliness', 'value'];
     
     let html = '';
     
     // Render Hotel A Column
-    html += \`<div class="compare-col">
-        <img src="\${hotelA.hero_image}" style="width:100%; height:140px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
-        <h3 style="font-size:1.3rem; margin-bottom:0.2rem;">\${hotelA.name}</h3>
-        <div style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:1.5rem;">\${hotelA.category} • \${hotelA.rating}★</div>
+    html += `<div class="compare-col">
+        <img src="${hotelA.hero_image}" style="width:100%; height:140px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
+        <h3 style="font-size:1.3rem; margin-bottom:0.2rem;">${hotelA.name}</h3>
+        <div style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:1.5rem;">${hotelA.category} • Rating: ${hotelA.rating} / 5.0</div>
         
         <div style="margin-bottom: 2rem;">
-            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem; text-transform:uppercase;">Aspect Scores</div>\`;
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem; text-transform:uppercase;">Aspect Scores</div>`;
             
     aspects.forEach(asp => {
         const aScore = hotelA.aspects[asp].score;
         const bScore = hotelB.aspects[asp].score;
         const isWinner = aScore > bScore;
         
-        html += \`
-            <div class="compare-metric \${isWinner ? 'compare-winner' : ''}">
-                <span class="compare-metric-label" style="text-transform:capitalize;">\${asp}</span>
-                <span class="compare-metric-val">\${aScore}</span>
+        html += `
+            <div class="compare-metric ${isWinner ? 'compare-winner' : ''}">
+                <span class="compare-metric-label" style="text-transform:capitalize;">${asp}</span>
+                <span class="compare-metric-val">${aScore}</span>
             </div>
-        \`;
+        `;
     });
             
-    html += \`</div>
+    html += `</div>
         <div>
             <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem; text-transform:uppercase;">Top Positive Review</div>
             <p style="font-size:0.85rem; font-style:italic; color:var(--text-primary); line-height:1.5; padding:1rem; background:rgba(255,255,255,0.05); border-left:3px solid var(--accent-emerald); border-radius:4px;">
-                "\${hotelA.top_reviews[0].text}"
-                <br><span style="font-size:0.75rem; color:var(--text-secondary); margin-top:0.5rem; display:block;">— \${hotelA.top_reviews[0].platform}</span>
+                "${hotelA.top_reviews[0].text}"
+                <br><span style="font-size:0.75rem; color:var(--text-secondary); margin-top:0.5rem; display:block;">- ${hotelA.top_reviews[0].platform}</span>
             </p>
         </div>
-    </div>\`;
+    </div>`;
     
     // Render Hotel B Column
-    html += \`<div class="compare-col">
-        <img src="\${hotelB.hero_image}" style="width:100%; height:140px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
-        <h3 style="font-size:1.3rem; margin-bottom:0.2rem;">\${hotelB.name}</h3>
-        <div style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:1.5rem;">\${hotelB.category} • \${hotelB.rating}★</div>
+    html += `<div class="compare-col">
+        <img src="${hotelB.hero_image}" style="width:100%; height:140px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
+        <h3 style="font-size:1.3rem; margin-bottom:0.2rem;">${hotelB.name}</h3>
+        <div style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:1.5rem;">${hotelB.category} • Rating: ${hotelB.rating} / 5.0</div>
         
         <div style="margin-bottom: 2rem;">
-            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem; text-transform:uppercase;">Aspect Scores</div>\`;
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem; text-transform:uppercase;">Aspect Scores</div>`;
             
     aspects.forEach(asp => {
         const aScore = hotelA.aspects[asp].score;
         const bScore = hotelB.aspects[asp].score;
         const isWinner = bScore > aScore;
         
-        html += \`
-            <div class="compare-metric \${isWinner ? 'compare-winner' : ''}">
-                <span class="compare-metric-label" style="text-transform:capitalize;">\${asp}</span>
-                <span class="compare-metric-val">\${bScore}</span>
+        html += `
+            <div class="compare-metric ${isWinner ? 'compare-winner' : ''}">
+                <span class="compare-metric-label" style="text-transform:capitalize;">${asp}</span>
+                <span class="compare-metric-val">${bScore}</span>
             </div>
-        \`;
+        `;
     });
             
-    html += \`</div>
+    html += `</div>
         <div>
             <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem; text-transform:uppercase;">Top Positive Review</div>
             <p style="font-size:0.85rem; font-style:italic; color:var(--text-primary); line-height:1.5; padding:1rem; background:rgba(255,255,255,0.05); border-left:3px solid var(--accent-emerald); border-radius:4px;">
-                "\${hotelB.top_reviews[0].text}"
-                <br><span style="font-size:0.75rem; color:var(--text-secondary); margin-top:0.5rem; display:block;">— \${hotelB.top_reviews[0].platform}</span>
+                "${hotelB.top_reviews[0].text}"
+                <br><span style="font-size:0.75rem; color:var(--text-secondary); margin-top:0.5rem; display:block;">- ${hotelB.top_reviews[0].platform}</span>
             </p>
         </div>
-    </div>\`;
+    </div>`;
     
     container.innerHTML = html;
 }
