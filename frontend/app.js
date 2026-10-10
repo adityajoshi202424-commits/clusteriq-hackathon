@@ -897,7 +897,7 @@ function initScrollytellingEngine() {
         '/static/images/corridor_03_transit.jpg',
         '/static/images/corridor_04_peaks.jpg',
         '/static/images/corridor_05_ridge_dusk.jpg',
-        '/static/images/corridor_01_panorama.jpg'
+        '/static/images/corridor_06_governance.jpg'
     ];
 
     const loadedImages = [];

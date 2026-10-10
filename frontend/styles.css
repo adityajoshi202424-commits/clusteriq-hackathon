@@ -1469,32 +1469,33 @@ select.hotel-select:focus {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 0 4rem;
-  max-width: 1440px;
+  justify-content: center;
+  padding: 3rem 2.5rem;
+  max-width: 1400px;
   margin: 0 auto;
-}
-
-.scrolly-stage:nth-child(even) {
-  justify-content: flex-end;
 }
 
 .stage-card {
   position: relative;
   pointer-events: auto;
-  max-width: 560px;
-  padding: 2.35rem;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.82) 0%, rgba(11, 19, 41, 0.86) 100%);
+  width: 100%;
+  max-width: 1180px;
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2.75rem;
+  align-items: center;
+  padding: 2.25rem 2.5rem;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.88) 0%, rgba(10, 16, 31, 0.92) 100%);
   backdrop-filter: blur(28px) saturate(190%);
   -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-md);
   box-shadow: 
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.2),
     inset 0 0 0 1px rgba(255, 255, 255, 0.04),
-    0 24px 60px -12px rgba(0, 0, 0, 0.85);
+    0 28px 64px -12px rgba(0, 0, 0, 0.88);
   opacity: 0.15;
-  transform: translateY(26px) scale(0.98);
+  transform: translateY(28px) scale(0.98);
   filter: blur(2px);
   transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.5s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
@@ -1503,27 +1504,103 @@ select.hotel-select:focus {
   content: '';
   position: absolute;
   top: 0;
-  left: 15%;
-  right: 15%;
+  left: 10%;
+  right: 10%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
   pointer-events: none;
+}
+
+.scrolly-stage:nth-child(even) .stage-card {
+  grid-template-columns: 1fr 1.15fr;
+}
+
+.scrolly-stage:nth-child(even) .stage-media-pane {
+  order: 2;
+}
+
+.scrolly-stage:nth-child(even) .stage-content-pane {
+  order: 1;
 }
 
 .scrolly-stage.active .stage-card {
   opacity: 1;
   transform: translateY(0) scale(1);
   filter: blur(0px);
-  border-color: rgba(14, 165, 233, 0.4);
+  border-color: rgba(14, 165, 233, 0.45);
   box-shadow: 
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.24),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.25),
     inset 0 0 0 1px rgba(14, 165, 233, 0.2),
-    0 30px 70px -15px rgba(0, 0, 0, 0.9),
-    0 0 24px -6px rgba(14, 165, 233, 0.2);
+    0 32px 75px -15px rgba(0, 0, 0, 0.92),
+    0 0 28px -6px rgba(14, 165, 233, 0.22);
+}
+
+/* Media Pane: High-Resolution Plate Showcase */
+.stage-media-pane {
+  position: relative;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #090d16;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55);
+}
+
+.stage-featured-image {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stage-card:hover .stage-featured-image {
+  transform: scale(1.03);
+}
+
+.media-tag-overlay {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 0.85rem;
+  right: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.media-geo-pill {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.25rem 0.65rem;
+  border-radius: 4px;
+}
+
+.media-res-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--accent-cyan);
+  background: rgba(14, 165, 233, 0.2);
+  border: 1px solid rgba(14, 165, 233, 0.4);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Content Pane: Clean High-Legibility Typography */
+.stage-content-pane {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .stage-badge {
   display: inline-block;
+  align-self: flex-start;
   font-size: 0.72rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -1566,6 +1643,29 @@ select.hotel-select:focus {
   border: 1px solid var(--border-glass);
   padding: 0.25rem 0.6rem;
   border-radius: 4px;
+}
+
+@media (max-width: 980px) {
+  .scrolly-stage {
+    padding: 2rem 1.25rem;
+  }
+  .stage-card,
+  .scrolly-stage:nth-child(even) .stage-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  .stage-media-pane,
+  .scrolly-stage:nth-child(even) .stage-media-pane {
+    order: 1 !important;
+  }
+  .stage-content-pane,
+  .scrolly-stage:nth-child(even) .stage-content-pane {
+    order: 2 !important;
+  }
+  .stage-featured-image {
+    height: 240px;
+  }
 }
 
 /* App Footer */
