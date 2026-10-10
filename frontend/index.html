@@ -71,17 +71,17 @@
 
         <!-- Mode Switcher Toggle -->
         <div class="mode-switcher">
-            <button id="btn-mode-search" class="mode-btn active">
-                City & Hotel Search
-            </button>
-            <button id="btn-mode-hotel" class="mode-btn">
-                Property Dashboard (B2B)
+            <button id="btn-mode-hotel" class="mode-btn active">
+                Hotel Operator Benchmark (B2B)
             </button>
             <button id="btn-mode-b2g" class="mode-btn">
-                Tourism Board (B2G)
+                Tourism Board & Civic Bottlenecks (B2G)
+            </button>
+            <button id="btn-mode-search" class="mode-btn">
+                Multi-City Cluster Directory
             </button>
             <button id="btn-mode-live" class="mode-btn">
-                Live ABSA
+                Live Hinglish ABSA Engine
             </button>
         </div>
     </header>
@@ -96,247 +96,40 @@
         <button id="btn-dismiss-alert" class="alert-close-btn" title="Dismiss Alert">&times;</button>
     </div>
 
-    <!-- =========================================================
-         CORRIDOR JOURNEY: SCROLLYTELLING ANIMATION ENGINE
-         ========================================================= -->
-    <section id="scrolly-runway" class="scrolly-runway">
-        <!-- Sticky Background Stage -->
-        <div class="scrolly-sticky-viewport">
-            <div class="scrolly-progress-line">
-                <div id="scrolly-progress-fill" class="scrolly-progress-fill"></div>
-            </div>
-            <canvas id="scrolly-canvas" class="scrolly-canvas"></canvas>
-            <div class="scrolly-vignette"></div>
-            <div class="scrolly-hud">
-                <span class="hud-indicator-dot"></span>
-                <span class="hud-tag">Corridor Telemetry</span>
-                <span id="scrolly-hud-label" class="hud-phase">Stage 01: Inflow Overview</span>
-                <span id="scrolly-hud-pct" class="hud-pct">00%</span>
-            </div>
-            <div class="scrolly-nav-rail">
-                <button class="rail-tick active" data-stage="0" title="Corridor Overview"></button>
-                <button class="rail-tick" data-stage="1" title="Heritage Comp-Set"></button>
-                <button class="rail-tick" data-stage="2" title="Multi-Platform Ingestion"></button>
-                <button class="rail-tick" data-stage="3" title="7-Pillar ABSA"></button>
-                <button class="rail-tick" data-stage="4" title="Disconnect Detector"></button>
-                <button class="rail-tick" data-stage="5" title="Municipal Governance"></button>
-            </div>
-            <div class="scrolly-jump-bar">
-                <a href="#interactive-workspace" class="btn-skip-to-dashboard">
-                    Jump to Interactive Dashboards
-                </a>
-            </div>
-        </div>
-
-        <!-- Scrolling Content Stages -->
-        <div class="scrolly-stages-container">
-            <!-- Stage 01 -->
-            <div class="scrolly-stage active" data-stage="0">
-                <div class="glass-panel stage-card">
-                    <div class="stage-media-pane">
-                        <img src="images/corridor_01_panorama.jpg" alt="Mussoorie and Dehradun Valley Panorama"
-                            class="stage-featured-image" loading="eager">
-                        <div class="media-tag-overlay">
-                            <span class="media-geo-pill">Mussoorie & Dehradun Valley Panorama</span>
-                            <span class="media-res-badge">4K Master Plate</span>
-                        </div>
-                    </div>
-                    <div class="stage-content-pane">
-                        <span class="stage-badge">Corridor Telemetry: TBI-GEU Pilot</span>
-                        <h2 class="stage-title">Mussoorie and Dehradun Tourism Corridor</h2>
-                        <p class="stage-desc">
-                            A high-altitude tourism corridor encompassing 10 benchmark hotels across Library Bazaar,
-                            Mall Road, and Kempty. Telemetry aggregates 1,400 verified multi-platform reviews and
-                            508,800 operational words into an empirical intelligence database.
-                        </p>
-                        <div class="stage-meta-row">
-                            <span class="stage-metric">10 Comp-Set Hotels</span>
-                            <span class="stage-metric">1,400 Public Reviews</span>
-                            <span class="stage-metric">508,800 Words Digested</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Stage 02 -->
-            <div class="scrolly-stage" data-stage="1">
-                <div class="glass-panel stage-card">
-                    <div class="stage-media-pane">
-                        <img src="images/corridor_02_heritage.jpg" alt="The Savoy Heritage Wing"
-                            class="stage-featured-image" loading="eager">
-                        <div class="media-tag-overlay">
-                            <span class="media-geo-pill">The Savoy Heritage Wing (Built 1902)</span>
-                            <span class="media-res-badge">4K Master Plate</span>
-                        </div>
-                    </div>
-                    <div class="stage-content-pane">
-                        <span class="stage-badge">Comp-Set Benchmarking</span>
-                        <h2 class="stage-title">Heritage Icon vs Hillside Boutique Dynamics</h2>
-                        <p class="stage-desc">
-                            Heritage icons like Welcomhotel The Savoy and boutique hillside retreats face unique
-                            operational trade-offs: heritage room tariffs versus mountain access logistics, seasonal
-                            heating demands, and parking bottlenecks.
-                        </p>
-                        <div class="stage-meta-row">
-                            <span class="stage-metric">Welcomhotel The Savoy</span>
-                            <span class="stage-metric">JW Marriott Walnut Grove</span>
-                            <span class="stage-metric">Jaypee Residency</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Stage 03 -->
-            <div class="scrolly-stage" data-stage="2">
-                <div class="glass-panel stage-card">
-                    <div class="stage-media-pane">
-                        <img src="images/corridor_03_transit.jpg" alt="Mall Road and Transit Arteries"
-                            class="stage-featured-image" loading="eager">
-                        <div class="media-tag-overlay">
-                            <span class="media-geo-pill">Mall Road & Transit Arteries</span>
-                            <span class="media-res-badge">4K Master Plate</span>
-                        </div>
-                    </div>
-                    <div class="stage-content-pane">
-                        <span class="stage-badge">Multi-Source Intake</span>
-                        <h2 class="stage-title">Cross-Platform Ingestion and Dialect Normalization</h2>
-                        <p class="stage-desc">
-                            Public review text from MakeMyTrip, Google Places, TripAdvisor, and Booking.com is unified
-                            under a standardized schema. Colloquial Hindi and transliterated Hinglish idioms are
-                            normalized to capture specific operational friction points.
-                        </p>
-                        <div class="stage-meta-row">
-                            <span class="stage-metric">MakeMyTrip</span>
-                            <span class="stage-metric">Google Places</span>
-                            <span class="stage-metric">TripAdvisor</span>
-                            <span class="stage-metric">Booking.com</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Stage 04 -->
-            <div class="scrolly-stage" data-stage="3">
-                <div class="glass-panel stage-card">
-                    <div class="stage-media-pane">
-                        <img src="images/corridor_04_peaks.jpg" alt="High-Altitude Mountain Corridor"
-                            class="stage-featured-image" loading="eager">
-                        <div class="media-tag-overlay">
-                            <span class="media-geo-pill">High-Altitude Mountain Corridor</span>
-                            <span class="media-res-badge">4K Master Plate</span>
-                        </div>
-                    </div>
-                    <div class="stage-content-pane">
-                        <span class="stage-badge">Mathematical Scoring</span>
-                        <h2 class="stage-title">7-Pillar Aspect-Based Sentiment Decomposition</h2>
-                        <p class="stage-desc">
-                            Unstructured feedback is decomposed into 7 core pillars: Cleanliness, Food, Maintenance,
-                            Logistics, Staff, Value, and Location. Mathematical aspect sentiment scores map delivered
-                            performance against Leave-One-Out cluster baselines.
-                        </p>
-                        <div class="stage-meta-row">
-                            <span class="stage-metric">Cleanliness</span>
-                            <span class="stage-metric">Logistics</span>
-                            <span class="stage-metric">Maintenance</span>
-                            <span class="stage-metric">Staff</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Stage 05 -->
-            <div class="scrolly-stage" data-stage="4">
-                <div class="glass-panel stage-card">
-                    <div class="stage-media-pane">
-                        <img src="images/corridor_05_ridge_dusk.jpg" alt="Mussoorie Ridge Skyline at Dusk"
-                            class="stage-featured-image" loading="eager">
-                        <div class="media-tag-overlay">
-                            <span class="media-geo-pill">Mussoorie Ridge Skyline at Dusk</span>
-                            <span class="media-res-badge">4K Master Plate</span>
-                        </div>
-                    </div>
-                    <div class="stage-content-pane">
-                        <span class="stage-badge">Algorithmic Risk Signal</span>
-                        <h2 class="stage-title">Price-to-Value Disconnect and Premium Illusion</h2>
-                        <p class="stage-desc">
-                            Using Huber Robust Linear Regression (RLM) and Bayesian shrinkage, properties are flagged
-                            when premium prices disconnect from operational delivery. The engine categorizes risks into
-                            the 4-Quadrant Opportunity Matrix.
-                        </p>
-                        <div class="stage-meta-row">
-                            <span class="stage-metric">Huber RLM Regression</span>
-                            <span class="stage-metric">Bayesian Shrinkage</span>
-                            <span class="stage-metric">Kasavana-Smith Matrix</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Stage 06 -->
-            <div class="scrolly-stage" data-stage="5">
-                <div class="glass-panel stage-card">
-                    <div class="stage-media-pane">
-                        <img src="images/corridor_06_governance.jpg" alt="Dehradun Civic and Administrative Landmark"
-                            class="stage-featured-image" loading="eager">
-                        <div class="media-tag-overlay">
-                            <span class="media-geo-pill">Dehradun Civic & Administrative Seat</span>
-                            <span class="media-res-badge">4K Master Plate</span>
-                        </div>
-                    </div>
-                    <div class="stage-content-pane">
-                        <span class="stage-badge">Civic Governance</span>
-                        <h2 class="stage-title">Civil Friction Register and UTDB Policy Briefs</h2>
-                        <p class="stage-desc">
-                            Civil infrastructure bottlenecks (Mall Road barrier queues, Library Chowk parking shortages)
-                            are segregated from hotel service issues to produce verified administrative dossiers for the
-                            District Magistrate and Uttarakhand Tourism Board.
-                        </p>
-                        <div class="stage-meta-row">
-                            <span class="stage-metric">UTDB Policy Brief</span>
-                            <span class="stage-metric">1-Click PDF Stream</span>
-                            <span class="stage-metric">District Admin Action Queue</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Main Content Container -->
-    <main id="interactive-workspace" class="container">
+    <main id="interactive-workspace" class="container" style="padding-top: 1.5rem;">
 
-        <!-- Efficiency Telemetry Panel -->
+        <!-- Executive Operational Benchmark Panel -->
         <section class="efficiency-hero-panel">
             <div class="efficiency-header">
-                <div class="efficiency-badge">OPERATIONAL VELOCITY TELEMETRY</div>
+                <div class="efficiency-badge">OPERATIONAL CLUSTER BENCHMARKING</div>
                 <h1 class="efficiency-headline">
-                    Human Reading Time Saved: <span id="hero-hours-saved" class="glow-text">42.4 Hours</span>
+                    Is Your Problem Yours Alone, Shared by the Cluster, or a Competitor Gap?
                 </h1>
                 <p class="efficiency-formula">
-                    Computation:
-                    <code>(508,800 Cluster Words / 200 WPM) - 14.2s CRI Pipeline Run = 42.4 Hours Operational Labor Saved</code>
+                    Hotels read only their own reviews, so they cannot tell whether a problem is theirs alone, shared by everyone, or an opportunity competitors fill better. ClusterIQ benchmarks 508,800 verified words across 1,400 regional reviews to isolate your true competitive position.
                 </p>
             </div>
             <div class="efficiency-stats-grid">
                 <div class="eff-stat-card">
                     <span class="eff-stat-num" id="eff-word-count">508,800</span>
-                    <span class="eff-stat-label">Cluster Word Count</span>
+                    <span class="eff-stat-label">Verified Words Digested</span>
                     <span class="eff-stat-sub">1,400 Verified Regional Reviews</span>
                 </div>
                 <div class="eff-stat-card">
-                    <span class="eff-stat-num" id="eff-human-speed">200 WPM</span>
-                    <span class="eff-stat-label">Human Reading Benchmark</span>
-                    <span class="eff-stat-sub">42.4 Hours Continuous Manual Effort</span>
+                    <span class="eff-stat-num" id="eff-human-speed">42.4 Hours</span>
+                    <span class="eff-stat-label">Human Reading Time Saved</span>
+                    <span class="eff-stat-sub">Based on 200 WPM Manual Audit Benchmark</span>
                 </div>
                 <div class="eff-stat-card">
-                    <span class="eff-stat-num highlight-cyan" id="eff-ai-speed">14.2s</span>
-                    <span class="eff-stat-label">Vectorized ABSA Pipeline</span>
-                    <span class="eff-stat-sub">10,750x Velocity Multiplier</span>
+                    <span class="eff-stat-num highlight-cyan" id="eff-ai-speed">38.9 Days</span>
+                    <span class="eff-stat-label">Early-Warning Lead Time</span>
+                    <span class="eff-stat-sub">Identifies Aspect Decay Before Star Rating Drops</span>
                 </div>
                 <div class="eff-stat-card">
                     <span class="eff-stat-num highlight-emerald" id="eff-roi">₹21,200</span>
                     <span class="eff-stat-label">Labor Cost Preserved</span>
-                    <span class="eff-stat-sub">General Manager Operational ROI / Cycle</span>
+                    <span class="eff-stat-sub">General Manager Operational ROI / Audit Cycle</span>
                 </div>
             </div>
         </section>
@@ -360,7 +153,7 @@
         </section>
 
         <!-- VIEW 0: CITY SEARCH & COMPARE -->
-        <div id="view-search" class="search-view active">
+        <div id="view-search" class="search-view">
 
             <div class="card-header" style="margin-bottom: 1.5rem;">
                 <h2 style="font-size: 1.8rem; font-weight: 700; color: var(--text-primary);">Discover Uttarakhand
@@ -449,15 +242,14 @@
         </div>
 
         <!-- VIEW 1: B2B HOTEL OPERATOR DASHBOARD -->
-        <div id="view-hotel" class="hotel-view">
+        <div id="view-hotel" class="hotel-view active">
 
             <!-- B2B Find Your Hotel Onboarding Banner -->
             <div class="b2b-onboarding-panel glass-panel">
                 <div class="b2b-onboarding-info">
                     <div class="onboarding-pill">HOTEL OPERATOR ONBOARDING</div>
-                    <h3 class="onboarding-title">Benchmark Your Property Against Your City Comp-Set</h3>
-                    <p class="onboarding-desc">Select your hotel across Mussoorie, Nainital, Bhimtal, or Dehradun to
-                        view isolated intra-cluster competitive scores and uncover revenue opportunities.</p>
+                    <h3 class="onboarding-title">Isolate Your Competitive Position Against the Destination Cluster</h3>
+                    <p class="onboarding-desc">Select your property to instantly distinguish your internal operational failures from shared municipal constraints, and discover where competitors leave market opportunities open.</p>
                 </div>
                 <div class="b2b-onboarding-selector">
                     <select id="b2b-cluster-select" class="b2b-cluster-dropdown" title="Filter by Destination">
