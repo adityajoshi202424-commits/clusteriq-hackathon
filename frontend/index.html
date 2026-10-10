@@ -460,16 +460,28 @@
                         see how your service compares to competitors and uncover immediate revenue opportunities.</p>
                 </div>
                 <div class="b2b-onboarding-selector">
-                    <select id="b2b-cluster-select" class="b2b-cluster-dropdown" title="Filter by Destination">
-                        <option value="all">All Destinations</option>
-                        <option value="mussoorie">Mussoorie</option>
-                        <option value="nainital">Nainital</option>
-                        <option value="bhimtal">Bhimtal</option>
-                        <option value="dehradun">Dehradun</option>
-                    </select>
-                    <select id="b2b-quick-select" class="b2b-property-dropdown" title="Select Property">
-                        <!-- Populated dynamically -->
-                    </select>
+                    <div class="selector-field">
+                        <span class="selector-field-label">Destination</span>
+                        <select id="b2b-cluster-select" class="b2b-cluster-dropdown" title="Filter by Destination">
+                            <option value="all">All Destinations</option>
+                            <option value="mussoorie">Mussoorie</option>
+                            <option value="nainital">Nainital</option>
+                            <option value="bhimtal">Bhimtal</option>
+                            <option value="dehradun">Dehradun</option>
+                        </select>
+                    </div>
+                    <div class="selector-field">
+                        <span class="selector-field-label">Your Hotel</span>
+                        <select id="b2b-quick-select" class="b2b-property-dropdown" title="Select Your Hotel">
+                            <!-- Populated dynamically -->
+                        </select>
+                    </div>
+                    <div class="selector-field">
+                        <span class="selector-field-label">Compare vs Competitor</span>
+                        <select id="b2b-competitor-select" class="b2b-property-dropdown competitor-select" title="Select Competitor to Compare Against">
+                            <!-- Populated dynamically with competitors, excluding Your Hotel -->
+                        </select>
+                    </div>
                 </div>
             </div>
 
@@ -494,9 +506,13 @@
             <div class="glass-panel property-toolbar reveal-on-scroll">
                 <div class="property-selector-group">
                     <span class="select-label">Your Hotel:</span>
-                    <span id="hotel-name-display" class="hotel-name-display">Welcomhotel The Savoy</span>
-                    <!-- Hidden select kept for backwards compatibility with JS -->
-                    <select id="hotel-select" class="hotel-select" style="display:none;">
+                    <select id="hotel-select" class="hotel-select" title="Select Your Hotel">
+                        <!-- Populated dynamically via JS -->
+                    </select>
+                </div>
+                <div class="competitor-selector-group">
+                    <span class="select-label">Benchmark vs:</span>
+                    <select id="toolbar-competitor-select" class="hotel-select competitor-select" title="Select Competitor to Benchmark Against">
                         <!-- Populated dynamically via JS -->
                     </select>
                 </div>
@@ -555,7 +571,7 @@
                         <div class="radar-legend">
                             <div class="legend-item">
                                 <span class="legend-dot property"></span>
-                                <span>Your Hotel</span>
+                                <span id="radar-legend-property-label">Your Hotel</span>
                             </div>
                             <div class="legend-item">
                                 <span class="legend-dot cluster"></span>
@@ -580,7 +596,7 @@
                                     <th>Category</th>
                                     <th>Position</th>
                                     <th>Your Score</th>
-                                    <th>Competitors</th>
+                                    <th id="leaderboard-comp-col-header">Competitors</th>
                                     <th>Difference</th>
                                     <th>Guest Reviews</th>
                                 </tr>

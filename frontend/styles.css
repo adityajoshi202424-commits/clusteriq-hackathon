@@ -219,15 +219,15 @@ main.container {
   padding: 1.25rem 1.5rem;
 }
 
-.property-selector-group {
+.property-selector-group,
+.competitor-selector-group {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  flex: 1;
+  gap: 0.75rem;
 }
 
 .select-label {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
   font-weight: 600;
   text-transform: uppercase;
@@ -239,14 +239,14 @@ select.hotel-select {
   background: var(--bg-secondary);
   color: var(--text-primary);
   border: 1px solid var(--border-glass);
-  padding: 0.65rem 1.2rem;
+  padding: 0.55rem 1rem;
   border-radius: var(--radius-sm);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   outline: none;
   cursor: pointer;
   transition: var(--transition);
-  min-width: 320px;
+  min-width: 260px;
 }
 
 select.hotel-select:focus {
@@ -254,15 +254,13 @@ select.hotel-select:focus {
   box-shadow: 0 0 12px var(--accent-cyan-glow);
 }
 
-.hotel-name-display {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  padding: 0.5rem 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 420px;
+select.hotel-select.competitor-select {
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+select.hotel-select.competitor-select:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.35);
 }
 
 .property-meta-tags {
@@ -397,7 +395,7 @@ select.hotel-select:focus {
 }
 
 .legend-dot.property { background: var(--accent-cyan); box-shadow: 0 0 8px var(--accent-cyan); }
-.legend-dot.cluster { background: rgba(148, 163, 184, 0.6); }
+.legend-dot.cluster { background: #f59e0b; box-shadow: 0 0 8px rgba(245, 158, 11, 0.6); }
 
 /* Aspect Leaderboard Table */
 .aspect-table {
@@ -2437,9 +2435,24 @@ select.hotel-select:focus {
 
 .b2b-onboarding-selector {
   display: flex;
-  gap: 0.6rem;
-  align-items: center;
+  gap: 0.75rem;
+  align-items: flex-end;
   flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.selector-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.selector-field-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .b2b-cluster-dropdown,
@@ -2453,10 +2466,22 @@ select.hotel-select:focus {
   font-size: 0.85rem;
   outline: none;
   cursor: pointer;
+  transition: var(--transition);
 }
 
 .b2b-property-dropdown {
-  min-width: 240px;
+  min-width: 220px;
+}
+
+.b2b-property-dropdown.competitor-select,
+.b2b-property-dropdown.competitor-dropdown {
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.b2b-property-dropdown.competitor-select:focus,
+.b2b-property-dropdown.competitor-dropdown:focus {
+  border-color: #f59e0b;
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.35);
 }
 
 /* Property Provenance Status Bar */

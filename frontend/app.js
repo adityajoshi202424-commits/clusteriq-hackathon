@@ -14,6 +14,7 @@ let demoMode = true; // Air-Gapped Warm Cache active by default
 // New V2 Multi-Cluster State
 let currentCityId = 'mussoorie';
 let currentClusterId = 'mussoorie';
+let currentCompetitorId = 'cluster_avg';
 let selectedHotelsForCompare = [];
 let currentFilter = 'all';
 
@@ -253,6 +254,7 @@ async function loadProperties() {
             currentPropertyId = 'welcomhotel_savoy';
             currentClusterId = 'mussoorie';
             select.value = currentPropertyId;
+            populateCompetitorDropdowns(currentClusterId, currentPropertyId);
             loadPropertyBenchmark(currentPropertyId, currentClusterId);
         }
     } catch (err) {
@@ -631,48 +633,113 @@ function renderHotelDashboard(data) {
     const proxLabel = p.proximity_label || 'to Central Promenade';
     if (mallDistElem) mallDistElem.textContent = p.distance_to_mall_road_m === 0 ? `Direct on ${proxLabel.replace('to ', '')}` : `${p.distance_to_mall_road_m}m ${proxLabel}`;
 
+    // Sync selector value without triggering change
+    const hotelSelect = document.getElementById('hotel-select');
+    if (hotelSelect && hotelSelect.value !== p.id) {
+        hotelSelect._suppressChange = true;
+        hotelSelect.value = p.id;
+    }
+
+    // Determine competitor benchmark data
+    let effectiveBenchmarks = data.aspect_benchmarks;
+    const segmentLabel = data.segment ? (data.segment === 'business' ? 'Business ' : 'Leisure ') : '';
+    let compDisplayName = `${cName} ${segmentLabel}Competitor Average`;
+    let compShortName = 'Competitors';
+
+    if (currentCompetitorId && currentCompetitorId !== 'cluster_avg') {
+        const compBm = window.CLUSTER_BENCHMARK?.[currentCompetitorId]
+            || window.CLUSTER_WARM_CACHE?.benchmarks?.[currentCompetitorId];
+        const compMeta = (window.HOTELS_INDEX || []).find(h => h.id === currentCompetitorId);
+
+        if (compMeta) {
+            compDisplayName = `${compMeta.name} (${compMeta.star_class || 'Hotel'})`;
+            compShortName = compMeta.name;
+        }
+
+        if (compBm && compBm.aspects && compBm.aspects.length > 0) {
+            effectiveBenchmarks = data.aspect_benchmarks.map(asp => {
+                const compAsp = compBm.aspects.find(a => a.aspect.toLowerCase() === asp.category.toLowerCase());
+                const compScore = compAsp ? Math.round(compAsp.score) : asp.cluster_baseline;
+                const gap = asp.property_score - compScore;
+
+                let classification = 'Town-Wide Issue';
+                let badgeColor = 'amber';
+                if (gap >= 8) {
+                    classification = 'Your Advantage';
+                    badgeColor = 'emerald';
+                } else if (gap <= -8) {
+                    classification = 'Fix Needed';
+                    badgeColor = 'rose';
+                } else if (gap > 0 && compScore < 60) {
+                    classification = 'Market Opportunity';
+                    badgeColor = 'cyan';
+                } else {
+                    classification = gap >= 0 ? 'Your Advantage' : 'Fix Needed';
+                    badgeColor = gap >= 0 ? 'emerald' : 'rose';
+                }
+
+                return {
+                    ...asp,
+                    cluster_baseline: compScore,
+                    competitive_gap: gap,
+                    classification: classification,
+                    badge_color: badgeColor
+                };
+            });
+        }
+    }
+
     // Calculate overall property sentiment score & ranking
     const rankObj = data.cluster_rankings.find(r => r.id === p.id) || { rank: 1, score: 75.0 };
     document.getElementById('kpi-score-val').textContent = `${rankObj.score > 0 ? '+' : ''}${rankObj.score}%`;
     document.getElementById('kpi-rank-val').textContent = `#${rankObj.rank}`;
-    
-    const segmentLabel = data.segment ? (data.segment === 'business' ? 'Business ' : 'Leisure ') : '';
     document.getElementById('kpi-rank-total').textContent = `of ${data.cluster_rankings.length} ${cName} ${segmentLabel}Hotels`;
 
-    // Radar Legend Label
+    // Radar Legend Labels
+    const radarPropLabel = document.getElementById('radar-legend-property-label');
+    if (radarPropLabel) {
+        radarPropLabel.textContent = p.name;
+    }
+
     const radarLegendLabel = document.getElementById('radar-legend-cluster-label');
     if (radarLegendLabel) {
-        radarLegendLabel.textContent = `${cName} ${segmentLabel}Competitor Average`;
+        radarLegendLabel.textContent = compDisplayName;
+    }
+
+    // Leaderboard Table Competitor Column Header
+    const compHeader = document.getElementById('leaderboard-comp-col-header');
+    if (compHeader) {
+        compHeader.textContent = compShortName;
     }
 
     // Lead / Lag categories
-    const sortedByGap = [...data.aspect_benchmarks].sort((a, b) => b.competitive_gap - a.competitive_gap);
+    const sortedByGap = [...effectiveBenchmarks].sort((a, b) => b.competitive_gap - a.competitive_gap);
     const topLead = sortedByGap[0];
     const topLag = sortedByGap[sortedByGap.length - 1];
 
     document.getElementById('kpi-lead-val').textContent = topLead.category;
-    document.getElementById('kpi-lead-sub').textContent = `+${topLead.competitive_gap}% vs Competitors`;
+    document.getElementById('kpi-lead-sub').textContent = `${topLead.competitive_gap >= 0 ? '+' : ''}${topLead.competitive_gap}% vs ${compShortName}`;
 
     document.getElementById('kpi-lag-val').textContent = topLag.category;
-    document.getElementById('kpi-lag-sub').textContent = `${topLag.competitive_gap}% vs Competitors`;
+    document.getElementById('kpi-lag-sub').textContent = `${topLag.competitive_gap >= 0 ? '+' : ''}${topLag.competitive_gap}% vs ${compShortName}`;
 
     const totalRevs = data.aspect_benchmarks.reduce((acc, x) => acc + x.total_mentions, 0);
     document.getElementById('kpi-revs-val').textContent = `${totalRevs} Mentions`;
 
-    // Render Radar Chart
-    renderRadarChart(data.aspect_benchmarks);
+    // Render Radar Chart with high-contrast polygons
+    renderRadarChart(effectiveBenchmarks);
 
     // Render Leaderboard Table
-    renderLeaderboardTable(data.aspect_benchmarks);
+    renderLeaderboardTable(effectiveBenchmarks);
 
     // Render 4-Quadrant Opportunity Matrix
-    renderOpportunityMatrix(data.aspect_benchmarks);
+    renderOpportunityMatrix(effectiveBenchmarks);
 
     // Render Changepoint Timeline
     renderTimelineChart(data.monthly_trend, p.name);
 
     // Render Actionable Prescriptions
-    renderActionPrescriptions(data.aspect_benchmarks, p);
+    renderActionPrescriptions(effectiveBenchmarks, p);
 }
 
 // Custom SVG Radar Chart Generator
@@ -746,7 +813,7 @@ function renderRadarChart(aspects) {
         return Math.max(maxRadius * 0.15, maxRadius * (clamped / 100));
     }
 
-    // Cluster Baseline Polygon (Dashed Slate)
+    // Competitor Benchmark Polygon (Vibrant Amber Dashed - High Contrast)
     let clusterPoints = [];
     aspects.forEach((asp, i) => {
         const angle = i * angleStep - Math.PI / 2;
@@ -757,13 +824,13 @@ function renderRadarChart(aspects) {
     });
     const clusterPoly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
     clusterPoly.setAttribute('points', clusterPoints.join(' '));
-    clusterPoly.setAttribute('fill', 'rgba(148, 163, 184, 0.18)');
-    clusterPoly.setAttribute('stroke', 'rgba(148, 163, 184, 0.6)');
-    clusterPoly.setAttribute('stroke-width', '1.5');
-    clusterPoly.setAttribute('stroke-dasharray', '4 4');
+    clusterPoly.setAttribute('fill', 'rgba(245, 158, 11, 0.22)');
+    clusterPoly.setAttribute('stroke', '#f59e0b');
+    clusterPoly.setAttribute('stroke-width', '2.5');
+    clusterPoly.setAttribute('stroke-dasharray', '5 4');
     svg.appendChild(clusterPoly);
 
-    // Selected Property Polygon (Glowing Cyan)
+    // Selected Property Polygon (Glowing Cyan Solid)
     let propPoints = [];
     aspects.forEach((asp, i) => {
         const angle = i * angleStep - Math.PI / 2;
@@ -779,7 +846,7 @@ function renderRadarChart(aspects) {
     propPoly.setAttribute('stroke-width', '2.5');
     svg.appendChild(propPoly);
 
-    // Competitor vertex dots (dashed slate polygon)
+    // Competitor vertex dots (amber dots with white border)
     aspects.forEach((asp, i) => {
         const angle = i * angleStep - Math.PI / 2;
         const r = scoreToRadius(asp.cluster_baseline);
@@ -789,14 +856,14 @@ function renderRadarChart(aspects) {
         const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         circle.setAttribute('cx', x);
         circle.setAttribute('cy', y);
-        circle.setAttribute('r', '3');
-        circle.setAttribute('fill', '#94a3b8');
-        circle.setAttribute('stroke', 'rgba(148, 163, 184, 0.6)');
-        circle.setAttribute('stroke-width', '1');
+        circle.setAttribute('r', '4');
+        circle.setAttribute('fill', '#f59e0b');
+        circle.setAttribute('stroke', '#ffffff');
+        circle.setAttribute('stroke-width', '1.5');
         svg.appendChild(circle);
     });
 
-    // Property vertex dots (cyan polygon)
+    // Property vertex dots (cyan dots with white border)
     aspects.forEach((asp, i) => {
         const angle = i * angleStep - Math.PI / 2;
         const r = scoreToRadius(asp.property_score);
@@ -806,9 +873,9 @@ function renderRadarChart(aspects) {
         const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         circle.setAttribute('cx', x);
         circle.setAttribute('cy', y);
-        circle.setAttribute('r', '4');
+        circle.setAttribute('r', '4.5');
         circle.setAttribute('fill', '#0ea5e9');
-        circle.setAttribute('stroke', '#fff');
+        circle.setAttribute('stroke', '#ffffff');
         circle.setAttribute('stroke-width', '1.5');
         svg.appendChild(circle);
     });
@@ -2558,6 +2625,61 @@ function renderHotelsForCity(cityId) {
     });
 }
 
+function populateCompetitorDropdowns(clusterId, activeHotelId) {
+    const b2bComp = document.getElementById('b2b-competitor-select');
+    const toolbarComp = document.getElementById('toolbar-competitor-select');
+    if (!b2bComp && !toolbarComp) return;
+
+    const hotelsIndex = window.HOTELS_INDEX || [];
+    // Strictly exclude the active hotel so the user's hotel NEVER appears in the competitor dropdown!
+    const clusterHotels = hotelsIndex.filter(h => h.cluster_id === clusterId && h.id !== activeHotelId);
+    const clusterMeta = (window.CLUSTERS_META || {})[clusterId] || {};
+    const clusterName = clusterMeta.name || (clusterId.charAt(0).toUpperCase() + clusterId.slice(1));
+
+    const optionsHtml = [
+        `<option value="cluster_avg">${clusterName} Competitor Average (Market Baseline)</option>`,
+        ...clusterHotels.map(h => `<option value="${h.id}">${h.name} (${h.star_class || 'Hotel'})</option>`)
+    ].join('');
+
+    if (currentCompetitorId === activeHotelId) {
+        currentCompetitorId = 'cluster_avg';
+    }
+
+    if (b2bComp) {
+        b2bComp._suppressChange = true;
+        b2bComp.innerHTML = optionsHtml;
+        b2bComp.value = currentCompetitorId;
+    }
+    if (toolbarComp) {
+        toolbarComp._suppressChange = true;
+        toolbarComp.innerHTML = optionsHtml;
+        toolbarComp.value = currentCompetitorId;
+    }
+}
+
+function selectCompetitorBenchmark(competitorId, sourceDropdown) {
+    currentCompetitorId = competitorId;
+
+    // Synchronize both competitor dropdowns without triggering circular events
+    const b2bComp = document.getElementById('b2b-competitor-select');
+    if (b2bComp && sourceDropdown !== 'b2b-competitor-select') {
+        b2bComp._suppressChange = true;
+        b2bComp.value = competitorId;
+    }
+
+    const toolbarComp = document.getElementById('toolbar-competitor-select');
+    if (toolbarComp && sourceDropdown !== 'toolbar-competitor-select') {
+        toolbarComp._suppressChange = true;
+        toolbarComp.value = competitorId;
+    }
+
+    // Notice: currentPropertyId and hotel metadata remain COMPLETELY UNCHANGED!
+    // Re-render dashboard against the selected competitor benchmark
+    if (currentBenchmarkData) {
+        renderHotelDashboard(currentBenchmarkData);
+    }
+}
+
 function selectHotelAndBenchmark(clusterId, hotelId, sourceDropdown) {
     if (window.setMode) {
         window.setMode('hotel');
@@ -2596,12 +2718,6 @@ function selectHotelAndBenchmark(clusterId, hotelId, sourceDropdown) {
     if (provPlatforms) provPlatforms.textContent = hotelMeta.review_count >= 150 ? 'Google, MakeMyTrip, Booking.com, TripAdvisor' : 'Google Places Verified';
     if (provUpdated) provUpdated.textContent = 'Q1 2026';
 
-    // Update hotel name display label in property toolbar
-    const hotelNameDisplay = document.getElementById('hotel-name-display');
-    if (hotelNameDisplay) {
-        hotelNameDisplay.textContent = `${hotelMeta.name} (${hotelMeta.star_class || 'Hotel'})`;
-    }
-
     // Synchronize selector dropdowns without triggering circular change events
     const hotelSelect = document.getElementById('hotel-select');
     if (hotelSelect && sourceDropdown !== 'hotel-select') {
@@ -2621,12 +2737,17 @@ function selectHotelAndBenchmark(clusterId, hotelId, sourceDropdown) {
     currentPropertyId = hotelId;
     currentClusterId = clusterId;
 
+    // Populate competitor list excluding current hotel
+    populateCompetitorDropdowns(clusterId, hotelId);
+
     loadPropertyBenchmark(hotelId, clusterId);
 }
 
 function initB2BOnboarding() {
     const clusterSelect = document.getElementById('b2b-cluster-select');
     const propSelect = document.getElementById('b2b-quick-select');
+    const b2bCompSelect = document.getElementById('b2b-competitor-select');
+    const toolbarCompSelect = document.getElementById('toolbar-competitor-select');
     if (!clusterSelect || !propSelect) return;
 
     function populateProps(cid) {
@@ -2657,7 +2778,22 @@ function initB2BOnboarding() {
         selectHotelAndBenchmark(cid, pid, 'b2b-quick-select');
     });
 
+    if (b2bCompSelect) {
+        b2bCompSelect.addEventListener('change', (e) => {
+            if (b2bCompSelect._suppressChange) { b2bCompSelect._suppressChange = false; return; }
+            selectCompetitorBenchmark(e.target.value, 'b2b-competitor-select');
+        });
+    }
+
+    if (toolbarCompSelect) {
+        toolbarCompSelect.addEventListener('change', (e) => {
+            if (toolbarCompSelect._suppressChange) { toolbarCompSelect._suppressChange = false; return; }
+            selectCompetitorBenchmark(e.target.value, 'toolbar-competitor-select');
+        });
+    }
+
     populateProps('all');
+    populateCompetitorDropdowns(currentClusterId || 'mussoorie', currentPropertyId || 'welcomhotel_savoy');
 }
 
 function initHashRouting() {
