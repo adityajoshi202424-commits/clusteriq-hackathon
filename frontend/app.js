@@ -868,6 +868,8 @@ function initLiveTester() {
 // -------------------------------------------------------------
 // Corridor Scrollytelling Animation Engine
 // -------------------------------------------------------------
+// Full-Page Corridor Scrollytelling Visual Engine (4K / 60fps Damped)
+// -------------------------------------------------------------
 function initScrollytellingEngine() {
     const canvas = document.getElementById('scrolly-canvas');
     const runway = document.getElementById('scrolly-runway');
@@ -876,6 +878,7 @@ function initScrollytellingEngine() {
     const ctx = canvas.getContext('2d');
     const hudLabel = document.getElementById('scrolly-hud-label');
     const hudPct = document.getElementById('scrolly-hud-pct');
+    const progressFill = document.getElementById('scrolly-progress-fill');
     const railTicks = document.querySelectorAll('.rail-tick');
     const stages = document.querySelectorAll('.scrolly-stage');
 
@@ -905,35 +908,42 @@ function initScrollytellingEngine() {
         img.src = src;
         img.onload = () => {
             imagesLoadedCount++;
-            if (imagesLoadedCount === 1) {
-                render();
+            if (!isRendering) {
+                renderFrame(currentProgress);
             }
         };
         loadedImages[idx] = img;
     });
 
+    // High-DPI 4K canvas configuration
     function resizeCanvas() {
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        canvas.width = window.innerWidth * dpr;
-        canvas.height = window.innerHeight * dpr;
-        render();
+        const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
+        canvas.width = Math.round(window.innerWidth * dpr);
+        canvas.height = Math.round(window.innerHeight * dpr);
+        if (ctx) {
+            ctx.imageSmoothingEnabled = true;
+            ctx.imageSmoothingQuality = 'high';
+        }
+        renderFrame(currentProgress);
     }
 
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('resize', resizeCanvas, { passive: true });
     resizeCanvas();
 
-    function drawImageCover(img, alpha) {
+    // High quality centered cover drawing with cinematic micro-scale
+    function drawImageCover(img, alpha, scaleMultiplier = 1.0) {
         if (!img || !img.complete || img.naturalWidth === 0) return;
         const cw = canvas.width;
         const ch = canvas.height;
         const iw = img.naturalWidth;
         const ih = img.naturalHeight;
 
-        const scale = Math.max(cw / iw, ch / ih);
+        const baseScale = Math.max(cw / iw, ch / ih);
+        const scale = baseScale * scaleMultiplier;
         const nw = iw * scale;
         const nh = ih * scale;
-        const nx = (cw - nw) / 2;
-        const ny = (ch - nh) / 2;
+        const nx = (cw - nw) * 0.5;
+        const ny = (ch - nh) * 0.5;
 
         ctx.save();
         ctx.globalAlpha = Math.max(0, Math.min(1, alpha));
@@ -941,41 +951,61 @@ function initScrollytellingEngine() {
         ctx.restore();
     }
 
-    let isTicking = false;
+    // Smoothstep easing for silky transitions
+    function smoothstep(t) {
+        const clamped = Math.max(0, Math.min(1, t));
+        return clamped * clamped * (3 - 2 * clamped);
+    }
 
-    function render() {
+    // Physics momentum variables (Damped LERP)
+    let targetProgress = 0;
+    let currentProgress = 0;
+    let isRendering = false;
+    let animFrameId = null;
+
+    function calculateTargetProgress() {
         const rect = runway.getBoundingClientRect();
         const runwayHeight = runway.offsetHeight;
         const windowHeight = window.innerHeight;
         const scrollDistance = runwayHeight - windowHeight;
 
-        let progress = 0;
         if (scrollDistance > 0) {
-            progress = Math.max(0, Math.min(1, -rect.top / scrollDistance));
+            return Math.max(0, Math.min(1, -rect.top / scrollDistance));
         }
+        return 0;
+    }
 
+    function renderFrame(progress) {
+        if (!ctx) return;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         const totalStages = stageDescriptions.length;
         const floatIndex = progress * (totalStages - 1);
         const currIdx = Math.floor(floatIndex);
         const nextIdx = Math.min(totalStages - 1, currIdx + 1);
-        const transition = floatIndex - currIdx;
+        const rawTransition = floatIndex - currIdx;
+        const easedTransition = smoothstep(rawTransition);
 
-        // Draw background images with smooth interpolation
+        // Subtle cinematic scale drift during cross-fade
+        const scaleCurrent = 1.0 + (rawTransition * 0.03);
+        const scaleNext = 1.03 - ((1.0 - rawTransition) * 0.03);
+
+        // Base image
         if (loadedImages[currIdx]) {
-            drawImageCover(loadedImages[currIdx], 1.0);
+            drawImageCover(loadedImages[currIdx], 1.0, scaleCurrent);
         }
+        // Incoming image with smoothed alpha & drift
         if (currIdx !== nextIdx && loadedImages[nextIdx]) {
-            drawImageCover(loadedImages[nextIdx], transition);
+            drawImageCover(loadedImages[nextIdx], easedTransition, scaleNext);
         }
 
-        // Active stage index
+        // Active stage index with subtle hysteresis
         const activeStage = Math.round(floatIndex);
 
-        // Update stages active class
+        // Update active class on stage cards
         stages.forEach((stage, idx) => {
-            if (idx === activeStage) {
+            const dist = Math.abs(floatIndex - idx);
+            if (dist < 0.5) {
                 stage.classList.add('active');
             } else {
                 stage.classList.remove('active');
@@ -999,17 +1029,41 @@ function initScrollytellingEngine() {
             hudPct.textContent = `${Math.round(progress * 100).toString().padStart(2, '0')}%`;
         }
 
-        isTicking = false;
+        // Update top nano progress fill
+        if (progressFill) {
+            progressFill.style.width = `${(progress * 100).toFixed(1)}%`;
+        }
     }
 
-    window.addEventListener('scroll', () => {
-        if (!isTicking) {
-            requestAnimationFrame(render);
-            isTicking = true;
+    function renderLoop() {
+        const diff = targetProgress - currentProgress;
+        if (Math.abs(diff) > 0.0004) {
+            currentProgress += diff * 0.085; // Damped momentum interpolation
+            renderFrame(currentProgress);
+            animFrameId = requestAnimationFrame(renderLoop);
+        } else {
+            currentProgress = targetProgress;
+            renderFrame(currentProgress);
+            isRendering = false;
         }
-    }, { passive: true });
+    }
 
-    // Rail tick click navigation
+    function onScrollUpdate() {
+        targetProgress = calculateTargetProgress();
+        if (!isRendering) {
+            isRendering = true;
+            animFrameId = requestAnimationFrame(renderLoop);
+        }
+    }
+
+    window.addEventListener('scroll', onScrollUpdate, { passive: true });
+
+    // Initial render
+    targetProgress = calculateTargetProgress();
+    currentProgress = targetProgress;
+    renderFrame(currentProgress);
+
+    // Rail tick click navigation with smooth scroll
     railTicks.forEach(tick => {
         tick.addEventListener('click', () => {
             const stageIdx = parseInt(tick.getAttribute('data-stage'), 10);

@@ -240,7 +240,7 @@ def refresh_cluster_data(req: RefreshDataRequest):
             return {
                 "status": "rate_limited_fallback",
                 "mode": "Live Scraper Fallback",
-                "message": "⚠️ Booking.com API rate limit reached. Auto-switching to locally cached community database.",
+                "message": "[Notice] Booking.com API rate limit reached. Auto-switching to locally cached community database.",
                 "total_reviews": len(benchmarking_engine.reviews),
                 "is_fallback": True
             }
@@ -248,7 +248,7 @@ def refresh_cluster_data(req: RefreshDataRequest):
         return {
             "status": "rate_limited_fallback",
             "mode": "Emergency Air-Gap Recovery",
-            "message": "⚠️ OTA live connection timed out. Seamlessly recovered using local community cache.",
+            "message": "[Notice] OTA live connection timed out. Seamlessly recovered using local community cache.",
             "total_reviews": len(benchmarking_engine.reviews),
             "is_fallback": True
         }
@@ -309,7 +309,7 @@ def analyze_live_review(req: LiveAnalysisRequest):
             "aspects_count": 0,
             "aspects": [],
             "status": "fallback",
-            "message": "⚠️ Parser encountered unexpected input syntax. Gracefully falling back to default heuristic baseline."
+            "message": "[Notice] Parser encountered unexpected input syntax. Gracefully falling back to default heuristic baseline."
         }
 
 
