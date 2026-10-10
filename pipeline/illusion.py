@@ -45,9 +45,16 @@ def compute_price_value_illusion() -> Dict[str, Any]:
     with open(CLUSTER_YAML_PATH, "r", encoding="utf-8") as f:
         cluster_cfg = yaml.safe_load(f)
 
-    props_meta = {p["id"]: p for p in cluster_cfg.get("properties", [])}
+    props_meta = {}
+    if "clusters" in cluster_cfg:
+        for c_obj in cluster_cfg["clusters"]:
+            for p in c_obj.get("properties", []):
+                props_meta[p["id"]] = p
+    else:
+        for p in cluster_cfg.get("properties", []):
+            props_meta[p["id"]] = p
 
-    prop_ids = list(benchmarks.keys())
+    prop_ids = [pid for pid in benchmarks.keys() if not str(pid).startswith("_")]
     price_levels = []
     for pid in prop_ids:
         meta = props_meta.get(pid, {})

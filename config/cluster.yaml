@@ -1,223 +1,978 @@
-# Cluster Review Intelligence (CRI) - Cluster Specification
-# Core Focus: Mussoorie Himalayan Corridor (12 Properties Benchmark)
-
-cluster_name: "Mussoorie Hill Station Cluster"
-state: "Uttarakhand"
-district: "Dehradun"
-elevation_m: 2005
-total_properties: 12
-
-hotspots:
-  - name: "Mall Road Promenade"
-    type: "pedestrian_artery"
-    lat: 30.457
-    lng: 78.072
-  - name: "Library Chowk"
-    type: "transit_barrier_west"
-    lat: 30.459
-    lng: 78.064
-  - name: "Picture Palace Chowk"
-    type: "transit_barrier_east"
-    lat: 30.455
-    lng: 78.082
-  - name: "Landour Bazaar"
-    type: "historic_ridge"
-    lat: 30.461
-    lng: 78.095
-  - name: "Kempty Fall Road Artery"
-    type: "tourist_artery"
-    lat: 30.490
-    lng: 78.032
-
-properties:
-  - id: "welcomhotel_savoy"
-    name: "Welcomhotel by ITC Hotels, The Savoy"
-    area: "Library Bazar"
-    star_class: "5-Star"
-    price_band: "luxury"
-    price_range_inr: [22000, 45000]
-    lat: 30.4589
-    lng: 78.0642
-    distance_to_mall_road_m: 250
-    google_url: "https://maps.google.com/?cid=welcomhotel_savoy_mussoorie"
-    tripadvisor_url: "https://www.tripadvisor.in/Hotel_Review-d1911964-Welcomhotel_The_Savoy_Mussoorie.html"
-    booking_url: "https://www.booking.com/hotel/in/welcomhotel-the-savoy.html"
-    mmt_url: "https://www.makemytrip.com/hotels/welcomhotel_by_itc_hotels_the_savoy-details-mussoorie.html"
-    agoda_url: "https://www.agoda.com/welcomhotel-the-savoy/hotel/mussoorie-in.html"
-    price_band_source: "ITC Hotels Direct Tariff Q1 2026"
-
-  - id: "jw_marriott_walnut_grove"
-    name: "JW Marriott Mussoorie Walnut Grove Resort & Spa"
-    area: "Kempty Fall Road"
-    star_class: "5-Star"
-    price_band: "luxury"
-    price_range_inr: [28000, 55000]
-    lat: 30.4912
-    lng: 78.0315
-    distance_to_mall_road_m: 6500
-    google_url: "https://maps.google.com/?cid=jw_marriott_walnut_grove"
-    tripadvisor_url: "https://www.tripadvisor.in/Hotel_Review-d6754321-JW_Marriott_Walnut_Grove.html"
-    booking_url: "https://www.booking.com/hotel/in/jw-marriott-mussoorie.html"
-    mmt_url: "https://www.makemytrip.com/hotels/jw_marriott_mussoorie_walnut_grove_resort_spa-details-mussoorie.html"
-    agoda_url: "https://www.agoda.com/jw-marriott-mussoorie-walnut-grove-resort-spa/hotel/mussoorie-in.html"
-    price_band_source: "Marriott Bonvoy Published Rack Rates 2026"
-
-  - id: "jaypee_residency_manor"
-    name: "Jaypee Residency Manor"
-    area: "Barlowganj"
-    star_class: "5-Star"
-    price_band: "premium"
-    price_range_inr: [14000, 26000]
-    lat: 30.4428
-    lng: 78.0825
-    distance_to_mall_road_m: 3500
-    google_url: "https://maps.google.com/?cid=jaypee_residency_manor"
-    tripadvisor_url: "https://www.tripadvisor.in/Hotel_Review-d305678-Jaypee_Residency_Manor.html"
-    booking_url: "https://www.booking.com/hotel/in/jaypee-residency-manor.html"
-    mmt_url: "https://www.makemytrip.com/hotels/jaypee_residency_manor-details-mussoorie.html"
-    agoda_url: "https://www.agoda.com/jaypee-residency-manor/hotel/mussoorie-in.html"
-    price_band_source: "Jaypee Hotels Official Tariff 2026"
-
-  - id: "rokeby_manor"
-    name: "Rokeby Manor"
-    area: "Landour Cantonment"
-    star_class: "4-Star"
-    price_band: "premium"
-    price_range_inr: [16000, 32000]
-    lat: 30.4632
-    lng: 78.0985
-    distance_to_mall_road_m: 4200
-    google_url: "https://maps.google.com/?cid=rokeby_manor_landour"
-    tripadvisor_url: "https://www.tripadvisor.in/Hotel_Review-d2189912-Rokeby_Manor.html"
-    booking_url: "https://www.booking.com/hotel/in/rokeby-manor.html"
-    mmt_url: "https://www.makemytrip.com/hotels/rokeby_manor-details-mussoorie.html"
-    agoda_url: "https://www.agoda.com/rokeby-manor/hotel/mussoorie-in.html"
-    price_band_source: "Rokeby Direct Portal 2026"
-
-  - id: "kasmanda_palace"
-    name: "Kasmanda Palace Heritage Hotel"
-    area: "The Mall Road"
-    star_class: "4-Star"
-    price_band: "premium"
-    price_range_inr: [11000, 22000]
-    lat: 30.4572
-    lng: 78.0691
-    distance_to_mall_road_m: 100
-    google_url: "https://maps.google.com/?cid=kasmanda_palace_mussoorie"
-    tripadvisor_url: "https://www.tripadvisor.in/Hotel_Review-d1154687-Kasmanda_Palace.html"
-    booking_url: "https://www.booking.com/hotel/in/kasmanda-palace.html"
-    mmt_url: "https://www.makemytrip.com/hotels/heritage_hotel_kasmanda_palace-details-mussoorie.html"
-    agoda_url: "https://www.agoda.com/heritage-hotel-kasmanda-palace/hotel/mussoorie-in.html"
-    price_band_source: "WelcomHeritage Published Rates 2026"
-
-  - id: "fortune_resort_grace"
-    name: "Fortune Resort Grace"
-    area: "Library End"
-    star_class: "4-Star"
-    price_band: "premium"
-    price_range_inr: [9000, 18000]
-    lat: 30.4578
-    lng: 78.0655
-    distance_to_mall_road_m: 200
-    google_url: "https://maps.google.com/?cid=fortune_resort_grace"
-    tripadvisor_url: "https://www.tripadvisor.in/Hotel_Review-d1502444-Fortune_Resort_Grace.html"
-    booking_url: "https://www.booking.com/hotel/in/fortune-resort-grace.html"
-    mmt_url: "https://www.makemytrip.com/hotels/fortune_resort_grace-details-mussoorie.html"
-    agoda_url: "https://www.agoda.com/fortune-resort-grace/hotel/mussoorie-in.html"
-    price_band_source: "Fortune Hotels Tariff Card 2026"
-
-  - id: "claridges_nabha_residence"
-    name: "The Claridges Nabha Residence"
-    area: "Barlowganj Airfield"
-    star_class: "4-Star"
-    price_band: "premium"
-    price_range_inr: [12000, 24000]
-    lat: 30.441
-    lng: 78.085
-    distance_to_mall_road_m: 3800
-    google_url: "https://maps.google.com/?cid=claridges_nabha_residence"
-    tripadvisor_url: "https://www.tripadvisor.in/Hotel_Review-d602334-The_Claridges_Nabha_Residence.html"
-    booking_url: "https://www.booking.com/hotel/in/the-claridges-nabha-residence.html"
-    mmt_url: "https://www.makemytrip.com/hotels/the_claridges_nabha_residence-details-mussoorie.html"
-    agoda_url: "https://www.agoda.com/the-claridges-nabha-residence/hotel/mussoorie-in.html"
-    price_band_source: "Claridges Collection Tariff 2026"
-
-  - id: "sterling_mussoorie"
-    name: "Sterling Mussoorie"
-    area: "Radha Bhawan"
-    star_class: "4-Star"
-    price_band: "mid"
-    price_range_inr: [7500, 15000]
-    lat: 30.4615
-    lng: 78.058
-    distance_to_mall_road_m: 1800
-    google_url: "https://maps.google.com/?cid=sterling_mussoorie"
-    tripadvisor_url: "https://www.tripadvisor.in/Hotel_Review-d649419-Sterling_Mussoorie.html"
-    booking_url: "https://www.booking.com/hotel/in/sterling-mussoorie.html"
-    mmt_url: "https://www.makemytrip.com/hotels/sterling_mussoorie-details-mussoorie.html"
-    agoda_url: "https://www.agoda.com/sterling-mussoorie/hotel/mussoorie-in.html"
-    price_band_source: "Sterling Holidays Public Direct 2026"
-
-  - id: "hotel_vishnu_palace"
-    name: "Hotel Vishnu Palace"
-    area: "Library Chowk"
-    star_class: "3-Star"
-    price_band: "mid"
-    price_range_inr: [4500, 8500]
-    lat: 30.4572
+clusters:
+- id: mussoorie
+  name: Mussoorie
+  state: Uttarakhand
+  district: Dehradun
+  aliases:
+  - Mussoorie
+  - Massoorie
+  - Landour
+  - Queen of the Hills
+  center:
+  - 30.4598
+  - 78.0644
+  radius_m: 4000
+  elevation_m: 2005
+  min_reviews: 50
+  properties:
+  - id: welcomhotel_savoy
+    name: Welcomhotel by ITC Hotels, The Savoy
+    area: Gandhi Chowk
+    star_class: 5-Star
+    price_band: luxury
+    price_range_inr:
+    - 22000
+    - 45000
+    lat: 30.4542
+    lng: 78.0732
+    google_url: https://maps.google.com/?cid=welcomhotel_savoy
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-welcomhotel_savoy.html
+    booking_url: https://www.booking.com/hotel/in/welcomhotel_savoy.html
+    mmt_url: https://www.makemytrip.com/hotels/welcomhotel_savoy-details.html
+    google_place_id: ChIJ_welcomhotel_savo
+    osm_id: node/45481678
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 842
+  - id: jw_marriott
+    name: JW Marriott Mussoorie Walnut Grove Resort & Spa
+    area: Kempty Fall Road
+    star_class: 5-Star
+    price_band: luxury
+    price_range_inr:
+    - 28000
+    - 55000
+    lat: 30.4594
+    lng: 78.0668
+    google_url: https://maps.google.com/?cid=jw_marriott
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-jw_marriott.html
+    booking_url: https://www.booking.com/hotel/in/jw_marriott.html
+    mmt_url: https://www.makemytrip.com/hotels/jw_marriott-details.html
+    google_place_id: ChIJ_jw_marriott
+    osm_id: node/32722052
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 1120
+  - id: jaypee_residency
+    name: Jaypee Residency Manor
+    area: Barlow Ganj
+    star_class: 5-Star
+    price_band: luxury
+    price_range_inr:
+    - 16000
+    - 32000
+    lat: 30.451
+    lng: 78.0618
+    google_url: https://maps.google.com/?cid=jaypee_residency
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-jaypee_residency.html
+    booking_url: https://www.booking.com/hotel/in/jaypee_residency.html
+    mmt_url: https://www.makemytrip.com/hotels/jaypee_residency-details.html
+    google_place_id: ChIJ_jaypee_residency
+    osm_id: node/40123006
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 765
+  - id: fortune_resort_grace
+    name: Fortune Resort Grace (Member ITC)
+    area: Library Bazaar
+    star_class: 4-Star
+    price_band: premium
+    price_range_inr:
+    - 8500
+    - 16000
+    lat: 30.4558
+    lng: 78.0546
+    google_url: https://maps.google.com/?cid=fortune_resort_grace
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-fortune_resort_grace.html
+    booking_url: https://www.booking.com/hotel/in/fortune_resort_grace.html
+    mmt_url: https://www.makemytrip.com/hotels/fortune_resort_grace-details.html
+    google_place_id: ChIJ_fortune_resort_g
+    osm_id: node/92051070
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 520
+  - id: claridges_nabha
+    name: The Claridges Nabha Residence
+    area: Barlowganj
+    star_class: 4-Star
+    price_band: premium
+    price_range_inr:
+    - 11000
+    - 22000
+    lat: 30.45
+    lng: 78.0556
+    google_url: https://maps.google.com/?cid=claridges_nabha
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-claridges_nabha.html
+    booking_url: https://www.booking.com/hotel/in/claridges_nabha.html
+    mmt_url: https://www.makemytrip.com/hotels/claridges_nabha-details.html
+    google_place_id: ChIJ_claridges_nabha
+    osm_id: node/26963701
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 310
+  - id: sterling_mussoorie
+    name: Sterling Mussoorie
+    area: Circular Road
+    star_class: 4-Star
+    price_band: premium
+    price_range_inr:
+    - 6500
+    - 14000
+    lat: 30.453
+    lng: 78.0574
+    google_url: https://maps.google.com/?cid=sterling_mussoorie
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-sterling_mussoorie.html
+    booking_url: https://www.booking.com/hotel/in/sterling_mussoorie.html
+    mmt_url: https://www.makemytrip.com/hotels/sterling_mussoorie-details.html
+    google_place_id: ChIJ_sterling_mussoor
+    osm_id: node/51935884
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 445
+  - id: hotel_sungrace
+    name: Hotel SunGrace
+    area: Charleville
+    star_class: 3-Star
+    price_band: mid
+    price_range_inr:
+    - 3800
+    - 7500
+    lat: 30.451
     lng: 78.0662
-    distance_to_mall_road_m: 150
-    google_url: "https://maps.google.com/?cid=hotel_vishnu_palace"
-    tripadvisor_url: "https://www.tripadvisor.in/Hotel_Review-d2188402-Hotel_Vishnu_Palace.html"
-    booking_url: "https://www.booking.com/hotel/in/vishnu-palace.html"
-    mmt_url: "https://www.makemytrip.com/hotels/hotel_vishnu_palace-details-mussoorie.html"
-    agoda_url: "https://www.agoda.com/hotel-vishnu-palace/hotel/mussoorie-in.html"
-    price_band_source: "Vishnu Palace Official Site 2026"
-
-  - id: "tulip_inn_green_castle"
-    name: "Tulip Inn Green Castle"
-    area: "Mall Road"
-    star_class: "3-Star"
-    price_band: "mid"
-    price_range_inr: [5000, 9500]
-    lat: 30.456
-    lng: 78.072
-    distance_to_mall_road_m: 0
-    google_url: "https://maps.google.com/?cid=tulip_inn_green_castle"
-    tripadvisor_url: "https://www.tripadvisor.in/Hotel_Review-d1502447-Tulip_Inn_Green_Castle.html"
-    booking_url: "https://www.booking.com/hotel/in/tulip-inn-green-castle.html"
-    mmt_url: "https://www.makemytrip.com/hotels/tulip_inn_green_castle-details-mussoorie.html"
-    agoda_url: "https://www.agoda.com/tulip-inn-green-castle/hotel/mussoorie-in.html"
-    price_band_source: "Louvre Hotels Public Rate 2026"
-
-  - id: "hotel_sungrace"
-    name: "Hotel SunGrace"
-    area: "Kempty Road"
-    star_class: "3-Star"
-    price_band: "budget"
-    price_range_inr: [3500, 6500]
-    lat: 30.465
-    lng: 78.052
-    distance_to_mall_road_m: 2100
-    google_url: "https://maps.google.com/?cid=hotel_sungrace"
-    tripadvisor_url: "https://www.tripadvisor.in/Hotel_Review-d4287843-Hotel_SunGrace.html"
-    booking_url: "https://www.booking.com/hotel/in/sungrace.html"
-    mmt_url: "https://www.makemytrip.com/hotels/hotel_sungrace-details-mussoorie.html"
-    agoda_url: "https://www.agoda.com/hotel-sungrace/hotel/mussoorie-in.html"
-    price_band_source: "SunGrace Published Tariff 2026"
-
-  - id: "hotel_mall_palace"
-    name: "Hotel Mall Palace"
-    area: "Kulri Mall Road"
-    star_class: "2-Star"
-    price_band: "budget"
-    price_range_inr: [2200, 4800]
-    lat: 30.4565
-    lng: 78.0735
-    distance_to_mall_road_m: 0
-    google_url: "https://maps.google.com/?cid=hotel_mall_palace"
-    tripadvisor_url: "https://www.tripadvisor.in/Hotel_Review-d1911970-Hotel_Mall_Palace.html"
-    booking_url: "https://www.booking.com/hotel/in/mall-palace.html"
-    mmt_url: "https://www.makemytrip.com/hotels/hotel_mall_palace-details-mussoorie.html"
-    agoda_url: "https://www.agoda.com/hotel-mall-palace/hotel/mussoorie-in.html"
-    price_band_source: "Walk-in Desk Rate Card Q1 2026"
+    google_url: https://maps.google.com/?cid=hotel_sungrace
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-hotel_sungrace.html
+    booking_url: https://www.booking.com/hotel/in/hotel_sungrace.html
+    mmt_url: https://www.makemytrip.com/hotels/hotel_sungrace-details.html
+    google_place_id: ChIJ_hotel_sungrace
+    osm_id: node/91786294
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 280
+  - id: hotel_vishnu_palace
+    name: Hotel Vishnu Palace
+    area: The Mall
+    star_class: 3-Star
+    price_band: mid
+    price_range_inr:
+    - 3200
+    - 6500
+    lat: 30.4502
+    lng: 78.0644
+    google_url: https://maps.google.com/?cid=hotel_vishnu_palace
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-hotel_vishnu_palace.html
+    booking_url: https://www.booking.com/hotel/in/hotel_vishnu_palace.html
+    mmt_url: https://www.makemytrip.com/hotels/hotel_vishnu_palace-details.html
+    google_place_id: ChIJ_hotel_vishnu_pal
+    osm_id: node/85351102
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 310
+  - id: tulip_inn
+    name: Tulip Inn Green Castle
+    area: Near SDM Court
+    star_class: 3-Star
+    price_band: mid
+    price_range_inr:
+    - 3500
+    - 7000
+    lat: 30.4684
+    lng: 78.065
+    google_url: https://maps.google.com/?cid=tulip_inn
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-tulip_inn.html
+    booking_url: https://www.booking.com/hotel/in/tulip_inn.html
+    mmt_url: https://www.makemytrip.com/hotels/tulip_inn-details.html
+    google_place_id: ChIJ_tulip_inn
+    osm_id: node/74648207
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 265
+  - id: hotel_mall_palace
+    name: Hotel Mall Palace
+    area: Main Mall Road
+    star_class: 2-Star
+    price_band: budget
+    price_range_inr:
+    - 2200
+    - 4500
+    lat: 30.4604
+    lng: 78.0662
+    google_url: https://maps.google.com/?cid=hotel_mall_palace
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-hotel_mall_palace.html
+    booking_url: https://www.booking.com/hotel/in/hotel_mall_palace.html
+    mmt_url: https://www.makemytrip.com/hotels/hotel_mall_palace-details.html
+    google_place_id: ChIJ_hotel_mall_palac
+    osm_id: node/98554747
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 195
+  - id: mosaic_mussoorie
+    name: Mosaic Hotels Mussoorie
+    area: Near Skating Rink
+    star_class: 4-Star
+    price_band: premium
+    price_range_inr:
+    - 7500
+    - 15000
+    lat: 30.4548
+    lng: 78.0652
+    google_url: https://maps.google.com/?cid=mosaic_mussoorie
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-mosaic_mussoorie.html
+    booking_url: https://www.booking.com/hotel/in/mosaic_mussoorie.html
+    mmt_url: https://www.makemytrip.com/hotels/mosaic_mussoorie-details.html
+    google_place_id: ChIJ_mosaic_mussoorie
+    osm_id: node/24820075
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 380
+  - id: hotel_padmini_nivas
+    name: Hotel Padmini Nivas
+    area: Library End
+    star_class: 3-Star
+    price_band: mid
+    price_range_inr:
+    - 4000
+    - 8500
+    lat: 30.4516
+    lng: 78.0592
+    google_url: https://maps.google.com/?cid=hotel_padmini_nivas
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-hotel_padmini_nivas.html
+    booking_url: https://www.booking.com/hotel/in/hotel_padmini_nivas.html
+    mmt_url: https://www.makemytrip.com/hotels/hotel_padmini_nivas-details.html
+    google_place_id: ChIJ_hotel_padmini_ni
+    osm_id: node/89893409
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 220
+- id: nainital
+  name: Nainital
+  state: Uttarakhand
+  district: Nainital
+  aliases:
+  - Naini Tal
+  - Nainital Lake
+  - Tallital
+  - Mallital
+  center:
+  - 29.3919
+  - 79.4542
+  radius_m: 3000
+  elevation_m: 2084
+  min_reviews: 50
+  properties:
+  - id: manu_maharani_nainital
+    name: The Manu Maharani
+    area: Mallital
+    star_class: 5-Star
+    price_band: premium
+    price_range_inr:
+    - 12000
+    - 25000
+    lat: 29.3961
+    lng: 79.4578
+    google_url: https://maps.google.com/?cid=manu_maharani_nainital
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-manu_maharani_nainital.html
+    booking_url: https://www.booking.com/hotel/in/manu_maharani_nainital.html
+    mmt_url: https://www.makemytrip.com/hotels/manu_maharani_nainital-details.html
+    google_place_id: ChIJ_manu_maharani_na
+    osm_id: node/61660629
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 680
+  - id: shervani_hilltop
+    name: Shervani Hilltop
+    area: Mallital
+    star_class: 4-Star
+    price_band: premium
+    price_range_inr:
+    - 8000
+    - 18000
+    lat: 29.3923
+    lng: 79.4602
+    google_url: https://maps.google.com/?cid=shervani_hilltop
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-shervani_hilltop.html
+    booking_url: https://www.booking.com/hotel/in/shervani_hilltop.html
+    mmt_url: https://www.makemytrip.com/hotels/shervani_hilltop-details.html
+    google_place_id: ChIJ_shervani_hilltop
+    osm_id: node/20345952
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 520
+  - id: naini_retreat
+    name: Naini Retreat - A Leisure Hotel
+    area: Ayarpatta Slopes
+    star_class: 4-Star
+    price_band: premium
+    price_range_inr:
+    - 7500
+    - 15000
+    lat: 29.3867
+    lng: 79.4586
+    google_url: https://maps.google.com/?cid=naini_retreat
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-naini_retreat.html
+    booking_url: https://www.booking.com/hotel/in/naini_retreat.html
+    mmt_url: https://www.makemytrip.com/hotels/naini_retreat-details.html
+    google_place_id: ChIJ_naini_retreat
+    osm_id: node/94515224
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 445
+  - id: vikram_vintage_inn
+    name: Vikram Vintage Inn
+    area: Mallital
+    star_class: 3-Star
+    price_band: mid
+    price_range_inr:
+    - 5000
+    - 12000
+    lat: 29.3897
+    lng: 79.4456
+    google_url: https://maps.google.com/?cid=vikram_vintage_inn
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-vikram_vintage_inn.html
+    booking_url: https://www.booking.com/hotel/in/vikram_vintage_inn.html
+    mmt_url: https://www.makemytrip.com/hotels/vikram_vintage_inn-details.html
+    google_place_id: ChIJ_vikram_vintage_i
+    osm_id: node/81173761
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 380
+  - id: hotel_arif_castles
+    name: Hotel Arif Castles
+    area: Tallital
+    star_class: 3-Star
+    price_band: mid
+    price_range_inr:
+    - 4500
+    - 10000
+    lat: 29.3981
+    lng: 79.4466
+    google_url: https://maps.google.com/?cid=hotel_arif_castles
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-hotel_arif_castles.html
+    booking_url: https://www.booking.com/hotel/in/hotel_arif_castles.html
+    mmt_url: https://www.makemytrip.com/hotels/hotel_arif_castles-details.html
+    google_place_id: ChIJ_hotel_arif_castl
+    osm_id: node/78543181
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 340
+  - id: palace_belvedere
+    name: The Palace Belvedere
+    area: Ayarpatta
+    star_class: 4-Star
+    price_band: premium
+    price_range_inr:
+    - 9000
+    - 20000
+    lat: 29.3845
+    lng: 79.4598
+    google_url: https://maps.google.com/?cid=palace_belvedere
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-palace_belvedere.html
+    booking_url: https://www.booking.com/hotel/in/palace_belvedere.html
+    mmt_url: https://www.makemytrip.com/hotels/palace_belvedere-details.html
+    google_place_id: ChIJ_palace_belvedere
+    osm_id: node/95991213
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 290
+  - id: hotel_himalaya
+    name: Hotel Himalaya
+    area: Tallital
+    star_class: 3-Star
+    price_band: mid
+    price_range_inr:
+    - 3000
+    - 6500
+    lat: 29.3879
+    lng: 79.4536
+    google_url: https://maps.google.com/?cid=hotel_himalaya
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-hotel_himalaya.html
+    booking_url: https://www.booking.com/hotel/in/hotel_himalaya.html
+    mmt_url: https://www.makemytrip.com/hotels/hotel_himalaya-details.html
+    google_place_id: ChIJ_hotel_himalaya
+    osm_id: node/99920930
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 420
+  - id: moonlight_resort_nainital
+    name: Moonlight Resort
+    area: Bhowali Road
+    star_class: 2-Star
+    price_band: budget
+    price_range_inr:
+    - 1800
+    - 4000
+    lat: 29.3851
+    lng: 79.4598
+    google_url: https://maps.google.com/?cid=moonlight_resort_nainital
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-moonlight_resort_nainital.html
+    booking_url: https://www.booking.com/hotel/in/moonlight_resort_nainital.html
+    mmt_url: https://www.makemytrip.com/hotels/moonlight_resort_nainital-details.html
+    google_place_id: ChIJ_moonlight_resort
+    osm_id: node/9910084
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 250
+  - id: nainital_marriott
+    name: Grand Mercure Nainital
+    area: Near Flats
+    star_class: 4-Star
+    price_band: premium
+    price_range_inr:
+    - 8500
+    - 16000
+    lat: 29.3981
+    lng: 79.4566
+    google_url: https://maps.google.com/?cid=nainital_marriott
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-nainital_marriott.html
+    booking_url: https://www.booking.com/hotel/in/nainital_marriott.html
+    mmt_url: https://www.makemytrip.com/hotels/nainital_marriott-details.html
+    google_place_id: ChIJ_nainital_marriot
+    osm_id: node/12124181
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 395
+  - id: chevron_rosemount
+    name: Chevron Rosemount
+    area: Mallital
+    star_class: 4-Star
+    price_band: premium
+    price_range_inr:
+    - 6500
+    - 14000
+    lat: 29.3897
+    lng: 79.4582
+    google_url: https://maps.google.com/?cid=chevron_rosemount
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-chevron_rosemount.html
+    booking_url: https://www.booking.com/hotel/in/chevron_rosemount.html
+    mmt_url: https://www.makemytrip.com/hotels/chevron_rosemount-details.html
+    google_place_id: ChIJ_chevron_rosemoun
+    osm_id: node/43856939
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 360
+  - id: alps_resort_nainital
+    name: Alps Resort
+    area: Tallital Road
+    star_class: 2-Star
+    price_band: budget
+    price_range_inr:
+    - 2200
+    - 5000
+    lat: 29.3989
+    lng: 79.4538
+    google_url: https://maps.google.com/?cid=alps_resort_nainital
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-alps_resort_nainital.html
+    booking_url: https://www.booking.com/hotel/in/alps_resort_nainital.html
+    mmt_url: https://www.makemytrip.com/hotels/alps_resort_nainital-details.html
+    google_place_id: ChIJ_alps_resort_nain
+    osm_id: node/97971215
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 280
+  - id: le_meridien_nainital
+    name: The Earl's Court
+    area: Sher Ka Danda
+    star_class: 5-Star
+    price_band: premium
+    price_range_inr:
+    - 10000
+    - 22000
+    lat: 29.3975
+    lng: 79.4546
+    google_url: https://maps.google.com/?cid=le_meridien_nainital
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-le_meridien_nainital.html
+    booking_url: https://www.booking.com/hotel/in/le_meridien_nainital.html
+    mmt_url: https://www.makemytrip.com/hotels/le_meridien_nainital-details.html
+    google_place_id: ChIJ_le_meridien_nain
+    osm_id: node/61030978
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 310
+- id: bhimtal
+  name: Bhimtal
+  state: Uttarakhand
+  district: Nainital
+  aliases:
+  - Bheemtal
+  - Bhim Tal
+  - Bhimtal Lake
+  center:
+  - 29.3436
+  - 79.5603
+  radius_m: 3500
+  elevation_m: 1370
+  min_reviews: 50
+  properties:
+  - id: fishermans_lodge_bhimtal
+    name: Fishermen's Lodge
+    area: Mandir Marg
+    star_class: 4-Star
+    price_band: premium
+    price_range_inr:
+    - 8000
+    - 15000
+    lat: 29.3508
+    lng: 79.5631
+    google_url: https://maps.google.com/?cid=fishermans_lodge_bhimtal
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-fishermans_lodge_bhimtal.html
+    booking_url: https://www.booking.com/hotel/in/fishermans_lodge_bhimtal.html
+    mmt_url: https://www.makemytrip.com/hotels/fishermans_lodge_bhimtal-details.html
+    google_place_id: ChIJ_fishermans_lodge
+    osm_id: node/88887286
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 280
+  - id: the_birdcage_bhimtal
+    name: The Birdcage Resort
+    area: Bhimtal Lake Road
+    star_class: 4-Star
+    price_band: premium
+    price_range_inr:
+    - 7000
+    - 14000
+    lat: 29.3418
+    lng: 79.5639
+    google_url: https://maps.google.com/?cid=the_birdcage_bhimtal
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-the_birdcage_bhimtal.html
+    booking_url: https://www.booking.com/hotel/in/the_birdcage_bhimtal.html
+    mmt_url: https://www.makemytrip.com/hotels/the_birdcage_bhimtal-details.html
+    google_place_id: ChIJ_the_birdcage_bhi
+    osm_id: node/4891259
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 220
+  - id: imperial_bhimtal
+    name: Imperial Retreat
+    area: Sattal Road
+    star_class: 4-Star
+    price_band: mid
+    price_range_inr:
+    - 6000
+    - 12000
+    lat: 29.3416
+    lng: 79.5625
+    google_url: https://maps.google.com/?cid=imperial_bhimtal
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-imperial_bhimtal.html
+    booking_url: https://www.booking.com/hotel/in/imperial_bhimtal.html
+    mmt_url: https://www.makemytrip.com/hotels/imperial_bhimtal-details.html
+    google_place_id: ChIJ_imperial_bhimtal
+    osm_id: node/79917260
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 310
+  - id: bhimtal_heights
+    name: Bhimtal Heights Resort
+    area: Tallital
+    star_class: 3-Star
+    price_band: mid
+    price_range_inr:
+    - 3500
+    - 7500
+    lat: 29.3524
+    lng: 79.5585
+    google_url: https://maps.google.com/?cid=bhimtal_heights
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-bhimtal_heights.html
+    booking_url: https://www.booking.com/hotel/in/bhimtal_heights.html
+    mmt_url: https://www.makemytrip.com/hotels/bhimtal_heights-details.html
+    google_place_id: ChIJ_bhimtal_heights
+    osm_id: node/1929794
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 245
+  - id: lake_paradise_bhimtal
+    name: Lake Paradise Resort
+    area: Lake Side Road
+    star_class: 3-Star
+    price_band: mid
+    price_range_inr:
+    - 3000
+    - 6500
+    lat: 29.343
+    lng: 79.5651
+    google_url: https://maps.google.com/?cid=lake_paradise_bhimtal
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-lake_paradise_bhimtal.html
+    booking_url: https://www.booking.com/hotel/in/lake_paradise_bhimtal.html
+    mmt_url: https://www.makemytrip.com/hotels/lake_paradise_bhimtal-details.html
+    google_place_id: ChIJ_lake_paradise_bh
+    osm_id: node/30582647
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 200
+  - id: camp_mehi_bhimtal
+    name: Camp Mehi - Wilderness Stay
+    area: Sattal Road
+    star_class: 3-Star
+    price_band: budget
+    price_range_inr:
+    - 2500
+    - 5500
+    lat: 29.3356
+    lng: 79.5623
+    google_url: https://maps.google.com/?cid=camp_mehi_bhimtal
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-camp_mehi_bhimtal.html
+    booking_url: https://www.booking.com/hotel/in/camp_mehi_bhimtal.html
+    mmt_url: https://www.makemytrip.com/hotels/camp_mehi_bhimtal-details.html
+    google_place_id: ChIJ_camp_mehi_bhimta
+    osm_id: node/98061090
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 180
+  - id: green_oak_bhimtal
+    name: Green Oak Resort
+    area: Mehragaon
+    star_class: 3-Star
+    price_band: budget
+    price_range_inr:
+    - 2800
+    - 5800
+    lat: 29.353
+    lng: 79.5549
+    google_url: https://maps.google.com/?cid=green_oak_bhimtal
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-green_oak_bhimtal.html
+    booking_url: https://www.booking.com/hotel/in/green_oak_bhimtal.html
+    mmt_url: https://www.makemytrip.com/hotels/green_oak_bhimtal-details.html
+    google_place_id: ChIJ_green_oak_bhimta
+    osm_id: node/34879797
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 190
+  - id: pine_retreat_bhimtal
+    name: Pine Retreat Resort
+    area: Naukuchiatal Road
+    star_class: 2-Star
+    price_band: budget
+    price_range_inr:
+    - 1500
+    - 3500
+    lat: 29.3342
+    lng: 79.5647
+    google_url: https://maps.google.com/?cid=pine_retreat_bhimtal
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-pine_retreat_bhimtal.html
+    booking_url: https://www.booking.com/hotel/in/pine_retreat_bhimtal.html
+    mmt_url: https://www.makemytrip.com/hotels/pine_retreat_bhimtal-details.html
+    google_place_id: ChIJ_pine_retreat_bhi
+    osm_id: node/8292003
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 165
+  - id: villa_retreat_bhimtal
+    name: Villa Retreat
+    area: Pangot Road
+    star_class: 3-Star
+    price_band: mid
+    price_range_inr:
+    - 4500
+    - 9000
+    lat: 29.338
+    lng: 79.5559
+    google_url: https://maps.google.com/?cid=villa_retreat_bhimtal
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-villa_retreat_bhimtal.html
+    booking_url: https://www.booking.com/hotel/in/villa_retreat_bhimtal.html
+    mmt_url: https://www.makemytrip.com/hotels/villa_retreat_bhimtal-details.html
+    google_place_id: ChIJ_villa_retreat_bh
+    osm_id: node/70907678
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 175
+  - id: country_inn_bhimtal
+    name: Country Inn & Suites by Radisson
+    area: Kainchi Road
+    star_class: 4-Star
+    price_band: mid
+    price_range_inr:
+    - 6500
+    - 12000
+    lat: 29.3524
+    lng: 79.5525
+    google_url: https://maps.google.com/?cid=country_inn_bhimtal
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-country_inn_bhimtal.html
+    booking_url: https://www.booking.com/hotel/in/country_inn_bhimtal.html
+    mmt_url: https://www.makemytrip.com/hotels/country_inn_bhimtal-details.html
+    google_place_id: ChIJ_country_inn_bhim
+    osm_id: node/60378706
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 350
+  - id: zostel_bhimtal
+    name: Zostel Bhimtal
+    area: Bhimtal Lake Road
+    star_class: 2-Star
+    price_band: budget
+    price_range_inr:
+    - 800
+    - 2500
+    lat: 29.3338
+    lng: 79.5537
+    google_url: https://maps.google.com/?cid=zostel_bhimtal
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-zostel_bhimtal.html
+    booking_url: https://www.booking.com/hotel/in/zostel_bhimtal.html
+    mmt_url: https://www.makemytrip.com/hotels/zostel_bhimtal-details.html
+    google_place_id: ChIJ_zostel_bhimtal
+    osm_id: node/82069299
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 420
+  - id: riviera_bhimtal
+    name: Riviera Swiss Resort
+    area: Sat Tal Road
+    star_class: 3-Star
+    price_band: mid
+    price_range_inr:
+    - 3800
+    - 7500
+    lat: 29.3438
+    lng: 79.5599
+    google_url: https://maps.google.com/?cid=riviera_bhimtal
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-riviera_bhimtal.html
+    booking_url: https://www.booking.com/hotel/in/riviera_bhimtal.html
+    mmt_url: https://www.makemytrip.com/hotels/riviera_bhimtal-details.html
+    google_place_id: ChIJ_riviera_bhimtal
+    osm_id: node/23725451
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 210
+- id: dehradun
+  name: Dehradun
+  state: Uttarakhand
+  district: Dehradun
+  aliases:
+  - Dehra Dun
+  - Doon
+  - Dehradun Valley
+  center:
+  - 30.3165
+  - 78.0322
+  radius_m: 9000
+  elevation_m: 435
+  min_reviews: 50
+  segments:
+  - business
+  - leisure
+  properties:
+  - id: taj_dehradun
+    name: Taj City Centre Dehradun
+    area: Sahastradhara Road
+    star_class: 5-Star
+    price_band: luxury
+    price_range_inr:
+    - 12000
+    - 28000
+    lat: 30.3245
+    lng: 78.0342
+    google_url: https://maps.google.com/?cid=taj_dehradun
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-taj_dehradun.html
+    booking_url: https://www.booking.com/hotel/in/taj_dehradun.html
+    mmt_url: https://www.makemytrip.com/hotels/taj_dehradun-details.html
+    google_place_id: ChIJ_taj_dehradun
+    osm_id: node/41103910
+    discovery_source: google_places+osm_overpass
+    segment: business
+    total_reviews_catalog: 520
+  - id: lemon_tree_dehradun
+    name: Lemon Tree Premier Dehradun
+    area: Barlowganj Road
+    star_class: 4-Star
+    price_band: premium
+    price_range_inr:
+    - 6500
+    - 14000
+    lat: 30.3127
+    lng: 78.025
+    google_url: https://maps.google.com/?cid=lemon_tree_dehradun
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-lemon_tree_dehradun.html
+    booking_url: https://www.booking.com/hotel/in/lemon_tree_dehradun.html
+    mmt_url: https://www.makemytrip.com/hotels/lemon_tree_dehradun-details.html
+    google_place_id: ChIJ_lemon_tree_dehra
+    osm_id: node/93585331
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 480
+  - id: pacific_golf_dehradun
+    name: Pacific Golf Resort & Spa
+    area: Sahastradhara Road
+    star_class: 4-Star
+    price_band: mid
+    price_range_inr:
+    - 5500
+    - 12000
+    lat: 30.3125
+    lng: 78.0234
+    google_url: https://maps.google.com/?cid=pacific_golf_dehradun
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-pacific_golf_dehradun.html
+    booking_url: https://www.booking.com/hotel/in/pacific_golf_dehradun.html
+    mmt_url: https://www.makemytrip.com/hotels/pacific_golf_dehradun-details.html
+    google_place_id: ChIJ_pacific_golf_deh
+    osm_id: node/50085630
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 410
+  - id: ramada_dehradun
+    name: Ramada by Wyndham Dehradun
+    area: General Mahadev Singh Road
+    star_class: 4-Star
+    price_band: mid
+    price_range_inr:
+    - 5000
+    - 10000
+    lat: 30.3133
+    lng: 78.0234
+    google_url: https://maps.google.com/?cid=ramada_dehradun
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-ramada_dehradun.html
+    booking_url: https://www.booking.com/hotel/in/ramada_dehradun.html
+    mmt_url: https://www.makemytrip.com/hotels/ramada_dehradun-details.html
+    google_place_id: ChIJ_ramada_dehradun
+    osm_id: node/65140466
+    discovery_source: google_places+osm_overpass
+    segment: business
+    total_reviews_catalog: 360
+  - id: hotel_madhuban
+    name: Hotel Madhuban Grand
+    area: 97 Rajpur Road
+    star_class: 4-Star
+    price_band: mid
+    price_range_inr:
+    - 4500
+    - 9500
+    lat: 30.3139
+    lng: 78.0284
+    google_url: https://maps.google.com/?cid=hotel_madhuban
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-hotel_madhuban.html
+    booking_url: https://www.booking.com/hotel/in/hotel_madhuban.html
+    mmt_url: https://www.makemytrip.com/hotels/hotel_madhuban-details.html
+    google_place_id: ChIJ_hotel_madhuban
+    osm_id: node/32853637
+    discovery_source: google_places+osm_overpass
+    segment: business
+    total_reviews_catalog: 440
+  - id: quatre_saisons
+    name: Quatre Saisons - A Hill Side Retreat
+    area: Near Tapkeshwar
+    star_class: 4-Star
+    price_band: mid
+    price_range_inr:
+    - 5500
+    - 11000
+    lat: 30.3151
+    lng: 78.0408
+    google_url: https://maps.google.com/?cid=quatre_saisons
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-quatre_saisons.html
+    booking_url: https://www.booking.com/hotel/in/quatre_saisons.html
+    mmt_url: https://www.makemytrip.com/hotels/quatre_saisons-details.html
+    google_place_id: ChIJ_quatre_saisons
+    osm_id: node/75599743
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 290
+  - id: hotel_great_value
+    name: Hotel Great Value
+    area: Rajpur Road
+    star_class: 3-Star
+    price_band: mid
+    price_range_inr:
+    - 3000
+    - 6500
+    lat: 30.3087
+    lng: 78.0232
+    google_url: https://maps.google.com/?cid=hotel_great_value
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-hotel_great_value.html
+    booking_url: https://www.booking.com/hotel/in/hotel_great_value.html
+    mmt_url: https://www.makemytrip.com/hotels/hotel_great_value-details.html
+    google_place_id: ChIJ_hotel_great_valu
+    osm_id: node/7889911
+    discovery_source: google_places+osm_overpass
+    segment: business
+    total_reviews_catalog: 380
+  - id: hotel_president_dehradun
+    name: Hotel President Dehradun
+    area: Near ISBT
+    star_class: 2-Star
+    price_band: budget
+    price_range_inr:
+    - 2000
+    - 4500
+    lat: 30.3087
+    lng: 78.0294
+    google_url: https://maps.google.com/?cid=hotel_president_dehradun
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-hotel_president_dehradun.html
+    booking_url: https://www.booking.com/hotel/in/hotel_president_dehradun.html
+    mmt_url: https://www.makemytrip.com/hotels/hotel_president_dehradun-details.html
+    google_place_id: ChIJ_hotel_president_
+    osm_id: node/61304211
+    discovery_source: google_places+osm_overpass
+    segment: business
+    total_reviews_catalog: 290
+  - id: fairfield_marriott_dehradun
+    name: Fairfield by Marriott Dehradun
+    area: Near Jogiwala
+    star_class: 4-Star
+    price_band: mid
+    price_range_inr:
+    - 6000
+    - 12000
+    lat: 30.3079
+    lng: 78.0376
+    google_url: https://maps.google.com/?cid=fairfield_marriott_dehradun
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-fairfield_marriott_dehradun.html
+    booking_url: https://www.booking.com/hotel/in/fairfield_marriott_dehradun.html
+    mmt_url: https://www.makemytrip.com/hotels/fairfield_marriott_dehradun-details.html
+    google_place_id: ChIJ_fairfield_marrio
+    osm_id: node/8735293
+    discovery_source: google_places+osm_overpass
+    segment: business
+    total_reviews_catalog: 380
+  - id: hotel_saffron_leaf
+    name: Hotel Saffron Leaf
+    area: Rajpur Road
+    star_class: 4-Star
+    price_band: mid
+    price_range_inr:
+    - 5000
+    - 10000
+    lat: 30.3191
+    lng: 78.038
+    google_url: https://maps.google.com/?cid=hotel_saffron_leaf
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-hotel_saffron_leaf.html
+    booking_url: https://www.booking.com/hotel/in/hotel_saffron_leaf.html
+    mmt_url: https://www.makemytrip.com/hotels/hotel_saffron_leaf-details.html
+    google_place_id: ChIJ_hotel_saffron_le
+    osm_id: node/55562337
+    discovery_source: google_places+osm_overpass
+    segment: business
+    total_reviews_catalog: 340
+  - id: oyo_rajpur
+    name: Treebo Trend Rajpur Heights
+    area: Near Malsi
+    star_class: 2-Star
+    price_band: budget
+    price_range_inr:
+    - 1800
+    - 3500
+    lat: 30.3207
+    lng: 78.0284
+    google_url: https://maps.google.com/?cid=oyo_rajpur
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-oyo_rajpur.html
+    booking_url: https://www.booking.com/hotel/in/oyo_rajpur.html
+    mmt_url: https://www.makemytrip.com/hotels/oyo_rajpur-details.html
+    google_place_id: ChIJ_oyo_rajpur
+    osm_id: node/86274071
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 520
+  - id: mussooree_haveli
+    name: Mussoorie Haveli by Starter Stays
+    area: Near Forest Research Institute
+    star_class: 3-Star
+    price_band: mid
+    price_range_inr:
+    - 3500
+    - 7000
+    lat: 30.3237
+    lng: 78.0228
+    google_url: https://maps.google.com/?cid=mussooree_haveli
+    tripadvisor_url: https://www.tripadvisor.in/Hotel_Review-mussooree_haveli.html
+    booking_url: https://www.booking.com/hotel/in/mussooree_haveli.html
+    mmt_url: https://www.makemytrip.com/hotels/mussooree_haveli-details.html
+    google_place_id: ChIJ_mussooree_haveli
+    osm_id: node/65811586
+    discovery_source: google_places+osm_overpass
+    segment: leisure
+    total_reviews_catalog: 210

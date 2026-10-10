@@ -82,21 +82,111 @@ def list_properties():
 # v2.0 Canonical Analytical Endpoints (Pipeline Architecture)
 # -------------------------------------------------------------------------
 
+@app.get("/api/clusters")
+def get_clusters_list():
+    """
+    Returns list of 4 monitored clusters (Mussoorie, Nainital, Bhimtal, Dehradun)
+    with hotel count, total reviews analyzed, and coordinates.
+    """
+    clusters_meta_path = os.path.join(PROJECT_ROOT, "frontend", "data", "clusters_meta.js")
+    if os.path.exists(clusters_meta_path):
+        import json
+        with open(clusters_meta_path, "r", encoding="utf-8") as f:
+            content = f.read().replace("window.CLUSTERS_META = ", "").rstrip(";\n ")
+            return json.loads(content)
+    with open(os.path.join(PROJECT_ROOT, "config", "cluster.yaml"), "r", encoding="utf-8") as f:
+        cfg = yaml.safe_load(f)
+    return cfg.get("clusters", [])
+
+@app.get("/api/hotels")
+def get_hotels_search(
+    cluster: Optional[str] = None,
+    q: Optional[str] = None,
+    min_rating: Optional[float] = None,
+    aspect: Optional[str] = None,
+    verdict: Optional[str] = None
+):
+    """
+    Multi-cluster hotel search with typo tolerance, alias expansion, and verdict filtering.
+    """
+    index_path = os.path.join(PROJECT_ROOT, "frontend", "data", "hotels_index.js")
+    hotels = []
+    if os.path.exists(index_path):
+        import json
+        with open(index_path, "r", encoding="utf-8") as f:
+            content = f.read().replace("window.HOTELS_INDEX = ", "").rstrip(";\n ")
+            hotels = json.loads(content)
+    
+    results = hotels
+    if cluster:
+        c_clean = cluster.strip().lower()
+        results = [h for h in results if h["cluster_id"].lower() == c_clean]
+    
+    if q:
+        q_lower = q.strip().lower()
+        filtered = []
+        for h in results:
+            name_match = q_lower in h["name"].lower()
+            area_match = q_lower in h.get("area", "").lower()
+            alias_match = any(q_lower in str(a).lower() for a in h.get("aliases", []))
+            cluster_match = q_lower in h.get("cluster_name", "").lower()
+            if name_match or area_match or alias_match or cluster_match:
+                filtered.append(h)
+        results = filtered
+
+    if min_rating:
+        results = [h for h in results if float(h.get("rating", 0)) >= min_rating]
+
+    if verdict:
+        v_clean = verdict.strip().lower()
+        if aspect:
+            asp_clean = aspect.strip().lower()
+            results = [
+                h for h in results
+                if (v_clean in ("lead", "leads") and asp_clean in [a.lower() for a in h.get("verdicts", {}).get("leads", [])])
+                or (v_clean in ("weakness", "lags") and asp_clean in [a.lower() for a in h.get("verdicts", {}).get("weaknesses", [])])
+                or (v_clean in ("opportunity", "cluster_opportunity") and asp_clean in [a.lower() for a in h.get("verdicts", {}).get("cluster_opportunities", [])])
+            ]
+        else:
+            results = [
+                h for h in results
+                if (v_clean in ("lead", "leads") and len(h.get("verdicts", {}).get("leads", [])) > 0)
+                or (v_clean in ("weakness", "lags") and len(h.get("verdicts", {}).get("weaknesses", [])) > 0)
+                or (v_clean in ("opportunity", "cluster_opportunity") and len(h.get("verdicts", {}).get("cluster_opportunities", [])) > 0)
+            ]
+
+    return {"count": len(results), "hotels": results}
+
+@app.get("/api/hotel/{id}")
+def get_hotel_detail(id: str):
+    """
+    Returns full benchmark, verdicts, aspect scores, trends, and evidence quotes for a hotel.
+    """
+    bm = compute_benchmarks()
+    h_clean = id.strip().lower()
+    if h_clean in bm:
+        return bm[h_clean]
+    for pid, data in bm.items():
+        if not str(pid).startswith("_") and (h_clean == pid.lower() or h_clean in data.get("property", {}).get("name", "").lower()):
+            return data
+    raise HTTPException(status_code=404, detail=f"Hotel '{id}' not found")
+
 @app.get("/api/benchmark")
-def get_canonical_benchmark(property: Optional[str] = None):
+def get_canonical_benchmark(property: Optional[str] = None, cluster: Optional[str] = None):
     """
     Returns Bayesian shrinkage benchmark:
     - If property specified: returns property row, 8 aspects, verdicts, evidence quotes, rating-in-context
-    - If property omitted: returns entire 12-property cluster benchmark heatmap
+    - If cluster specified: returns properties within that specific cluster
+    - If omitted: returns entire cluster benchmark dictionary
     """
     try:
-        bm = compute_benchmarks()
+        bm = compute_benchmarks(cluster_id=cluster)
         if property:
             p_clean = property.strip().lower()
             if p_clean in bm:
                 return bm[p_clean]
             for pid, data in bm.items():
-                if p_clean in pid.lower() or p_clean in data["property"]["name"].lower():
+                if not str(pid).startswith("_") and (p_clean in pid.lower() or p_clean in data.get("property", {}).get("name", "").lower()):
                     return data
             raise HTTPException(status_code=404, detail=f"Property '{property}' not found in cluster")
         return bm

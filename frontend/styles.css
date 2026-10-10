@@ -2009,3 +2009,409 @@ select.hotel-select:focus {
   background: var(--accent-emerald-glow);
   border-radius: 4px;
 }
+
+/* ==========================================================================
+   Multi-Cluster Search & Discovery UI System
+   ========================================================================== */
+
+/* Global Search Bar (Always Visible) */
+.global-search-section {
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 40;
+}
+
+.global-search-bar {
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  position: relative;
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.search-bar-icon {
+  color: var(--accent-cyan);
+  flex-shrink: 0;
+}
+
+.global-search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.global-search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.btn-clear-search {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  transition: var(--transition);
+}
+
+.btn-clear-search:hover {
+  color: var(--text-primary);
+}
+
+/* Autocomplete Dropdown Grouped by City */
+.search-autocomplete-dropdown {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  background: rgba(15, 23, 42, 0.97);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  max-height: 480px;
+  overflow-y: auto;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5);
+  z-index: 50;
+  padding: 0.75rem;
+}
+
+[data-theme="light"] .search-autocomplete-dropdown {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.15);
+}
+
+.search-group-header {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent-cyan);
+  padding: 0.5rem 0.75rem 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-glass);
+  margin-bottom: 0.35rem;
+}
+
+.search-group-count {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  color: inherit;
+}
+
+.search-result-item:hover,
+.search-result-item.selected {
+  background: rgba(14, 165, 233, 0.12);
+}
+
+.search-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.search-item-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.search-item-meta {
+  font-size: 0.76rem;
+  color: var(--text-secondary);
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.search-item-badge {
+  font-size: 0.68rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.search-item-verdict {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.search-verdict-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+.search-verdict-lead {
+  background: var(--accent-emerald-glow);
+  color: var(--accent-emerald);
+}
+
+.search-verdict-lag {
+  background: var(--accent-rose-glow);
+  color: var(--accent-rose);
+}
+
+/* Enhanced Filters Bar */
+.search-filters-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+}
+
+.filter-control-group {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.filter-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filter-select {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid var(--border-glass);
+  color: var(--text-primary);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-family: var(--font-family);
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition);
+}
+
+[data-theme="light"] .filter-select {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-primary);
+}
+
+.filter-select:focus {
+  border-color: var(--border-focus);
+}
+
+/* Data Coverage Badges */
+.badge-coverage {
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  letter-spacing: 0.02em;
+}
+
+.coverage-multi {
+  background: var(--accent-emerald-glow);
+  color: var(--accent-emerald);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.coverage-core {
+  background: var(--accent-cyan-glow);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(14, 165, 233, 0.3);
+}
+
+.coverage-limited {
+  background: var(--accent-amber-glow);
+  color: var(--accent-amber);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+/* Hotel Card Verdict Strip */
+.hotel-card-verdicts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.6rem 0;
+}
+
+.card-verdict-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.card-verdict-pill.lead {
+  background: var(--accent-emerald-glow);
+  color: var(--accent-emerald);
+}
+
+.card-verdict-pill.lag {
+  background: var(--accent-rose-glow);
+  color: var(--accent-rose);
+}
+
+.card-verdict-pill.opp {
+  background: var(--accent-cyan-glow);
+  color: var(--accent-cyan);
+}
+
+/* B2B Onboarding Panel */
+.b2b-onboarding-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+  border-left: 4px solid var(--accent-cyan);
+}
+
+.b2b-onboarding-info {
+  flex: 1;
+}
+
+.onboarding-pill {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.onboarding-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.onboarding-desc {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.b2b-onboarding-selector {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.b2b-cluster-dropdown,
+.b2b-property-dropdown {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-glass);
+  color: var(--text-primary);
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family);
+  font-size: 0.85rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.b2b-property-dropdown {
+  min-width: 240px;
+}
+
+/* Property Provenance Status Bar */
+.property-provenance-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.prov-item strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.prov-divider {
+  color: var(--border-glass);
+}
+
+/* Cross-City Destination Comparison Table */
+.cross-city-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.84rem;
+}
+
+.cross-city-table th,
+.cross-city-table td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.cross-city-table th {
+  background: rgba(15, 23, 42, 0.8);
+  color: var(--text-muted);
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cross-city-table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.city-pct-pill {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.pct-high {
+  background: var(--accent-rose-glow);
+  color: var(--accent-rose);
+}
+
+.pct-med {
+  background: var(--accent-amber-glow);
+  color: var(--accent-amber);
+}
+
+.pct-low {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+}
+

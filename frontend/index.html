@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClusterIQ: Cluster Review Intelligence | Mussoorie Corridor</title>
+    <title>ClusterIQ: Cluster Review Intelligence | Uttarakhand Multi-Cluster</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="geo-badge">
-                Mussoorie and Dehradun Corridor (Live TBI-GEU Pilot)
+                Uttarakhand Regional Hospitality Corridor (Mussoorie, Nainital, Bhimtal, Dehradun)
             </div>
         </div>
 
@@ -299,30 +299,85 @@
             </div>
         </section>
 
+        <!-- ALWAYS-VISIBLE MULTI-CLUSTER HOTEL SEARCH BAR -->
+        <section class="global-search-section">
+            <div class="global-search-bar glass-panel">
+                <div class="search-input-wrapper">
+                    <svg class="search-bar-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" id="global-hotel-search-input" class="global-search-input" placeholder="Search 54 hotels across Mussoorie, Nainital, Bhimtal, Dehradun (e.g. 'Naini Retreat', 'Mall Road', 'Bhimtal lake', 'Hyatt')..." autocomplete="off">
+                    <button id="btn-clear-search" class="btn-clear-search hidden" title="Clear Search">&times;</button>
+                </div>
+                <div id="search-autocomplete-dropdown" class="search-autocomplete-dropdown hidden"></div>
+            </div>
+        </section>
+
         <!-- VIEW 0: CITY SEARCH & COMPARE -->
         <div id="view-search" class="search-view active">
             
             <div class="card-header" style="margin-bottom: 1.5rem;">
                 <h2 style="font-size: 1.8rem; font-weight: 700; color: var(--text-primary);">Discover Uttarakhand Properties</h2>
-                <p style="color: var(--text-secondary); margin-top: 0.5rem;">Select a destination to explore 48+ curated hotels across 4 cities with competitive pricing and review analytics.</p>
+                <p style="color: var(--text-secondary); margin-top: 0.5rem;">Select a destination to explore 54 curated hotels across 4 cities with competitive pricing and review analytics.</p>
             </div>
 
             <!-- City Cards Grid -->
             <div id="city-selector-grid" class="city-selector-grid">
-                <!-- Dynamically populated -->
+                <!-- Dynamically populated via window.CLUSTERS_META -->
             </div>
 
-            <!-- Filters Bar -->
-            <div class="glass-panel search-filters hidden" id="search-filters">
-                <span style="color: var(--text-muted); font-size: 0.9rem; font-weight: 600;">Filter by Aspect:</span>
-                <button class="filter-pill active" data-filter="all">All</button>
-                <button class="filter-pill" data-filter="price">Best Price</button>
-                <button class="filter-pill" data-filter="view">Best View</button>
-                <button class="filter-pill" data-filter="food">Best Food</button>
-                <button class="filter-pill" data-filter="staff">Best Service</button>
+            <!-- Filters Bar with Verdict & Price & Coverage Selects -->
+            <div class="glass-panel search-filters-bar hidden" id="search-filters">
+                <div class="filter-control-group">
+                    <span class="filter-label">Aspect:</span>
+                    <button class="filter-pill active" data-filter="all">All</button>
+                    <button class="filter-pill" data-filter="food">Food</button>
+                    <button class="filter-pill" data-filter="staff">Staff</button>
+                    <button class="filter-pill" data-filter="room">Room</button>
+                    <button class="filter-pill" data-filter="view">View</button>
+                    <button class="filter-pill" data-filter="price">Price</button>
+                </div>
+
+                <div class="filter-control-group">
+                    <span class="filter-label">Verdict:</span>
+                    <select id="filter-verdict-select" class="filter-select">
+                        <option value="all">All Verdicts</option>
+                        <option value="lead_staff">Leads on Staff</option>
+                        <option value="lead_food">Leads on Food</option>
+                        <option value="lead_location">Leads on Location</option>
+                        <option value="lead_cleanliness">Leads on Cleanliness</option>
+                        <option value="lag_food">Lags on Food</option>
+                        <option value="lag_logistics">Lags on Logistics</option>
+                        <option value="lag_value">Lags on Value</option>
+                        <option value="lag_room">Lags on Room</option>
+                        <option value="opportunity">Cluster Opportunity</option>
+                    </select>
+                </div>
+
+                <div class="filter-control-group">
+                    <span class="filter-label">Price:</span>
+                    <select id="filter-price-select" class="filter-select">
+                        <option value="all">All Bands</option>
+                        <option value="luxury">Luxury</option>
+                        <option value="premium">Premium</option>
+                        <option value="mid">Mid-Range</option>
+                        <option value="budget">Budget</option>
+                    </select>
+                </div>
+
+                <div class="filter-control-group">
+                    <span class="filter-label">Coverage:</span>
+                    <select id="filter-coverage-select" class="filter-select">
+                        <option value="all">All Data Tiers</option>
+                        <option value="multi">150+ Reviews (Verified)</option>
+                        <option value="core">50+ Reviews (Core)</option>
+                        <option value="limited">Limited Data (N&lt;50)</option>
+                    </select>
+                </div>
                 
                 <div style="margin-left: auto;">
-                    <button id="btn-compare-selected" class="btn-analyze-live" disabled style="padding: 0.5rem 1.2rem; font-size: 0.9rem;">Compare Selected (0/2)</button>
+                    <button id="btn-compare-selected" class="btn-analyze-live" disabled style="padding: 0.45rem 1.1rem; font-size: 0.85rem;">Compare Selected (0/2)</button>
                 </div>
             </div>
 
@@ -345,6 +400,42 @@
 
         <!-- VIEW 1: B2B HOTEL OPERATOR DASHBOARD -->
         <div id="view-hotel" class="hotel-view">
+
+            <!-- B2B Find Your Hotel Onboarding Banner -->
+            <div class="b2b-onboarding-panel glass-panel">
+                <div class="b2b-onboarding-info">
+                    <div class="onboarding-pill">HOTEL OPERATOR ONBOARDING</div>
+                    <h3 class="onboarding-title">Benchmark Your Property Against Your City Comp-Set</h3>
+                    <p class="onboarding-desc">Select your hotel across Mussoorie, Nainital, Bhimtal, or Dehradun to view isolated intra-cluster competitive scores and uncover revenue opportunities.</p>
+                </div>
+                <div class="b2b-onboarding-selector">
+                    <select id="b2b-cluster-select" class="b2b-cluster-dropdown" title="Filter by Destination">
+                        <option value="all">All Destinations</option>
+                        <option value="mussoorie">Mussoorie</option>
+                        <option value="nainital">Nainital</option>
+                        <option value="bhimtal">Bhimtal</option>
+                        <option value="dehradun">Dehradun</option>
+                    </select>
+                    <select id="b2b-quick-select" class="b2b-property-dropdown" title="Select Property">
+                        <!-- Populated dynamically -->
+                    </select>
+                </div>
+            </div>
+
+            <!-- Provenance & Data Quality Status Bar -->
+            <div id="property-provenance-bar" class="property-provenance-bar glass-panel">
+                <span class="prov-item">Cluster: <strong id="prov-cluster">Mussoorie</strong></span>
+                <span class="prov-divider">|</span>
+                <span class="prov-item">Segment: <strong id="prov-segment">Leisure Resort</strong></span>
+                <span class="prov-divider">|</span>
+                <span class="prov-item">Data Coverage: <strong id="prov-coverage" class="badge-coverage coverage-multi">Multi-Platform Verified (150+ Reviews)</strong></span>
+                <span class="prov-divider">|</span>
+                <span class="prov-item">Reviews Analysed: <strong id="prov-reviews">842 Verified Reviews</strong></span>
+                <span class="prov-divider">|</span>
+                <span class="prov-item">Platforms: <strong id="prov-platforms">Google Places, MMT, Booking.com, TripAdvisor</strong></span>
+                <span class="prov-divider">|</span>
+                <span class="prov-item">Last Updated: <strong id="prov-updated">Q1 2026</strong></span>
+            </div>
 
             <!-- Property Selector Toolbar -->
             <div class="glass-panel property-toolbar">
@@ -413,7 +504,7 @@
                             </div>
                             <div class="legend-item">
                                 <span class="legend-dot cluster"></span>
-                                <span>Mussoorie Cluster Baseline (Leave-One-Out)</span>
+                                <span id="radar-legend-cluster-label">Mussoorie Cluster Baseline (Leave-One-Out)</span>
                             </div>
                         </div>
                     </div>
@@ -559,6 +650,37 @@
                     <div class="kpi-title">Aspect Data Points</div>
                     <div id="b2g-aspect-obs" class="kpi-value">1,420 Points</div>
                     <div class="kpi-subtext">Aspect-Based Sentiment Classifications</div>
+                </div>
+            </div>
+
+            <!-- Cross-City Destination Themes Comparison Board -->
+            <div class="glass-panel" style="margin-bottom: 2rem;">
+                <div class="card-header">
+                    <div>
+                        <div class="card-title">Cross-City Destination Theme Comparison (Visitor Friction Contrast)</div>
+                        <p style="color: var(--text-secondary); font-size: 0.82rem; margin-top: 0.25rem;">
+                            Empirical civic bottleneck comparison across Nainital, Mussoorie, Dehradun, and Bhimtal to guide infrastructure budget allocations.
+                        </p>
+                    </div>
+                    <span class="badge-cyan" style="font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 4px;">4-City Macro Benchmark</span>
+                </div>
+                <div class="card-body" style="padding: 0; overflow-x: auto;">
+                    <table class="cross-city-table">
+                        <thead>
+                            <tr>
+                                <th>Civic Bottleneck Dimension</th>
+                                <th>Nodal Department</th>
+                                <th style="text-align: center;">Nainital</th>
+                                <th style="text-align: center;">Mussoorie</th>
+                                <th style="text-align: center;">Dehradun</th>
+                                <th style="text-align: center;">Bhimtal</th>
+                                <th>Inter-City Friction Contrast</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cross-city-table-body">
+                            <!-- Populated dynamically via JS from CLUSTER_DESTINATION.cross_city_comparison -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
@@ -719,10 +841,12 @@
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms and Conditions</a>
             </div>
-            <div class="footer-copy">Mussoorie and Dehradun Corridor Hospitality Telemetry</div>
+            <div class="footer-copy">Uttarakhand Regional Hospitality Intelligence (Mussoorie, Nainital, Bhimtal, Dehradun)</div>
         </div>
     </footer>
 
+    <script src="data/clusters_meta.js"></script>
+    <script src="data/hotels_index.js"></script>
     <script src="data/benchmark.js"></script>
     <script src="data/trends.js"></script>
     <script src="data/destination.js"></script>
