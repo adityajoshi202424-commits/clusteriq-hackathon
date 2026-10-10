@@ -49,15 +49,15 @@ function initModeSwitcher() {
     const viewB2G = document.getElementById('view-b2g');
     const viewLive = document.getElementById('view-live');
 
-    btnSearch.addEventListener('click', () => setMode('search'));
-    btnHotel.addEventListener('click', () => setMode('hotel'));
+    btnHotel.addEventListener('click', () => setMode('hotel', true));
     btnB2G.addEventListener('click', () => {
-        setMode('b2g');
+        setMode('b2g', true);
         if (!tourismData) loadTourismData();
     });
-    btnLive.addEventListener('click', () => setMode('live'));
+    btnSearch.addEventListener('click', () => setMode('search', true));
+    btnLive.addEventListener('click', () => setMode('live', true));
 
-    function setMode(mode) {
+    function setMode(mode, shouldScroll = false) {
         btnSearch.className = `mode-btn ${mode === 'search' ? 'active' : ''}`;
         btnHotel.className = `mode-btn ${mode === 'hotel' ? 'active' : ''}`;
         btnB2G.className = `mode-btn ${mode === 'b2g' ? 'active b2g-active' : ''}`;
@@ -68,10 +68,12 @@ function initModeSwitcher() {
         viewB2G.className = `b2g-view ${mode === 'b2g' ? 'active' : ''}`;
         viewLive.className = `live-view ${mode === 'live' ? 'active' : ''}`;
 
-        // Smooth scroll to selected view container
-        const targetView = mode === 'search' ? viewSearch : (mode === 'hotel' ? viewHotel : (mode === 'b2g' ? viewB2G : viewLive));
-        if (targetView) {
-            targetView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Smooth scroll to selected view container only when triggered by explicit user click
+        if (shouldScroll) {
+            const targetView = mode === 'search' ? viewSearch : (mode === 'hotel' ? viewHotel : (mode === 'b2g' ? viewB2G : viewLive));
+            if (targetView) {
+                targetView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
     }
     
@@ -230,7 +232,7 @@ async function loadProperties() {
         });
 
         // Initialize with default property if not already set by hash
-        if (!window.location.hash || window.location.hash === '#' || window.location.hash === '#/search') {
+        if (!window.location.hash || window.location.hash === '#' || window.location.hash === '#/hotel' || window.location.hash === '#/search') {
             currentPropertyId = 'welcomhotel_savoy';
             currentClusterId = 'mussoorie';
             select.value = currentPropertyId;
@@ -2039,7 +2041,11 @@ function initB2BOnboarding() {
 function initHashRouting() {
     function handleHash() {
         const hash = window.location.hash;
-        if (!hash || hash === '#' || hash === '#/search') {
+        if (!hash || hash === '#' || hash === '#/hotel') {
+            if (window.setMode) window.setMode('hotel');
+            return;
+        }
+        if (hash === '#/search') {
             if (window.setMode) window.setMode('search');
             return;
         }

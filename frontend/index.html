@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,11 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
     <!-- Header Navigation -->
@@ -17,10 +20,11 @@
         <div class="brand-section">
             <div class="brand-logo">
                 <div class="brand-icon">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <polygon points="12 2 2 22 22 22"/>
-                        <polyline points="12 12 17 22"/>
-                        <line x1="8.5" y1="18.5" x2="15.5" y2="18.5"/>
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 22 22 22" />
+                        <polyline points="12 12 17 22" />
+                        <line x1="8.5" y1="18.5" x2="15.5" y2="18.5" />
                     </svg>
                 </div>
                 <div>
@@ -36,11 +40,27 @@
         <!-- Header Actions: Warm Cache Demo Toggle & Refresh -->
         <div class="header-actions">
             <div class="cache-toggle-wrapper">
-                <button id="btn-theme-toggle" class="btn-demo-toggle" style="margin-right: 10px;" title="Toggle Dark/Light Mode">
-                    <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-                    <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                <button id="btn-theme-toggle" class="btn-demo-toggle" style="margin-right: 10px;"
+                    title="Toggle Dark/Light Mode">
+                    <svg id="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" style="display: none;">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg id="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
                 </button>
-                <button id="btn-demo-mode-toggle" class="btn-demo-toggle" title="Click to toggle Air-Gapped Demo Mode vs Live Scraper Mode">
+                <button id="btn-demo-mode-toggle" class="btn-demo-toggle"
+                    title="Click to toggle Air-Gapped Demo Mode vs Live Scraper Mode">
                     <span id="demo-mode-status-text">Demo Mode: WARM CACHE</span>
                 </button>
                 <button id="btn-refresh-cluster" class="btn-refresh-cluster" title="Synchronize cluster reviews">
@@ -70,7 +90,8 @@
     <div id="branded-alert-banner" class="branded-alert-banner hidden">
         <div class="alert-content">
             <span class="alert-icon" style="font-weight: 700; color: #fbbf24;">[Notice]</span>
-            <span id="alert-message">Booking.com API rate limit reached. Auto-switching to locally cached community database.</span>
+            <span id="alert-message">Booking.com API rate limit reached. Auto-switching to locally cached community
+                database.</span>
         </div>
         <button id="btn-dismiss-alert" class="alert-close-btn" title="Dismiss Alert">&times;</button>
     </div>
@@ -81,7 +102,9 @@
     <section id="scrolly-runway" class="scrolly-runway">
         <!-- Sticky Background Stage -->
         <div class="scrolly-sticky-viewport">
-            <div class="scrolly-progress-line"><div id="scrolly-progress-fill" class="scrolly-progress-fill"></div></div>
+            <div class="scrolly-progress-line">
+                <div id="scrolly-progress-fill" class="scrolly-progress-fill"></div>
+            </div>
             <canvas id="scrolly-canvas" class="scrolly-canvas"></canvas>
             <div class="scrolly-vignette"></div>
             <div class="scrolly-hud">
@@ -111,7 +134,8 @@
             <div class="scrolly-stage active" data-stage="0">
                 <div class="glass-panel stage-card">
                     <div class="stage-media-pane">
-                        <img src="images/corridor_01_panorama.jpg" alt="Mussoorie and Dehradun Valley Panorama" class="stage-featured-image" loading="eager">
+                        <img src="images/corridor_01_panorama.jpg" alt="Mussoorie and Dehradun Valley Panorama"
+                            class="stage-featured-image" loading="eager">
                         <div class="media-tag-overlay">
                             <span class="media-geo-pill">Mussoorie & Dehradun Valley Panorama</span>
                             <span class="media-res-badge">4K Master Plate</span>
@@ -121,7 +145,9 @@
                         <span class="stage-badge">Corridor Telemetry: TBI-GEU Pilot</span>
                         <h2 class="stage-title">Mussoorie and Dehradun Tourism Corridor</h2>
                         <p class="stage-desc">
-                            A high-altitude tourism corridor encompassing 10 benchmark hotels across Library Bazaar, Mall Road, and Kempty. Telemetry aggregates 1,400 verified multi-platform reviews and 508,800 operational words into an empirical intelligence database.
+                            A high-altitude tourism corridor encompassing 10 benchmark hotels across Library Bazaar,
+                            Mall Road, and Kempty. Telemetry aggregates 1,400 verified multi-platform reviews and
+                            508,800 operational words into an empirical intelligence database.
                         </p>
                         <div class="stage-meta-row">
                             <span class="stage-metric">10 Comp-Set Hotels</span>
@@ -136,7 +162,8 @@
             <div class="scrolly-stage" data-stage="1">
                 <div class="glass-panel stage-card">
                     <div class="stage-media-pane">
-                        <img src="images/corridor_02_heritage.jpg" alt="The Savoy Heritage Wing" class="stage-featured-image" loading="eager">
+                        <img src="images/corridor_02_heritage.jpg" alt="The Savoy Heritage Wing"
+                            class="stage-featured-image" loading="eager">
                         <div class="media-tag-overlay">
                             <span class="media-geo-pill">The Savoy Heritage Wing (Built 1902)</span>
                             <span class="media-res-badge">4K Master Plate</span>
@@ -146,7 +173,9 @@
                         <span class="stage-badge">Comp-Set Benchmarking</span>
                         <h2 class="stage-title">Heritage Icon vs Hillside Boutique Dynamics</h2>
                         <p class="stage-desc">
-                            Heritage icons like Welcomhotel The Savoy and boutique hillside retreats face unique operational trade-offs: heritage room tariffs versus mountain access logistics, seasonal heating demands, and parking bottlenecks.
+                            Heritage icons like Welcomhotel The Savoy and boutique hillside retreats face unique
+                            operational trade-offs: heritage room tariffs versus mountain access logistics, seasonal
+                            heating demands, and parking bottlenecks.
                         </p>
                         <div class="stage-meta-row">
                             <span class="stage-metric">Welcomhotel The Savoy</span>
@@ -161,7 +190,8 @@
             <div class="scrolly-stage" data-stage="2">
                 <div class="glass-panel stage-card">
                     <div class="stage-media-pane">
-                        <img src="images/corridor_03_transit.jpg" alt="Mall Road and Transit Arteries" class="stage-featured-image" loading="eager">
+                        <img src="images/corridor_03_transit.jpg" alt="Mall Road and Transit Arteries"
+                            class="stage-featured-image" loading="eager">
                         <div class="media-tag-overlay">
                             <span class="media-geo-pill">Mall Road & Transit Arteries</span>
                             <span class="media-res-badge">4K Master Plate</span>
@@ -171,7 +201,9 @@
                         <span class="stage-badge">Multi-Source Intake</span>
                         <h2 class="stage-title">Cross-Platform Ingestion and Dialect Normalization</h2>
                         <p class="stage-desc">
-                            Public review text from MakeMyTrip, Google Places, TripAdvisor, and Booking.com is unified under a standardized schema. Colloquial Hindi and transliterated Hinglish idioms are normalized to capture specific operational friction points.
+                            Public review text from MakeMyTrip, Google Places, TripAdvisor, and Booking.com is unified
+                            under a standardized schema. Colloquial Hindi and transliterated Hinglish idioms are
+                            normalized to capture specific operational friction points.
                         </p>
                         <div class="stage-meta-row">
                             <span class="stage-metric">MakeMyTrip</span>
@@ -187,7 +219,8 @@
             <div class="scrolly-stage" data-stage="3">
                 <div class="glass-panel stage-card">
                     <div class="stage-media-pane">
-                        <img src="images/corridor_04_peaks.jpg" alt="High-Altitude Mountain Corridor" class="stage-featured-image" loading="eager">
+                        <img src="images/corridor_04_peaks.jpg" alt="High-Altitude Mountain Corridor"
+                            class="stage-featured-image" loading="eager">
                         <div class="media-tag-overlay">
                             <span class="media-geo-pill">High-Altitude Mountain Corridor</span>
                             <span class="media-res-badge">4K Master Plate</span>
@@ -197,7 +230,9 @@
                         <span class="stage-badge">Mathematical Scoring</span>
                         <h2 class="stage-title">7-Pillar Aspect-Based Sentiment Decomposition</h2>
                         <p class="stage-desc">
-                            Unstructured feedback is decomposed into 7 core pillars: Cleanliness, Food, Maintenance, Logistics, Staff, Value, and Location. Mathematical aspect sentiment scores map delivered performance against Leave-One-Out cluster baselines.
+                            Unstructured feedback is decomposed into 7 core pillars: Cleanliness, Food, Maintenance,
+                            Logistics, Staff, Value, and Location. Mathematical aspect sentiment scores map delivered
+                            performance against Leave-One-Out cluster baselines.
                         </p>
                         <div class="stage-meta-row">
                             <span class="stage-metric">Cleanliness</span>
@@ -213,7 +248,8 @@
             <div class="scrolly-stage" data-stage="4">
                 <div class="glass-panel stage-card">
                     <div class="stage-media-pane">
-                        <img src="images/corridor_05_ridge_dusk.jpg" alt="Mussoorie Ridge Skyline at Dusk" class="stage-featured-image" loading="eager">
+                        <img src="images/corridor_05_ridge_dusk.jpg" alt="Mussoorie Ridge Skyline at Dusk"
+                            class="stage-featured-image" loading="eager">
                         <div class="media-tag-overlay">
                             <span class="media-geo-pill">Mussoorie Ridge Skyline at Dusk</span>
                             <span class="media-res-badge">4K Master Plate</span>
@@ -223,7 +259,9 @@
                         <span class="stage-badge">Algorithmic Risk Signal</span>
                         <h2 class="stage-title">Price-to-Value Disconnect and Premium Illusion</h2>
                         <p class="stage-desc">
-                            Using Huber Robust Linear Regression (RLM) and Bayesian shrinkage, properties are flagged when premium prices disconnect from operational delivery. The engine categorizes risks into the 4-Quadrant Opportunity Matrix.
+                            Using Huber Robust Linear Regression (RLM) and Bayesian shrinkage, properties are flagged
+                            when premium prices disconnect from operational delivery. The engine categorizes risks into
+                            the 4-Quadrant Opportunity Matrix.
                         </p>
                         <div class="stage-meta-row">
                             <span class="stage-metric">Huber RLM Regression</span>
@@ -238,7 +276,8 @@
             <div class="scrolly-stage" data-stage="5">
                 <div class="glass-panel stage-card">
                     <div class="stage-media-pane">
-                        <img src="images/corridor_06_governance.jpg" alt="Dehradun Civic and Administrative Landmark" class="stage-featured-image" loading="eager">
+                        <img src="images/corridor_06_governance.jpg" alt="Dehradun Civic and Administrative Landmark"
+                            class="stage-featured-image" loading="eager">
                         <div class="media-tag-overlay">
                             <span class="media-geo-pill">Dehradun Civic & Administrative Seat</span>
                             <span class="media-res-badge">4K Master Plate</span>
@@ -248,7 +287,9 @@
                         <span class="stage-badge">Civic Governance</span>
                         <h2 class="stage-title">Civil Friction Register and UTDB Policy Briefs</h2>
                         <p class="stage-desc">
-                            Civil infrastructure bottlenecks (Mall Road barrier queues, Library Chowk parking shortages) are segregated from hotel service issues to produce verified administrative dossiers for the District Magistrate and Uttarakhand Tourism Board.
+                            Civil infrastructure bottlenecks (Mall Road barrier queues, Library Chowk parking shortages)
+                            are segregated from hotel service issues to produce verified administrative dossiers for the
+                            District Magistrate and Uttarakhand Tourism Board.
                         </p>
                         <div class="stage-meta-row">
                             <span class="stage-metric">UTDB Policy Brief</span>
@@ -272,7 +313,8 @@
                     Human Reading Time Saved: <span id="hero-hours-saved" class="glow-text">42.4 Hours</span>
                 </h1>
                 <p class="efficiency-formula">
-                    Computation: <code>(508,800 Cluster Words / 200 WPM) - 14.2s CRI Pipeline Run = 42.4 Hours Operational Labor Saved</code>
+                    Computation:
+                    <code>(508,800 Cluster Words / 200 WPM) - 14.2s CRI Pipeline Run = 42.4 Hours Operational Labor Saved</code>
                 </p>
             </div>
             <div class="efficiency-stats-grid">
@@ -303,11 +345,14 @@
         <section class="global-search-section">
             <div class="global-search-bar glass-panel">
                 <div class="search-input-wrapper">
-                    <svg class="search-bar-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg class="search-bar-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <input type="text" id="global-hotel-search-input" class="global-search-input" placeholder="Search 54 hotels across Mussoorie, Nainital, Bhimtal, Dehradun (e.g. 'Naini Retreat', 'Mall Road', 'Bhimtal lake', 'Hyatt')..." autocomplete="off">
+                    <input type="text" id="global-hotel-search-input" class="global-search-input"
+                        placeholder="Search 54 hotels across Mussoorie, Nainital, Bhimtal, Dehradun (e.g. 'Naini Retreat', 'Mall Road', 'Bhimtal lake', 'Hyatt')..."
+                        autocomplete="off">
                     <button id="btn-clear-search" class="btn-clear-search hidden" title="Clear Search">&times;</button>
                 </div>
                 <div id="search-autocomplete-dropdown" class="search-autocomplete-dropdown hidden"></div>
@@ -316,10 +361,12 @@
 
         <!-- VIEW 0: CITY SEARCH & COMPARE -->
         <div id="view-search" class="search-view active">
-            
+
             <div class="card-header" style="margin-bottom: 1.5rem;">
-                <h2 style="font-size: 1.8rem; font-weight: 700; color: var(--text-primary);">Discover Uttarakhand Properties</h2>
-                <p style="color: var(--text-secondary); margin-top: 0.5rem;">Select a destination to explore 54 curated hotels across 4 cities with competitive pricing and review analytics.</p>
+                <h2 style="font-size: 1.8rem; font-weight: 700; color: var(--text-primary);">Discover Uttarakhand
+                    Properties</h2>
+                <p style="color: var(--text-secondary); margin-top: 0.5rem;">Select a destination to explore 54 curated
+                    hotels across 4 cities with competitive pricing and review analytics.</p>
             </div>
 
             <!-- City Cards Grid -->
@@ -375,9 +422,10 @@
                         <option value="limited">Limited Data (N&lt;50)</option>
                     </select>
                 </div>
-                
+
                 <div style="margin-left: auto;">
-                    <button id="btn-compare-selected" class="btn-analyze-live" disabled style="padding: 0.45rem 1.1rem; font-size: 0.85rem;">Compare Selected (0/2)</button>
+                    <button id="btn-compare-selected" class="btn-analyze-live" disabled
+                        style="padding: 0.45rem 1.1rem; font-size: 0.85rem;">Compare Selected (0/2)</button>
                 </div>
             </div>
 
@@ -385,12 +433,14 @@
             <div id="hotel-search-results" class="hotel-results-grid hidden">
                 <!-- Dynamically populated -->
             </div>
-            
+
             <!-- Comparison Panel (hidden by default) -->
             <div id="comparison-panel" class="comparison-panel hidden glass-panel">
-                <div class="card-header" style="background: rgba(15,23,42,0.9); padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-glass); backdrop-filter: blur(10px);">
+                <div class="card-header"
+                    style="background: rgba(15,23,42,0.9); padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-glass); backdrop-filter: blur(10px);">
                     <div class="card-title">Head-to-Head Comparison</div>
-                    <button id="btn-close-compare" class="alert-close-btn" style="position: absolute; right: 2rem; top: 1.5rem; font-size: 1.5rem;">&times;</button>
+                    <button id="btn-close-compare" class="alert-close-btn"
+                        style="position: absolute; right: 2rem; top: 1.5rem; font-size: 1.5rem;">&times;</button>
                 </div>
                 <div id="comparison-content" class="comparison-content" style="background: var(--bg-primary);">
                     <!-- Populated dynamically -->
@@ -406,7 +456,8 @@
                 <div class="b2b-onboarding-info">
                     <div class="onboarding-pill">HOTEL OPERATOR ONBOARDING</div>
                     <h3 class="onboarding-title">Benchmark Your Property Against Your City Comp-Set</h3>
-                    <p class="onboarding-desc">Select your hotel across Mussoorie, Nainital, Bhimtal, or Dehradun to view isolated intra-cluster competitive scores and uncover revenue opportunities.</p>
+                    <p class="onboarding-desc">Select your hotel across Mussoorie, Nainital, Bhimtal, or Dehradun to
+                        view isolated intra-cluster competitive scores and uncover revenue opportunities.</p>
                 </div>
                 <div class="b2b-onboarding-selector">
                     <select id="b2b-cluster-select" class="b2b-cluster-dropdown" title="Filter by Destination">
@@ -428,11 +479,13 @@
                 <span class="prov-divider">|</span>
                 <span class="prov-item">Segment: <strong id="prov-segment">Leisure Resort</strong></span>
                 <span class="prov-divider">|</span>
-                <span class="prov-item">Data Coverage: <strong id="prov-coverage" class="badge-coverage coverage-multi">Multi-Platform Verified (150+ Reviews)</strong></span>
+                <span class="prov-item">Data Coverage: <strong id="prov-coverage"
+                        class="badge-coverage coverage-multi">Multi-Platform Verified (150+ Reviews)</strong></span>
                 <span class="prov-divider">|</span>
                 <span class="prov-item">Reviews Analysed: <strong id="prov-reviews">842 Verified Reviews</strong></span>
                 <span class="prov-divider">|</span>
-                <span class="prov-item">Platforms: <strong id="prov-platforms">Google Places, MMT, Booking.com, TripAdvisor</strong></span>
+                <span class="prov-item">Platforms: <strong id="prov-platforms">Google Places, MMT, Booking.com,
+                        TripAdvisor</strong></span>
                 <span class="prov-divider">|</span>
                 <span class="prov-item">Last Updated: <strong id="prov-updated">Q1 2026</strong></span>
             </div>
@@ -484,7 +537,7 @@
 
             <!-- Analytics Row: Radar Chart vs Aspect Leaderboard -->
             <div class="analytics-row">
-                
+
                 <!-- Comp-Set Radar Chart -->
                 <div class="glass-panel">
                     <div class="card-header">
@@ -589,7 +642,8 @@
                     <div class="card-title">
                         Changepoint Detection Timeline (Jan 2025 - Feb 2026)
                     </div>
-                    <span style="font-size: 0.78rem; color: #94a3b8;">Cyan = Property | Dashed Grey = Cluster Average</span>
+                    <span style="font-size: 0.78rem; color: #94a3b8;">Cyan = Property | Dashed Grey = Cluster
+                        Average</span>
                 </div>
                 <div class="card-body">
                     <svg id="timeline-chart-svg" class="timeline-chart-svg"></svg>
@@ -613,7 +667,7 @@
 
         <!-- VIEW 2: B2G TOURISM BOARD / MUNICIPAL ADMIN DASHBOARD -->
         <div id="view-b2g" class="b2g-view">
-            
+
             <!-- Hero Banner with 1-Click PDF Download -->
             <div class="b2g-hero-banner">
                 <div>
@@ -621,11 +675,14 @@
                         Uttarakhand Tourism Development Board (UTDB)
                     </h2>
                     <p style="color: #cbd5e1; font-size: 0.92rem; max-width: 700px;">
-                        Macro Destination Intelligence Command Centre. Aggregating 10 hotel clusters to transform unstructured guest reviews into empirical municipal policy evidence.
+                        Macro Destination Intelligence Command Centre. Aggregating 10 hotel clusters to transform
+                        unstructured guest reviews into empirical municipal policy evidence.
                     </p>
                 </div>
                 <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-                    <a id="btn-download-dm-pdf" href="Mussoorie_Tourism_Infrastructure_Bottleneck_Report_Q1_2026.pdf" class="btn-export-pdf" download="Mussoorie_Tourism_Infrastructure_Bottleneck_Report_Q1_2026.pdf">
+                    <a id="btn-download-dm-pdf" href="Mussoorie_Tourism_Infrastructure_Bottleneck_Report_Q1_2026.pdf"
+                        class="btn-export-pdf"
+                        download="Mussoorie_Tourism_Infrastructure_Bottleneck_Report_Q1_2026.pdf">
                         Download Official DM Brief (Instant PDF)
                     </a>
                     <button id="btn-export-brief" class="btn-export-brief">
@@ -657,12 +714,16 @@
             <div class="glass-panel" style="margin-bottom: 2rem;">
                 <div class="card-header">
                     <div>
-                        <div class="card-title">Cross-City Destination Theme Comparison (Visitor Friction Contrast)</div>
+                        <div class="card-title">Cross-City Destination Theme Comparison (Visitor Friction Contrast)
+                        </div>
                         <p style="color: var(--text-secondary); font-size: 0.82rem; margin-top: 0.25rem;">
-                            Empirical civic bottleneck comparison across Nainital, Mussoorie, Dehradun, and Bhimtal to guide infrastructure budget allocations.
+                            Empirical civic bottleneck comparison across Nainital, Mussoorie, Dehradun, and Bhimtal to
+                            guide infrastructure budget allocations.
                         </p>
                     </div>
-                    <span class="badge-cyan" style="font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 4px;">4-City Macro Benchmark</span>
+                    <span class="badge-cyan"
+                        style="font-size: 0.75rem; padding: 0.25rem 0.6rem; border-radius: 4px;">4-City Macro
+                        Benchmark</span>
                 </div>
                 <div class="card-body" style="padding: 0; overflow-x: auto;">
                     <table class="cross-city-table">
@@ -686,7 +747,7 @@
 
             <!-- Two-Column Bottlenecks vs Citations -->
             <div class="analytics-row" style="grid-template-columns: 1.3fr 1fr;">
-                
+
                 <!-- Municipal Infrastructure Bottlenecks -->
                 <div class="glass-panel">
                     <div class="card-header">
@@ -723,37 +784,44 @@
 
         <!-- VIEW 3: LIVE REVIEW ABSA PLAYGROUND -->
         <div id="view-live" class="live-view">
-            
+
             <div class="tester-box">
                 <h2 style="font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">
                     Real-Time Hinglish ABSA Engine Playground
                 </h2>
                 <p style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 1.25rem;">
-                    Paste any live hotel review in English, Hindi, or transliterated Hinglish. Watch the engine isolate operational aspects, sub-issues, sentiment polarity, and English semantics in real-time.
+                    Paste any live hotel review in English, Hindi, or transliterated Hinglish. Watch the engine isolate
+                    operational aspects, sub-issues, sentiment polarity, and English semantics in real-time.
                 </p>
 
                 <!-- Preset Sample Buttons -->
                 <div class="preset-pills">
                     <span style="font-size: 0.78rem; color: #64748b; align-self: center;">Quick Test Cases:</span>
-                    <button class="preset-pill" data-text="Room counter pe sharmila naam ka staff tha, check-in me aadha ghanta laga diya, completely third class behavior.">
+                    <button class="preset-pill"
+                        data-text="Room counter pe sharmila naam ka staff tha, check-in me aadha ghanta laga diya, completely third class behavior.">
                         Case 1: Hinglish (Staff Delay: Sharmila)
                     </button>
-                    <button class="preset-pill" data-text="Geyser paani thanda de raha tha subah 7 baje aur parking ki bohot dikkat thi.">
+                    <button class="preset-pill"
+                        data-text="Geyser paani thanda de raha tha subah 7 baje aur parking ki bohot dikkat thi.">
                         Case 2: Geyser + Parking Failure
                     </button>
-                    <button class="preset-pill" data-text="Staff bhaiya bohot polite aur cooperative the, garam chai aur pahadi parathe lajawab the!">
+                    <button class="preset-pill"
+                        data-text="Staff bhaiya bohot polite aur cooperative the, garam chai aur pahadi parathe lajawab the!">
                         Case 3: Hospitality & Pahadi Food Praise
                     </button>
-                    <button class="preset-pill" data-text="January winter mein room freezing tha aur room heater ke extra ₹400 per night charge kiya.">
+                    <button class="preset-pill"
+                        data-text="January winter mein room freezing tha aur room heater ke extra ₹400 per night charge kiya.">
                         Case 4: Winter Heating + Surcharge
                     </button>
-                    <button class="preset-pill" data-text="Victorian architecture is magnificent, Royal Afghan dinner was divine and central heating kept us warm through the freezing night.">
+                    <button class="preset-pill"
+                        data-text="Victorian architecture is magnificent, Royal Afghan dinner was divine and central heating kept us warm through the freezing night.">
                         Case 5: Savoy Luxury Heritage
                     </button>
                 </div>
 
-                <textarea id="live-review-input" class="tester-textarea" maxlength="300" placeholder="Type or paste a guest review here in English, Hindi, or Hinglish (Strictly Sanitized up to 300 characters)..."></textarea>
-                
+                <textarea id="live-review-input" class="tester-textarea" maxlength="300"
+                    placeholder="Type or paste a guest review here in English, Hindi, or Hinglish (Strictly Sanitized up to 300 characters)..."></textarea>
+
                 <div class="textarea-footer">
                     <span class="sanitization-badge">Strict Regex Sanitization Active (Zero Token Overflow Risk)</span>
                     <span id="char-counter" class="char-counter">0 / 300 characters</span>
@@ -774,7 +842,8 @@
                         <span style="font-size: 0.78rem; color: #34d399;">Localized Classifier</span>
                     </div>
                     <div id="live-absa-results" class="card-body">
-                        <p style="color: #64748b; font-style: italic;">Click "Analyze Review" or select a preset to view extracted aspects.</p>
+                        <p style="color: #64748b; font-style: italic;">Click "Analyze Review" or select a preset to view
+                            extracted aspects.</p>
                     </div>
                 </div>
 
@@ -786,7 +855,8 @@
                         <span style="font-size: 0.78rem; color: #38bdf8;">Production Payload</span>
                     </div>
                     <div class="card-body">
-                        <pre id="live-json-preview" style="background: rgba(15,23,42,0.8); padding: 1rem; border-radius: 8px; color: #38bdf8; font-size: 0.8rem; overflow-x: auto; max-height: 400px;"></pre>
+                        <pre id="live-json-preview"
+                            style="background: rgba(15,23,42,0.8); padding: 1rem; border-radius: 8px; color: #38bdf8; font-size: 0.8rem; overflow-x: auto; max-height: 400px;"></pre>
                     </div>
                 </div>
             </div>
@@ -800,7 +870,9 @@
     <div id="evidence-drawer" class="evidence-drawer">
         <div class="drawer-header">
             <div>
-                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--accent-cyan); font-weight: 700;">Audit Trail</span>
+                <span
+                    style="font-size: 0.75rem; text-transform: uppercase; color: var(--accent-cyan); font-weight: 700;">Audit
+                    Trail</span>
                 <h3 id="drawer-category-title" class="drawer-title">Aspect Review Evidence</h3>
             </div>
             <button id="btn-close-drawer" class="btn-close-drawer">&times;</button>
@@ -822,11 +894,15 @@
             <div id="modal-brief-content" class="modal-body">
                 <!-- Populated dynamically via JS -->
             </div>
-            <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--border-glass); display: flex; justify-content: flex-end; gap: 0.75rem;">
-                <a href="Mussoorie_Tourism_Infrastructure_Bottleneck_Report_Q1_2026.pdf" class="btn-export-pdf" style="font-size: 0.82rem; padding: 0.5rem 1rem;" download="Mussoorie_Tourism_Infrastructure_Bottleneck_Report_Q1_2026.pdf">
+            <div
+                style="padding: 1rem 1.5rem; border-top: 1px solid var(--border-glass); display: flex; justify-content: flex-end; gap: 0.75rem;">
+                <a href="Mussoorie_Tourism_Infrastructure_Bottleneck_Report_Q1_2026.pdf" class="btn-export-pdf"
+                    style="font-size: 0.82rem; padding: 0.5rem 1rem;"
+                    download="Mussoorie_Tourism_Infrastructure_Bottleneck_Report_Q1_2026.pdf">
                     Download Official PDF
                 </a>
-                <button onclick="window.print()" class="btn-export-brief" style="font-size: 0.82rem; padding: 0.5rem 1rem;">
+                <button onclick="window.print()" class="btn-export-brief"
+                    style="font-size: 0.82rem; padding: 0.5rem 1rem;">
                     Print Document
                 </button>
             </div>
@@ -841,7 +917,8 @@
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms and Conditions</a>
             </div>
-            <div class="footer-copy">Uttarakhand Regional Hospitality Intelligence (Mussoorie, Nainital, Bhimtal, Dehradun)</div>
+            <div class="footer-copy">Uttarakhand Regional Hospitality Intelligence (Mussoorie, Nainital, Bhimtal,
+                Dehradun)</div>
         </div>
     </footer>
 
@@ -856,4 +933,5 @@
     <script src="data/hotels_database.js"></script>
     <script src="app.js"></script>
 </body>
+
 </html>
