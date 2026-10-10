@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClusterIQ: Cluster Review Intelligence | Mussoorie Corridor</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="app-header">
+        <div class="brand-section">
+            <div class="brand-logo">
+                <div class="brand-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 2 22 22 22"/>
+                        <polyline points="12 12 17 22"/>
+                        <line x1="8.5" y1="18.5" x2="15.5" y2="18.5"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="brand-title">ClusterIQ</div>
+                    <div class="brand-subtitle">Cluster Review Intelligence</div>
+                </div>
+            </div>
+            <div class="geo-badge">
+                Mussoorie and Dehradun Corridor (Live TBI-GEU Pilot)
+            </div>
+        </div>
+
+        <!-- Header Actions: Warm Cache Demo Toggle & Refresh -->
+        <div class="header-actions">
+            <div class="cache-toggle-wrapper">
+                <button id="btn-demo-mode-toggle" class="btn-demo-toggle" title="Click to toggle Air-Gapped Demo Mode vs Live Scraper Mode">
+                    <span id="demo-mode-status-text">Demo Mode: WARM CACHE</span>
+                </button>
+                <button id="btn-refresh-cluster" class="btn-refresh-cluster" title="Synchronize cluster reviews">
+                    Refresh Cluster Data
+                </button>
+            </div>
+        </div>
+
+        <!-- Tri-Mode Switcher Toggle -->
+        <div class="mode-switcher">
+            <button id="btn-mode-hotel" class="mode-btn active">
+                Hotel Operator Mode (B2B)
+            </button>
+            <button id="btn-mode-b2g" class="mode-btn">
+                Tourism Board Mode (B2G)
+            </button>
+            <button id="btn-mode-live" class="mode-btn">
+                Live ABSA Tester
+            </button>
+        </div>
+    </header>
+
+    <!-- Graceful Branded Alert Banner -->
+    <div id="branded-alert-banner" class="branded-alert-banner hidden">
+        <div class="alert-content">
+            <span class="alert-icon" style="font-weight: 700; color: #fbbf24;">[Notice]</span>
+            <span id="alert-message">Booking.com API rate limit reached. Auto-switching to locally cached community database.</span>
+        </div>
+        <button id="btn-dismiss-alert" class="alert-close-btn" title="Dismiss Alert">&times;</button>
+    </div>
+
+    <!-- =========================================================
+         CORRIDOR JOURNEY: SCROLLYTELLING ANIMATION ENGINE
+         ========================================================= -->
+    <section id="scrolly-runway" class="scrolly-runway">
+        <!-- Sticky Background Stage -->
+        <div class="scrolly-sticky-viewport">
+            <div class="scrolly-progress-line"><div id="scrolly-progress-fill" class="scrolly-progress-fill"></div></div>
+            <canvas id="scrolly-canvas" class="scrolly-canvas"></canvas>
+            <div class="scrolly-vignette"></div>
+            <div class="scrolly-hud">
+                <span class="hud-indicator-dot"></span>
+                <span class="hud-tag">Corridor Telemetry</span>
+                <span id="scrolly-hud-label" class="hud-phase">Stage 01: Inflow Overview</span>
+                <span id="scrolly-hud-pct" class="hud-pct">00%</span>
+            </div>
+            <div class="scrolly-nav-rail">
+                <button class="rail-tick active" data-stage="0" title="Corridor Overview"></button>
+                <button class="rail-tick" data-stage="1" title="Heritage Comp-Set"></button>
+                <button class="rail-tick" data-stage="2" title="Multi-Platform Ingestion"></button>
+                <button class="rail-tick" data-stage="3" title="7-Pillar ABSA"></button>
+                <button class="rail-tick" data-stage="4" title="Disconnect Detector"></button>
+                <button class="rail-tick" data-stage="5" title="Municipal Governance"></button>
+            </div>
+            <div class="scrolly-jump-bar">
+                <a href="#interactive-workspace" class="btn-skip-to-dashboard">
+                    Jump to Interactive Dashboards
+                </a>
+            </div>
+        </div>
+
+        <!-- Scrolling Content Stages -->
+        <div class="scrolly-stages-container">
+            <!-- Stage 01 -->
+            <div class="scrolly-stage active" data-stage="0">
+                <div class="glass-panel stage-card">
+                    <div class="stage-media-pane">
+                        <img src="images/corridor_01_panorama.jpg" alt="Mussoorie and Dehradun Valley Panorama" class="stage-featured-image" loading="eager">
+                        <div class="media-tag-overlay">
+                            <span class="media-geo-pill">Mussoorie & Dehradun Valley Panorama</span>
+                            <span class="media-res-badge">4K Master Plate</span>
+                        </div>
+                    </div>
+                    <div class="stage-content-pane">
+                        <span class="stage-badge">Corridor Telemetry: TBI-GEU Pilot</span>
+                        <h2 class="stage-title">Mussoorie and Dehradun Tourism Corridor</h2>
+                        <p class="stage-desc">
+                            A high-altitude tourism corridor encompassing 10 benchmark hotels across Library Bazaar, Mall Road, and Kempty. Telemetry aggregates 1,400 verified multi-platform reviews and 508,800 operational words into an empirical intelligence database.
+                        </p>
+                        <div class="stage-meta-row">
+                            <span class="stage-metric">10 Comp-Set Hotels</span>
+                            <span class="stage-metric">1,400 Public Reviews</span>
+                            <span class="stage-metric">508,800 Words Digested</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 02 -->
+            <div class="scrolly-stage" data-stage="1">
+                <div class="glass-panel stage-card">
+                    <div class="stage-media-pane">
+                        <img src="images/corridor_02_heritage.jpg" alt="The Savoy Heritage Wing" class="stage-featured-image" loading="lazy">
+                        <div class="media-tag-overlay">
+                            <span class="media-geo-pill">The Savoy Heritage Wing (Built 1902)</span>
+                            <span class="media-res-badge">4K Master Plate</span>
+                        </div>
+                    </div>
+                    <div class="stage-content-pane">
+                        <span class="stage-badge">Comp-Set Benchmarking</span>
+                        <h2 class="stage-title">Heritage Icon vs Hillside Boutique Dynamics</h2>
+                        <p class="stage-desc">
+                            Heritage icons like Welcomhotel The Savoy and boutique hillside retreats face unique operational trade-offs: heritage room tariffs versus mountain access logistics, seasonal heating demands, and parking bottlenecks.
+                        </p>
+                        <div class="stage-meta-row">
+                            <span class="stage-metric">Welcomhotel The Savoy</span>
+                            <span class="stage-metric">JW Marriott Walnut Grove</span>
+                            <span class="stage-metric">Jaypee Residency</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 03 -->
+            <div class="scrolly-stage" data-stage="2">
+                <div class="glass-panel stage-card">
+                    <div class="stage-media-pane">
+                        <img src="images/corridor_03_transit.jpg" alt="Mall Road and Transit Arteries" class="stage-featured-image" loading="lazy">
+                        <div class="media-tag-overlay">
+                            <span class="media-geo-pill">Mall Road & Transit Arteries</span>
+                            <span class="media-res-badge">4K Master Plate</span>
+                        </div>
+                    </div>
+                    <div class="stage-content-pane">
+                        <span class="stage-badge">Multi-Source Intake</span>
+                        <h2 class="stage-title">Cross-Platform Ingestion and Dialect Normalization</h2>
+                        <p class="stage-desc">
+                            Public review text from MakeMyTrip, Google Places, TripAdvisor, and Booking.com is unified under a standardized schema. Colloquial Hindi and transliterated Hinglish idioms are normalized to capture specific operational friction points.
+                        </p>
+                        <div class="stage-meta-row">
+                            <span class="stage-metric">MakeMyTrip</span>
+                            <span class="stage-metric">Google Places</span>
+                            <span class="stage-metric">TripAdvisor</span>
+                            <span class="stage-metric">Booking.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 04 -->
+            <div class="scrolly-stage" data-stage="3">
+                <div class="glass-panel stage-card">
+                    <div class="stage-media-pane">
+                        <img src="images/corridor_04_peaks.jpg" alt="High-Altitude Mountain Corridor" class="stage-featured-image" loading="lazy">
+                        <div class="media-tag-overlay">
+                            <span class="media-geo-pill">High-Altitude Mountain Corridor</span>
+                            <span class="media-res-badge">4K Master Plate</span>
+                        </div>
+                    </div>
+                    <div class="stage-content-pane">
+                        <span class="stage-badge">Mathematical Scoring</span>
+                        <h2 class="stage-title">7-Pillar Aspect-Based Sentiment Decomposition</h2>
+                        <p class="stage-desc">
+                            Unstructured feedback is decomposed into 7 core pillars: Cleanliness, Food, Maintenance, Logistics, Staff, Value, and Location. Mathematical aspect sentiment scores map delivered performance against Leave-One-Out cluster baselines.
+                        </p>
+                        <div class="stage-meta-row">
+                            <span class="stage-metric">Cleanliness</span>
+                            <span class="stage-metric">Logistics</span>
+                            <span class="stage-metric">Maintenance</span>
+                            <span class="stage-metric">Staff</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 05 -->
+            <div class="scrolly-stage" data-stage="4">
+                <div class="glass-panel stage-card">
+                    <div class="stage-media-pane">
+                        <img src="images/corridor_05_ridge_dusk.jpg" alt="Mussoorie Ridge Skyline at Dusk" class="stage-featured-image" loading="lazy">
+                        <div class="media-tag-overlay">
+                            <span class="media-geo-pill">Mussoorie Ridge Skyline at Dusk</span>
+                            <span class="media-res-badge">4K Master Plate</span>
+                        </div>
+                    </div>
+                    <div class="stage-content-pane">
+                        <span class="stage-badge">Algorithmic Risk Signal</span>
+                        <h2 class="stage-title">Price-to-Value Disconnect and Premium Illusion</h2>
+                        <p class="stage-desc">
+                            Using Huber Robust Linear Regression (RLM) and Bayesian shrinkage, properties are flagged when premium prices disconnect from operational delivery. The engine categorizes risks into the 4-Quadrant Opportunity Matrix.
+                        </p>
+                        <div class="stage-meta-row">
+                            <span class="stage-metric">Huber RLM Regression</span>
+                            <span class="stage-metric">Bayesian Shrinkage</span>
+                            <span class="stage-metric">Kasavana-Smith Matrix</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 06 -->
+            <div class="scrolly-stage" data-stage="5">
+                <div class="glass-panel stage-card">
+                    <div class="stage-media-pane">
+                        <img src="images/corridor_06_governance.jpg" alt="Dehradun Civic and Administrative Landmark" class="stage-featured-image" loading="lazy">
+                        <div class="media-tag-overlay">
+                            <span class="media-geo-pill">Dehradun Civic & Administrative Seat</span>
+                            <span class="media-res-badge">4K Master Plate</span>
+                        </div>
+                    </div>
+                    <div class="stage-content-pane">
+                        <span class="stage-badge">Civic Governance</span>
+                        <h2 class="stage-title">Civil Friction Register and UTDB Policy Briefs</h2>
+                        <p class="stage-desc">
+                            Civil infrastructure bottlenecks (Mall Road barrier queues, Library Chowk parking shortages) are segregated from hotel service issues to produce verified administrative dossiers for the District Magistrate and Uttarakhand Tourism Board.
+                        </p>
+                        <div class="stage-meta-row">
+                            <span class="stage-metric">UTDB Policy Brief</span>
+                            <span class="stage-metric">1-Click PDF Stream</span>
+                            <span class="stage-metric">District Admin Action Queue</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container -->
+    <main id="interactive-workspace" class="container">
+
+        <!-- Efficiency Telemetry Panel -->
+        <section class="efficiency-hero-panel">
+            <div class="efficiency-header">
+                <div class="efficiency-badge">OPERATIONAL VELOCITY TELEMETRY</div>
+                <h1 class="efficiency-headline">
+                    Human Reading Time Saved: <span id="hero-hours-saved" class="glow-text">42.4 Hours</span>
+                </h1>
+                <p class="efficiency-formula">
+                    Computation: <code>(508,800 Cluster Words / 200 WPM) - 14.2s CRI Pipeline Run = 42.4 Hours Operational Labor Saved</code>
+                </p>
+            </div>
+            <div class="efficiency-stats-grid">
+                <div class="eff-stat-card">
+                    <span class="eff-stat-num" id="eff-word-count">508,800</span>
+                    <span class="eff-stat-label">Cluster Word Count</span>
+                    <span class="eff-stat-sub">1,400 Verified Regional Reviews</span>
+                </div>
+                <div class="eff-stat-card">
+                    <span class="eff-stat-num" id="eff-human-speed">200 WPM</span>
+                    <span class="eff-stat-label">Human Reading Benchmark</span>
+                    <span class="eff-stat-sub">42.4 Hours Continuous Manual Effort</span>
+                </div>
+                <div class="eff-stat-card">
+                    <span class="eff-stat-num highlight-cyan" id="eff-ai-speed">14.2s</span>
+                    <span class="eff-stat-label">Vectorized ABSA Pipeline</span>
+                    <span class="eff-stat-sub">10,750x Velocity Multiplier</span>
+                </div>
+                <div class="eff-stat-card">
+                    <span class="eff-stat-num highlight-emerald" id="eff-roi">₹21,200</span>
+                    <span class="eff-stat-label">Labor Cost Preserved</span>
+                    <span class="eff-stat-sub">General Manager Operational ROI / Cycle</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIEW 1: B2B HOTEL OPERATOR DASHBOARD -->
+        <div id="view-hotel" class="hotel-view active">
+
+            <!-- Property Selector Toolbar -->
+            <div class="glass-panel property-toolbar">
+                <div class="property-selector-group">
+                    <span class="select-label">Select Comp-Set Subject:</span>
+                    <select id="hotel-select" class="hotel-select">
+                        <!-- Populated dynamically via JS -->
+                    </select>
+                </div>
+                <div class="property-meta-tags">
+                    <span class="tag-badge">Location: <span id="meta-location">Library Bazar, Mussoorie</span></span>
+                    <span class="tag-badge">Rooms: <span id="meta-rooms">121 Rooms</span></span>
+                    <span class="tag-badge">Rate: <span id="meta-price">₹22,000 - ₹45,000</span></span>
+                    <span class="tag-badge">Corridor: <span id="meta-mall-dist">150m to Mall Road</span></span>
+                </div>
+            </div>
+
+            <!-- KPI Metric Cards Grid -->
+            <div class="kpi-grid">
+                <div class="glass-panel kpi-card score">
+                    <div class="kpi-title">Cluster Sentiment Index</div>
+                    <div id="kpi-score-val" class="kpi-value">+78.4%</div>
+                    <div class="kpi-subtext">Net aspect positivity across platforms</div>
+                </div>
+                <div class="glass-panel kpi-card rank">
+                    <div class="kpi-title">Competitive Rank</div>
+                    <div id="kpi-rank-val" class="kpi-value">#1</div>
+                    <div id="kpi-rank-total" class="kpi-subtext">of 10 Mussoorie Cluster Hotels</div>
+                </div>
+                <div class="glass-panel kpi-card lead">
+                    <div class="kpi-title">Primary Moat / Lead</div>
+                    <div id="kpi-lead-val" class="kpi-value">Staff</div>
+                    <div id="kpi-lead-sub" class="kpi-subtext">+18.5% vs Market Baseline</div>
+                </div>
+                <div class="glass-panel kpi-card lag">
+                    <div class="kpi-title">Primary Operational Lag</div>
+                    <div id="kpi-lag-val" class="kpi-value">Logistics</div>
+                    <div id="kpi-lag-sub" class="kpi-subtext">-12.4% vs Market Baseline</div>
+                </div>
+                <div class="glass-panel kpi-card reviews">
+                    <div class="kpi-title">Aspect Data Points</div>
+                    <div id="kpi-revs-val" class="kpi-value">520 Reviews</div>
+                    <div class="kpi-subtext">MMT, TripAdvisor, Google & Booking</div>
+                </div>
+            </div>
+
+            <!-- Analytics Row: Radar Chart vs Aspect Leaderboard -->
+            <div class="analytics-row">
+                
+                <!-- Comp-Set Radar Chart -->
+                <div class="glass-panel">
+                    <div class="card-header">
+                        <div class="card-title">
+                            Comp-Set Benchmark Radar
+                        </div>
+                        <span style="font-size: 0.78rem; color: #94a3b8;">7 Core Hospitality Pillars</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="radar-container">
+                            <svg id="radar-svg" width="360" height="320"></svg>
+                        </div>
+                        <div class="radar-legend">
+                            <div class="legend-item">
+                                <span class="legend-dot property"></span>
+                                <span>Selected Property</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-dot cluster"></span>
+                                <span>Mussoorie Cluster Baseline (Leave-One-Out)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aspect Leaderboard Table -->
+                <div class="glass-panel">
+                    <div class="card-header">
+                        <div class="card-title">
+                            Aspect Performance & Opportunity Leaderboard
+                        </div>
+                        <span style="font-size: 0.75rem; color: #94a3b8;">Formula: S = 100 * (P-N)/(P+N)</span>
+                    </div>
+                    <div class="card-body" style="padding: 0;">
+                        <table class="aspect-table">
+                            <thead>
+                                <tr>
+                                    <th>Aspect</th>
+                                    <th>Classification</th>
+                                    <th>Score</th>
+                                    <th>Cluster</th>
+                                    <th>Gap</th>
+                                    <th>Audit Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="aspect-table-body">
+                                <!-- Populated dynamically via JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4-Quadrant Opportunity Matrix -->
+            <div class="glass-panel" style="margin-bottom: 2rem;">
+                <div class="card-header">
+                    <div class="card-title">
+                        4-Quadrant Opportunity & Threat Matrix (Kasavana-Smith Model for Reviews)
+                    </div>
+                    <span style="font-size: 0.78rem; color: #94a3b8;">Click any item to view underlying reviews</span>
+                </div>
+                <div class="card-body">
+                    <div class="matrix-grid">
+                        <div class="matrix-quadrant advantage">
+                            <div class="quadrant-header">
+                                <span class="quadrant-title" style="color: #34d399;">Competitive Advantage</span>
+                                <span style="font-size: 0.72rem; color: #a7f3d0;">Protect & Promote</span>
+                            </div>
+                            <div id="quadrant-advantage" class="quadrant-items"></div>
+                        </div>
+
+                        <div class="matrix-quadrant opportunity">
+                            <div class="quadrant-header">
+                                <span class="quadrant-title" style="color: #38bdf8;">Market Opportunity</span>
+                                <span style="font-size: 0.72rem; color: #bae6fd;">Competitors Fail, You Win</span>
+                            </div>
+                            <div id="quadrant-opportunity" class="quadrant-items"></div>
+                        </div>
+
+                        <div class="matrix-quadrant weakness">
+                            <div class="quadrant-header">
+                                <span class="quadrant-title" style="color: #fb7185;">Competitive Weakness</span>
+                                <span style="font-size: 0.72rem; color: #fecdd3;">Critical Operational Fix</span>
+                            </div>
+                            <div id="quadrant-weakness" class="quadrant-items"></div>
+                        </div>
+
+                        <div class="matrix-quadrant market-problem">
+                            <div class="quadrant-header">
+                                <span class="quadrant-title" style="color: #fbbf24;">Market-Wide Problem</span>
+                                <span style="font-size: 0.72rem; color: #fef3c7;">Destination Constraint</span>
+                            </div>
+                            <div id="quadrant-market-prob" class="quadrant-items"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Changepoint & Trend Timeline -->
+            <div class="glass-panel timeline-card">
+                <div class="card-header">
+                    <div class="card-title">
+                        Changepoint Detection Timeline (Jan 2025 - Feb 2026)
+                    </div>
+                    <span style="font-size: 0.78rem; color: #94a3b8;">Cyan = Property | Dashed Grey = Cluster Average</span>
+                </div>
+                <div class="card-body">
+                    <svg id="timeline-chart-svg" class="timeline-chart-svg"></svg>
+                </div>
+            </div>
+
+            <!-- Actionable Recommendations -->
+            <div class="glass-panel">
+                <div class="card-header">
+                    <div class="card-title">
+                        Prescriptive Recommendations & Operational ROI
+                    </div>
+                    <span style="font-size: 0.78rem; color: #94a3b8;">Algorithmic Interventions</span>
+                </div>
+                <div id="prescriptions-container" class="card-body">
+                    <!-- Populated dynamically via JS -->
+                </div>
+            </div>
+
+        </div>
+
+        <!-- VIEW 2: B2G TOURISM BOARD / MUNICIPAL ADMIN DASHBOARD -->
+        <div id="view-b2g" class="b2g-view">
+            
+            <!-- Hero Banner with 1-Click PDF Download -->
+            <div class="b2g-hero-banner">
+                <div>
+                    <h2 style="font-size: 1.6rem; font-weight: 800; color: #fff; margin-bottom: 0.35rem;">
+                        Uttarakhand Tourism Development Board (UTDB)
+                    </h2>
+                    <p style="color: #cbd5e1; font-size: 0.92rem; max-width: 700px;">
+                        Macro Destination Intelligence Command Centre. Aggregating 10 hotel clusters to transform unstructured guest reviews into empirical municipal policy evidence.
+                    </p>
+                </div>
+                <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                    <a id="btn-download-dm-pdf" href="Mussoorie_Tourism_Infrastructure_Bottleneck_Report_Q1_2026.pdf" class="btn-export-pdf" download="Mussoorie_Tourism_Infrastructure_Bottleneck_Report_Q1_2026.pdf">
+                        Download Official DM Brief (Instant PDF)
+                    </a>
+                    <button id="btn-export-brief" class="btn-export-brief">
+                        View Executive Brief (Markdown)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Macro Stats Row -->
+            <div class="kpi-grid">
+                <div class="glass-panel kpi-card lead">
+                    <div class="kpi-title">Destination Health Score</div>
+                    <div id="b2g-health-score" class="kpi-value">74.2 / 100</div>
+                    <div class="kpi-subtext">Mussoorie & Dehradun Hospitality Corridor</div>
+                </div>
+                <div class="glass-panel kpi-card reviews">
+                    <div class="kpi-title">Verified Public Evidence</div>
+                    <div id="b2g-total-reviews" class="kpi-value">520 Reviews</div>
+                    <div class="kpi-subtext">MakeMyTrip, TripAdvisor & Google</div>
+                </div>
+                <div class="glass-panel kpi-card score">
+                    <div class="kpi-title">Aspect Data Points</div>
+                    <div id="b2g-aspect-obs" class="kpi-value">1,420 Points</div>
+                    <div class="kpi-subtext">Aspect-Based Sentiment Classifications</div>
+                </div>
+            </div>
+
+            <!-- Two-Column Bottlenecks vs Citations -->
+            <div class="analytics-row" style="grid-template-columns: 1.3fr 1fr;">
+                
+                <!-- Municipal Infrastructure Bottlenecks -->
+                <div class="glass-panel">
+                    <div class="card-header">
+                        <div class="card-title">
+                            Systemic Municipal Friction Register
+                        </div>
+                        <span style="font-size: 0.78rem; color: #fbbf24;">Prioritized for Administrative Action</span>
+                    </div>
+                    <div class="card-body">
+                        <div id="bottlenecks-list-container" class="bottlenecks-list">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real Traveler Citation Feed -->
+                <div class="glass-panel">
+                    <div class="card-header">
+                        <div class="card-title">
+                            Ground-Truth Tourist Citations
+                        </div>
+                        <span style="font-size: 0.78rem; color: #94a3b8;">Verbatim Citizen Feedback</span>
+                    </div>
+                    <div class="card-body" style="max-height: 600px; overflow-y: auto;">
+                        <div id="b2g-citations-feed">
+                            <!-- Populated dynamically via JS -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- VIEW 3: LIVE REVIEW ABSA PLAYGROUND -->
+        <div id="view-live" class="live-view">
+            
+            <div class="tester-box">
+                <h2 style="font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">
+                    Real-Time Hinglish ABSA Engine Playground
+                </h2>
+                <p style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 1.25rem;">
+                    Paste any live hotel review in English, Hindi, or transliterated Hinglish. Watch the engine isolate operational aspects, sub-issues, sentiment polarity, and English semantics in real-time.
+                </p>
+
+                <!-- Preset Sample Buttons -->
+                <div class="preset-pills">
+                    <span style="font-size: 0.78rem; color: #64748b; align-self: center;">Quick Test Cases:</span>
+                    <button class="preset-pill" data-text="Room counter pe sharmila naam ka staff tha, check-in me aadha ghanta laga diya, completely third class behavior.">
+                        Case 1: Hinglish (Staff Delay: Sharmila)
+                    </button>
+                    <button class="preset-pill" data-text="Geyser paani thanda de raha tha subah 7 baje aur parking ki bohot dikkat thi.">
+                        Case 2: Geyser + Parking Failure
+                    </button>
+                    <button class="preset-pill" data-text="Staff bhaiya bohot polite aur cooperative the, garam chai aur pahadi parathe lajawab the!">
+                        Case 3: Hospitality & Pahadi Food Praise
+                    </button>
+                    <button class="preset-pill" data-text="January winter mein room freezing tha aur room heater ke extra ₹400 per night charge kiya.">
+                        Case 4: Winter Heating + Surcharge
+                    </button>
+                    <button class="preset-pill" data-text="Victorian architecture is magnificent, Royal Afghan dinner was divine and central heating kept us warm through the freezing night.">
+                        Case 5: Savoy Luxury Heritage
+                    </button>
+                </div>
+
+                <textarea id="live-review-input" class="tester-textarea" maxlength="300" placeholder="Type or paste a guest review here in English, Hindi, or Hinglish (Strictly Sanitized up to 300 characters)..."></textarea>
+                
+                <div class="textarea-footer">
+                    <span class="sanitization-badge">Strict Regex Sanitization Active (Zero Token Overflow Risk)</span>
+                    <span id="char-counter" class="char-counter">0 / 300 characters</span>
+                </div>
+
+                <button id="btn-run-live-absa" class="btn-analyze-live">
+                    Analyze Review in Real-Time
+                </button>
+            </div>
+
+            <!-- Live Analysis Output Row -->
+            <div class="analytics-row" style="grid-template-columns: 1.3fr 1fr;">
+                <div class="glass-panel">
+                    <div class="card-header">
+                        <div class="card-title">
+                            Side-by-Side Hinglish Translation & Aspect Extraction
+                        </div>
+                        <span style="font-size: 0.78rem; color: #34d399;">Localized Classifier</span>
+                    </div>
+                    <div id="live-absa-results" class="card-body">
+                        <p style="color: #64748b; font-style: italic;">Click "Analyze Review" or select a preset to view extracted aspects.</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel">
+                    <div class="card-header">
+                        <div class="card-title">
+                            Validated JSON Schema Output
+                        </div>
+                        <span style="font-size: 0.78rem; color: #38bdf8;">Production Payload</span>
+                    </div>
+                    <div class="card-body">
+                        <pre id="live-json-preview" style="background: rgba(15,23,42,0.8); padding: 1rem; border-radius: 8px; color: #38bdf8; font-size: 0.8rem; overflow-x: auto; max-height: 400px;"></pre>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Slide-over Evidence Drawer -->
+    <div id="drawer-backdrop" class="evidence-drawer-backdrop"></div>
+    <div id="evidence-drawer" class="evidence-drawer">
+        <div class="drawer-header">
+            <div>
+                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--accent-cyan); font-weight: 700;">Audit Trail</span>
+                <h3 id="drawer-category-title" class="drawer-title">Aspect Review Evidence</h3>
+            </div>
+            <button id="btn-close-drawer" class="btn-close-drawer">&times;</button>
+        </div>
+        <div id="drawer-cards-container" class="drawer-content">
+            <!-- Populated dynamically via JS -->
+        </div>
+    </div>
+
+    <!-- Export Policy Brief Modal -->
+    <div id="modal-policy-brief" class="modal-backdrop">
+        <div class="modal-dialog">
+            <div class="modal-header">
+                <div style="font-weight: 700; font-size: 1.1rem; color: #fff;">
+                    Uttarakhand Tourism Development Board (UTDB): Executive Policy Brief
+                </div>
+                <button id="btn-close-modal" class="btn-close-drawer">&times;</button>
+            </div>
+            <div id="modal-brief-content" class="modal-body">
+                <!-- Populated dynamically via JS -->
+            </div>
+            <div style="padding: 1rem 1.5rem; border-top: 1px solid var(--border-glass); display: flex; justify-content: flex-end; gap: 0.75rem;">
+                <a href="Mussoorie_Tourism_Infrastructure_Bottleneck_Report_Q1_2026.pdf" class="btn-export-pdf" style="font-size: 0.82rem; padding: 0.5rem 1rem;" download="Mussoorie_Tourism_Infrastructure_Bottleneck_Report_Q1_2026.pdf">
+                    Download Official PDF
+                </a>
+                <button onclick="window.print()" class="btn-export-brief" style="font-size: 0.82rem; padding: 0.5rem 1rem;">
+                    Print Document
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="app-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">ClusterIQ: Cluster Review Intelligence</div>
+            <div class="footer-links">
+                <a href="index.html">Dashboard</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms and Conditions</a>
+            </div>
+            <div class="footer-copy">Mussoorie and Dehradun Corridor Hospitality Telemetry</div>
+        </div>
+    </footer>
+
+    <script src="data/warm_cache.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -11,6 +11,11 @@ let currentBenchmarkData = null;
 let tourismData = null;
 let demoMode = true; // Air-Gapped Warm Cache active by default
 
+// New V2 State
+let currentCityId = null;
+let selectedHotelsForCompare = [];
+let currentFilter = 'all';
+
 // DOM Ready
 document.addEventListener('DOMContentLoaded', () => {
     initModeSwitcher();
@@ -21,18 +26,25 @@ document.addEventListener('DOMContentLoaded', () => {
     initLiveTester();
     initDrawerClose();
     initModalClose();
+    
+    // V2 Init
+    initThemeToggle();
+    initCitySearch();
 });
 
 // Mode Switching Controller
 function initModeSwitcher() {
+    const btnSearch = document.getElementById('btn-mode-search');
     const btnHotel = document.getElementById('btn-mode-hotel');
     const btnB2G = document.getElementById('btn-mode-b2g');
     const btnLive = document.getElementById('btn-mode-live');
 
+    const viewSearch = document.getElementById('view-search');
     const viewHotel = document.getElementById('view-hotel');
     const viewB2G = document.getElementById('view-b2g');
     const viewLive = document.getElementById('view-live');
 
+    btnSearch.addEventListener('click', () => setMode('search'));
     btnHotel.addEventListener('click', () => setMode('hotel'));
     btnB2G.addEventListener('click', () => {
         setMode('b2g');
@@ -41,14 +53,19 @@ function initModeSwitcher() {
     btnLive.addEventListener('click', () => setMode('live'));
 
     function setMode(mode) {
+        btnSearch.className = `mode-btn ${mode === 'search' ? 'active' : ''}`;
         btnHotel.className = `mode-btn ${mode === 'hotel' ? 'active' : ''}`;
         btnB2G.className = `mode-btn ${mode === 'b2g' ? 'active b2g-active' : ''}`;
         btnLive.className = `mode-btn ${mode === 'live' ? 'active play-active' : ''}`;
 
+        viewSearch.className = `search-view ${mode === 'search' ? 'active' : ''}`;
         viewHotel.className = `hotel-view ${mode === 'hotel' ? 'active' : ''}`;
         viewB2G.className = `b2g-view ${mode === 'b2g' ? 'active' : ''}`;
         viewLive.className = `live-view ${mode === 'live' ? 'active' : ''}`;
     }
+    
+    // Expose for external calls
+    window.setMode = setMode;
 }
 
 // -------------------------------------------------------------
@@ -1235,4 +1252,322 @@ function initScrollytellingEngine() {
             }
         });
     });
+}
+
+// ==========================================================================
+// V2: Theme Toggle, City Search, and Hotel Comparison Logic
+// ==========================================================================
+
+function initThemeToggle() {
+    const btn = document.getElementById('btn-theme-toggle');
+    const iconSun = document.getElementById('icon-sun');
+    const iconMoon = document.getElementById('icon-moon');
+    
+    // Check saved
+    const savedTheme = localStorage.getItem('clusteriq-theme');
+    if (savedTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        iconSun.style.display = 'block';
+        iconMoon.style.display = 'none';
+    }
+
+    btn.addEventListener('click', () => {
+        const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+        if (isLight) {
+            document.documentElement.removeAttribute('data-theme');
+            localStorage.setItem('clusteriq-theme', 'dark');
+            iconSun.style.display = 'none';
+            iconMoon.style.display = 'block';
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('clusteriq-theme', 'light');
+            iconSun.style.display = 'block';
+            iconMoon.style.display = 'none';
+        }
+    });
+}
+
+function initCitySearch() {
+    if (!window.HOTELS_DATABASE) return;
+    
+    renderCitySelector();
+    
+    // Filter pills
+    document.querySelectorAll('.filter-pill').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+            e.target.classList.add('active');
+            currentFilter = e.target.getAttribute('data-filter');
+            if (currentCityId) renderHotelsForCity(currentCityId);
+        });
+    });
+    
+    // Compare button
+    const btnCompare = document.getElementById('btn-compare-selected');
+    const closeCompare = document.getElementById('btn-close-compare');
+    const comparePanel = document.getElementById('comparison-panel');
+    
+    btnCompare.addEventListener('click', () => {
+        if (selectedHotelsForCompare.length === 2) {
+            renderComparison(selectedHotelsForCompare[0], selectedHotelsForCompare[1]);
+            comparePanel.classList.add('show');
+            comparePanel.classList.remove('hidden');
+        }
+    });
+    
+    closeCompare.addEventListener('click', () => {
+        comparePanel.classList.remove('show');
+        setTimeout(() => comparePanel.classList.add('hidden'), 400); // Wait for transition
+    });
+}
+
+function renderCitySelector() {
+    const grid = document.getElementById('city-selector-grid');
+    if (!grid) return;
+    
+    grid.innerHTML = '';
+    window.HOTELS_DATABASE.cities.forEach(city => {
+        const div = document.createElement('div');
+        div.className = 'city-card';
+        div.innerHTML = `
+            <h3>${city.name}</h3>
+            <p style="color: var(--accent-cyan); font-weight:600; margin: 0.5rem 0;">${city.tagline}</p>
+            <p>${city.hotelCount} Properties Indexed</p>
+            <p style="font-size: 0.75rem; margin-top: 0.5rem; opacity: 0.8;">Avg Rate: ₹${city.avgPrice.toLocaleString()}</p>
+        `;
+        div.addEventListener('click', () => {
+            document.querySelectorAll('.city-card').forEach(c => c.classList.remove('active'));
+            div.classList.add('active');
+            currentCityId = city.id;
+            document.getElementById('search-filters').classList.remove('hidden');
+            document.getElementById('hotel-search-results').classList.remove('hidden');
+            renderHotelsForCity(city.id);
+        });
+        grid.appendChild(div);
+    });
+}
+
+function getFillClass(score) {
+    if (score >= 80) return 'fill-excellent';
+    if (score >= 65) return 'fill-good';
+    if (score >= 50) return 'fill-average';
+    return 'fill-poor';
+}
+
+function renderHotelsForCity(cityId) {
+    const grid = document.getElementById('hotel-search-results');
+    if (!grid) return;
+    
+    let hotels = window.HOTELS_DATABASE.hotels.filter(h => h.city === cityId);
+    
+    // Sort logic based on filter
+    if (currentFilter === 'price') {
+        hotels.sort((a, b) => a.platforms.booking_com.price - b.platforms.booking_com.price);
+    } else if (currentFilter === 'view' || currentFilter === 'food' || currentFilter === 'staff') {
+        hotels.sort((a, b) => b.aspects[currentFilter].score - a.aspects[currentFilter].score);
+    } else {
+        // default: sort by rating
+        hotels.sort((a, b) => b.rating - a.rating);
+    }
+    
+    grid.innerHTML = '';
+    hotels.forEach(hotel => {
+        const isSelected = selectedHotelsForCompare.find(h => h.id === hotel.id);
+        
+        const card = document.createElement('div');
+        card.className = 'hotel-search-card';
+        
+        // Find best price
+        const prices = [
+            { name: 'Booking.com', price: hotel.platforms.booking_com.price },
+            { name: 'MakeMyTrip', price: hotel.platforms.makemytrip.price },
+            { name: 'Goibibo', price: hotel.platforms.goibibo.price }
+        ];
+        prices.sort((a, b) => a.price - b.price);
+        const bestPrice = prices[0];
+        
+        card.innerHTML = `
+            <img src="${hotel.hero_image}" alt="${hotel.name}" class="hotel-search-image">
+            <div class="hotel-search-content">
+                <div class="hotel-search-header">
+                    <div>
+                        <div class="hotel-search-cat">${hotel.category}</div>
+                        <div class="hotel-search-title">${hotel.name}</div>
+                        <div style="font-size: 0.8rem; color: var(--text-secondary);">${hotel.rating} ★ (${hotel.total_reviews} reviews)</div>
+                    </div>
+                </div>
+                
+                <div class="hotel-aspect-bars">
+                    <div class="hotel-aspect-row">
+                        <span class="hotel-aspect-label">Food</span>
+                        <div class="hotel-aspect-bar-bg"><div class="hotel-aspect-bar-fill ${getFillClass(hotel.aspects.food.score)}" style="width: ${hotel.aspects.food.score}%"></div></div>
+                        <span style="font-family: monospace; font-size: 0.75rem;">${hotel.aspects.food.score}</span>
+                    </div>
+                    <div class="hotel-aspect-row">
+                        <span class="hotel-aspect-label">Room</span>
+                        <div class="hotel-aspect-bar-bg"><div class="hotel-aspect-bar-fill ${getFillClass(hotel.aspects.room.score)}" style="width: ${hotel.aspects.room.score}%"></div></div>
+                        <span style="font-family: monospace; font-size: 0.75rem;">${hotel.aspects.room.score}</span>
+                    </div>
+                    <div class="hotel-aspect-row">
+                        <span class="hotel-aspect-label">Staff</span>
+                        <div class="hotel-aspect-bar-bg"><div class="hotel-aspect-bar-fill ${getFillClass(hotel.aspects.staff.score)}" style="width: ${hotel.aspects.staff.score}%"></div></div>
+                        <span style="font-family: monospace; font-size: 0.75rem;">${hotel.aspects.staff.score}</span>
+                    </div>
+                </div>
+                
+                <div class="hotel-platforms">
+                    <div class="platform-row">
+                        <span>MakeMyTrip</span>
+                        <span>₹${hotel.platforms.makemytrip.price.toLocaleString()}</span>
+                    </div>
+                    <div class="platform-row">
+                        <span>Booking.com</span>
+                        <span>₹${hotel.platforms.booking_com.price.toLocaleString()}</span>
+                    </div>
+                    <div class="platform-row platform-best">
+                        <span>Best: ${bestPrice.name}</span>
+                        <span>₹${bestPrice.price.toLocaleString()}</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hotel-search-actions">
+                <label class="compare-checkbox-label">
+                    <input type="checkbox" class="compare-cb" data-id="${hotel.id}" ${isSelected ? 'checked' : ''}>
+                    Compare
+                </label>
+                <button class="btn-view-dashboard" data-id="${hotel.id}">View Dashboard</button>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
+    
+    // Attach listeners
+    document.querySelectorAll('.compare-cb').forEach(cb => {
+        cb.addEventListener('change', (e) => {
+            const hId = e.target.getAttribute('data-id');
+            const hotelObj = window.HOTELS_DATABASE.hotels.find(h => h.id === hId);
+            
+            if (e.target.checked) {
+                if (selectedHotelsForCompare.length >= 2) {
+                    // Remove first item
+                    selectedHotelsForCompare.shift();
+                }
+                selectedHotelsForCompare.push(hotelObj);
+            } else {
+                selectedHotelsForCompare = selectedHotelsForCompare.filter(h => h.id !== hId);
+            }
+            
+            // Re-render to update checkboxes correctly
+            renderHotelsForCity(cityId);
+            
+            // Update Compare button
+            const btnCompare = document.getElementById('btn-compare-selected');
+            btnCompare.textContent = \`Compare Selected (\${selectedHotelsForCompare.length}/2)\`;
+            if (selectedHotelsForCompare.length === 2) {
+                btnCompare.disabled = false;
+                btnCompare.classList.add('glow');
+            } else {
+                btnCompare.disabled = true;
+                btnCompare.classList.remove('glow');
+            }
+        });
+    });
+    
+    document.querySelectorAll('.btn-view-dashboard').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const hId = e.target.getAttribute('data-id');
+            // If the hotel exists in the warm cache (for Mussoorie B2B dashboard)
+            // we load it, otherwise we just show a mockup/alert
+            const warmCacheHotel = window.CLUSTER_WARM_CACHE.find(h => h.id === hId);
+            
+            if (window.setMode) {
+                window.setMode('hotel');
+            }
+            
+            if (warmCacheHotel) {
+                currentPropertyId = hId;
+                const select = document.getElementById('hotel-select');
+                if (select) select.value = hId;
+                selectProperty(hId);
+            } else {
+                // Not in warm cache, just show alert but go to dashboard
+                showBrandedAlert(\`Note: \${hId} full dashboard data not in warm cache. Showing default demo data.\`, "warning");
+            }
+        });
+    });
+}
+
+function renderComparison(hotelA, hotelB) {
+    const container = document.getElementById('comparison-content');
+    
+    const aspects = ['food', 'room', 'view', 'staff', 'cleanliness', 'value'];
+    
+    let html = '';
+    
+    // Render Hotel A Column
+    html += \`<div class="compare-col">
+        <img src="\${hotelA.hero_image}" style="width:100%; height:140px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
+        <h3 style="font-size:1.3rem; margin-bottom:0.2rem;">\${hotelA.name}</h3>
+        <div style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:1.5rem;">\${hotelA.category} • \${hotelA.rating}★</div>
+        
+        <div style="margin-bottom: 2rem;">
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem; text-transform:uppercase;">Aspect Scores</div>\`;
+            
+    aspects.forEach(asp => {
+        const aScore = hotelA.aspects[asp].score;
+        const bScore = hotelB.aspects[asp].score;
+        const isWinner = aScore > bScore;
+        
+        html += \`
+            <div class="compare-metric \${isWinner ? 'compare-winner' : ''}">
+                <span class="compare-metric-label" style="text-transform:capitalize;">\${asp}</span>
+                <span class="compare-metric-val">\${aScore}</span>
+            </div>
+        \`;
+    });
+            
+    html += \`</div>
+        <div>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem; text-transform:uppercase;">Top Positive Review</div>
+            <p style="font-size:0.85rem; font-style:italic; color:var(--text-primary); line-height:1.5; padding:1rem; background:rgba(255,255,255,0.05); border-left:3px solid var(--accent-emerald); border-radius:4px;">
+                "\${hotelA.top_reviews[0].text}"
+                <br><span style="font-size:0.75rem; color:var(--text-secondary); margin-top:0.5rem; display:block;">— \${hotelA.top_reviews[0].platform}</span>
+            </p>
+        </div>
+    </div>\`;
+    
+    // Render Hotel B Column
+    html += \`<div class="compare-col">
+        <img src="\${hotelB.hero_image}" style="width:100%; height:140px; object-fit:cover; border-radius:8px; margin-bottom:1rem;">
+        <h3 style="font-size:1.3rem; margin-bottom:0.2rem;">\${hotelB.name}</h3>
+        <div style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:1.5rem;">\${hotelB.category} • \${hotelB.rating}★</div>
+        
+        <div style="margin-bottom: 2rem;">
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem; text-transform:uppercase;">Aspect Scores</div>\`;
+            
+    aspects.forEach(asp => {
+        const aScore = hotelA.aspects[asp].score;
+        const bScore = hotelB.aspects[asp].score;
+        const isWinner = bScore > aScore;
+        
+        html += \`
+            <div class="compare-metric \${isWinner ? 'compare-winner' : ''}">
+                <span class="compare-metric-label" style="text-transform:capitalize;">\${asp}</span>
+                <span class="compare-metric-val">\${bScore}</span>
+            </div>
+        \`;
+    });
+            
+    html += \`</div>
+        <div>
+            <div style="font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem; text-transform:uppercase;">Top Positive Review</div>
+            <p style="font-size:0.85rem; font-style:italic; color:var(--text-primary); line-height:1.5; padding:1rem; background:rgba(255,255,255,0.05); border-left:3px solid var(--accent-emerald); border-radius:4px;">
+                "\${hotelB.top_reviews[0].text}"
+                <br><span style="font-size:0.75rem; color:var(--text-secondary); margin-top:0.5rem; display:block;">— \${hotelB.top_reviews[0].platform}</span>
+            </p>
+        </div>
+    </div>\`;
+    
+    container.innerHTML = html;
 }
