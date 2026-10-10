@@ -1031,10 +1031,26 @@ function renderActionPrescriptions(aspects, prop) {
     if (!container) return;
     container.innerHTML = '';
 
-    const weakAspects = aspects.filter(a => a.classification === 'Competitive Weakness' || a.classification === 'Fix Needed');
-    const oppAspects = aspects.filter(a => a.classification === 'Market Opportunity');
-    const advAspects = aspects.filter(a => a.classification === 'Competitive Advantage' || a.classification === 'Your Advantage');
-    const mktAspects = aspects.filter(a => a.classification === 'Market-Wide Problem' || a.classification === 'Town-Wide Issue');
+    // Event delegation on prescriptions container to handle all card clicks
+    if (!container._hasEvidenceDelegation) {
+        container.addEventListener('click', (e) => {
+            const btn = e.target.closest('.btn-prescription-evidence');
+            if (btn) {
+                const cat = btn.getAttribute('data-category');
+                if (cat) {
+                    const targetAspect = aspects?.find(a => a.category === cat);
+                    const quotes = targetAspect?.evidence_quotes || targetAspect?.quotes || [];
+                    openEvidenceDrawer(cat, quotes);
+                }
+            }
+        });
+        container._hasEvidenceDelegation = true;
+    }
+
+    const weakAspects = (aspects || []).filter(a => a.classification === 'Competitive Weakness' || a.classification === 'Fix Needed');
+    const oppAspects = (aspects || []).filter(a => a.classification === 'Market Opportunity');
+    const advAspects = (aspects || []).filter(a => a.classification === 'Competitive Advantage' || a.classification === 'Your Advantage');
+    const mktAspects = (aspects || []).filter(a => a.classification === 'Market-Wide Problem' || a.classification === 'Town-Wide Issue');
 
     // Priority 1: Operational Fixes
     weakAspects.forEach(w => {
@@ -1050,7 +1066,7 @@ function renderActionPrescriptions(aspects, prop) {
                 <h4 style="font-size: 0.95rem; font-weight: 700; color: #fb7185;">Priority Operational Fix: ${w.category}</h4>
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
                     <span class="badge-classification rose">Deficit: ${w.competitive_gap}%</span>
-                    <button class="btn-prescription-evidence" style="background: rgba(244,63,94,0.15); border: 1px solid rgba(244,63,94,0.3); color: #fecdd3; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                    <button class="btn-prescription-evidence" data-category="${w.category}" style="background: rgba(244,63,94,0.15); border: 1px solid rgba(244,63,94,0.3); color: #fecdd3; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                         Read Comments (${quoteCount})
                     </button>
                 </div>
@@ -1060,9 +1076,12 @@ function renderActionPrescriptions(aspects, prop) {
                 <strong>Expected Impact & ROI:</strong> Competitors maintain a <strong>${w.cluster_baseline > 0 ? '+' : ''}${w.cluster_baseline}%</strong> satisfaction baseline while you lag at <strong>${w.property_score}%</strong>. Addressing this gap protects an estimated <strong>₹45,000 - ₹95,000 / month</strong> in prevented booking cancellations.
             </div>
         `;
-        card.querySelector('.btn-prescription-evidence').addEventListener('click', () => {
-            openEvidenceDrawer(w.category, quotes);
-        });
+        const btn = card.querySelector('.btn-prescription-evidence');
+        if (btn) {
+            btn.addEventListener('click', () => {
+                openEvidenceDrawer(w.category, quotes);
+            });
+        }
         container.appendChild(card);
     });
 
@@ -1080,7 +1099,7 @@ function renderActionPrescriptions(aspects, prop) {
                 <h4 style="font-size: 0.95rem; font-weight: 700; color: #38bdf8;">Growth Opportunity: ${o.category}</h4>
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
                     <span class="badge-classification cyan" style="background: rgba(14,165,233,0.15); color: #38bdf8; border: 1px solid rgba(14,165,233,0.3);">Competitors Lag: +${Math.abs(o.competitive_gap)}%</span>
-                    <button class="btn-prescription-evidence" style="background: rgba(14,165,233,0.15); border: 1px solid rgba(14,165,233,0.3); color: #7dd3fc; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                    <button class="btn-prescription-evidence" data-category="${o.category}" style="background: rgba(14,165,233,0.15); border: 1px solid rgba(14,165,233,0.3); color: #7dd3fc; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                         Read Comments (${quoteCount})
                     </button>
                 </div>
@@ -1090,9 +1109,12 @@ function renderActionPrescriptions(aspects, prop) {
                 <strong>Market Edge & Revenue Impact:</strong> While nearby competitors struggle with guest complaints on ${o.category} (${o.cluster_baseline}%), your score reaches <strong>${o.property_score}%</strong>. Highlighting this in direct ad copy captures an estimated <strong>12% - 18% direct booking lift</strong>.
             </div>
         `;
-        card.querySelector('.btn-prescription-evidence').addEventListener('click', () => {
-            openEvidenceDrawer(o.category, quotes);
-        });
+        const btn = card.querySelector('.btn-prescription-evidence');
+        if (btn) {
+            btn.addEventListener('click', () => {
+                openEvidenceDrawer(o.category, quotes);
+            });
+        }
         container.appendChild(card);
     });
 
@@ -1110,7 +1132,7 @@ function renderActionPrescriptions(aspects, prop) {
                 <h4 style="font-size: 0.95rem; font-weight: 700; color: #34d399;">Your Strength: ${a.category}</h4>
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
                     <span class="badge-classification emerald">Advantage: +${a.competitive_gap}%</span>
-                    <button class="btn-prescription-evidence" style="background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); color: #6ee7b7; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                    <button class="btn-prescription-evidence" data-category="${a.category}" style="background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); color: #6ee7b7; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                         Read Comments (${quoteCount})
                     </button>
                 </div>
@@ -1120,9 +1142,12 @@ function renderActionPrescriptions(aspects, prop) {
                 <strong>Brand Value & Room Rate Defense:</strong> High guest satisfaction of <strong>${a.property_score}%</strong> supports your pricing integrity. Defends <strong>₹1,500 - ₹3,500 premium</strong> per room night over the local average.
             </div>
         `;
-        card.querySelector('.btn-prescription-evidence').addEventListener('click', () => {
-            openEvidenceDrawer(a.category, quotes);
-        });
+        const btn = card.querySelector('.btn-prescription-evidence');
+        if (btn) {
+            btn.addEventListener('click', () => {
+                openEvidenceDrawer(a.category, quotes);
+            });
+        }
         container.appendChild(card);
     });
 
@@ -1140,7 +1165,7 @@ function renderActionPrescriptions(aspects, prop) {
                 <h4 style="font-size: 0.95rem; font-weight: 700; color: #fbbf24;">Town-Wide Challenge: ${m.category}</h4>
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
                     <span class="badge-classification amber" style="background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3);">Town Average: ${m.cluster_baseline}%</span>
-                    <button class="btn-prescription-evidence" style="background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3); color: #fde68a; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                    <button class="btn-prescription-evidence" data-category="${m.category}" style="background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3); color: #fde68a; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                         Read Comments (${quoteCount})
                     </button>
                 </div>
@@ -1150,9 +1175,12 @@ function renderActionPrescriptions(aspects, prop) {
                 <strong>Destination Context:</strong> Both your hotel (${m.property_score}%) and the town average (${m.cluster_baseline}%) experience friction on ${m.category}. Setting clear expectations with guests before check-in reduces negative reviews by up to <strong>55%</strong>.
             </div>
         `;
-        card.querySelector('.btn-prescription-evidence').addEventListener('click', () => {
-            openEvidenceDrawer(m.category, quotes);
-        });
+        const btn = card.querySelector('.btn-prescription-evidence');
+        if (btn) {
+            btn.addEventListener('click', () => {
+                openEvidenceDrawer(m.category, quotes);
+            });
+        }
         container.appendChild(card);
     });
 
