@@ -60,11 +60,11 @@
                     </svg>
                 </button>
                 <button id="btn-demo-mode-toggle" class="btn-demo-toggle"
-                    title="Click to toggle Air-Gapped Demo Mode vs Live Scraper Mode">
-                    <span id="demo-mode-status-text">Demo Mode: WARM CACHE</span>
+                    title="Click to toggle Pre-Loaded Local Database vs Live Scraper Mode">
+                    <span id="demo-mode-status-text">Database: Pre-Loaded</span>
                 </button>
-                <button id="btn-refresh-cluster" class="btn-refresh-cluster" title="Synchronize cluster reviews">
-                    Refresh Cluster Data
+                <button id="btn-refresh-cluster" class="btn-refresh-cluster" title="Synchronize hotel reviews">
+                    Refresh Hotel Data
                 </button>
             </div>
         </div>
@@ -75,13 +75,13 @@
                 City & Hotel Search
             </button>
             <button id="btn-mode-hotel" class="mode-btn">
-                Property Dashboard (B2B)
+                Hotel Manager View
             </button>
             <button id="btn-mode-b2g" class="mode-btn">
-                Tourism Board (B2G)
+                Tourism Board View
             </button>
             <button id="btn-mode-live" class="mode-btn">
-                Live ABSA
+                Live Review Tester
             </button>
         </div>
     </header>
@@ -114,12 +114,12 @@
                 <span id="scrolly-hud-pct" class="hud-pct">00%</span>
             </div>
             <div class="scrolly-nav-rail">
-                <button class="rail-tick active" data-stage="0" title="Corridor Overview"></button>
-                <button class="rail-tick" data-stage="1" title="Heritage Comp-Set"></button>
+                <button class="rail-tick active" data-stage="0" title="Destination Overview"></button>
+                <button class="rail-tick" data-stage="1" title="Heritage Competitors"></button>
                 <button class="rail-tick" data-stage="2" title="Multi-Platform Ingestion"></button>
-                <button class="rail-tick" data-stage="3" title="7-Pillar ABSA"></button>
-                <button class="rail-tick" data-stage="4" title="Disconnect Detector"></button>
-                <button class="rail-tick" data-stage="5" title="Municipal Governance"></button>
+                <button class="rail-tick" data-stage="3" title="8 Service Categories"></button>
+                <button class="rail-tick" data-stage="4" title="Price vs Value Analysis"></button>
+                <button class="rail-tick" data-stage="5" title="City Infrastructure"></button>
             </div>
             <div class="scrolly-jump-bar">
                 <a href="#interactive-workspace" class="btn-skip-to-dashboard">
@@ -150,7 +150,7 @@
                             508,800 operational words into an empirical intelligence database.
                         </p>
                         <div class="stage-meta-row">
-                            <span class="stage-metric">10 Comp-Set Hotels</span>
+                            <span class="stage-metric">10 Competitor Hotels</span>
                             <span class="stage-metric">1,400 Public Reviews</span>
                             <span class="stage-metric">508,800 Words Digested</span>
                         </div>
@@ -170,7 +170,7 @@
                         </div>
                     </div>
                     <div class="stage-content-pane">
-                        <span class="stage-badge">Comp-Set Benchmarking</span>
+                        <span class="stage-badge">Competitive Benchmarking</span>
                         <h2 class="stage-title">Heritage Icon vs Hillside Boutique Dynamics</h2>
                         <p class="stage-desc">
                             Heritage icons like Welcomhotel The Savoy and boutique hillside retreats face unique
@@ -227,18 +227,18 @@
                         </div>
                     </div>
                     <div class="stage-content-pane">
-                        <span class="stage-badge">Mathematical Scoring</span>
-                        <h2 class="stage-title">7-Pillar Aspect-Based Sentiment Decomposition</h2>
+                        <span class="stage-badge">Review Intelligence</span>
+                        <h2 class="stage-title">8 Key Service Categories</h2>
                         <p class="stage-desc">
-                            Unstructured feedback is decomposed into 7 core pillars: Cleanliness, Food, Maintenance,
-                            Logistics, Staff, Value, and Location. Mathematical aspect sentiment scores map delivered
-                            performance against Leave-One-Out cluster baselines.
+                            Customer feedback is organized into 8 essential hospitality areas: Cleanliness, Food, Rooms,
+                            Staff, Location, Value, Housekeeping, and Booking. Each area is scored against competing hotels
+                            in the same destination.
                         </p>
                         <div class="stage-meta-row">
                             <span class="stage-metric">Cleanliness</span>
-                            <span class="stage-metric">Logistics</span>
-                            <span class="stage-metric">Maintenance</span>
-                            <span class="stage-metric">Staff</span>
+                            <span class="stage-metric">Food & Dining</span>
+                            <span class="stage-metric">Rooms</span>
+                            <span class="stage-metric">Staff & Service</span>
                         </div>
                     </div>
                 </div>
@@ -256,17 +256,17 @@
                         </div>
                     </div>
                     <div class="stage-content-pane">
-                        <span class="stage-badge">Algorithmic Risk Signal</span>
-                        <h2 class="stage-title">Price-to-Value Disconnect and Premium Illusion</h2>
+                        <span class="stage-badge">Value & Pricing Analysis</span>
+                        <h2 class="stage-title">Price vs Guest Satisfaction Gap</h2>
                         <p class="stage-desc">
-                            Using Huber Robust Linear Regression (RLM) and Bayesian shrinkage, properties are flagged
-                            when premium prices disconnect from operational delivery. The engine categorizes risks into
-                            the 4-Quadrant Opportunity Matrix.
+                            When room rates are high but guest ratings drop, ClusterIQ flags the gap between price and
+                            service quality. Every issue is mapped into a clear 4-Way Action Matrix to help managers fix
+                            root causes.
                         </p>
                         <div class="stage-meta-row">
-                            <span class="stage-metric">Huber RLM Regression</span>
-                            <span class="stage-metric">Bayesian Shrinkage</span>
-                            <span class="stage-metric">Kasavana-Smith Matrix</span>
+                            <span class="stage-metric">Price vs Rating Analysis</span>
+                            <span class="stage-metric">Fair Benchmarking</span>
+                            <span class="stage-metric">Actionable Priorities</span>
                         </div>
                     </div>
                 </div>
@@ -308,35 +308,34 @@
         <!-- Efficiency Telemetry Panel -->
         <section class="efficiency-hero-panel">
             <div class="efficiency-header">
-                <div class="efficiency-badge">OPERATIONAL VELOCITY TELEMETRY</div>
+                <div class="efficiency-badge">TIME & LABOR SAVINGS</div>
                 <h1 class="efficiency-headline">
-                    Human Reading Time Saved: <span id="hero-hours-saved" class="glow-text">42.4 Hours</span>
+                    Manager Review Reading Time Saved: <span id="hero-hours-saved" class="glow-text">42.4 Hours</span>
                 </h1>
                 <p class="efficiency-formula">
-                    Computation:
-                    <code>(508,800 Cluster Words / 200 WPM) - 14.2s CRI Pipeline Run = 42.4 Hours Operational Labor Saved</code>
+                    Reading 508,800 review words by hand takes 42.4 hours. ClusterIQ analyzes the entire regional market in 14.2 seconds.
                 </p>
             </div>
             <div class="efficiency-stats-grid">
                 <div class="eff-stat-card">
                     <span class="eff-stat-num" id="eff-word-count">508,800</span>
-                    <span class="eff-stat-label">Cluster Word Count</span>
-                    <span class="eff-stat-sub">1,400 Verified Regional Reviews</span>
+                    <span class="eff-stat-label">Words Analyzed</span>
+                    <span class="eff-stat-sub">1,400+ Verified Regional Reviews</span>
                 </div>
                 <div class="eff-stat-card">
                     <span class="eff-stat-num" id="eff-human-speed">200 WPM</span>
-                    <span class="eff-stat-label">Human Reading Benchmark</span>
-                    <span class="eff-stat-sub">42.4 Hours Continuous Manual Effort</span>
+                    <span class="eff-stat-label">Manual Reading Speed</span>
+                    <span class="eff-stat-sub">42.4 Hours of Manual Effort</span>
                 </div>
                 <div class="eff-stat-card">
                     <span class="eff-stat-num highlight-cyan" id="eff-ai-speed">14.2s</span>
-                    <span class="eff-stat-label">Vectorized ABSA Pipeline</span>
-                    <span class="eff-stat-sub">10,750x Velocity Multiplier</span>
+                    <span class="eff-stat-label">AI Analysis Time</span>
+                    <span class="eff-stat-sub">10,750x Faster Turnaround</span>
                 </div>
                 <div class="eff-stat-card">
                     <span class="eff-stat-num highlight-emerald" id="eff-roi">₹21,200</span>
-                    <span class="eff-stat-label">Labor Cost Preserved</span>
-                    <span class="eff-stat-sub">General Manager Operational ROI / Cycle</span>
+                    <span class="eff-stat-label">Management Hours Saved</span>
+                    <span class="eff-stat-sub">Estimated GM Labor Value per Audit</span>
                 </div>
             </div>
         </section>
@@ -454,10 +453,10 @@
             <!-- B2B Find Your Hotel Onboarding Banner -->
             <div class="b2b-onboarding-panel glass-panel">
                 <div class="b2b-onboarding-info">
-                    <div class="onboarding-pill">HOTEL OPERATOR ONBOARDING</div>
-                    <h3 class="onboarding-title">Benchmark Your Property Against Your City Comp-Set</h3>
+                    <div class="onboarding-pill">HOTEL BENCHMARKING</div>
+                    <h3 class="onboarding-title">Benchmark Your Hotel Against Nearby Competitors</h3>
                     <p class="onboarding-desc">Select your hotel across Mussoorie, Nainital, Bhimtal, or Dehradun to
-                        view isolated intra-cluster competitive scores and uncover revenue opportunities.</p>
+                        see how your service compares to competitors and uncover immediate revenue opportunities.</p>
                 </div>
                 <div class="b2b-onboarding-selector">
                     <select id="b2b-cluster-select" class="b2b-cluster-dropdown" title="Filter by Destination">
@@ -475,14 +474,14 @@
 
             <!-- Provenance & Data Quality Status Bar -->
             <div id="property-provenance-bar" class="property-provenance-bar glass-panel">
-                <span class="prov-item">Cluster: <strong id="prov-cluster">Mussoorie</strong></span>
+                <span class="prov-item">Destination: <strong id="prov-cluster">Mussoorie</strong></span>
                 <span class="prov-divider">|</span>
-                <span class="prov-item">Segment: <strong id="prov-segment">Leisure Resort</strong></span>
+                <span class="prov-item">Property Type: <strong id="prov-segment">Leisure Resort</strong></span>
                 <span class="prov-divider">|</span>
                 <span class="prov-item">Data Coverage: <strong id="prov-coverage"
                         class="badge-coverage coverage-multi">Multi-Platform Verified (150+ Reviews)</strong></span>
                 <span class="prov-divider">|</span>
-                <span class="prov-item">Reviews Analysed: <strong id="prov-reviews">842 Verified Reviews</strong></span>
+                <span class="prov-item">Reviews Analyzed: <strong id="prov-reviews">842 Verified Reviews</strong></span>
                 <span class="prov-divider">|</span>
                 <span class="prov-item">Platforms: <strong id="prov-platforms">Google Places, MMT, Booking.com,
                         TripAdvisor</strong></span>
@@ -493,7 +492,7 @@
             <!-- Property Selector Toolbar -->
             <div class="glass-panel property-toolbar">
                 <div class="property-selector-group">
-                    <span class="select-label">Select Comp-Set Subject:</span>
+                    <span class="select-label">Select Hotel:</span>
                     <select id="hotel-select" class="hotel-select">
                         <!-- Populated dynamically via JS -->
                     </select>
@@ -502,49 +501,49 @@
                     <span class="tag-badge">Location: <span id="meta-location">Library Bazar, Mussoorie</span></span>
                     <span class="tag-badge">Rooms: <span id="meta-rooms">121 Rooms</span></span>
                     <span class="tag-badge">Rate: <span id="meta-price">₹22,000 - ₹45,000</span></span>
-                    <span class="tag-badge">Corridor: <span id="meta-mall-dist">150m to Mall Road</span></span>
+                    <span class="tag-badge">Proximity: <span id="meta-mall-dist">150m to Mall Road</span></span>
                 </div>
             </div>
 
             <!-- KPI Metric Cards Grid -->
             <div class="kpi-grid">
                 <div class="glass-panel kpi-card score">
-                    <div class="kpi-title">Cluster Sentiment Index</div>
+                    <div class="kpi-title">Guest Satisfaction Score</div>
                     <div id="kpi-score-val" class="kpi-value">+78.4%</div>
-                    <div class="kpi-subtext">Net aspect positivity across platforms</div>
+                    <div class="kpi-subtext">Overall sentiment across review platforms</div>
                 </div>
                 <div class="glass-panel kpi-card rank">
-                    <div class="kpi-title">Competitive Rank</div>
+                    <div class="kpi-title">Market Rank</div>
                     <div id="kpi-rank-val" class="kpi-value">#1</div>
-                    <div id="kpi-rank-total" class="kpi-subtext">of 10 Mussoorie Cluster Hotels</div>
+                    <div id="kpi-rank-total" class="kpi-subtext">of 10 Mussoorie Hotels</div>
                 </div>
                 <div class="glass-panel kpi-card lead">
-                    <div class="kpi-title">Primary Moat / Lead</div>
+                    <div class="kpi-title">Strongest Category</div>
                     <div id="kpi-lead-val" class="kpi-value">Staff</div>
-                    <div id="kpi-lead-sub" class="kpi-subtext">+18.5% vs Market Baseline</div>
+                    <div id="kpi-lead-sub" class="kpi-subtext">+18.5% vs Competitors</div>
                 </div>
                 <div class="glass-panel kpi-card lag">
-                    <div class="kpi-title">Primary Operational Lag</div>
-                    <div id="kpi-lag-val" class="kpi-value">Logistics</div>
-                    <div id="kpi-lag-sub" class="kpi-subtext">-12.4% vs Market Baseline</div>
+                    <div class="kpi-title">Biggest Area to Improve</div>
+                    <div id="kpi-lag-val" class="kpi-value">Room Maintenance</div>
+                    <div id="kpi-lag-sub" class="kpi-subtext">-12.4% vs Competitors</div>
                 </div>
                 <div class="glass-panel kpi-card reviews">
-                    <div class="kpi-title">Aspect Data Points</div>
-                    <div id="kpi-revs-val" class="kpi-value">520 Reviews</div>
-                    <div class="kpi-subtext">MMT, TripAdvisor, Google & Booking</div>
+                    <div class="kpi-title">Review Mentions</div>
+                    <div id="kpi-revs-val" class="kpi-value">520 Mentions</div>
+                    <div class="kpi-subtext">Across Google, MMT, Booking & TripAdvisor</div>
                 </div>
             </div>
 
             <!-- Analytics Row: Radar Chart vs Aspect Leaderboard -->
             <div class="analytics-row">
 
-                <!-- Comp-Set Radar Chart -->
+                <!-- Performance Radar Chart -->
                 <div class="glass-panel">
                     <div class="card-header">
                         <div class="card-title">
-                            Comp-Set Benchmark Radar
+                            Performance Radar vs Competitors
                         </div>
-                        <span style="font-size: 0.78rem; color: #94a3b8;">7 Core Hospitality Pillars</span>
+                        <span style="font-size: 0.78rem; color: #94a3b8;">8 Key Service Categories</span>
                     </div>
                     <div class="card-body">
                         <div class="radar-container">
@@ -553,11 +552,11 @@
                         <div class="radar-legend">
                             <div class="legend-item">
                                 <span class="legend-dot property"></span>
-                                <span>Selected Property</span>
+                                <span>Your Hotel</span>
                             </div>
                             <div class="legend-item">
                                 <span class="legend-dot cluster"></span>
-                                <span id="radar-legend-cluster-label">Mussoorie Cluster Baseline (Leave-One-Out)</span>
+                                <span id="radar-legend-cluster-label">Mussoorie Competitor Average</span>
                             </div>
                         </div>
                     </div>
@@ -567,24 +566,87 @@
                 <div class="glass-panel">
                     <div class="card-header">
                         <div class="card-title">
-                            Aspect Performance & Opportunity Leaderboard
+                            Category Breakdown & Competitor Comparison
                         </div>
-                        <span style="font-size: 0.75rem; color: #94a3b8;">Formula: S = 100 * (P-N)/(P+N)</span>
+                        <span style="font-size: 0.78rem; color: #94a3b8;">Scale: -100 to +100 based on verified guest feedback</span>
                     </div>
                     <div class="card-body" style="padding: 0;">
                         <table class="aspect-table">
                             <thead>
                                 <tr>
-                                    <th>Aspect</th>
-                                    <th>Classification</th>
-                                    <th>Score</th>
-                                    <th>Cluster</th>
-                                    <th>Gap</th>
-                                    <th>Audit Action</th>
+                                    <th>Category</th>
+                                    <th>Position</th>
+                                    <th>Your Score</th>
+                                    <th>Competitors</th>
+                                    <th>Difference</th>
+                                    <th>Guest Reviews</th>
                                 </tr>
                             </thead>
                             <tbody id="aspect-table-body">
-                                <!-- Populated dynamically via JS -->
+                                <tr>
+                                    <td><div class="aspect-name"><span>Booking</span></div></td>
+                                    <td><span class="badge-classification amber">Town-Wide Issue</span></td>
+                                    <td><span style="font-weight: 700; color: #34d399;">+17</span></td>
+                                    <td><span style="color: #94a3b8;">+21</span></td>
+                                    <td><span class="delta-badge neg">-4%</span></td>
+                                    <td><button class="btn-view-evidence" data-category="Booking">Read Comments (2)</button></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="aspect-name"><span>Cleanliness</span></div></td>
+                                    <td><span class="badge-classification rose">Fix Needed</span></td>
+                                    <td><span style="font-weight: 700; color: #34d399;">+70</span></td>
+                                    <td><span style="color: #94a3b8;">+70</span></td>
+                                    <td><span class="delta-badge pos">+0%</span></td>
+                                    <td><button class="btn-view-evidence" data-category="Cleanliness">Read Comments (4)</button></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="aspect-name"><span>Food</span></div></td>
+                                    <td><span class="badge-classification rose">Fix Needed</span></td>
+                                    <td><span style="font-weight: 700; color: #34d399;">+66</span></td>
+                                    <td><span style="color: #94a3b8;">+70</span></td>
+                                    <td><span class="delta-badge neg">-4%</span></td>
+                                    <td><button class="btn-view-evidence" data-category="Food">Read Comments (2)</button></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="aspect-name"><span>Housekeeping</span></div></td>
+                                    <td><span class="badge-classification rose">Fix Needed</span></td>
+                                    <td><span style="font-weight: 700; color: #34d399;">+66</span></td>
+                                    <td><span style="color: #94a3b8;">+67</span></td>
+                                    <td><span class="delta-badge neg">-1%</span></td>
+                                    <td><button class="btn-view-evidence" data-category="Housekeeping">Read Comments (2)</button></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="aspect-name"><span>Location</span></div></td>
+                                    <td><span class="badge-classification emerald">Your Advantage</span></td>
+                                    <td><span style="font-weight: 700; color: #34d399;">+43</span></td>
+                                    <td><span style="color: #94a3b8;">+42</span></td>
+                                    <td><span class="delta-badge pos">+1%</span></td>
+                                    <td><button class="btn-view-evidence" data-category="Location">Read Comments (4)</button></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="aspect-name"><span>Room</span></div></td>
+                                    <td><span class="badge-classification cyan">Market Opportunity</span></td>
+                                    <td><span style="font-weight: 700; color: #34d399;">+54</span></td>
+                                    <td><span style="color: #94a3b8;">+60</span></td>
+                                    <td><span class="delta-badge neg">-6%</span></td>
+                                    <td><button class="btn-view-evidence" data-category="Room">Read Comments (4)</button></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="aspect-name"><span>Staff</span></div></td>
+                                    <td><span class="badge-classification rose">Fix Needed</span></td>
+                                    <td><span style="font-weight: 700; color: #34d399;">+65</span></td>
+                                    <td><span style="color: #94a3b8;">+65</span></td>
+                                    <td><span class="delta-badge pos">+0%</span></td>
+                                    <td><button class="btn-view-evidence" data-category="Staff">Read Comments (4)</button></td>
+                                </tr>
+                                <tr>
+                                    <td><div class="aspect-name"><span>Value</span></div></td>
+                                    <td><span class="badge-classification amber">Town-Wide Issue</span></td>
+                                    <td><span style="font-weight: 700; color: #34d399;">+51</span></td>
+                                    <td><span style="color: #94a3b8;">+54</span></td>
+                                    <td><span class="delta-badge neg">-3%</span></td>
+                                    <td><button class="btn-view-evidence" data-category="Value">Read Comments (4)</button></td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -595,40 +657,40 @@
             <div class="glass-panel" style="margin-bottom: 2rem;">
                 <div class="card-header">
                     <div class="card-title">
-                        4-Quadrant Opportunity & Threat Matrix (Kasavana-Smith Model for Reviews)
+                        4-Way Opportunity & Risk Matrix
                     </div>
-                    <span style="font-size: 0.78rem; color: #94a3b8;">Click any item to view underlying reviews</span>
+                    <span style="font-size: 0.78rem; color: #94a3b8;">Click any category to read customer comments</span>
                 </div>
                 <div class="card-body">
                     <div class="matrix-grid">
                         <div class="matrix-quadrant advantage">
                             <div class="quadrant-header">
-                                <span class="quadrant-title" style="color: #34d399;">Competitive Advantage</span>
-                                <span style="font-size: 0.72rem; color: #a7f3d0;">Protect & Promote</span>
+                                <span class="quadrant-title" style="color: #34d399;">Your Key Strengths</span>
+                                <span style="font-size: 0.72rem; color: #a7f3d0;">Protect & Highlight in Marketing</span>
                             </div>
                             <div id="quadrant-advantage" class="quadrant-items"></div>
                         </div>
 
                         <div class="matrix-quadrant opportunity">
                             <div class="quadrant-header">
-                                <span class="quadrant-title" style="color: #38bdf8;">Market Opportunity</span>
-                                <span style="font-size: 0.72rem; color: #bae6fd;">Competitors Fail, You Win</span>
+                                <span class="quadrant-title" style="color: #38bdf8;">Growth Opportunities</span>
+                                <span style="font-size: 0.72rem; color: #bae6fd;">Competitors Struggle, You Win</span>
                             </div>
                             <div id="quadrant-opportunity" class="quadrant-items"></div>
                         </div>
 
                         <div class="matrix-quadrant weakness">
                             <div class="quadrant-header">
-                                <span class="quadrant-title" style="color: #fb7185;">Competitive Weakness</span>
-                                <span style="font-size: 0.72rem; color: #fecdd3;">Critical Operational Fix</span>
+                                <span class="quadrant-title" style="color: #fb7185;">Priority Areas to Fix</span>
+                                <span style="font-size: 0.72rem; color: #fecdd3;">Competitors Are Performing Better</span>
                             </div>
                             <div id="quadrant-weakness" class="quadrant-items"></div>
                         </div>
 
                         <div class="matrix-quadrant market-problem">
                             <div class="quadrant-header">
-                                <span class="quadrant-title" style="color: #fbbf24;">Market-Wide Problem</span>
-                                <span style="font-size: 0.72rem; color: #fef3c7;">Destination Constraint</span>
+                                <span class="quadrant-title" style="color: #fbbf24;">Shared Destination Challenges</span>
+                                <span style="font-size: 0.72rem; color: #fef3c7;">Town-Wide Issues (Traffic, Roads)</span>
                             </div>
                             <div id="quadrant-market-prob" class="quadrant-items"></div>
                         </div>
@@ -640,10 +702,9 @@
             <div class="glass-panel timeline-card">
                 <div class="card-header">
                     <div class="card-title">
-                        Changepoint Detection Timeline (Jan 2025 - Feb 2026)
+                        Monthly Guest Satisfaction Trend (Jan 2025 - Feb 2026)
                     </div>
-                    <span style="font-size: 0.78rem; color: #94a3b8;">Cyan = Property | Dashed Grey = Cluster
-                        Average</span>
+                    <span style="font-size: 0.78rem; color: #94a3b8;">Cyan = Your Hotel | Dashed Line = Competitor Average</span>
                 </div>
                 <div class="card-body">
                     <svg id="timeline-chart-svg" class="timeline-chart-svg"></svg>
@@ -654,9 +715,9 @@
             <div class="glass-panel">
                 <div class="card-header">
                     <div class="card-title">
-                        Prescriptive Recommendations & Operational ROI
+                        Actionable Recommendations & Revenue Impact
                     </div>
-                    <span style="font-size: 0.78rem; color: #94a3b8;">Algorithmic Interventions</span>
+                    <span style="font-size: 0.78rem; color: #94a3b8;">Priority Steps for Management</span>
                 </div>
                 <div id="prescriptions-container" class="card-body">
                     <!-- Populated dynamically via JS -->
@@ -676,7 +737,7 @@
                     </h2>
                     <p style="color: #cbd5e1; font-size: 0.92rem; max-width: 700px;">
                         Macro Destination Intelligence Command Centre. Aggregating 10 hotel clusters to transform
-                        unstructured guest reviews into empirical municipal policy evidence.
+                        Aggregating verified visitor reviews across 54 hotels to identify municipal infrastructure needs, parking congestion, and civic priorities.
                     </p>
                 </div>
                 <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
@@ -699,14 +760,14 @@
                     <div class="kpi-subtext">Mussoorie & Dehradun Hospitality Corridor</div>
                 </div>
                 <div class="glass-panel kpi-card reviews">
-                    <div class="kpi-title">Verified Public Evidence</div>
+                    <div class="kpi-title">Verified Reviews Analyzed</div>
                     <div id="b2g-total-reviews" class="kpi-value">520 Reviews</div>
                     <div class="kpi-subtext">MakeMyTrip, TripAdvisor & Google</div>
                 </div>
                 <div class="glass-panel kpi-card score">
-                    <div class="kpi-title">Aspect Data Points</div>
-                    <div id="b2g-aspect-obs" class="kpi-value">1,420 Points</div>
-                    <div class="kpi-subtext">Aspect-Based Sentiment Classifications</div>
+                    <div class="kpi-title">Review Mentions</div>
+                    <div id="b2g-aspect-obs" class="kpi-value">1,420 Mentions</div>
+                    <div class="kpi-subtext">Categorized Guest Comments</div>
                 </div>
             </div>
 
@@ -714,11 +775,11 @@
             <div class="glass-panel" style="margin-bottom: 2rem;">
                 <div class="card-header">
                     <div>
-                        <div class="card-title">Cross-City Destination Theme Comparison (Visitor Friction Contrast)
+                        <div class="card-title">Cross-City Infrastructure Comparison
                         </div>
                         <p style="color: var(--text-secondary); font-size: 0.82rem; margin-top: 0.25rem;">
-                            Empirical civic bottleneck comparison across Nainital, Mussoorie, Dehradun, and Bhimtal to
-                            guide infrastructure budget allocations.
+                            Civic infrastructure comparison across Nainital, Mussoorie, Dehradun, and Bhimtal to
+                            guide municipal budget allocations.
                         </p>
                     </div>
                     <span class="badge-cyan"
@@ -729,13 +790,13 @@
                     <table class="cross-city-table">
                         <thead>
                             <tr>
-                                <th>Civic Bottleneck Dimension</th>
-                                <th>Nodal Department</th>
+                                <th>Civic Priority Area</th>
+                                <th>Responsible Department</th>
                                 <th style="text-align: center;">Nainital</th>
                                 <th style="text-align: center;">Mussoorie</th>
                                 <th style="text-align: center;">Dehradun</th>
                                 <th style="text-align: center;">Bhimtal</th>
-                                <th>Inter-City Friction Contrast</th>
+                                <th>City Contrast & Insights</th>
                             </tr>
                         </thead>
                         <tbody id="cross-city-table-body">
@@ -752,7 +813,7 @@
                 <div class="glass-panel">
                     <div class="card-header">
                         <div class="card-title">
-                            Systemic Municipal Friction Register
+                            Priority Infrastructure Issues
                         </div>
                         <span style="font-size: 0.78rem; color: #fbbf24;">Prioritized for Administrative Action</span>
                     </div>
@@ -767,7 +828,7 @@
                 <div class="glass-panel">
                     <div class="card-header">
                         <div class="card-title">
-                            Ground-Truth Tourist Citations
+                            Tourist Feedback & Citations
                         </div>
                         <span style="font-size: 0.78rem; color: #94a3b8;">Verbatim Citizen Feedback</span>
                     </div>
@@ -782,16 +843,15 @@
 
         </div>
 
-        <!-- VIEW 3: LIVE REVIEW ABSA PLAYGROUND -->
+        <!-- VIEW 3: LIVE REVIEW TESTER -->
         <div id="view-live" class="live-view">
 
             <div class="tester-box">
                 <h2 style="font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem;">
-                    Real-Time Hinglish ABSA Engine Playground
+                    Live Review Sentiment & Language Tester
                 </h2>
                 <p style="color: #94a3b8; font-size: 0.88rem; margin-bottom: 1.25rem;">
-                    Paste any live hotel review in English, Hindi, or transliterated Hinglish. Watch the engine isolate
-                    operational aspects, sub-issues, sentiment polarity, and English semantics in real-time.
+                    Paste any guest review in English, Hindi, or conversational Hinglish to see instant category extraction, sentiment scoring, and English translation.
                 </p>
 
                 <!-- Preset Sample Buttons -->
@@ -820,10 +880,10 @@
                 </div>
 
                 <textarea id="live-review-input" class="tester-textarea" maxlength="300"
-                    placeholder="Type or paste a guest review here in English, Hindi, or Hinglish (Strictly Sanitized up to 300 characters)..."></textarea>
+                    placeholder="Type or paste a guest review here in English, Hindi, or Hinglish (up to 300 characters)..."></textarea>
 
                 <div class="textarea-footer">
-                    <span class="sanitization-badge">Strict Regex Sanitization Active (Zero Token Overflow Risk)</span>
+                    <span class="sanitization-badge">Input limit: 300 characters</span>
                     <span id="char-counter" class="char-counter">0 / 300 characters</span>
                 </div>
 
@@ -837,9 +897,9 @@
                 <div class="glass-panel">
                     <div class="card-header">
                         <div class="card-title">
-                            Side-by-Side Hinglish Translation & Aspect Extraction
+                            Review Categories & English Translation
                         </div>
-                        <span style="font-size: 0.78rem; color: #34d399;">Localized Classifier</span>
+                        <span style="font-size: 0.78rem; color: #34d399;">AI Analysis</span>
                     </div>
                     <div id="live-absa-results" class="card-body">
                         <p style="color: #64748b; font-style: italic;">Click "Analyze Review" or select a preset to view
@@ -850,9 +910,9 @@
                 <div class="glass-panel">
                     <div class="card-header">
                         <div class="card-title">
-                            Validated JSON Schema Output
+                            Structured Data Output (JSON)
                         </div>
-                        <span style="font-size: 0.78rem; color: #38bdf8;">Production Payload</span>
+                        <span style="font-size: 0.78rem; color: #38bdf8;">API Response</span>
                     </div>
                     <div class="card-body">
                         <pre id="live-json-preview"
