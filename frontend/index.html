@@ -68,8 +68,138 @@
         <button id="btn-dismiss-alert" class="alert-close-btn" title="Dismiss Alert">&times;</button>
     </div>
 
+    <!-- =========================================================
+         CORRIDOR JOURNEY: SCROLLYTELLING ANIMATION ENGINE
+         ========================================================= -->
+    <section id="scrolly-runway" class="scrolly-runway">
+        <!-- Sticky Background Stage -->
+        <div class="scrolly-sticky-viewport">
+            <canvas id="scrolly-canvas" class="scrolly-canvas"></canvas>
+            <div class="scrolly-vignette"></div>
+            <div class="scrolly-hud">
+                <span class="hud-tag">Corridor Telemetry</span>
+                <span id="scrolly-hud-label" class="hud-phase">Stage 01: Inflow Overview</span>
+                <span id="scrolly-hud-pct" class="hud-pct">00%</span>
+            </div>
+            <div class="scrolly-nav-rail">
+                <button class="rail-tick active" data-stage="0" title="Corridor Overview"></button>
+                <button class="rail-tick" data-stage="1" title="Heritage Comp-Set"></button>
+                <button class="rail-tick" data-stage="2" title="Multi-Platform Ingestion"></button>
+                <button class="rail-tick" data-stage="3" title="7-Pillar ABSA"></button>
+                <button class="rail-tick" data-stage="4" title="Disconnect Detector"></button>
+                <button class="rail-tick" data-stage="5" title="Municipal Governance"></button>
+            </div>
+            <div class="scrolly-jump-bar">
+                <a href="#interactive-workspace" class="btn-skip-to-dashboard">
+                    Jump to Interactive Dashboards
+                </a>
+            </div>
+        </div>
+
+        <!-- Scrolling Content Stages -->
+        <div class="scrolly-stages-container">
+            <!-- Stage 01 -->
+            <div class="scrolly-stage active" data-stage="0">
+                <div class="glass-panel stage-card">
+                    <span class="stage-badge">Corridor Telemetry: TBI-GEU Pilot</span>
+                    <h2 class="stage-title">Mussoorie and Dehradun Tourism Corridor</h2>
+                    <p class="stage-desc">
+                        A high-altitude tourism corridor encompassing 10 benchmark hotels across Library Bazaar, Mall Road, and Kempty. Telemetry aggregates 1,400 verified multi-platform reviews and 508,800 operational words into an empirical intelligence database.
+                    </p>
+                    <div class="stage-meta-row">
+                        <span class="stage-metric">10 Comp-Set Hotels</span>
+                        <span class="stage-metric">1,400 Public Reviews</span>
+                        <span class="stage-metric">508,800 Words Digested</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 02 -->
+            <div class="scrolly-stage" data-stage="1">
+                <div class="glass-panel stage-card">
+                    <span class="stage-badge">Comp-Set Benchmarking</span>
+                    <h2 class="stage-title">Heritage Icon vs Hillside Boutique Dynamics</h2>
+                    <p class="stage-desc">
+                        Heritage icons like Welcomhotel The Savoy and boutique hillside retreats face unique operational trade-offs: heritage room tariffs versus mountain access logistics, seasonal heating demands, and parking bottlenecks.
+                    </p>
+                    <div class="stage-meta-row">
+                        <span class="stage-metric">Welcomhotel The Savoy</span>
+                        <span class="stage-metric">JW Marriott Walnut Grove</span>
+                        <span class="stage-metric">Jaypee Residency</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 03 -->
+            <div class="scrolly-stage" data-stage="2">
+                <div class="glass-panel stage-card">
+                    <span class="stage-badge">Multi-Source Intake</span>
+                    <h2 class="stage-title">Cross-Platform Ingestion and Dialect Normalization</h2>
+                    <p class="stage-desc">
+                        Public review text from MakeMyTrip, Google Places, TripAdvisor, and Booking.com is unified under a standardized schema. Colloquial Hindi and transliterated Hinglish idioms are normalized to capture specific operational friction points.
+                    </p>
+                    <div class="stage-meta-row">
+                        <span class="stage-metric">MakeMyTrip</span>
+                        <span class="stage-metric">Google Places</span>
+                        <span class="stage-metric">TripAdvisor</span>
+                        <span class="stage-metric">Booking.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 04 -->
+            <div class="scrolly-stage" data-stage="3">
+                <div class="glass-panel stage-card">
+                    <span class="stage-badge">Mathematical Scoring</span>
+                    <h2 class="stage-title">7-Pillar Aspect-Based Sentiment Decomposition</h2>
+                    <p class="stage-desc">
+                        Unstructured feedback is decomposed into 7 core pillars: Cleanliness, Food, Maintenance, Logistics, Staff, Value, and Location. Mathematical aspect sentiment scores map delivered performance against Leave-One-Out cluster baselines.
+                    </p>
+                    <div class="stage-meta-row">
+                        <span class="stage-metric">Cleanliness</span>
+                        <span class="stage-metric">Logistics</span>
+                        <span class="stage-metric">Maintenance</span>
+                        <span class="stage-metric">Staff</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 05 -->
+            <div class="scrolly-stage" data-stage="4">
+                <div class="glass-panel stage-card">
+                    <span class="stage-badge">Algorithmic Risk Signal</span>
+                    <h2 class="stage-title">Price-to-Value Disconnect and Premium Illusion</h2>
+                    <p class="stage-desc">
+                        Using Huber Robust Linear Regression (RLM) and Bayesian shrinkage, properties are flagged when premium prices disconnect from operational delivery. The engine categorizes risks into the 4-Quadrant Opportunity Matrix.
+                    </p>
+                    <div class="stage-meta-row">
+                        <span class="stage-metric">Huber RLM Regression</span>
+                        <span class="stage-metric">Bayesian Shrinkage</span>
+                        <span class="stage-metric">Kasavana-Smith Matrix</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stage 06 -->
+            <div class="scrolly-stage" data-stage="5">
+                <div class="glass-panel stage-card">
+                    <span class="stage-badge">Civic Governance</span>
+                    <h2 class="stage-title">Civil Friction Register and UTDB Policy Briefs</h2>
+                    <p class="stage-desc">
+                        Civil infrastructure bottlenecks (Mall Road barrier queues, Library Chowk parking shortages) are segregated from hotel service issues to produce verified administrative dossiers for the District Magistrate and Uttarakhand Tourism Board.
+                    </p>
+                    <div class="stage-meta-row">
+                        <span class="stage-metric">UTDB Policy Brief</span>
+                        <span class="stage-metric">1-Click PDF Stream</span>
+                        <span class="stage-metric">District Admin Action Queue</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Main Content Container -->
-    <main class="container">
+    <main id="interactive-workspace" class="container">
 
         <!-- Efficiency Telemetry Panel -->
         <section class="efficiency-hero-panel">

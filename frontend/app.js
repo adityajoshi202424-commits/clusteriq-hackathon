@@ -15,6 +15,7 @@ let demoMode = true; // Air-Gapped Warm Cache active by default
 document.addEventListener('DOMContentLoaded', () => {
     initModeSwitcher();
     initWarmCacheControls();
+    initScrollytellingEngine();
     loadProperties();
     loadEfficiencyMetrics();
     initLiveTester();
@@ -862,4 +863,159 @@ function initLiveTester() {
             resultsContainer.appendChild(card);
         });
     }
+}
+
+// -------------------------------------------------------------
+// Corridor Scrollytelling Animation Engine
+// -------------------------------------------------------------
+function initScrollytellingEngine() {
+    const canvas = document.getElementById('scrolly-canvas');
+    const runway = document.getElementById('scrolly-runway');
+    if (!canvas || !runway) return;
+
+    const ctx = canvas.getContext('2d');
+    const hudLabel = document.getElementById('scrolly-hud-label');
+    const hudPct = document.getElementById('scrolly-hud-pct');
+    const railTicks = document.querySelectorAll('.rail-tick');
+    const stages = document.querySelectorAll('.scrolly-stage');
+
+    const stageDescriptions = [
+        'Stage 01: Inflow Overview',
+        'Stage 02: Comp-Set Dynamics',
+        'Stage 03: Multi-Platform Intake',
+        'Stage 04: 7-Pillar Decomposition',
+        'Stage 05: Disconnect Detector',
+        'Stage 06: Civil Governance Dossiers'
+    ];
+
+    const imageSources = [
+        '/static/images/corridor_01_panorama.jpg',
+        '/static/images/corridor_02_heritage.jpg',
+        '/static/images/corridor_03_transit.jpg',
+        '/static/images/corridor_04_peaks.jpg',
+        '/static/images/corridor_05_ridge_dusk.jpg',
+        '/static/images/corridor_01_panorama.jpg'
+    ];
+
+    const loadedImages = [];
+    let imagesLoadedCount = 0;
+
+    imageSources.forEach((src, idx) => {
+        const img = new Image();
+        img.src = src;
+        img.onload = () => {
+            imagesLoadedCount++;
+            if (imagesLoadedCount === 1) {
+                render();
+            }
+        };
+        loadedImages[idx] = img;
+    });
+
+    function resizeCanvas() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = window.innerWidth * dpr;
+        canvas.height = window.innerHeight * dpr;
+        render();
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function drawImageCover(img, alpha) {
+        if (!img || !img.complete || img.naturalWidth === 0) return;
+        const cw = canvas.width;
+        const ch = canvas.height;
+        const iw = img.naturalWidth;
+        const ih = img.naturalHeight;
+
+        const scale = Math.max(cw / iw, ch / ih);
+        const nw = iw * scale;
+        const nh = ih * scale;
+        const nx = (cw - nw) / 2;
+        const ny = (ch - nh) / 2;
+
+        ctx.save();
+        ctx.globalAlpha = Math.max(0, Math.min(1, alpha));
+        ctx.drawImage(img, nx, ny, nw, nh);
+        ctx.restore();
+    }
+
+    let isTicking = false;
+
+    function render() {
+        const rect = runway.getBoundingClientRect();
+        const runwayHeight = runway.offsetHeight;
+        const windowHeight = window.innerHeight;
+        const scrollDistance = runwayHeight - windowHeight;
+
+        let progress = 0;
+        if (scrollDistance > 0) {
+            progress = Math.max(0, Math.min(1, -rect.top / scrollDistance));
+        }
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        const totalStages = stageDescriptions.length;
+        const floatIndex = progress * (totalStages - 1);
+        const currIdx = Math.floor(floatIndex);
+        const nextIdx = Math.min(totalStages - 1, currIdx + 1);
+        const transition = floatIndex - currIdx;
+
+        // Draw background images with smooth interpolation
+        if (loadedImages[currIdx]) {
+            drawImageCover(loadedImages[currIdx], 1.0);
+        }
+        if (currIdx !== nextIdx && loadedImages[nextIdx]) {
+            drawImageCover(loadedImages[nextIdx], transition);
+        }
+
+        // Active stage index
+        const activeStage = Math.round(floatIndex);
+
+        // Update stages active class
+        stages.forEach((stage, idx) => {
+            if (idx === activeStage) {
+                stage.classList.add('active');
+            } else {
+                stage.classList.remove('active');
+            }
+        });
+
+        // Update rail ticks
+        railTicks.forEach((tick, idx) => {
+            if (idx === activeStage) {
+                tick.classList.add('active');
+            } else {
+                tick.classList.remove('active');
+            }
+        });
+
+        // Update HUD
+        if (hudLabel) {
+            hudLabel.textContent = stageDescriptions[activeStage] || stageDescriptions[0];
+        }
+        if (hudPct) {
+            hudPct.textContent = `${Math.round(progress * 100).toString().padStart(2, '0')}%`;
+        }
+
+        isTicking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!isTicking) {
+            requestAnimationFrame(render);
+            isTicking = true;
+        }
+    }, { passive: true });
+
+    // Rail tick click navigation
+    railTicks.forEach(tick => {
+        tick.addEventListener('click', () => {
+            const stageIdx = parseInt(tick.getAttribute('data-stage'), 10);
+            if (stages[stageIdx]) {
+                stages[stageIdx].scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
 }
