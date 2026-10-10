@@ -254,6 +254,17 @@ select.hotel-select:focus {
   box-shadow: 0 0 12px var(--accent-cyan-glow);
 }
 
+.hotel-name-display {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  padding: 0.5rem 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 420px;
+}
+
 .property-meta-tags {
   display: flex;
   align-items: center;

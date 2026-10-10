@@ -2596,6 +2596,12 @@ function selectHotelAndBenchmark(clusterId, hotelId, sourceDropdown) {
     if (provPlatforms) provPlatforms.textContent = hotelMeta.review_count >= 150 ? 'Google, MakeMyTrip, Booking.com, TripAdvisor' : 'Google Places Verified';
     if (provUpdated) provUpdated.textContent = 'Q1 2026';
 
+    // Update hotel name display label in property toolbar
+    const hotelNameDisplay = document.getElementById('hotel-name-display');
+    if (hotelNameDisplay) {
+        hotelNameDisplay.textContent = `${hotelMeta.name} (${hotelMeta.star_class || 'Hotel'})`;
+    }
+
     // Synchronize selector dropdowns without triggering circular change events
     const hotelSelect = document.getElementById('hotel-select');
     if (hotelSelect && sourceDropdown !== 'hotel-select') {

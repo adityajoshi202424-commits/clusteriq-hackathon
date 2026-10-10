@@ -490,11 +490,13 @@
                 <span class="prov-item">Last Updated: <strong id="prov-updated">Q1 2026</strong></span>
             </div>
 
-            <!-- Property Selector Toolbar -->
+            <!-- Property Info Toolbar -->
             <div class="glass-panel property-toolbar reveal-on-scroll">
                 <div class="property-selector-group">
-                    <span class="select-label">Select Hotel:</span>
-                    <select id="hotel-select" class="hotel-select">
+                    <span class="select-label">Your Hotel:</span>
+                    <span id="hotel-name-display" class="hotel-name-display">Welcomhotel The Savoy</span>
+                    <!-- Hidden select kept for backwards compatibility with JS -->
+                    <select id="hotel-select" class="hotel-select" style="display:none;">
                         <!-- Populated dynamically via JS -->
                     </select>
                 </div>
