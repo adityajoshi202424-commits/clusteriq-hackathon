@@ -57,6 +57,11 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+}
+
 body {
   font-family: var(--font-family);
   background: var(--bg-primary);
@@ -66,7 +71,7 @@ body {
   color: var(--text-primary);
   line-height: 1.5;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 /* Glass Card Utility */
@@ -1506,17 +1511,23 @@ select.hotel-select:focus {
   gap: 2.75rem;
   align-items: center;
   padding: 2.25rem 2.5rem;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(10, 16, 31, 0.98) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.94) 0%, rgba(10, 16, 31, 0.97) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-md);
   box-shadow: 
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.2),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
-    0 28px 64px -12px rgba(0, 0, 0, 0.88);
-  opacity: 0.88;
-  transform: translateY(12px) scale(0.99);
-  filter: none;
-  transition: opacity 0.4s ease, transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.18),
+    0 24px 48px -12px rgba(0, 0, 0, 0.82);
+  opacity: 0.16;
+  transform: translateY(44px) scale(0.95);
+  filter: blur(2px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), 
+              filter 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.4s ease, 
+              box-shadow 0.4s ease;
+  will-change: opacity, transform, filter;
 }
 
 .stage-card::before {
@@ -1545,13 +1556,13 @@ select.hotel-select:focus {
 .scrolly-stage.active .stage-card {
   opacity: 1;
   transform: translateY(0) scale(1);
-  filter: none;
-  border-color: rgba(14, 165, 233, 0.55);
+  filter: blur(0px);
+  border-color: rgba(14, 165, 233, 0.65);
   box-shadow: 
-    inset 0 1px 1px 0 rgba(255, 255, 255, 0.25),
-    inset 0 0 0 1px rgba(14, 165, 233, 0.2),
-    0 32px 75px -15px rgba(0, 0, 0, 0.92),
-    0 0 28px -6px rgba(14, 165, 233, 0.22);
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.28),
+    inset 0 0 0 1px rgba(14, 165, 233, 0.25),
+    0 32px 80px -15px rgba(0, 0, 0, 0.95),
+    0 0 32px -6px rgba(14, 165, 233, 0.3);
 }
 
 /* Media Pane: High-Resolution Plate Showcase */
@@ -1569,7 +1580,14 @@ select.hotel-select:focus {
   height: 330px;
   object-fit: cover;
   display: block;
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(0.96);
+  filter: brightness(0.88);
+  transition: transform 0.75s cubic-bezier(0.16, 1, 0.3, 1), filter 0.75s ease;
+}
+
+.scrolly-stage.active .stage-featured-image {
+  transform: scale(1.0);
+  filter: brightness(1.02);
 }
 
 .stage-card:hover .stage-featured-image {
@@ -2416,5 +2434,88 @@ select.hotel-select:focus {
 .pct-low {
   background: rgba(255, 255, 255, 0.05);
   color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Global Sticky Header Scroll Progress Bar (0% to 100%)
+   ========================================================================== */
+.global-scroll-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-cyan) 0%, var(--accent-emerald) 100%);
+  box-shadow: 0 0 10px rgba(14, 165, 233, 0.75);
+  transition: width 0.08s ease-out;
+  z-index: 60;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Landing Page Scroll-Reveal Animation Engine (IntersectionObserver)
+   Fast, responsive, hardware-accelerated transitions
+   ========================================================================== */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease,
+              box-shadow 0.4s ease;
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.revealed {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Stagger delays for cards and grids */
+.reveal-stagger-1 { transition-delay: 0.08s; }
+.reveal-stagger-2 { transition-delay: 0.16s; }
+.reveal-stagger-3 { transition-delay: 0.24s; }
+.reveal-stagger-4 { transition-delay: 0.32s; }
+
+/* Interactive pulse when stat cards enter the viewport */
+.stat-card-pulse {
+  animation: statHighlight 0.75s ease-out;
+}
+
+@keyframes statHighlight {
+  0% {
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(14, 165, 233, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(14, 165, 233, 0);
+  }
+}
+
+/* Timeline SVG Line Animation */
+.timeline-chart-svg.anim-drawn path[stroke="#0ea5e9"] {
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: drawTimelineLine 1.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes drawTimelineLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Accessible reduced motion override */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .global-scroll-progress {
+    display: none !important;
+  }
 }
 

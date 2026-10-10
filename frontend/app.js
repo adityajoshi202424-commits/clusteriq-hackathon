@@ -35,6 +35,10 @@ function initApp() {
     initB2BOnboarding();
     initHashRouting();
     renderCrossCityComparison();
+
+    // Global Scroll Progress & Scroll Reveal Engine
+    initGlobalScrollIndicator();
+    initScrollRevealEngine();
 }
 
 if (document.readyState === 'loading') {
@@ -179,16 +183,22 @@ async function loadEfficiencyMetrics() {
         }
 
         if (data) {
-            const heroHours = document.getElementById('hero-hours-saved');
-            if (heroHours) heroHours.textContent = `${data.human_reading_time_saved_hours} Hours`;
-            const wordCount = document.getElementById('eff-word-count');
-            if (wordCount) wordCount.textContent = (data.cluster_archive_words || 508800).toLocaleString();
-            const humanSpeed = document.getElementById('eff-human-speed');
-            if (humanSpeed) humanSpeed.textContent = `${data.reading_speed_wpm || 200} WPM`;
-            const aiSpeed = document.getElementById('eff-ai-speed');
-            if (aiSpeed) aiSpeed.textContent = `${data.ai_processing_time_sec || 14.2}s`;
-            const roi = document.getElementById('eff-roi');
-            if (roi) roi.textContent = data.cost_savings_inr || '₹21,200';
+            window.CACHED_EFFICIENCY_METRICS = data;
+            const panel = document.querySelector('.efficiency-hero-panel');
+            if (panel && panel.classList.contains('revealed')) {
+                triggerEfficiencyCounters();
+            } else if (efficiencyCountersAnimated) {
+                const heroHours = document.getElementById('hero-hours-saved');
+                if (heroHours) heroHours.textContent = `${data.human_reading_time_saved_hours} Hours`;
+                const wordCount = document.getElementById('eff-word-count');
+                if (wordCount) wordCount.textContent = (data.cluster_archive_words || 508800).toLocaleString();
+                const humanSpeed = document.getElementById('eff-human-speed');
+                if (humanSpeed) humanSpeed.textContent = `${data.reading_speed_wpm || 200} WPM`;
+                const aiSpeed = document.getElementById('eff-ai-speed');
+                if (aiSpeed) aiSpeed.textContent = `${data.ai_processing_time_sec || 14.2}s`;
+                const roi = document.getElementById('eff-roi');
+                if (roi) roi.textContent = data.cost_savings_inr || '₹21,200';
+            }
         }
     } catch (e) {
         console.error('Failed to load efficiency metrics:', e);
@@ -1830,22 +1840,24 @@ function initScrollytellingEngine() {
         const rawTransition = floatIndex - currIdx;
         const easedTransition = smoothstep(rawTransition);
 
-        // Base image
+        // Base image with smooth cinematic camera drift
+        const baseScale = 1.0 + (easedTransition * 0.035);
         if (loadedImages[currIdx]) {
-            drawImageCover(loadedImages[currIdx], 1.0, 1.0);
+            drawImageCover(loadedImages[currIdx], 1.0, baseScale);
         }
         // Incoming image with smoothed alpha cross-fade
+        const incomingScale = 1.035 - ((1.0 - easedTransition) * 0.035);
         if (currIdx !== nextIdx && loadedImages[nextIdx] && easedTransition > 0.01) {
-            drawImageCover(loadedImages[nextIdx], easedTransition, 1.0);
+            drawImageCover(loadedImages[nextIdx], easedTransition, incomingScale);
         }
 
-        // Active stage index with subtle hysteresis
+        // Active stage index with clean transition
         const activeStage = Math.round(floatIndex);
 
         // Update active class on stage cards
         stages.forEach((stage, idx) => {
             const dist = Math.abs(floatIndex - idx);
-            if (dist < 0.65) {
+            if (dist < 0.5) {
                 stage.classList.add('active');
             } else {
                 stage.classList.remove('active');
@@ -1940,6 +1952,137 @@ function initScrollytellingEngine() {
             }
         });
     });
+}
+
+// ==========================================================================
+// Global Scroll Progress & Landing Page Scroll Reveal Engine
+// ==========================================================================
+
+function initGlobalScrollIndicator() {
+    const progressBar = document.getElementById('global-scroll-progress');
+    if (!progressBar) return;
+
+    let ticking = false;
+    function updateProgress() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (docHeight > 0) {
+            const pct = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
+            progressBar.style.width = `${pct.toFixed(1)}%`;
+        }
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(updateProgress);
+        }
+    }, { passive: true });
+
+    updateProgress();
+}
+
+let efficiencyCountersAnimated = false;
+
+function animateNumber(element, start, end, duration, formatFn) {
+    if (!element) return;
+    const startTime = performance.now();
+    function step(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const currentVal = start + (end - start) * eased;
+        element.textContent = formatFn(currentVal, progress === 1);
+        if (progress < 1) {
+            requestAnimationFrame(step);
+        }
+    }
+    requestAnimationFrame(step);
+}
+
+function triggerEfficiencyCounters() {
+    if (efficiencyCountersAnimated) return;
+    efficiencyCountersAnimated = true;
+
+    const data = window.CACHED_EFFICIENCY_METRICS || window.CLUSTER_WARM_CACHE?.efficiency_metrics || {
+        human_reading_time_saved_hours: 42.4,
+        cluster_archive_words: 508800,
+        reading_speed_wpm: 200,
+        ai_processing_time_sec: 14.2,
+        cost_savings_inr: '₹21,200'
+    };
+
+    const targetHours = Number(data.human_reading_time_saved_hours) || 42.4;
+    const targetWords = Number(data.cluster_archive_words) || 508800;
+    const targetWpm = Number(data.reading_speed_wpm) || 200;
+    const targetSec = Number(data.ai_processing_time_sec) || 14.2;
+
+    const heroHours = document.getElementById('hero-hours-saved');
+    if (heroHours) {
+        animateNumber(heroHours, 0, targetHours, 1200, (v, done) => done ? `${targetHours} Hours` : `${v.toFixed(1)} Hours`);
+    }
+
+    const wordCount = document.getElementById('eff-word-count');
+    if (wordCount) {
+        animateNumber(wordCount, 0, targetWords, 1400, (v, done) => done ? targetWords.toLocaleString() : Math.round(v).toLocaleString());
+    }
+
+    const humanSpeed = document.getElementById('eff-human-speed');
+    if (humanSpeed) {
+        animateNumber(humanSpeed, 0, targetWpm, 1000, (v, done) => done ? `${targetWpm} WPM` : `${Math.round(v)} WPM`);
+    }
+
+    const aiSpeed = document.getElementById('eff-ai-speed');
+    if (aiSpeed) {
+        animateNumber(aiSpeed, 0, targetSec, 1100, (v, done) => done ? `${targetSec}s` : `${v.toFixed(1)}s`);
+    }
+
+    const roi = document.getElementById('eff-roi');
+    if (roi) {
+        animateNumber(roi, 0, 21200, 1300, (v, done) => done ? (data.cost_savings_inr || '₹21,200') : `₹${Math.round(v).toLocaleString()}`);
+    }
+
+    const statCards = document.querySelectorAll('.eff-stat-card');
+    statCards.forEach(card => card.classList.add('stat-card-pulse'));
+}
+
+function initScrollRevealEngine() {
+    const revealEls = document.querySelectorAll('.reveal-on-scroll');
+    if (!revealEls.length) return;
+
+    if (!('IntersectionObserver' in window)) {
+        revealEls.forEach(el => el.classList.add('revealed'));
+        triggerEfficiencyCounters();
+        return;
+    }
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+
+                // Trigger efficiency counters when panel scrolls in
+                if (entry.target.classList.contains('efficiency-hero-panel')) {
+                    triggerEfficiencyCounters();
+                }
+
+                // Trigger SVG timeline animation when timeline card scrolls in
+                if (entry.target.classList.contains('timeline-card')) {
+                    const svg = entry.target.querySelector('.timeline-chart-svg');
+                    if (svg) svg.classList.add('anim-drawn');
+                }
+
+                obs.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealEls.forEach(el => observer.observe(el));
+    window.clusterScrollObserver = observer;
 }
 
 // ==========================================================================

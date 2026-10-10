@@ -84,6 +84,7 @@
                 Live Review Tester
             </button>
         </div>
+        <div id="global-scroll-progress" class="global-scroll-progress" aria-hidden="true"></div>
     </header>
 
     <!-- Graceful Branded Alert Banner -->
@@ -306,7 +307,7 @@
     <main id="interactive-workspace" class="container">
 
         <!-- Efficiency Telemetry Panel -->
-        <section class="efficiency-hero-panel">
+        <section class="efficiency-hero-panel reveal-on-scroll">
             <div class="efficiency-header">
                 <div class="efficiency-badge">TIME & LABOR SAVINGS</div>
                 <h1 class="efficiency-headline">
@@ -317,22 +318,22 @@
                 </p>
             </div>
             <div class="efficiency-stats-grid">
-                <div class="eff-stat-card">
+                <div class="eff-stat-card reveal-on-scroll reveal-stagger-1">
                     <span class="eff-stat-num" id="eff-word-count">508,800</span>
                     <span class="eff-stat-label">Words Analyzed</span>
                     <span class="eff-stat-sub">1,400+ Verified Regional Reviews</span>
                 </div>
-                <div class="eff-stat-card">
+                <div class="eff-stat-card reveal-on-scroll reveal-stagger-2">
                     <span class="eff-stat-num" id="eff-human-speed">200 WPM</span>
                     <span class="eff-stat-label">Manual Reading Speed</span>
                     <span class="eff-stat-sub">42.4 Hours of Manual Effort</span>
                 </div>
-                <div class="eff-stat-card">
+                <div class="eff-stat-card reveal-on-scroll reveal-stagger-3">
                     <span class="eff-stat-num highlight-cyan" id="eff-ai-speed">14.2s</span>
                     <span class="eff-stat-label">AI Analysis Time</span>
                     <span class="eff-stat-sub">10,750x Faster Turnaround</span>
                 </div>
-                <div class="eff-stat-card">
+                <div class="eff-stat-card reveal-on-scroll reveal-stagger-4">
                     <span class="eff-stat-num highlight-emerald" id="eff-roi">₹21,200</span>
                     <span class="eff-stat-label">Management Hours Saved</span>
                     <span class="eff-stat-sub">Estimated GM Labor Value per Audit</span>
@@ -341,7 +342,7 @@
         </section>
 
         <!-- ALWAYS-VISIBLE MULTI-CLUSTER HOTEL SEARCH BAR -->
-        <section class="global-search-section">
+        <section class="global-search-section reveal-on-scroll">
             <div class="global-search-bar glass-panel">
                 <div class="search-input-wrapper">
                     <svg class="search-bar-icon" width="20" height="20" viewBox="0 0 24 24" fill="none"
@@ -361,7 +362,7 @@
         <!-- VIEW 0: CITY SEARCH & COMPARE -->
         <div id="view-search" class="search-view active">
 
-            <div class="card-header" style="margin-bottom: 1.5rem;">
+            <div class="card-header reveal-on-scroll" style="margin-bottom: 1.5rem;">
                 <h2 style="font-size: 1.8rem; font-weight: 700; color: var(--text-primary);">Discover Uttarakhand
                     Properties</h2>
                 <p style="color: var(--text-secondary); margin-top: 0.5rem;">Select a destination to explore 54 curated
@@ -369,7 +370,7 @@
             </div>
 
             <!-- City Cards Grid -->
-            <div id="city-selector-grid" class="city-selector-grid">
+            <div id="city-selector-grid" class="city-selector-grid reveal-on-scroll">
                 <!-- Dynamically populated via window.CLUSTERS_META -->
             </div>
 
@@ -451,7 +452,7 @@
         <div id="view-hotel" class="hotel-view">
 
             <!-- B2B Find Your Hotel Onboarding Banner -->
-            <div class="b2b-onboarding-panel glass-panel">
+            <div class="b2b-onboarding-panel glass-panel reveal-on-scroll">
                 <div class="b2b-onboarding-info">
                     <div class="onboarding-pill">HOTEL BENCHMARKING</div>
                     <h3 class="onboarding-title">Benchmark Your Hotel Against Nearby Competitors</h3>
@@ -473,7 +474,7 @@
             </div>
 
             <!-- Provenance & Data Quality Status Bar -->
-            <div id="property-provenance-bar" class="property-provenance-bar glass-panel">
+            <div id="property-provenance-bar" class="property-provenance-bar glass-panel reveal-on-scroll">
                 <span class="prov-item">Destination: <strong id="prov-cluster">Mussoorie</strong></span>
                 <span class="prov-divider">|</span>
                 <span class="prov-item">Property Type: <strong id="prov-segment">Leisure Resort</strong></span>
@@ -490,7 +491,7 @@
             </div>
 
             <!-- Property Selector Toolbar -->
-            <div class="glass-panel property-toolbar">
+            <div class="glass-panel property-toolbar reveal-on-scroll">
                 <div class="property-selector-group">
                     <span class="select-label">Select Hotel:</span>
                     <select id="hotel-select" class="hotel-select">
@@ -506,7 +507,7 @@
             </div>
 
             <!-- KPI Metric Cards Grid -->
-            <div class="kpi-grid">
+            <div class="kpi-grid reveal-on-scroll">
                 <div class="glass-panel kpi-card score">
                     <div class="kpi-title">Guest Satisfaction Score</div>
                     <div id="kpi-score-val" class="kpi-value">+78.4%</div>
@@ -535,7 +536,7 @@
             </div>
 
             <!-- Analytics Row: Radar Chart vs Aspect Leaderboard -->
-            <div class="analytics-row">
+            <div class="analytics-row reveal-on-scroll">
 
                 <!-- Performance Radar Chart -->
                 <div class="glass-panel">
@@ -654,7 +655,7 @@
             </div>
 
             <!-- 4-Quadrant Opportunity Matrix -->
-            <div class="glass-panel" style="margin-bottom: 2rem;">
+            <div class="glass-panel reveal-on-scroll" style="margin-bottom: 2rem;">
                 <div class="card-header">
                     <div class="card-title">
                         4-Way Opportunity & Risk Matrix
@@ -699,7 +700,7 @@
             </div>
 
             <!-- Changepoint & Trend Timeline -->
-            <div class="glass-panel timeline-card">
+            <div class="glass-panel timeline-card reveal-on-scroll">
                 <div class="card-header">
                     <div class="card-title">
                         Monthly Guest Satisfaction Trend (Jan 2025 - Feb 2026)
@@ -788,7 +789,7 @@
             </div>
 
             <!-- Actionable Recommendations -->
-            <div class="glass-panel">
+            <div class="glass-panel prescriptions-card reveal-on-scroll">
                 <div class="card-header">
                     <div class="card-title">
                         Actionable Recommendations & Revenue Impact
