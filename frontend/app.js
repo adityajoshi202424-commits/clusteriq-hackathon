@@ -905,8 +905,8 @@ function renderRadarChart(aspects) {
     });
     const propPoly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
     propPoly.setAttribute('points', propPoints.join(' '));
-    propPoly.setAttribute('fill', 'rgba(245, 158, 11, 0.28)');
-    propPoly.setAttribute('stroke', '#f59e0b');
+    propPoly.setAttribute('fill', 'rgba(219, 39, 119, 0.28)');
+    propPoly.setAttribute('stroke', '#db2777');
     propPoly.setAttribute('stroke-width', '2.5');
     svg.appendChild(propPoly);
 
@@ -927,7 +927,7 @@ function renderRadarChart(aspects) {
         svg.appendChild(circle);
     });
 
-    // Property vertex dots (radiant amber dots with white border)
+    // Property vertex dots (radiant purplish-pink dots with white border)
     aspects.forEach((asp, i) => {
         const angle = i * angleStep - Math.PI / 2;
         const r = scoreToRadius(asp.property_score);
@@ -938,7 +938,7 @@ function renderRadarChart(aspects) {
         circle.setAttribute('cx', x);
         circle.setAttribute('cy', y);
         circle.setAttribute('r', '4.5');
-        circle.setAttribute('fill', '#f59e0b');
+        circle.setAttribute('fill', '#db2777');
         circle.setAttribute('stroke', '#ffffff');
         circle.setAttribute('stroke-width', '1.5');
         svg.appendChild(circle);
@@ -1094,12 +1094,12 @@ function renderTimelineChart(monthlyTrend, propName) {
 
     const stop1 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
     stop1.setAttribute('offset', '0%');
-    stop1.setAttribute('stop-color', '#f59e0b');
+    stop1.setAttribute('stop-color', '#db2777');
     stop1.setAttribute('stop-opacity', '0.22');
 
     const stop2 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
     stop2.setAttribute('offset', '100%');
-    stop2.setAttribute('stop-color', '#f59e0b');
+    stop2.setAttribute('stop-color', '#db2777');
     stop2.setAttribute('stop-opacity', '0.0');
 
     grad.appendChild(stop1);
@@ -1165,11 +1165,11 @@ function renderTimelineChart(monthlyTrend, propName) {
     areaPath.setAttribute('fill', 'url(#timeline-area-grad)');
     svg.appendChild(areaPath);
 
-    // Property Sentiment solid line (warm golden amber)
+    // Property Sentiment solid line (purplish pink)
     const propPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     propPath.setAttribute('d', `M ${validProp.map(p => `${p.x},${p.y}`).join(' L ')}`);
     propPath.setAttribute('fill', 'none');
-    propPath.setAttribute('stroke', '#f59e0b');
+    propPath.setAttribute('stroke', '#db2777');
     propPath.setAttribute('stroke-width', '2.5');
     svg.appendChild(propPath);
 
@@ -1189,7 +1189,7 @@ function renderTimelineChart(monthlyTrend, propName) {
         dot.setAttribute('cx', p.x);
         dot.setAttribute('cy', p.y);
         dot.setAttribute('r', isAnn ? '5.5' : '3.5');
-        dot.setAttribute('fill', isAnn ? '#f43f5e' : '#f59e0b');
+        dot.setAttribute('fill', isAnn ? '#f43f5e' : '#db2777');
         dot.setAttribute('stroke', '#ffffff');
         dot.setAttribute('stroke-width', isAnn ? '2' : '1.5');
         dot.style.cursor = 'pointer';
@@ -1294,7 +1294,7 @@ function renderActionPrescriptions(aspects, prop) {
         const card = document.createElement('div');
         card.className = 'glass-panel';
         card.style.padding = '1.25rem';
-        card.style.borderLeft = '4px solid #f59e0b';
+        card.style.borderLeft = '4px solid #db2777';
         card.style.marginBottom = '1rem';
         const quotes = o.evidence_quotes || o.quotes || [];
         const quoteCount = quotes.length;
@@ -1360,7 +1360,7 @@ function renderActionPrescriptions(aspects, prop) {
         const card = document.createElement('div');
         card.className = 'glass-panel';
         card.style.padding = '1.25rem';
-        card.style.borderLeft = '4px solid #f59e0b';
+        card.style.borderLeft = '4px solid #db2777';
         card.style.marginBottom = '1rem';
         const quotes = m.evidence_quotes || m.quotes || [];
         const quoteCount = quotes.length;
