@@ -381,7 +381,7 @@ function adaptBenchmarkToDashboard(bmData, propertyId, clusterId) {
         { aspect: "Housekeeping", score: 75.0, z: 0.2, n: 15, verdict_category: "neutral", verdict: "On par with cluster" }
     ];
 
-    // Balanced 4-Quadrant Kasavana-Smith Assignment
+    // Strictly truthful Kasavana-Smith assignment: positive gap is ALWAYS an advantage/opportunity, negative gap is ALWAYS a weakness/town issue
     const rawItems = rawAspects.map(a => {
         const compGap = Math.round((a.z || 0) * 12.5);
         const baseline = Math.max(10, Math.min(95, Math.round(a.score - compGap)));
@@ -390,52 +390,10 @@ function adaptBenchmarkToDashboard(bmData, propertyId, clusterId) {
 
     let assignments = {};
     rawItems.forEach(it => {
-        if (it.aspect.verdict_category === 'lead') {
-            assignments[it.cat] = 'Competitive Advantage';
-        } else if (it.aspect.verdict_category === 'weakness') {
-            assignments[it.cat] = 'Competitive Weakness';
-        } else if (it.aspect.verdict_category === 'cluster_opportunity') {
-            assignments[it.cat] = 'Market Opportunity';
-        } else if (it.aspect.verdict_category === 'market_wide') {
-            assignments[it.cat] = 'Market-Wide Problem';
+        if (it.compGap > 0) {
+            assignments[it.cat] = it.baseline < 60 ? 'Market Opportunity' : 'Competitive Advantage';
         } else {
-            if (it.compGap > 0) {
-                assignments[it.cat] = it.baseline < 60 ? 'Market Opportunity' : 'Competitive Advantage';
-            } else {
-                assignments[it.cat] = (it.baseline < 55 || it.score < 50) ? 'Market-Wide Problem' : 'Competitive Weakness';
-            }
-        }
-    });
-
-    // Ensure all 4 quadrants have active representations using donors
-    const quads = ['Competitive Advantage', 'Market Opportunity', 'Competitive Weakness', 'Market-Wide Problem'];
-    const sortedByGapDesc = [...rawItems].sort((a, b) => b.compGap - a.compGap);
-    const sortedByGapAsc = [...rawItems].sort((a, b) => a.compGap - b.compGap);
-    const sortedByBaseAsc = [...rawItems].sort((a, b) => a.baseline - b.baseline);
-
-    quads.forEach(q => {
-        const count = Object.values(assignments).filter(v => v === q).length;
-        if (count === 0) {
-            const donorQuadCandidates = Object.keys(assignments).filter(cat => {
-                const donorQ = assignments[cat];
-                return Object.values(assignments).filter(v => v === donorQ).length >= 2;
-            });
-
-            if (donorQuadCandidates.length > 0) {
-                let chosenCat = null;
-                if (q === 'Competitive Advantage') {
-                    chosenCat = sortedByGapDesc.find(it => donorQuadCandidates.includes(it.cat))?.cat;
-                } else if (q === 'Competitive Weakness') {
-                    chosenCat = sortedByGapAsc.find(it => donorQuadCandidates.includes(it.cat))?.cat;
-                } else if (q === 'Market Opportunity') {
-                    chosenCat = sortedByBaseAsc.find(it => donorQuadCandidates.includes(it.cat) && it.compGap >= -5)?.cat 
-                                || sortedByBaseAsc.find(it => donorQuadCandidates.includes(it.cat))?.cat;
-                } else if (q === 'Market-Wide Problem') {
-                    chosenCat = sortedByBaseAsc.find(it => donorQuadCandidates.includes(it.cat) && it.score < 60)?.cat
-                                || sortedByBaseAsc.find(it => donorQuadCandidates.includes(it.cat))?.cat;
-                }
-                if (chosenCat) assignments[chosenCat] = q;
-            }
+            assignments[it.cat] = (it.baseline < 55 && it.score < 55) ? 'Market-Wide Problem' : 'Competitive Weakness';
         }
     });
 
@@ -708,8 +666,10 @@ function renderHotelDashboard(data) {
     let compDisplayName = `${cName} ${segmentLabel}Competitor Average`;
     let compShortName = 'Competitors';
 
+    let compBm = null;
     if (currentCompetitorId && currentCompetitorId !== 'cluster_avg') {
-        const compBm = window.CLUSTER_BENCHMARK?.[currentCompetitorId]
+        compBm = window.CLUSTER_BENCHMARK?.[currentCompetitorId]
+            || window.CLUSTER_BENCHMARK?._by_cluster?.[cid]?.[currentCompetitorId]
             || window.CLUSTER_WARM_CACHE?.benchmarks?.[currentCompetitorId];
         const compMeta = (window.HOTELS_INDEX || []).find(h => h.id === currentCompetitorId);
 
@@ -718,26 +678,21 @@ function renderHotelDashboard(data) {
             compShortName = compMeta.name;
         }
 
-        if (compBm && compBm.aspects && compBm.aspects.length > 0) {
+        if (compBm && (compBm.aspects || compBm.aspect_benchmarks)) {
+            const compAspectsList = compBm.aspects || compBm.aspect_benchmarks;
             effectiveBenchmarks = data.aspect_benchmarks.map(asp => {
-                const compAsp = compBm.aspects.find(a => a.aspect.toLowerCase() === asp.category.toLowerCase());
-                const compScore = compAsp ? Math.round(compAsp.score) : asp.cluster_baseline;
+                const compAsp = compAspectsList.find(a => (a.aspect || a.category || '').toLowerCase() === asp.category.toLowerCase());
+                const compScore = compAsp ? Math.round(compAsp.score ?? compAsp.property_score) : asp.cluster_baseline;
                 const gap = asp.property_score - compScore;
 
-                let classification = 'Town-Wide Issue';
-                let badgeColor = 'amber';
-                if (gap >= 8) {
-                    classification = 'Your Advantage';
-                    badgeColor = 'emerald';
-                } else if (gap <= -8) {
-                    classification = 'Fix Needed';
-                    badgeColor = 'rose';
-                } else if (gap > 0 && compScore < 60) {
-                    classification = 'Market Opportunity';
-                    badgeColor = 'cyan';
+                let classification = 'Fix Needed';
+                let badgeColor = 'rose';
+                if (gap > 0) {
+                    classification = compScore < 60 ? 'Market Opportunity' : 'Your Advantage';
+                    badgeColor = compScore < 60 ? 'cyan' : 'emerald';
                 } else {
-                    classification = gap >= 0 ? 'Your Advantage' : 'Fix Needed';
-                    badgeColor = gap >= 0 ? 'emerald' : 'rose';
+                    classification = (compScore < 55 && asp.property_score < 55) ? 'Town-Wide Issue' : 'Fix Needed';
+                    badgeColor = (compScore < 55 && asp.property_score < 55) ? 'amber' : 'rose';
                 }
 
                 return {
@@ -797,11 +752,12 @@ function renderHotelDashboard(data) {
     // Render 4-Quadrant Opportunity Matrix
     renderOpportunityMatrix(effectiveBenchmarks);
 
-    // Render Changepoint Timeline
-    renderTimelineChart(data.monthly_trend, p.name);
+    // Render Changepoint Timeline with competitor trend comparison
+    const compTrend = (compBm && compBm.monthly_trend) ? compBm.monthly_trend : null;
+    renderTimelineChart(data.monthly_trend, p.name, compTrend, compDisplayName, compShortName);
 
     // Render Actionable Prescriptions
-    renderActionPrescriptions(effectiveBenchmarks, p);
+    renderActionPrescriptions(effectiveBenchmarks, p, compShortName);
 }
 
 // Custom SVG Radar Chart Generator
@@ -1041,12 +997,17 @@ function renderOpportunityMatrix(aspects) {
     });
 }
 
-function renderTimelineChart(monthlyTrend, propName) {
+function renderTimelineChart(monthlyTrend, propName, competitorTrend, compDisplayName, compShortName) {
     const svg = document.getElementById('timeline-chart-svg');
     if (!svg) return;
     svg.innerHTML = '';
     svg.setAttribute('viewBox', '0 0 850 200');
     svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+
+    const captionEl = document.getElementById('timeline-legend-caption');
+    if (captionEl) {
+        captionEl.innerHTML = `<span style="color: #db2777; font-weight: 600;">● Purplish Pink</span> = ${propName || 'Your Hotel'} | <span style="color: #10b981; font-weight: 600;">--- Dashed Emerald</span> = ${compDisplayName || 'Competitor Average'}`;
+    }
 
     const isLight = document.documentElement.getAttribute('data-theme') === 'light';
 
@@ -1137,8 +1098,14 @@ function renderTimelineChart(monthlyTrend, propName) {
         '2026-01': "Jan '26", '2026-02': "Feb '26"
     };
 
-    // Competitor Benchmark dashed line
-    let clusterPoints = trendData.map((m, i) => `${(padding.left + i * stepX).toFixed(1)},${valToY(m.cluster_sentiment ?? m.cluster_avg ?? 65).toFixed(1)}`);
+    // Competitor Benchmark dashed line (supports specific competitor hotel or cluster average)
+    let clusterPoints = trendData.map((m, i) => {
+        let compVal = m.cluster_sentiment ?? m.cluster_avg ?? 65;
+        if (competitorTrend && competitorTrend[i]) {
+            compVal = competitorTrend[i].property_sentiment ?? competitorTrend[i].score ?? compVal;
+        }
+        return `${(padding.left + i * stepX).toFixed(1)},${valToY(compVal).toFixed(1)}`;
+    });
     const clusterPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     clusterPath.setAttribute('d', `M ${clusterPoints.join(' L ')}`);
     clusterPath.setAttribute('fill', 'none');
@@ -1148,14 +1115,20 @@ function renderTimelineChart(monthlyTrend, propName) {
     svg.appendChild(clusterPath);
 
     // Property Sentiment points
-    let validProp = trendData.map((m, i) => ({
-        x: parseFloat((padding.left + i * stepX).toFixed(1)),
-        y: parseFloat(valToY(m.property_sentiment ?? m.score ?? 70).toFixed(1)),
-        ann: m.annotation,
-        month: m.month,
-        val: m.property_sentiment ?? m.score ?? 70,
-        clusterVal: m.cluster_sentiment ?? m.cluster_avg ?? 65
-    }));
+    let validProp = trendData.map((m, i) => {
+        let compVal = m.cluster_sentiment ?? m.cluster_avg ?? 65;
+        if (competitorTrend && competitorTrend[i]) {
+            compVal = competitorTrend[i].property_sentiment ?? competitorTrend[i].score ?? compVal;
+        }
+        return {
+            x: parseFloat((padding.left + i * stepX).toFixed(1)),
+            y: parseFloat(valToY(m.property_sentiment ?? m.score ?? 70).toFixed(1)),
+            ann: m.annotation,
+            month: m.month,
+            val: m.property_sentiment ?? m.score ?? 70,
+            clusterVal: compVal
+        };
+    });
 
     // Area fill under Property curve
     const bottomY = (padding.top + chartH).toFixed(1);
@@ -1195,7 +1168,7 @@ function renderTimelineChart(monthlyTrend, propName) {
         dot.style.cursor = 'pointer';
 
         const titleEl = document.createElementNS('http://www.w3.org/2000/svg', 'title');
-        titleEl.textContent = `${monthNames[p.month] || p.month}: ${propName || 'Hotel'} ${p.val}% vs Competitor Average ${p.clusterVal}%${isAnn ? ' (' + p.ann + ')' : ''}`;
+        titleEl.textContent = `${monthNames[p.month] || p.month}: ${propName || 'Hotel'} ${p.val}% vs ${compShortName || 'Competitor'} ${p.clusterVal}%${isAnn ? ' (' + p.ann + ')' : ''}`;
         dot.appendChild(titleEl);
         svg.appendChild(dot);
 
@@ -1230,10 +1203,12 @@ function renderTimelineChart(monthlyTrend, propName) {
     });
 }
 
-function renderActionPrescriptions(aspects, prop) {
+function renderActionPrescriptions(aspects, prop, compShortName) {
     const container = document.getElementById('prescriptions-container');
     if (!container) return;
     container.innerHTML = '';
+
+    const compName = compShortName || 'Competitors';
 
     // Event delegation on prescriptions container to handle all card clicks
     if (!container._hasEvidenceDelegation) {
@@ -1251,12 +1226,12 @@ function renderActionPrescriptions(aspects, prop) {
         container._hasEvidenceDelegation = true;
     }
 
-    const weakAspects = (aspects || []).filter(a => a.classification === 'Competitive Weakness' || a.classification === 'Fix Needed');
-    const oppAspects = (aspects || []).filter(a => a.classification === 'Market Opportunity');
-    const advAspects = (aspects || []).filter(a => a.classification === 'Competitive Advantage' || a.classification === 'Your Advantage');
+    const weakAspects = (aspects || []).filter(a => (a.classification === 'Competitive Weakness' || a.classification === 'Fix Needed') && a.competitive_gap <= 0);
+    const oppAspects = (aspects || []).filter(a => a.classification === 'Market Opportunity' && a.competitive_gap > 0);
+    const advAspects = (aspects || []).filter(a => (a.classification === 'Competitive Advantage' || a.classification === 'Your Advantage') && a.competitive_gap > 0);
     const mktAspects = (aspects || []).filter(a => a.classification === 'Market-Wide Problem' || a.classification === 'Town-Wide Issue');
 
-    // Priority 1: Operational Fixes
+    // Priority 1: Operational Fixes (Deficits where hotel lags)
     weakAspects.forEach(w => {
         const card = document.createElement('div');
         card.className = 'glass-panel';
@@ -1265,11 +1240,12 @@ function renderActionPrescriptions(aspects, prop) {
         card.style.marginBottom = '1rem';
         const quotes = w.evidence_quotes || w.quotes || [];
         const quoteCount = quotes.length;
+        const deficitVal = Math.abs(w.competitive_gap);
         card.innerHTML = `
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                <h4 class="rx-heading rx-fix" style="font-size: 0.95rem; font-weight: 700;">Priority Operational Fix: ${w.category}</h4>
+                <h4 class="rx-heading rx-fix" style="font-size: 0.95rem; font-weight: 700; color: #fb7185;">Priority Operational Fix: ${w.category}</h4>
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
-                    <span class="badge-classification rose">Deficit: ${w.competitive_gap}%</span>
+                    <span class="badge-classification rose">Deficit: -${deficitVal}%</span>
                     <button class="btn-prescription-evidence rx-btn-fix" data-category="${w.category}" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                         Read Comments (${quoteCount})
                     </button>
@@ -1277,32 +1253,26 @@ function renderActionPrescriptions(aspects, prop) {
             </div>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">${w.action_recommendation}</p>
             <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
-                <strong>Expected Impact & ROI:</strong> Competitors maintain a <strong>${w.cluster_baseline > 0 ? '+' : ''}${w.cluster_baseline}%</strong> satisfaction baseline while you lag at <strong>${w.property_score}%</strong>. Addressing this gap protects an estimated <strong>₹45,000 - ₹95,000 / month</strong> in prevented booking cancellations.
+                <strong>Expected Impact & ROI:</strong> ${compName} maintains a <strong>${w.cluster_baseline}%</strong> satisfaction baseline while you trail at <strong>${w.property_score}%</strong> (${deficitVal}% operational deficit). Addressing this gap protects an estimated <strong>₹45,000 - ₹95,000 / month</strong> in prevented booking cancellations.
             </div>
         `;
-        const btn = card.querySelector('.btn-prescription-evidence');
-        if (btn) {
-            btn.addEventListener('click', () => {
-                openEvidenceDrawer(w.category, quotes);
-            });
-        }
         container.appendChild(card);
     });
 
-    // Priority 2: Market Opportunities
+    // Priority 2: Market Opportunities (High-leverage differentiator where hotel leads)
     oppAspects.forEach(o => {
         const card = document.createElement('div');
         card.className = 'glass-panel';
         card.style.padding = '1.25rem';
-        card.style.borderLeft = '4px solid #db2777';
+        card.style.borderLeft = '4px solid #06b6d4';
         card.style.marginBottom = '1rem';
         const quotes = o.evidence_quotes || o.quotes || [];
         const quoteCount = quotes.length;
         card.innerHTML = `
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                <h4 class="rx-heading rx-opp" style="font-size: 0.95rem; font-weight: 700;">Growth Opportunity: ${o.category}</h4>
+                <h4 class="rx-heading rx-opp" style="font-size: 0.95rem; font-weight: 700; color: #22d3ee;">Growth Opportunity: ${o.category}</h4>
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
-                    <span class="badge-classification amber">Competitors Lag: +${Math.abs(o.competitive_gap)}%</span>
+                    <span class="badge-classification cyan">Lead: +${o.competitive_gap}%</span>
                     <button class="btn-prescription-evidence rx-btn-opp" data-category="${o.category}" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                         Read Comments (${quoteCount})
                     </button>
@@ -1310,15 +1280,9 @@ function renderActionPrescriptions(aspects, prop) {
             </div>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">${o.action_recommendation}</p>
             <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
-                <strong>Market Edge & Revenue Impact:</strong> While nearby competitors struggle with guest complaints on ${o.category} (${o.cluster_baseline}%), your score reaches <strong>${o.property_score}%</strong>. Highlighting this in direct ad copy captures an estimated <strong>12% - 18% direct booking lift</strong>.
+                <strong>Market Edge & Revenue Impact:</strong> While nearby competitors struggle with guest complaints on ${o.category} (${o.cluster_baseline}%), your score reaches <strong>${o.property_score}%</strong> (+${o.competitive_gap}% market lead). Highlighting this in direct ad copy captures an estimated <strong>12% - 18% direct booking lift</strong>.
             </div>
         `;
-        const btn = card.querySelector('.btn-prescription-evidence');
-        if (btn) {
-            btn.addEventListener('click', () => {
-                openEvidenceDrawer(o.category, quotes);
-            });
-        }
         container.appendChild(card);
     });
 
@@ -1333,7 +1297,7 @@ function renderActionPrescriptions(aspects, prop) {
         const quoteCount = quotes.length;
         card.innerHTML = `
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                <h4 class="rx-heading rx-adv" style="font-size: 0.95rem; font-weight: 700;">Your Strength: ${a.category}</h4>
+                <h4 class="rx-heading rx-adv" style="font-size: 0.95rem; font-weight: 700; color: #34d399;">Your Strength: ${a.category}</h4>
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
                     <span class="badge-classification emerald">Advantage: +${a.competitive_gap}%</span>
                     <button class="btn-prescription-evidence rx-btn-adv" data-category="${a.category}" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
@@ -1343,15 +1307,9 @@ function renderActionPrescriptions(aspects, prop) {
             </div>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">${a.action_recommendation}</p>
             <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
-                <strong>Brand Value & Room Rate Defense:</strong> High guest satisfaction of <strong>${a.property_score}%</strong> supports your pricing integrity. Defends <strong>₹1,500 - ₹3,500 premium</strong> per room night over the local average.
+                <strong>Brand Value & Room Rate Defense:</strong> High guest satisfaction of <strong>${a.property_score}%</strong> (outperforming ${compName} at ${a.cluster_baseline}%) supports your pricing integrity. Defends <strong>₹1,500 - ₹3,500 premium</strong> per room night over the local average.
             </div>
         `;
-        const btn = card.querySelector('.btn-prescription-evidence');
-        if (btn) {
-            btn.addEventListener('click', () => {
-                openEvidenceDrawer(a.category, quotes);
-            });
-        }
         container.appendChild(card);
     });
 
@@ -1360,13 +1318,13 @@ function renderActionPrescriptions(aspects, prop) {
         const card = document.createElement('div');
         card.className = 'glass-panel';
         card.style.padding = '1.25rem';
-        card.style.borderLeft = '4px solid #db2777';
+        card.style.borderLeft = '4px solid #f59e0b';
         card.style.marginBottom = '1rem';
         const quotes = m.evidence_quotes || m.quotes || [];
         const quoteCount = quotes.length;
         card.innerHTML = `
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                <h4 class="rx-heading rx-mkt" style="font-size: 0.95rem; font-weight: 700;">Town-Wide Challenge: ${m.category}</h4>
+                <h4 class="rx-heading rx-mkt" style="font-size: 0.95rem; font-weight: 700; color: #fbbf24;">Town-Wide Challenge: ${m.category}</h4>
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
                     <span class="badge-classification amber">Town Average: ${m.cluster_baseline}%</span>
                     <button class="btn-prescription-evidence rx-btn-mkt" data-category="${m.category}" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
@@ -1376,20 +1334,14 @@ function renderActionPrescriptions(aspects, prop) {
             </div>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">${m.action_recommendation}</p>
             <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
-                <strong>Destination Context:</strong> Both your hotel (${m.property_score}%) and the town average (${m.cluster_baseline}%) experience friction on ${m.category}. Setting clear expectations with guests before check-in reduces negative reviews by up to <strong>55%</strong>.
+                <strong>Destination Context:</strong> Both your hotel (${m.property_score}%) and the ${compName} baseline (${m.cluster_baseline}%) experience friction on ${m.category}. Setting clear expectations with guests before check-in reduces negative reviews by up to <strong>55%</strong>.
             </div>
         `;
-        const btn = card.querySelector('.btn-prescription-evidence');
-        if (btn) {
-            btn.addEventListener('click', () => {
-                openEvidenceDrawer(m.category, quotes);
-            });
-        }
         container.appendChild(card);
     });
 
     if (container.children.length === 0) {
-        container.innerHTML = '<p style="color: var(--text-muted); font-style: italic; padding: 1rem;">No immediate operational risks detected. All key categories are on par with or exceeding competitor standards.</p>';
+        container.innerHTML = '<p style="color: var(--text-muted); font-style: italic; padding: 1.5rem; text-align: center;">No critical operational deficits detected. All audited categories meet or exceed competitor baselines.</p>';
     }
 }
 
@@ -2784,12 +2736,10 @@ function populateCompetitorDropdowns(clusterId, activeHotelId) {
     }
 
     if (b2bComp) {
-        b2bComp._suppressChange = true;
         b2bComp.innerHTML = optionsHtml;
         b2bComp.value = currentCompetitorId;
     }
     if (toolbarComp) {
-        toolbarComp._suppressChange = true;
         toolbarComp.innerHTML = optionsHtml;
         toolbarComp.value = currentCompetitorId;
     }
@@ -2798,18 +2748,11 @@ function populateCompetitorDropdowns(clusterId, activeHotelId) {
 function selectCompetitorBenchmark(competitorId, sourceDropdown) {
     currentCompetitorId = competitorId;
 
-    // Synchronize both competitor dropdowns without triggering circular events
     const b2bComp = document.getElementById('b2b-competitor-select');
-    if (b2bComp && sourceDropdown !== 'b2b-competitor-select') {
-        b2bComp._suppressChange = true;
-        b2bComp.value = competitorId;
-    }
+    if (b2bComp) b2bComp.value = competitorId;
 
     const toolbarComp = document.getElementById('toolbar-competitor-select');
-    if (toolbarComp && sourceDropdown !== 'toolbar-competitor-select') {
-        toolbarComp._suppressChange = true;
-        toolbarComp.value = competitorId;
-    }
+    if (toolbarComp) toolbarComp.value = competitorId;
 
     // Notice: currentPropertyId and hotel metadata remain COMPLETELY UNCHANGED!
     // Re-render dashboard against the selected competitor benchmark
@@ -2835,8 +2778,15 @@ function selectHotelAndBenchmark(clusterId, hotelId, sourceDropdown) {
         data_coverage_label: 'Core Monitored'
     };
 
-    // Update URL hash for shareable linking
-    window.location.hash = `#/${clusterId}/${hotelId}`;
+    // Update URL hash for shareable linking without triggering recursive hashchange listener
+    const newHash = `#/${clusterId}/${hotelId}`;
+    if (window.location.hash !== newHash) {
+        if (window.history && window.history.replaceState) {
+            window.history.replaceState(null, '', newHash);
+        } else {
+            window.location.hash = newHash;
+        }
+    }
 
     // Update Provenance Status Bar
     const provCluster = document.getElementById('prov-cluster');
@@ -2856,21 +2806,15 @@ function selectHotelAndBenchmark(clusterId, hotelId, sourceDropdown) {
     if (provPlatforms) provPlatforms.textContent = hotelMeta.review_count >= 150 ? 'Google, MakeMyTrip, Booking.com, TripAdvisor' : 'Google Places Verified';
     if (provUpdated) provUpdated.textContent = 'Q1 2026';
 
-    // Synchronize selector dropdowns without triggering circular change events
+    // Synchronize selector dropdowns directly (programmatic .value assignment does NOT trigger DOM change events)
     const hotelSelect = document.getElementById('hotel-select');
-    if (hotelSelect && sourceDropdown !== 'hotel-select') {
-        hotelSelect._suppressChange = true;
-        hotelSelect.value = hotelId;
-    }
+    if (hotelSelect) hotelSelect.value = hotelId;
 
     const b2bCluster = document.getElementById('b2b-cluster-select');
     if (b2bCluster) b2bCluster.value = clusterId;
 
     const b2bQuick = document.getElementById('b2b-quick-select');
-    if (b2bQuick && sourceDropdown !== 'b2b-quick-select') {
-        b2bQuick._suppressChange = true;
-        b2bQuick.value = hotelId;
-    }
+    if (b2bQuick) b2bQuick.value = hotelId;
 
     currentPropertyId = hotelId;
     currentClusterId = clusterId;
@@ -2905,11 +2849,17 @@ function initB2BOnboarding() {
     }
 
     clusterSelect.addEventListener('change', (e) => {
-        populateProps(e.target.value);
+        const newCid = e.target.value;
+        populateProps(newCid);
+        const opt = propSelect.selectedOptions[0];
+        const actualCid = opt ? opt.getAttribute('data-cid') : (newCid === 'all' ? 'mussoorie' : newCid);
+        const actualPid = propSelect.value;
+        if (actualPid) {
+            selectHotelAndBenchmark(actualCid, actualPid, 'b2b-cluster-select');
+        }
     });
 
     propSelect.addEventListener('change', (e) => {
-        if (propSelect._suppressChange) { propSelect._suppressChange = false; return; }
         const opt = propSelect.selectedOptions[0];
         const cid = opt ? opt.getAttribute('data-cid') : 'mussoorie';
         const pid = e.target.value;
@@ -2918,14 +2868,12 @@ function initB2BOnboarding() {
 
     if (b2bCompSelect) {
         b2bCompSelect.addEventListener('change', (e) => {
-            if (b2bCompSelect._suppressChange) { b2bCompSelect._suppressChange = false; return; }
             selectCompetitorBenchmark(e.target.value, 'b2b-competitor-select');
         });
     }
 
     if (toolbarCompSelect) {
         toolbarCompSelect.addEventListener('change', (e) => {
-            if (toolbarCompSelect._suppressChange) { toolbarCompSelect._suppressChange = false; return; }
             selectCompetitorBenchmark(e.target.value, 'toolbar-competitor-select');
         });
     }
@@ -2954,7 +2902,9 @@ function initHashRouting() {
             else if (cleanHash.includes('/')) {
                 const parts = cleanHash.split('/');
                 if (parts.length >= 2) {
-                    selectHotelAndBenchmark(parts[0], parts[1]);
+                    if (parts[0] !== currentClusterId || parts[1] !== currentPropertyId) {
+                        selectHotelAndBenchmark(parts[0], parts[1]);
+                    }
                     return;
                 }
             }

@@ -1,6 +1,6 @@
 window.CLUSTER_BENCHMARK = {
   "_meta": {
-    "generated_at": "2026-10-11T12:19:37.119Z",
+    "generated_at": "2026-10-11T12:36:46.935Z",
     "total_properties": 54,
     "clusters": [
       "bhimtal",
@@ -71,9 +71,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 69,
             "competitive_gap": -4,
             "total_mentions": 75,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Food offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Food; competitors lead by 4%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -103,9 +103,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": -13,
             "total_mentions": 72,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 13%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -498,8 +498,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 65,
             "z": -0.32,
             "n": 75,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -512,8 +512,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 52,
             "z": -1.04,
             "n": 72,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Best hostel in Bhimtal! Lake views, great vibe, and amazing community kitchen. Perfect for solo travelers."
@@ -685,9 +685,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": 13,
             "total_mentions": 70,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Room; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -749,9 +749,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 69,
             "competitive_gap": -14,
             "total_mentions": 58,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Location; competitors lead by 14%.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -1094,8 +1094,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 78,
             "z": 1.04,
             "n": 70,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Standard Radisson quality. Clean rooms and professional staff. But the lake is not visible from property."
@@ -1122,8 +1122,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 55,
             "z": -1.12,
             "n": 58,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Standard Radisson quality. Clean rooms and professional staff. But the lake is not visible from property."
@@ -1203,9 +1203,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": 5,
             "total_mentions": 62,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -1267,9 +1267,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": 7,
             "total_mentions": 65,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Room; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -1648,8 +1648,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0.4,
             "n": 62,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +5% above the Bhimtal regional average."
@@ -1676,8 +1676,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0.56,
             "n": 65,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Good resort with nice garden area. Food could be better but rooms are comfortable. Sattal nearby is a bonus."
@@ -1785,9 +1785,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": 18,
             "total_mentions": 58,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -1849,9 +1849,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": 15,
             "total_mentions": 55,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Room; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -2230,8 +2230,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 85,
             "z": 1.44,
             "n": 58,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +18% above the Bhimtal regional average."
@@ -2258,8 +2258,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 80,
             "z": 1.2,
             "n": 55,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Room stands out at +15% above the Bhimtal regional average."
@@ -2431,9 +2431,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": -7,
             "total_mentions": 48,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 7%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -2495,9 +2495,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 69,
             "competitive_gap": -1,
             "total_mentions": 45,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Location offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Location; competitors lead by 1%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -2527,9 +2527,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 72,
             "competitive_gap": 0,
             "total_mentions": 48,
-            "classification": "Competitive Advantage",
-            "badge_color": "emerald",
-            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -2840,8 +2840,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 58,
             "z": -0.56,
             "n": 48,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -2868,8 +2868,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 68,
             "z": -0.08,
             "n": 45,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -2882,8 +2882,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0,
             "n": 48,
-            "verdict_category": "lead",
-            "verdict": "Competitive Advantage",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at 0% above the Bhimtal regional average."
@@ -3013,9 +3013,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": 13,
             "total_mentions": 45,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Room; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Booking.com",
@@ -3173,9 +3173,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 69,
             "competitive_gap": -15,
             "total_mentions": 40,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Booking; competitors lead by 15%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -3422,8 +3422,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 78,
             "z": 1.04,
             "n": 45,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Eco-friendly resort with stunning lake views. Perfect for a quiet getaway from city noise."
@@ -3492,8 +3492,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 54,
             "z": -1.2,
             "n": 40,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -3531,9 +3531,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": -2,
             "total_mentions": 40,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 2%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -3595,9 +3595,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": 0,
             "total_mentions": 42,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -3691,9 +3691,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 72,
             "competitive_gap": 0,
             "total_mentions": 42,
-            "classification": "Competitive Advantage",
-            "badge_color": "emerald",
-            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -3755,9 +3755,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 69,
             "competitive_gap": 0,
             "total_mentions": 38,
-            "classification": "Competitive Advantage",
-            "badge_color": "emerald",
-            "action_recommendation": "Key competitive differentiator in Booking; feature prominently in direct marketing and protected tariff tiers.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Booking; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -3976,8 +3976,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 65,
             "z": -0.16,
             "n": 40,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -4004,8 +4004,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 65,
             "z": 0,
             "n": 42,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Swiss-style cottages with good views. Kids enjoyed the play area. Food is average but portion size is generous."
@@ -4046,8 +4046,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0,
             "n": 42,
-            "verdict_category": "lead",
-            "verdict": "Competitive Advantage",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at 0% above the Bhimtal regional average."
@@ -4074,8 +4074,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 69,
             "z": 0,
             "n": 38,
-            "verdict_category": "lead",
-            "verdict": "Competitive Advantage",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Booking stands out at 0% above the Bhimtal regional average."
@@ -4177,9 +4177,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": -10,
             "total_mentions": 40,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 10%.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -4241,9 +4241,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 69,
             "competitive_gap": 13,
             "total_mentions": 42,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Location offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Location; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -4586,8 +4586,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 55,
             "z": -0.8,
             "n": 40,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Right on the lake! Great location for boating. Rooms are simple but the view is unbeatable at this price."
@@ -4614,8 +4614,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 82,
             "z": 1.04,
             "n": 42,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Right on the lake! Great location for boating. Rooms are simple but the view is unbeatable at this price."
@@ -4727,9 +4727,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 69,
             "competitive_gap": -4,
             "total_mentions": 42,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Food offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Food; competitors lead by 4%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -4823,9 +4823,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 69,
             "competitive_gap": -11,
             "total_mentions": 38,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Location; competitors lead by 11%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -4855,9 +4855,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 72,
             "competitive_gap": 0,
             "total_mentions": 42,
-            "classification": "Competitive Advantage",
-            "badge_color": "emerald",
-            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -5154,8 +5154,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 65,
             "z": -0.32,
             "n": 42,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -5196,8 +5196,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 58,
             "z": -0.88,
             "n": 38,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -5210,8 +5210,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0,
             "n": 42,
-            "verdict_category": "lead",
-            "verdict": "Competitive Advantage",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at 0% above the Bhimtal regional average."
@@ -5277,9 +5277,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": -2,
             "total_mentions": 38,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 2%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -5341,9 +5341,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": -3,
             "total_mentions": 35,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 3%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -5722,8 +5722,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 65,
             "z": -0.16,
             "n": 38,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -5750,8 +5750,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 62,
             "z": -0.24,
             "n": 35,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -5923,9 +5923,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": 17,
             "total_mentions": 38,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Room; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Booking.com",
@@ -5987,9 +5987,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 69,
             "competitive_gap": -14,
             "total_mentions": 35,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Location; competitors lead by 14%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -6332,8 +6332,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 82,
             "z": 1.36,
             "n": 38,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Private villa feel with mountain views. Very clean and well-maintained. Perfect romantic getaway."
@@ -6360,8 +6360,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 55,
             "z": -1.12,
             "n": 35,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -6441,9 +6441,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": -29,
             "total_mentions": 30,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 29%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -6473,9 +6473,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 69,
             "competitive_gap": -24,
             "total_mentions": 38,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Food; competitors lead by 24%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -6505,9 +6505,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": -25,
             "total_mentions": 35,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 25%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -6569,9 +6569,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 69,
             "competitive_gap": -27,
             "total_mentions": 32,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Location; competitors lead by 27%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -6601,9 +6601,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 72,
             "competitive_gap": 0,
             "total_mentions": 38,
-            "classification": "Competitive Advantage",
-            "badge_color": "emerald",
-            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -6633,9 +6633,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": -28,
             "total_mentions": 23,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Housekeeping; competitors lead by 28%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -6886,8 +6886,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 38,
             "z": -2.32,
             "n": 30,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -6900,8 +6900,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 45,
             "z": -1.92,
             "n": 38,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -6914,8 +6914,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 40,
             "z": -2,
             "n": 35,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -6942,8 +6942,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 42,
             "z": -2.16,
             "n": 32,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -6956,8 +6956,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0,
             "n": 38,
-            "verdict_category": "lead",
-            "verdict": "Competitive Advantage",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at 0% above the Bhimtal regional average."
@@ -6970,8 +6970,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 39,
             "z": -2.24,
             "n": 23,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -7057,9 +7057,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": -26,
             "total_mentions": 95,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Food; competitors lead by 26%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -7089,9 +7089,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": -19,
             "total_mentions": 92,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 19%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -7153,9 +7153,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": -1,
             "total_mentions": 78,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Location offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Location; competitors lead by 1%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -7484,8 +7484,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 45,
             "z": -2.08,
             "n": 95,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -7498,8 +7498,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 52,
             "z": -1.52,
             "n": 92,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -7526,8 +7526,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 70,
             "z": -0.08,
             "n": 78,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -7767,9 +7767,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -15,
             "total_mentions": 88,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 15%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -7831,9 +7831,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": 3,
             "total_mentions": 94,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Booking offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Booking; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -8122,8 +8122,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 55,
             "z": -1.2,
             "n": 88,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -8150,8 +8150,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 73,
             "z": 0.24,
             "n": 94,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Booking stands out at +3% above the Dehradun regional average."
@@ -8349,9 +8349,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": 2,
             "total_mentions": 85,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -8413,9 +8413,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -2,
             "total_mentions": 86,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Booking; competitors lead by 2%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -8704,8 +8704,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0.16,
             "n": 85,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +2% above the Dehradun regional average."
@@ -8732,8 +8732,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 68,
             "z": -0.16,
             "n": 86,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -8931,9 +8931,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": 8,
             "total_mentions": 78,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -8995,9 +8995,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -4,
             "total_mentions": 79,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Booking; competitors lead by 4%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -9286,8 +9286,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 78,
             "z": 0.64,
             "n": 78,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +8% above the Dehradun regional average."
@@ -9314,8 +9314,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 66,
             "z": -0.32,
             "n": 79,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -9353,9 +9353,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 72,
             "competitive_gap": 0,
             "total_mentions": 75,
-            "classification": "Competitive Advantage",
-            "badge_color": "emerald",
-            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -9385,9 +9385,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": 1,
             "total_mentions": 85,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Food offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Food; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -9481,9 +9481,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": -16,
             "total_mentions": 68,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Location; competitors lead by 16%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -9545,9 +9545,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 72,
             "competitive_gap": 0,
             "total_mentions": 56,
-            "classification": "Competitive Advantage",
-            "badge_color": "emerald",
-            "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Housekeeping; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -9798,8 +9798,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0,
             "n": 75,
-            "verdict_category": "lead",
-            "verdict": "Competitive Advantage",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at 0% above the Dehradun regional average."
@@ -9812,8 +9812,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0.08,
             "n": 85,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Food stands out at +1% above the Dehradun regional average."
@@ -9854,8 +9854,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 55,
             "z": -1.28,
             "n": 68,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -9882,8 +9882,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0,
             "n": 56,
-            "verdict_category": "lead",
-            "verdict": "Competitive Advantage",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Housekeeping stands out at 0% above the Dehradun regional average."
@@ -9967,9 +9967,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": 7,
             "total_mentions": 72,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Food offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Food; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Booking.com",
@@ -10095,9 +10095,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -8,
             "total_mentions": 65,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 8%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -10394,8 +10394,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 78,
             "z": 0.56,
             "n": 72,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Reliable Marriott quality. Modern rooms, great gym. Breakfast buffet is solid."
@@ -10450,8 +10450,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 62,
             "z": -0.64,
             "n": 65,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -10581,9 +10581,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": -13,
             "total_mentions": 70,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 13%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -10677,9 +10677,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": 8,
             "total_mentions": 72,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -10990,8 +10990,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 58,
             "z": -1.04,
             "n": 70,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -11032,8 +11032,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 78,
             "z": 0.64,
             "n": 72,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +8% above the Dehradun regional average."
@@ -11131,9 +11131,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": -3,
             "total_mentions": 68,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Food offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Food; competitors lead by 3%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -11259,9 +11259,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -5,
             "total_mentions": 62,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 5%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -11558,8 +11558,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 68,
             "z": -0.24,
             "n": 68,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -11614,8 +11614,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 65,
             "z": -0.4,
             "n": 62,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -11841,9 +11841,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": 0,
             "total_mentions": 62,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -11905,9 +11905,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -12,
             "total_mentions": 61,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Booking; competitors lead by 12%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -12196,8 +12196,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 70,
             "z": 0,
             "n": 62,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at 0% above the Dehradun regional average."
@@ -12224,8 +12224,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 58,
             "z": -0.96,
             "n": 61,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -12263,9 +12263,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 72,
             "competitive_gap": -30,
             "total_mentions": 48,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 30%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -12295,9 +12295,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": -23,
             "total_mentions": 55,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Food; competitors lead by 23%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -12327,9 +12327,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": -26,
             "total_mentions": 52,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 26%.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -12423,9 +12423,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": 2,
             "total_mentions": 52,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -12455,9 +12455,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 72,
             "competitive_gap": -29,
             "total_mentions": 36,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Housekeeping; competitors lead by 29%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -12708,8 +12708,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 42,
             "z": -2.4,
             "n": 48,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -12722,8 +12722,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 48,
             "z": -1.84,
             "n": 55,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -12736,8 +12736,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 45,
             "z": -2.08,
             "n": 52,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -12778,8 +12778,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0.16,
             "n": 52,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +2% above the Dehradun regional average."
@@ -12792,8 +12792,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 43,
             "z": -2.32,
             "n": 36,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -12973,9 +12973,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": -13,
             "total_mentions": 50,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Location; competitors lead by 13%.",
             "evidence_quotes": [
               {
                 "platform": "Booking.com",
@@ -13005,9 +13005,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": 2,
             "total_mentions": 52,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -13346,8 +13346,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 58,
             "z": -1.04,
             "n": 50,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Hidden gem in Dehradun! Hillside location with mountain air. Rooms are beautifully designed."
@@ -13360,8 +13360,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0.16,
             "n": 52,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +2% above the Dehradun regional average."
@@ -13427,9 +13427,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 72,
             "competitive_gap": 0,
             "total_mentions": 40,
-            "classification": "Competitive Advantage",
-            "badge_color": "emerald",
-            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -13587,9 +13587,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": 5,
             "total_mentions": 42,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -13651,9 +13651,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -6,
             "total_mentions": 38,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Booking; competitors lead by 6%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -13872,8 +13872,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0,
             "n": 40,
-            "verdict_category": "lead",
-            "verdict": "Competitive Advantage",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at 0% above the Dehradun regional average."
@@ -13942,8 +13942,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 75,
             "z": 0.4,
             "n": 42,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +5% above the Dehradun regional average."
@@ -13970,8 +13970,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 64,
             "z": -0.48,
             "n": 38,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -14011,9 +14011,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": 30,
             "total_mentions": 220,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -14207,9 +14207,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": -14,
             "total_mentions": 140,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 14%.",
             "evidence_quotes": [
               {
                 "platform": "Booking.com",
@@ -14239,9 +14239,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": 28,
             "total_mentions": 165,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -14528,8 +14528,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 93,
             "z": 2.4,
             "n": 220,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +30% above the Mussoorie regional average."
@@ -14600,8 +14600,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 48,
             "z": -1.12,
             "n": 140,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Breakfast buffet with Garhwali dishes like chainssoo was delicious. Safe parking and EV charger on site."
@@ -14614,8 +14614,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 92,
             "z": 2.24,
             "n": 165,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Housekeeping stands out at +28% above the Mussoorie regional average."
@@ -14667,9 +14667,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": 27,
             "total_mentions": 178,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor",
@@ -14899,9 +14899,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": -10,
             "total_mentions": 145,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 10%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -14931,9 +14931,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": 24,
             "total_mentions": 134,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Booking.com",
@@ -14963,9 +14963,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 68,
             "competitive_gap": 4,
             "total_mentions": 152,
-            "classification": "Competitive Weakness",
-            "badge_color": "rose",
-            "action_recommendation": "Operational review required for Booking; competitors lead by 4%.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Booking; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -15220,8 +15220,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 90,
             "z": 2.16,
             "n": 178,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Victorian Gothic architecture and misty winter views of the Doon valley took our breath away. Central heating was spotless. Royal Afghan dinner was divine.",
@@ -15295,8 +15295,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 52,
             "z": -0.8,
             "n": 145,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -15309,8 +15309,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 88,
             "z": 1.92,
             "n": 134,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Breakfast buffet is huge with live counter for dosas and fresh mountain bakery. Cleanliness 10/10."
@@ -15323,8 +15323,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0.32,
             "n": 152,
-            "verdict_category": "weakness",
-            "verdict": "Competitive Weakness",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -15362,9 +15362,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": 9,
             "total_mentions": 138,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -15458,9 +15458,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": 5,
             "total_mentions": 142,
-            "classification": "Competitive Weakness",
-            "badge_color": "rose",
-            "action_recommendation": "Operational review required for Staff; competitors lead by 5%.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Staff; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -15490,9 +15490,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -25,
             "total_mentions": 140,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Location; competitors lead by 25%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor",
@@ -15522,9 +15522,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": 6,
             "total_mentions": 130,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor",
@@ -15554,9 +15554,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": 10,
             "total_mentions": 104,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -15843,8 +15843,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0.72,
             "n": 138,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +9% above the Mussoorie regional average."
@@ -15885,8 +15885,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 75,
             "z": 0.4,
             "n": 142,
-            "verdict_category": "weakness",
-            "verdict": "Competitive Weakness",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Staff stands out at +5% above the Mussoorie regional average."
@@ -15899,8 +15899,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 45,
             "z": -2,
             "n": 140,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -15913,8 +15913,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 68,
             "z": 0.48,
             "n": 130,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -15927,8 +15927,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 74,
             "z": 0.8,
             "n": 104,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Housekeeping stands out at +10% above the Mussoorie regional average."
@@ -15980,9 +15980,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": -3,
             "total_mentions": 100,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 3%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -16044,9 +16044,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": 0,
             "total_mentions": 105,
-            "classification": "Competitive Advantage",
-            "badge_color": "emerald",
-            "action_recommendation": "Key competitive differentiator in Room; feature prominently in direct marketing and protected tariff tiers.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -16158,9 +16158,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": -7,
             "total_mentions": 98,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 7%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -16190,9 +16190,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": -3,
             "total_mentions": 75,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Housekeeping; competitors lead by 3%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -16479,8 +16479,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 60,
             "z": -0.24,
             "n": 100,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Location is excellent near Library Bazaar. Rooms are clean but slightly dated. Food quality is decent."
@@ -16507,8 +16507,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 65,
             "z": 0,
             "n": 105,
-            "verdict_category": "lead",
-            "verdict": "Competitive Advantage",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Location is excellent near Library Bazaar. Rooms are clean but slightly dated. Food quality is decent."
@@ -16551,8 +16551,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 55,
             "z": -0.56,
             "n": 98,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -16565,8 +16565,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 61,
             "z": -0.24,
             "n": 75,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Location is excellent near Library Bazaar. Rooms are clean but slightly dated. Food quality is decent."
@@ -16618,9 +16618,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": -13,
             "total_mentions": 80,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 13%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -16778,9 +16778,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": 3,
             "total_mentions": 78,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -16810,9 +16810,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": -13,
             "total_mentions": 60,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Housekeeping; competitors lead by 13%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -17099,8 +17099,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 50,
             "z": -1.04,
             "n": 80,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -17169,8 +17169,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 65,
             "z": 0.24,
             "n": 78,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +3% above the Mussoorie regional average."
@@ -17183,8 +17183,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 51,
             "z": -1.04,
             "n": 60,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -17236,9 +17236,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": 15,
             "total_mentions": 80,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -17396,9 +17396,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": 8,
             "total_mentions": 78,
-            "classification": "Competitive Weakness",
-            "badge_color": "rose",
-            "action_recommendation": "Operational review required for Value; competitors lead by 8%.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -17428,9 +17428,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": 15,
             "total_mentions": 60,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -17717,8 +17717,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 78,
             "z": 1.2,
             "n": 80,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +15% above the Mussoorie regional average."
@@ -17787,8 +17787,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 70,
             "z": 0.64,
             "n": 78,
-            "verdict_category": "weakness",
-            "verdict": "Competitive Weakness",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +8% above the Mussoorie regional average."
@@ -17801,8 +17801,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 79,
             "z": 1.2,
             "n": 60,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Housekeeping stands out at +15% above the Mussoorie regional average."
@@ -17854,9 +17854,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": 21,
             "total_mentions": 68,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -17982,9 +17982,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -30,
             "total_mentions": 58,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Location; competitors lead by 30%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -18046,9 +18046,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": 20,
             "total_mentions": 51,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -18335,8 +18335,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 84,
             "z": 1.68,
             "n": 68,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +21% above the Mussoorie regional average."
@@ -18391,8 +18391,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 40,
             "z": -2.4,
             "n": 58,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -18419,8 +18419,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 84,
             "z": 1.6,
             "n": 51,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Housekeeping stands out at +20% above the Mussoorie regional average."
@@ -18472,9 +18472,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": -15,
             "total_mentions": 55,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 15%.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -18536,9 +18536,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": -15,
             "total_mentions": 60,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 15%.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -18632,9 +18632,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": 10,
             "total_mentions": 55,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -18664,9 +18664,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": -15,
             "total_mentions": 41,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Housekeeping; competitors lead by 15%.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -18696,9 +18696,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 68,
             "competitive_gap": -15,
             "total_mentions": 56,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Booking; competitors lead by 15%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -18953,8 +18953,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 48,
             "z": -1.2,
             "n": 55,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -18981,8 +18981,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 50,
             "z": -1.2,
             "n": 60,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -19023,8 +19023,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0.8,
             "n": 55,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +10% above the Mussoorie regional average."
@@ -19037,8 +19037,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 49,
             "z": -1.2,
             "n": 41,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -19051,8 +19051,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 53,
             "z": -1.2,
             "n": 56,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -19090,9 +19090,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": 7,
             "total_mentions": 52,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -19250,9 +19250,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": 20,
             "total_mentions": 58,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -19282,9 +19282,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": 6,
             "total_mentions": 39,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -19314,9 +19314,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 68,
             "competitive_gap": -15,
             "total_mentions": 50,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Booking; competitors lead by 15%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -19571,8 +19571,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 70,
             "z": 0.56,
             "n": 52,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Great value for money! Staff is very friendly and helpful. Clean rooms with decent mountain view."
@@ -19641,8 +19641,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 82,
             "z": 1.6,
             "n": 58,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +20% above the Mussoorie regional average."
@@ -19655,8 +19655,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 70,
             "z": 0.48,
             "n": 39,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Great value for money! Staff is very friendly and helpful. Clean rooms with decent mountain view."
@@ -19669,8 +19669,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 53,
             "z": -1.2,
             "n": 50,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -19740,9 +19740,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 68,
             "competitive_gap": -28,
             "total_mentions": 55,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Food; competitors lead by 28%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -19772,9 +19772,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": -30,
             "total_mentions": 52,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 30%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -19804,9 +19804,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -28,
             "total_mentions": 50,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Staff; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Staff; competitors lead by 28%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -19868,9 +19868,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": -17,
             "total_mentions": 45,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 17%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -19900,9 +19900,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": -33,
             "total_mentions": 36,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Housekeeping; competitors lead by 33%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -19932,9 +19932,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 68,
             "competitive_gap": -28,
             "total_mentions": 48,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Booking; competitors lead by 28%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -20203,8 +20203,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 40,
             "z": -2.24,
             "n": 55,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -20217,8 +20217,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 35,
             "z": -2.4,
             "n": 52,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -20231,8 +20231,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 42,
             "z": -2.24,
             "n": 50,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -20259,8 +20259,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 45,
             "z": -1.36,
             "n": 45,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -20273,8 +20273,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 31,
             "z": -2.64,
             "n": 36,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -20287,8 +20287,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 40,
             "z": -2.24,
             "n": 48,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -20326,9 +20326,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": -8,
             "total_mentions": 40,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 8%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -20486,9 +20486,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": 8,
             "total_mentions": 42,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -20518,9 +20518,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": -8,
             "total_mentions": 30,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Housekeeping; competitors lead by 8%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -20807,8 +20807,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 55,
             "z": -0.64,
             "n": 40,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -20877,8 +20877,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 70,
             "z": 0.64,
             "n": 42,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +8% above the Mussoorie regional average."
@@ -20891,8 +20891,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 56,
             "z": -0.64,
             "n": 30,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -20976,9 +20976,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 68,
             "competitive_gap": -33,
             "total_mentions": 42,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Food; competitors lead by 33%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -21008,9 +21008,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": -35,
             "total_mentions": 40,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 35%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -21040,9 +21040,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -20,
             "total_mentions": 40,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Staff; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Staff; competitors lead by 20%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -21104,9 +21104,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": -2,
             "total_mentions": 42,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 2%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -21136,9 +21136,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": -35,
             "total_mentions": 26,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Housekeeping; competitors lead by 35%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -21168,9 +21168,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 68,
             "competitive_gap": -16,
             "total_mentions": 35,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Booking; competitors lead by 16%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -21439,8 +21439,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 35,
             "z": -2.64,
             "n": 42,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -21453,8 +21453,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 30,
             "z": -2.8,
             "n": 40,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -21467,8 +21467,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 50,
             "z": -1.6,
             "n": 40,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -21495,8 +21495,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 60,
             "z": -0.16,
             "n": 42,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -21509,8 +21509,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 29,
             "z": -2.8,
             "n": 26,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -21523,8 +21523,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 52,
             "z": -1.28,
             "n": 35,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -21562,9 +21562,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": 21,
             "total_mentions": 68,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -21722,9 +21722,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": -2,
             "total_mentions": 60,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 2%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -21754,9 +21754,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": 20,
             "total_mentions": 51,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -22043,8 +22043,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 84,
             "z": 1.68,
             "n": 68,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +21% above the Mussoorie regional average."
@@ -22113,8 +22113,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 60,
             "z": -0.16,
             "n": 60,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -22127,8 +22127,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 84,
             "z": 1.6,
             "n": 51,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Housekeeping stands out at +20% above the Mussoorie regional average."
@@ -22180,9 +22180,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": 30,
             "total_mentions": 220,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -22376,9 +22376,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": -12,
             "total_mentions": 140,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 12%.",
             "evidence_quotes": [
               {
                 "platform": "Booking.com",
@@ -22408,9 +22408,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": 28,
             "total_mentions": 165,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -22697,8 +22697,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 93,
             "z": 2.4,
             "n": 220,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +30% above the Mussoorie regional average."
@@ -22769,8 +22769,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 50,
             "z": -0.96,
             "n": 140,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Breakfast buffet with Garhwali dishes like chainssoo was delicious. Safe parking and EV charger on site."
@@ -22783,8 +22783,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 92,
             "z": 2.24,
             "n": 165,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Housekeeping stands out at +28% above the Mussoorie regional average."
@@ -22868,9 +22868,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 68,
             "competitive_gap": -28,
             "total_mentions": 55,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Food; competitors lead by 28%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -22900,9 +22900,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 65,
             "competitive_gap": -25,
             "total_mentions": 52,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 25%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -22932,9 +22932,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -28,
             "total_mentions": 50,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Staff; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Staff; competitors lead by 28%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -22996,9 +22996,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": -17,
             "total_mentions": 45,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 17%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -23028,9 +23028,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": -33,
             "total_mentions": 36,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Housekeeping; competitors lead by 33%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -23060,9 +23060,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 68,
             "competitive_gap": -17,
             "total_mentions": 12,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Booking; competitors lead by 17%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -23331,8 +23331,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 40,
             "z": -2.24,
             "n": 55,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -23345,8 +23345,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 40,
             "z": -2,
             "n": 52,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -23359,8 +23359,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 42,
             "z": -2.24,
             "n": 50,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -23387,8 +23387,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 45,
             "z": -1.36,
             "n": 45,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -23401,8 +23401,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 31,
             "z": -2.64,
             "n": 36,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -23415,8 +23415,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 51,
             "z": -1.36,
             "n": 12,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -23454,9 +23454,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": 9,
             "total_mentions": 138,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -23550,9 +23550,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": 5,
             "total_mentions": 142,
-            "classification": "Competitive Weakness",
-            "badge_color": "rose",
-            "action_recommendation": "Operational review required for Staff; competitors lead by 5%.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Staff; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -23582,9 +23582,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -25,
             "total_mentions": 140,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Location; competitors lead by 25%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor",
@@ -23614,9 +23614,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": 6,
             "total_mentions": 130,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor",
@@ -23646,9 +23646,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": 10,
             "total_mentions": 104,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -23935,8 +23935,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0.72,
             "n": 138,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +9% above the Mussoorie regional average."
@@ -23977,8 +23977,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 75,
             "z": 0.4,
             "n": 142,
-            "verdict_category": "weakness",
-            "verdict": "Competitive Weakness",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Staff stands out at +5% above the Mussoorie regional average."
@@ -23991,8 +23991,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 45,
             "z": -2,
             "n": 140,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -24005,8 +24005,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 68,
             "z": 0.48,
             "n": 130,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -24019,8 +24019,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 74,
             "z": 0.8,
             "n": 104,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Housekeeping stands out at +10% above the Mussoorie regional average."
@@ -24072,9 +24072,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": 1,
             "total_mentions": 3,
-            "classification": "Competitive Weakness",
-            "badge_color": "rose",
-            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 1%.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -24232,9 +24232,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": -10,
             "total_mentions": 2,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 10%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -24264,9 +24264,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": 2,
             "total_mentions": 2,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -24553,8 +24553,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 64,
             "z": 0.08,
             "n": 3,
-            "verdict_category": "weakness",
-            "verdict": "Competitive Weakness",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +1% above the Mussoorie regional average."
@@ -24623,8 +24623,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 52,
             "z": -0.8,
             "n": 2,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -24637,8 +24637,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 66,
             "z": 0.16,
             "n": 2,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Housekeeping stands out at +2% above the Mussoorie regional average."
@@ -24690,9 +24690,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 63,
             "competitive_gap": 0,
             "total_mentions": 3,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -24722,9 +24722,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 68,
             "competitive_gap": 0,
             "total_mentions": 3,
-            "classification": "Competitive Advantage",
-            "badge_color": "emerald",
-            "action_recommendation": "Key competitive differentiator in Food; feature prominently in direct marketing and protected tariff tiers.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Food; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -24850,9 +24850,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 62,
             "competitive_gap": -11,
             "total_mentions": 2,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 11%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -24882,9 +24882,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 64,
             "competitive_gap": 1,
             "total_mentions": 2,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -25171,8 +25171,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 63,
             "z": 0,
             "n": 3,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at 0% above the Mussoorie regional average."
@@ -25185,8 +25185,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 68,
             "z": 0,
             "n": 3,
-            "verdict_category": "lead",
-            "verdict": "Competitive Advantage",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Food stands out at 0% above the Mussoorie regional average."
@@ -25241,8 +25241,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 51,
             "z": -0.88,
             "n": 2,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -25255,8 +25255,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 65,
             "z": 0.08,
             "n": 2,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Housekeeping stands out at +1% above the Mussoorie regional average."
@@ -25310,9 +25310,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": 9,
             "total_mentions": 142,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -25488,9 +25488,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 66,
             "competitive_gap": -8,
             "total_mentions": 125,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 8%.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -25773,8 +25773,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 76,
             "z": 0.72,
             "n": 142,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +9% above the Nainital regional average."
@@ -25845,8 +25845,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 58,
             "z": -0.64,
             "n": 125,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -25912,9 +25912,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": 1,
             "total_mentions": 102,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -26072,9 +26072,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 66,
             "competitive_gap": -4,
             "total_mentions": 98,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 4%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -26357,8 +26357,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 68,
             "z": 0.08,
             "n": 102,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +1% above the Nainital regional average."
@@ -26427,8 +26427,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 62,
             "z": -0.32,
             "n": 98,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -26494,9 +26494,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": 13,
             "total_mentions": 88,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -26654,9 +26654,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 66,
             "competitive_gap": 6,
             "total_mentions": 85,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -26939,8 +26939,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 80,
             "z": 1.04,
             "n": 88,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +13% above the Nainital regional average."
@@ -27009,8 +27009,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0.48,
             "n": 85,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +6% above the Nainital regional average."
@@ -27076,9 +27076,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": -19,
             "total_mentions": 70,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 19%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -27140,9 +27140,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -20,
             "total_mentions": 78,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 20%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -27236,9 +27236,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 66,
             "competitive_gap": 6,
             "total_mentions": 72,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -27268,9 +27268,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 68,
             "competitive_gap": -19,
             "total_mentions": 53,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Housekeeping; competitors lead by 19%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -27521,8 +27521,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 48,
             "z": -1.52,
             "n": 70,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -27549,8 +27549,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 50,
             "z": -1.6,
             "n": 78,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -27591,8 +27591,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0.48,
             "n": 72,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +6% above the Nainital regional average."
@@ -27605,8 +27605,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 49,
             "z": -1.52,
             "n": 53,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -27658,9 +27658,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": 18,
             "total_mentions": 82,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Booking.com",
@@ -27818,9 +27818,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 66,
             "competitive_gap": -11,
             "total_mentions": 78,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 11%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -28103,8 +28103,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 85,
             "z": 1.44,
             "n": 82,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Professional service and clean rooms. Good chain hotel standards. Lake not directly visible from all rooms."
@@ -28173,8 +28173,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 55,
             "z": -0.88,
             "n": 78,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -28240,9 +28240,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": -2,
             "total_mentions": 75,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 2%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -28272,9 +28272,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": 0,
             "total_mentions": 82,
-            "classification": "Competitive Advantage",
-            "badge_color": "emerald",
-            "action_recommendation": "Key competitive differentiator in Food; feature prominently in direct marketing and protected tariff tiers.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Food; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -28400,9 +28400,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 66,
             "competitive_gap": 9,
             "total_mentions": 78,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -28464,9 +28464,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": 0,
             "total_mentions": 68,
-            "classification": "Competitive Advantage",
-            "badge_color": "emerald",
-            "action_recommendation": "Key competitive differentiator in Booking; feature prominently in direct marketing and protected tariff tiers.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Booking; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -28685,8 +28685,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 65,
             "z": -0.16,
             "n": 75,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -28699,8 +28699,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 70,
             "z": 0,
             "n": 82,
-            "verdict_category": "lead",
-            "verdict": "Competitive Advantage",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Charming vintage property near the lake. Good value and the restaurant serves excellent local cuisine."
@@ -28755,8 +28755,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 75,
             "z": 0.72,
             "n": 78,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +9% above the Nainital regional average."
@@ -28783,8 +28783,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 71,
             "z": 0,
             "n": 68,
-            "verdict_category": "lead",
-            "verdict": "Competitive Advantage",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Booking stands out at 0% above the Nainital regional average."
@@ -28822,9 +28822,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": 5,
             "total_mentions": 72,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -28982,9 +28982,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 66,
             "competitive_gap": 2,
             "total_mentions": 72,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -29267,8 +29267,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 72,
             "z": 0.4,
             "n": 72,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +5% above the Nainital regional average."
@@ -29337,8 +29337,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 68,
             "z": 0.16,
             "n": 72,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +2% above the Nainital regional average."
@@ -29404,9 +29404,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": 1,
             "total_mentions": 65,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -29468,9 +29468,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": 0,
             "total_mentions": 70,
-            "classification": "Competitive Advantage",
-            "badge_color": "emerald",
-            "action_recommendation": "Key competitive differentiator in Room; feature prominently in direct marketing and protected tariff tiers.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 0%.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -29564,9 +29564,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 66,
             "competitive_gap": 12,
             "total_mentions": 68,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -29849,8 +29849,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 68,
             "z": 0.08,
             "n": 65,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Clean rooms with lake view. Staff was very accommodating. Good breakfast spread."
@@ -29877,8 +29877,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 70,
             "z": 0,
             "n": 70,
-            "verdict_category": "lead",
-            "verdict": "Competitive Advantage",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "Clean rooms with lake view. Staff was very accommodating. Good breakfast spread."
@@ -29919,8 +29919,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 78,
             "z": 0.96,
             "n": 68,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +12% above the Nainital regional average."
@@ -29986,9 +29986,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": 21,
             "total_mentions": 62,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -30114,9 +30114,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": -16,
             "total_mentions": 52,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Location; competitors lead by 16%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor",
@@ -30431,8 +30431,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 88,
             "z": 1.68,
             "n": 62,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +21% above the Nainital regional average."
@@ -30487,8 +30487,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 55,
             "z": -1.28,
             "n": 52,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "A hidden gem on the hilltop. The rooms are exquisite with antique furniture. Panoramic lake view."
@@ -30568,9 +30568,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": 15,
             "total_mentions": 58,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -30728,9 +30728,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 66,
             "competitive_gap": -11,
             "total_mentions": 52,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Value; competitors lead by 11%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor",
@@ -31013,8 +31013,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 82,
             "z": 1.2,
             "n": 58,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Cleanliness stands out at +15% above the Nainital regional average."
@@ -31083,8 +31083,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 55,
             "z": -0.88,
             "n": 52,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [
                 "A genuine heritage palace with stunning period furniture. Worth the premium for history lovers."
@@ -31150,9 +31150,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": -25,
             "total_mentions": 42,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 25%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -31182,9 +31182,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -18,
             "total_mentions": 55,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Food; competitors lead by 18%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -31214,9 +31214,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -22,
             "total_mentions": 52,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 22%.",
             "evidence_quotes": [
               {
                 "platform": "MakeMyTrip",
@@ -31310,9 +31310,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 66,
             "competitive_gap": 4,
             "total_mentions": 48,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+            "classification": "Competitive Advantage",
+            "badge_color": "emerald",
+            "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
             "evidence_quotes": [
               {
                 "platform": "Google Places / MakeMyTrip",
@@ -31342,9 +31342,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 68,
             "competitive_gap": -24,
             "total_mentions": 32,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Housekeeping; competitors lead by 24%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -31595,8 +31595,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 42,
             "z": -2,
             "n": 42,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -31609,8 +31609,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 52,
             "z": -1.44,
             "n": 55,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -31623,8 +31623,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 48,
             "z": -1.76,
             "n": 52,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -31665,8 +31665,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 70,
             "z": 0.32,
             "n": 48,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "lead",
+            "verdict": "Competitive Advantage",
             "top_quotes": {
               "positive": [
                 "Guest satisfaction for Value stands out at +4% above the Nainital regional average."
@@ -31679,8 +31679,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 44,
             "z": -1.92,
             "n": 32,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -31732,9 +31732,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 67,
             "competitive_gap": -32,
             "total_mentions": 42,
-            "classification": "Market Opportunity",
-            "badge_color": "cyan",
-            "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Cleanliness; competitors lead by 32%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -31764,9 +31764,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -28,
             "total_mentions": 52,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Food; competitors lead by 28%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -31796,9 +31796,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 70,
             "competitive_gap": -32,
             "total_mentions": 48,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Room; competitors lead by 32%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -31828,9 +31828,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": -19,
             "total_mentions": 48,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Staff; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Staff; competitors lead by 19%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -31860,9 +31860,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 71,
             "competitive_gap": -31,
             "total_mentions": 42,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Location; competitors lead by 31%.",
             "evidence_quotes": [
               {
                 "platform": "Google",
@@ -31924,9 +31924,9 @@ window.CLUSTER_BENCHMARK = {
             "cluster_baseline": 68,
             "competitive_gap": -32,
             "total_mentions": 32,
-            "classification": "Market-Wide Problem",
-            "badge_color": "amber",
-            "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+            "classification": "Competitive Weakness",
+            "badge_color": "rose",
+            "action_recommendation": "Operational review required for Housekeeping; competitors lead by 32%.",
             "evidence_quotes": [
               {
                 "platform": "TripAdvisor / Booking.com",
@@ -32177,8 +32177,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 35,
             "z": -2.56,
             "n": 42,
-            "verdict_category": "cluster_opportunity",
-            "verdict": "Market Opportunity",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -32191,8 +32191,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 42,
             "z": -2.24,
             "n": 52,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -32205,8 +32205,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 38,
             "z": -2.56,
             "n": 48,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -32219,8 +32219,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 52,
             "z": -1.52,
             "n": 48,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -32233,8 +32233,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 40,
             "z": -2.48,
             "n": 42,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -32261,8 +32261,8 @@ window.CLUSTER_BENCHMARK = {
             "score": 36,
             "z": -2.56,
             "n": 32,
-            "verdict_category": "market_wide",
-            "verdict": "Market-Wide Problem",
+            "verdict_category": "weakness",
+            "verdict": "Competitive Weakness",
             "top_quotes": {
               "positive": [],
               "negative": [
@@ -32348,9 +32348,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 69,
         "competitive_gap": -4,
         "total_mentions": 75,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Food offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Food; competitors lead by 4%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -32380,9 +32380,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": -13,
         "total_mentions": 72,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 13%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -32775,8 +32775,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 65,
         "z": -0.32,
         "n": 75,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -32789,8 +32789,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 52,
         "z": -1.04,
         "n": 72,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Best hostel in Bhimtal! Lake views, great vibe, and amazing community kitchen. Perfect for solo travelers."
@@ -32962,9 +32962,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": 13,
         "total_mentions": 70,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Room; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -33026,9 +33026,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 69,
         "competitive_gap": -14,
         "total_mentions": 58,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Location; competitors lead by 14%.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -33371,8 +33371,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 78,
         "z": 1.04,
         "n": 70,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Standard Radisson quality. Clean rooms and professional staff. But the lake is not visible from property."
@@ -33399,8 +33399,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 55,
         "z": -1.12,
         "n": 58,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Standard Radisson quality. Clean rooms and professional staff. But the lake is not visible from property."
@@ -33480,9 +33480,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": 5,
         "total_mentions": 62,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -33544,9 +33544,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": 7,
         "total_mentions": 65,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Room; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -33925,8 +33925,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0.4,
         "n": 62,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +5% above the Bhimtal regional average."
@@ -33953,8 +33953,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0.56,
         "n": 65,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Good resort with nice garden area. Food could be better but rooms are comfortable. Sattal nearby is a bonus."
@@ -34062,9 +34062,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": 18,
         "total_mentions": 58,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -34126,9 +34126,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": 15,
         "total_mentions": 55,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Room; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -34507,8 +34507,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 85,
         "z": 1.44,
         "n": 58,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +18% above the Bhimtal regional average."
@@ -34535,8 +34535,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 80,
         "z": 1.2,
         "n": 55,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Room stands out at +15% above the Bhimtal regional average."
@@ -34708,9 +34708,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": -7,
         "total_mentions": 48,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 7%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -34772,9 +34772,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 69,
         "competitive_gap": -1,
         "total_mentions": 45,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Location offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Location; competitors lead by 1%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -34804,9 +34804,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 72,
         "competitive_gap": 0,
         "total_mentions": 48,
-        "classification": "Competitive Advantage",
-        "badge_color": "emerald",
-        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -35117,8 +35117,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 58,
         "z": -0.56,
         "n": 48,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -35145,8 +35145,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 68,
         "z": -0.08,
         "n": 45,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -35159,8 +35159,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0,
         "n": 48,
-        "verdict_category": "lead",
-        "verdict": "Competitive Advantage",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at 0% above the Bhimtal regional average."
@@ -35290,9 +35290,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": 13,
         "total_mentions": 45,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Room; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Booking.com",
@@ -35450,9 +35450,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 69,
         "competitive_gap": -15,
         "total_mentions": 40,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Booking; competitors lead by 15%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -35699,8 +35699,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 78,
         "z": 1.04,
         "n": 45,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Eco-friendly resort with stunning lake views. Perfect for a quiet getaway from city noise."
@@ -35769,8 +35769,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 54,
         "z": -1.2,
         "n": 40,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -35808,9 +35808,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": -2,
         "total_mentions": 40,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 2%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -35872,9 +35872,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": 0,
         "total_mentions": 42,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -35968,9 +35968,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 72,
         "competitive_gap": 0,
         "total_mentions": 42,
-        "classification": "Competitive Advantage",
-        "badge_color": "emerald",
-        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -36032,9 +36032,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 69,
         "competitive_gap": 0,
         "total_mentions": 38,
-        "classification": "Competitive Advantage",
-        "badge_color": "emerald",
-        "action_recommendation": "Key competitive differentiator in Booking; feature prominently in direct marketing and protected tariff tiers.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Booking; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -36253,8 +36253,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 65,
         "z": -0.16,
         "n": 40,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -36281,8 +36281,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 65,
         "z": 0,
         "n": 42,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Swiss-style cottages with good views. Kids enjoyed the play area. Food is average but portion size is generous."
@@ -36323,8 +36323,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0,
         "n": 42,
-        "verdict_category": "lead",
-        "verdict": "Competitive Advantage",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at 0% above the Bhimtal regional average."
@@ -36351,8 +36351,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 69,
         "z": 0,
         "n": 38,
-        "verdict_category": "lead",
-        "verdict": "Competitive Advantage",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Booking stands out at 0% above the Bhimtal regional average."
@@ -36454,9 +36454,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": -10,
         "total_mentions": 40,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 10%.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -36518,9 +36518,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 69,
         "competitive_gap": 13,
         "total_mentions": 42,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Location offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Location; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -36863,8 +36863,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 55,
         "z": -0.8,
         "n": 40,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Right on the lake! Great location for boating. Rooms are simple but the view is unbeatable at this price."
@@ -36891,8 +36891,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 82,
         "z": 1.04,
         "n": 42,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Right on the lake! Great location for boating. Rooms are simple but the view is unbeatable at this price."
@@ -37004,9 +37004,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 69,
         "competitive_gap": -4,
         "total_mentions": 42,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Food offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Food; competitors lead by 4%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -37100,9 +37100,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 69,
         "competitive_gap": -11,
         "total_mentions": 38,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Location; competitors lead by 11%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -37132,9 +37132,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 72,
         "competitive_gap": 0,
         "total_mentions": 42,
-        "classification": "Competitive Advantage",
-        "badge_color": "emerald",
-        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -37431,8 +37431,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 65,
         "z": -0.32,
         "n": 42,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -37473,8 +37473,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 58,
         "z": -0.88,
         "n": 38,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -37487,8 +37487,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0,
         "n": 42,
-        "verdict_category": "lead",
-        "verdict": "Competitive Advantage",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at 0% above the Bhimtal regional average."
@@ -37554,9 +37554,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": -2,
         "total_mentions": 38,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 2%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -37618,9 +37618,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": -3,
         "total_mentions": 35,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 3%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -37999,8 +37999,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 65,
         "z": -0.16,
         "n": 38,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -38027,8 +38027,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 62,
         "z": -0.24,
         "n": 35,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -38200,9 +38200,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": 17,
         "total_mentions": 38,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Room; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Booking.com",
@@ -38264,9 +38264,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 69,
         "competitive_gap": -14,
         "total_mentions": 35,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Location; competitors lead by 14%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -38609,8 +38609,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 82,
         "z": 1.36,
         "n": 38,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Private villa feel with mountain views. Very clean and well-maintained. Perfect romantic getaway."
@@ -38637,8 +38637,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 55,
         "z": -1.12,
         "n": 35,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -38718,9 +38718,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": -29,
         "total_mentions": 30,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 29%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -38750,9 +38750,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 69,
         "competitive_gap": -24,
         "total_mentions": 38,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Food; competitors lead by 24%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -38782,9 +38782,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": -25,
         "total_mentions": 35,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Room offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 25%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -38846,9 +38846,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 69,
         "competitive_gap": -27,
         "total_mentions": 32,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Location; competitors lead by 27%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -38878,9 +38878,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 72,
         "competitive_gap": 0,
         "total_mentions": 38,
-        "classification": "Competitive Advantage",
-        "badge_color": "emerald",
-        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -38910,9 +38910,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": -28,
         "total_mentions": 23,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Housekeeping; competitors lead by 28%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -39163,8 +39163,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 38,
         "z": -2.32,
         "n": 30,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -39177,8 +39177,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 45,
         "z": -1.92,
         "n": 38,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -39191,8 +39191,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 40,
         "z": -2,
         "n": 35,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -39219,8 +39219,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 42,
         "z": -2.16,
         "n": 32,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -39233,8 +39233,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0,
         "n": 38,
-        "verdict_category": "lead",
-        "verdict": "Competitive Advantage",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at 0% above the Bhimtal regional average."
@@ -39247,8 +39247,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 39,
         "z": -2.24,
         "n": 23,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -39332,9 +39332,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": -26,
         "total_mentions": 95,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Food; competitors lead by 26%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -39364,9 +39364,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": -19,
         "total_mentions": 92,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 19%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -39428,9 +39428,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": -1,
         "total_mentions": 78,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Location offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Location; competitors lead by 1%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -39759,8 +39759,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 45,
         "z": -2.08,
         "n": 95,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -39773,8 +39773,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 52,
         "z": -1.52,
         "n": 92,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -39801,8 +39801,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 70,
         "z": -0.08,
         "n": 78,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -40042,9 +40042,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -15,
         "total_mentions": 88,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 15%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -40106,9 +40106,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": 3,
         "total_mentions": 94,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Booking offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Booking; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -40397,8 +40397,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 55,
         "z": -1.2,
         "n": 88,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -40425,8 +40425,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 73,
         "z": 0.24,
         "n": 94,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Booking stands out at +3% above the Dehradun regional average."
@@ -40624,9 +40624,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": 2,
         "total_mentions": 85,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -40688,9 +40688,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -2,
         "total_mentions": 86,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Booking; competitors lead by 2%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -40979,8 +40979,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0.16,
         "n": 85,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +2% above the Dehradun regional average."
@@ -41007,8 +41007,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 68,
         "z": -0.16,
         "n": 86,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -41206,9 +41206,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": 8,
         "total_mentions": 78,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -41270,9 +41270,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -4,
         "total_mentions": 79,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Booking; competitors lead by 4%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -41561,8 +41561,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 78,
         "z": 0.64,
         "n": 78,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +8% above the Dehradun regional average."
@@ -41589,8 +41589,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 66,
         "z": -0.32,
         "n": 79,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -41628,9 +41628,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 72,
         "competitive_gap": 0,
         "total_mentions": 75,
-        "classification": "Competitive Advantage",
-        "badge_color": "emerald",
-        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -41660,9 +41660,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": 1,
         "total_mentions": 85,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Food offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Food; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -41756,9 +41756,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": -16,
         "total_mentions": 68,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Location; competitors lead by 16%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -41820,9 +41820,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 72,
         "competitive_gap": 0,
         "total_mentions": 56,
-        "classification": "Competitive Advantage",
-        "badge_color": "emerald",
-        "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Housekeeping; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -42073,8 +42073,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0,
         "n": 75,
-        "verdict_category": "lead",
-        "verdict": "Competitive Advantage",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at 0% above the Dehradun regional average."
@@ -42087,8 +42087,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0.08,
         "n": 85,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Food stands out at +1% above the Dehradun regional average."
@@ -42129,8 +42129,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 55,
         "z": -1.28,
         "n": 68,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -42157,8 +42157,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0,
         "n": 56,
-        "verdict_category": "lead",
-        "verdict": "Competitive Advantage",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Housekeeping stands out at 0% above the Dehradun regional average."
@@ -42242,9 +42242,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": 7,
         "total_mentions": 72,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Food offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Food; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Booking.com",
@@ -42370,9 +42370,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -8,
         "total_mentions": 65,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 8%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -42669,8 +42669,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 78,
         "z": 0.56,
         "n": 72,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Reliable Marriott quality. Modern rooms, great gym. Breakfast buffet is solid."
@@ -42725,8 +42725,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 62,
         "z": -0.64,
         "n": 65,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -42856,9 +42856,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": -13,
         "total_mentions": 70,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 13%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -42952,9 +42952,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": 8,
         "total_mentions": 72,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -43265,8 +43265,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 58,
         "z": -1.04,
         "n": 70,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -43307,8 +43307,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 78,
         "z": 0.64,
         "n": 72,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +8% above the Dehradun regional average."
@@ -43406,9 +43406,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": -3,
         "total_mentions": 68,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Food offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Food; competitors lead by 3%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -43534,9 +43534,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -5,
         "total_mentions": 62,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 5%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -43833,8 +43833,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 68,
         "z": -0.24,
         "n": 68,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -43889,8 +43889,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 65,
         "z": -0.4,
         "n": 62,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -44116,9 +44116,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": 0,
         "total_mentions": 62,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -44180,9 +44180,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -12,
         "total_mentions": 61,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Booking; competitors lead by 12%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -44471,8 +44471,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 70,
         "z": 0,
         "n": 62,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at 0% above the Dehradun regional average."
@@ -44499,8 +44499,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 58,
         "z": -0.96,
         "n": 61,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -44538,9 +44538,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 72,
         "competitive_gap": -30,
         "total_mentions": 48,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 30%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -44570,9 +44570,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": -23,
         "total_mentions": 55,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Food; competitors lead by 23%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -44602,9 +44602,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": -26,
         "total_mentions": 52,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 26%.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -44698,9 +44698,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": 2,
         "total_mentions": 52,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -44730,9 +44730,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 72,
         "competitive_gap": -29,
         "total_mentions": 36,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Housekeeping; competitors lead by 29%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -44983,8 +44983,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 42,
         "z": -2.4,
         "n": 48,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -44997,8 +44997,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 48,
         "z": -1.84,
         "n": 55,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -45011,8 +45011,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 45,
         "z": -2.08,
         "n": 52,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -45053,8 +45053,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0.16,
         "n": 52,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +2% above the Dehradun regional average."
@@ -45067,8 +45067,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 43,
         "z": -2.32,
         "n": 36,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -45248,9 +45248,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": -13,
         "total_mentions": 50,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Location; competitors lead by 13%.",
         "evidence_quotes": [
           {
             "platform": "Booking.com",
@@ -45280,9 +45280,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": 2,
         "total_mentions": 52,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -45621,8 +45621,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 58,
         "z": -1.04,
         "n": 50,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Hidden gem in Dehradun! Hillside location with mountain air. Rooms are beautifully designed."
@@ -45635,8 +45635,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0.16,
         "n": 52,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +2% above the Dehradun regional average."
@@ -45702,9 +45702,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 72,
         "competitive_gap": 0,
         "total_mentions": 40,
-        "classification": "Competitive Advantage",
-        "badge_color": "emerald",
-        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -45862,9 +45862,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": 5,
         "total_mentions": 42,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -45926,9 +45926,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -6,
         "total_mentions": 38,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Booking; competitors lead by 6%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -46147,8 +46147,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0,
         "n": 40,
-        "verdict_category": "lead",
-        "verdict": "Competitive Advantage",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at 0% above the Dehradun regional average."
@@ -46217,8 +46217,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 75,
         "z": 0.4,
         "n": 42,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +5% above the Dehradun regional average."
@@ -46245,8 +46245,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 64,
         "z": -0.48,
         "n": 38,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -46284,9 +46284,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": 30,
         "total_mentions": 220,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -46480,9 +46480,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": -14,
         "total_mentions": 140,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 14%.",
         "evidence_quotes": [
           {
             "platform": "Booking.com",
@@ -46512,9 +46512,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": 28,
         "total_mentions": 165,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -46801,8 +46801,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 93,
         "z": 2.4,
         "n": 220,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +30% above the Mussoorie regional average."
@@ -46873,8 +46873,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 48,
         "z": -1.12,
         "n": 140,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Breakfast buffet with Garhwali dishes like chainssoo was delicious. Safe parking and EV charger on site."
@@ -46887,8 +46887,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 92,
         "z": 2.24,
         "n": 165,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Housekeeping stands out at +28% above the Mussoorie regional average."
@@ -46940,9 +46940,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": 27,
         "total_mentions": 178,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor",
@@ -47172,9 +47172,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": -10,
         "total_mentions": 145,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 10%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -47204,9 +47204,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": 24,
         "total_mentions": 134,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Booking.com",
@@ -47236,9 +47236,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 68,
         "competitive_gap": 4,
         "total_mentions": 152,
-        "classification": "Competitive Weakness",
-        "badge_color": "rose",
-        "action_recommendation": "Operational review required for Booking; competitors lead by 4%.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Booking; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -47493,8 +47493,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 90,
         "z": 2.16,
         "n": 178,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Victorian Gothic architecture and misty winter views of the Doon valley took our breath away. Central heating was spotless. Royal Afghan dinner was divine.",
@@ -47568,8 +47568,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 52,
         "z": -0.8,
         "n": 145,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -47582,8 +47582,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 88,
         "z": 1.92,
         "n": 134,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Breakfast buffet is huge with live counter for dosas and fresh mountain bakery. Cleanliness 10/10."
@@ -47596,8 +47596,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0.32,
         "n": 152,
-        "verdict_category": "weakness",
-        "verdict": "Competitive Weakness",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -47635,9 +47635,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": 9,
         "total_mentions": 138,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -47731,9 +47731,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": 5,
         "total_mentions": 142,
-        "classification": "Competitive Weakness",
-        "badge_color": "rose",
-        "action_recommendation": "Operational review required for Staff; competitors lead by 5%.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Staff; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -47763,9 +47763,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -25,
         "total_mentions": 140,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Location; competitors lead by 25%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor",
@@ -47795,9 +47795,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": 6,
         "total_mentions": 130,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor",
@@ -47827,9 +47827,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": 10,
         "total_mentions": 104,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -48116,8 +48116,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0.72,
         "n": 138,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +9% above the Mussoorie regional average."
@@ -48158,8 +48158,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 75,
         "z": 0.4,
         "n": 142,
-        "verdict_category": "weakness",
-        "verdict": "Competitive Weakness",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Staff stands out at +5% above the Mussoorie regional average."
@@ -48172,8 +48172,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 45,
         "z": -2,
         "n": 140,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -48186,8 +48186,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 68,
         "z": 0.48,
         "n": 130,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -48200,8 +48200,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 74,
         "z": 0.8,
         "n": 104,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Housekeeping stands out at +10% above the Mussoorie regional average."
@@ -48253,9 +48253,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": -3,
         "total_mentions": 100,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 3%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -48317,9 +48317,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": 0,
         "total_mentions": 105,
-        "classification": "Competitive Advantage",
-        "badge_color": "emerald",
-        "action_recommendation": "Key competitive differentiator in Room; feature prominently in direct marketing and protected tariff tiers.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -48431,9 +48431,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": -7,
         "total_mentions": 98,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 7%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -48463,9 +48463,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": -3,
         "total_mentions": 75,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Housekeeping; competitors lead by 3%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -48752,8 +48752,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 60,
         "z": -0.24,
         "n": 100,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Location is excellent near Library Bazaar. Rooms are clean but slightly dated. Food quality is decent."
@@ -48780,8 +48780,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 65,
         "z": 0,
         "n": 105,
-        "verdict_category": "lead",
-        "verdict": "Competitive Advantage",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Location is excellent near Library Bazaar. Rooms are clean but slightly dated. Food quality is decent."
@@ -48824,8 +48824,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 55,
         "z": -0.56,
         "n": 98,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -48838,8 +48838,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 61,
         "z": -0.24,
         "n": 75,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Location is excellent near Library Bazaar. Rooms are clean but slightly dated. Food quality is decent."
@@ -48891,9 +48891,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": -13,
         "total_mentions": 80,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 13%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -49051,9 +49051,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": 3,
         "total_mentions": 78,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -49083,9 +49083,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": -13,
         "total_mentions": 60,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Housekeeping; competitors lead by 13%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -49372,8 +49372,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 50,
         "z": -1.04,
         "n": 80,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -49442,8 +49442,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 65,
         "z": 0.24,
         "n": 78,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +3% above the Mussoorie regional average."
@@ -49456,8 +49456,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 51,
         "z": -1.04,
         "n": 60,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -49509,9 +49509,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": 15,
         "total_mentions": 80,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -49669,9 +49669,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": 8,
         "total_mentions": 78,
-        "classification": "Competitive Weakness",
-        "badge_color": "rose",
-        "action_recommendation": "Operational review required for Value; competitors lead by 8%.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -49701,9 +49701,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": 15,
         "total_mentions": 60,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -49990,8 +49990,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 78,
         "z": 1.2,
         "n": 80,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +15% above the Mussoorie regional average."
@@ -50060,8 +50060,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 70,
         "z": 0.64,
         "n": 78,
-        "verdict_category": "weakness",
-        "verdict": "Competitive Weakness",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +8% above the Mussoorie regional average."
@@ -50074,8 +50074,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 79,
         "z": 1.2,
         "n": 60,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Housekeeping stands out at +15% above the Mussoorie regional average."
@@ -50127,9 +50127,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": 21,
         "total_mentions": 68,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -50255,9 +50255,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -30,
         "total_mentions": 58,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Location; competitors lead by 30%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -50319,9 +50319,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": 20,
         "total_mentions": 51,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -50608,8 +50608,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 84,
         "z": 1.68,
         "n": 68,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +21% above the Mussoorie regional average."
@@ -50664,8 +50664,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 40,
         "z": -2.4,
         "n": 58,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -50692,8 +50692,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 84,
         "z": 1.6,
         "n": 51,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Housekeeping stands out at +20% above the Mussoorie regional average."
@@ -50745,9 +50745,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": -15,
         "total_mentions": 55,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 15%.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -50809,9 +50809,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": -15,
         "total_mentions": 60,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 15%.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -50905,9 +50905,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": 10,
         "total_mentions": 55,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -50937,9 +50937,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": -15,
         "total_mentions": 41,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Housekeeping; competitors lead by 15%.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -50969,9 +50969,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 68,
         "competitive_gap": -15,
         "total_mentions": 56,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Booking; competitors lead by 15%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -51226,8 +51226,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 48,
         "z": -1.2,
         "n": 55,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -51254,8 +51254,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 50,
         "z": -1.2,
         "n": 60,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -51296,8 +51296,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0.8,
         "n": 55,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +10% above the Mussoorie regional average."
@@ -51310,8 +51310,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 49,
         "z": -1.2,
         "n": 41,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -51324,8 +51324,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 53,
         "z": -1.2,
         "n": 56,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -51363,9 +51363,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": 7,
         "total_mentions": 52,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -51523,9 +51523,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": 20,
         "total_mentions": 58,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -51555,9 +51555,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": 6,
         "total_mentions": 39,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -51587,9 +51587,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 68,
         "competitive_gap": -15,
         "total_mentions": 50,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Booking; competitors lead by 15%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -51844,8 +51844,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 70,
         "z": 0.56,
         "n": 52,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Great value for money! Staff is very friendly and helpful. Clean rooms with decent mountain view."
@@ -51914,8 +51914,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 82,
         "z": 1.6,
         "n": 58,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +20% above the Mussoorie regional average."
@@ -51928,8 +51928,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 70,
         "z": 0.48,
         "n": 39,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Great value for money! Staff is very friendly and helpful. Clean rooms with decent mountain view."
@@ -51942,8 +51942,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 53,
         "z": -1.2,
         "n": 50,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -52013,9 +52013,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 68,
         "competitive_gap": -28,
         "total_mentions": 55,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Food; competitors lead by 28%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -52045,9 +52045,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": -30,
         "total_mentions": 52,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 30%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -52077,9 +52077,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -28,
         "total_mentions": 50,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Staff; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Staff; competitors lead by 28%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -52141,9 +52141,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": -17,
         "total_mentions": 45,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 17%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -52173,9 +52173,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": -33,
         "total_mentions": 36,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Housekeeping; competitors lead by 33%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -52205,9 +52205,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 68,
         "competitive_gap": -28,
         "total_mentions": 48,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Booking; competitors lead by 28%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -52476,8 +52476,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 40,
         "z": -2.24,
         "n": 55,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -52490,8 +52490,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 35,
         "z": -2.4,
         "n": 52,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -52504,8 +52504,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 42,
         "z": -2.24,
         "n": 50,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -52532,8 +52532,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 45,
         "z": -1.36,
         "n": 45,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -52546,8 +52546,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 31,
         "z": -2.64,
         "n": 36,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -52560,8 +52560,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 40,
         "z": -2.24,
         "n": 48,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -52599,9 +52599,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": -8,
         "total_mentions": 40,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 8%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -52759,9 +52759,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": 8,
         "total_mentions": 42,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -52791,9 +52791,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": -8,
         "total_mentions": 30,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Housekeeping; competitors lead by 8%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -53080,8 +53080,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 55,
         "z": -0.64,
         "n": 40,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -53150,8 +53150,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 70,
         "z": 0.64,
         "n": 42,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +8% above the Mussoorie regional average."
@@ -53164,8 +53164,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 56,
         "z": -0.64,
         "n": 30,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -53249,9 +53249,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 68,
         "competitive_gap": -33,
         "total_mentions": 42,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Food; competitors lead by 33%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -53281,9 +53281,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": -35,
         "total_mentions": 40,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 35%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -53313,9 +53313,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -20,
         "total_mentions": 40,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Staff; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Staff; competitors lead by 20%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -53377,9 +53377,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": -2,
         "total_mentions": 42,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 2%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -53409,9 +53409,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": -35,
         "total_mentions": 26,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Housekeeping; competitors lead by 35%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -53441,9 +53441,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 68,
         "competitive_gap": -16,
         "total_mentions": 35,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Booking; competitors lead by 16%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -53712,8 +53712,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 35,
         "z": -2.64,
         "n": 42,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -53726,8 +53726,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 30,
         "z": -2.8,
         "n": 40,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -53740,8 +53740,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 50,
         "z": -1.6,
         "n": 40,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -53768,8 +53768,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 60,
         "z": -0.16,
         "n": 42,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -53782,8 +53782,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 29,
         "z": -2.8,
         "n": 26,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -53796,8 +53796,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 52,
         "z": -1.28,
         "n": 35,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -53835,9 +53835,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": 21,
         "total_mentions": 68,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -53995,9 +53995,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": -2,
         "total_mentions": 60,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 2%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -54027,9 +54027,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": 20,
         "total_mentions": 51,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -54316,8 +54316,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 84,
         "z": 1.68,
         "n": 68,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +21% above the Mussoorie regional average."
@@ -54386,8 +54386,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 60,
         "z": -0.16,
         "n": 60,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -54400,8 +54400,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 84,
         "z": 1.6,
         "n": 51,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Housekeeping stands out at +20% above the Mussoorie regional average."
@@ -54453,9 +54453,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": 30,
         "total_mentions": 220,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -54649,9 +54649,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": -12,
         "total_mentions": 140,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 12%.",
         "evidence_quotes": [
           {
             "platform": "Booking.com",
@@ -54681,9 +54681,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": 28,
         "total_mentions": 165,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -54970,8 +54970,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 93,
         "z": 2.4,
         "n": 220,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +30% above the Mussoorie regional average."
@@ -55042,8 +55042,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 50,
         "z": -0.96,
         "n": 140,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Breakfast buffet with Garhwali dishes like chainssoo was delicious. Safe parking and EV charger on site."
@@ -55056,8 +55056,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 92,
         "z": 2.24,
         "n": 165,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Housekeeping stands out at +28% above the Mussoorie regional average."
@@ -55141,9 +55141,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 68,
         "competitive_gap": -28,
         "total_mentions": 55,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Food; competitors lead by 28%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -55173,9 +55173,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 65,
         "competitive_gap": -25,
         "total_mentions": 52,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 25%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -55205,9 +55205,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -28,
         "total_mentions": 50,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Staff; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Staff; competitors lead by 28%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -55269,9 +55269,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": -17,
         "total_mentions": 45,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 17%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -55301,9 +55301,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": -33,
         "total_mentions": 36,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Housekeeping; competitors lead by 33%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -55333,9 +55333,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 68,
         "competitive_gap": -17,
         "total_mentions": 12,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Booking; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Booking; competitors lead by 17%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -55604,8 +55604,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 40,
         "z": -2.24,
         "n": 55,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -55618,8 +55618,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 40,
         "z": -2,
         "n": 52,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -55632,8 +55632,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 42,
         "z": -2.24,
         "n": 50,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -55660,8 +55660,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 45,
         "z": -1.36,
         "n": 45,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -55674,8 +55674,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 31,
         "z": -2.64,
         "n": 36,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -55688,8 +55688,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 51,
         "z": -1.36,
         "n": 12,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -55727,9 +55727,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": 9,
         "total_mentions": 138,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -55823,9 +55823,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": 5,
         "total_mentions": 142,
-        "classification": "Competitive Weakness",
-        "badge_color": "rose",
-        "action_recommendation": "Operational review required for Staff; competitors lead by 5%.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Staff; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -55855,9 +55855,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -25,
         "total_mentions": 140,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Location; competitors lead by 25%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor",
@@ -55887,9 +55887,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": 6,
         "total_mentions": 130,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor",
@@ -55919,9 +55919,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": 10,
         "total_mentions": 104,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -56208,8 +56208,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0.72,
         "n": 138,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +9% above the Mussoorie regional average."
@@ -56250,8 +56250,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 75,
         "z": 0.4,
         "n": 142,
-        "verdict_category": "weakness",
-        "verdict": "Competitive Weakness",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Staff stands out at +5% above the Mussoorie regional average."
@@ -56264,8 +56264,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 45,
         "z": -2,
         "n": 140,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -56278,8 +56278,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 68,
         "z": 0.48,
         "n": 130,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -56292,8 +56292,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 74,
         "z": 0.8,
         "n": 104,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Housekeeping stands out at +10% above the Mussoorie regional average."
@@ -56345,9 +56345,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": 1,
         "total_mentions": 3,
-        "classification": "Competitive Weakness",
-        "badge_color": "rose",
-        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 1%.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -56505,9 +56505,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": -10,
         "total_mentions": 2,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 10%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -56537,9 +56537,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": 2,
         "total_mentions": 2,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -56826,8 +56826,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 64,
         "z": 0.08,
         "n": 3,
-        "verdict_category": "weakness",
-        "verdict": "Competitive Weakness",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +1% above the Mussoorie regional average."
@@ -56896,8 +56896,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 52,
         "z": -0.8,
         "n": 2,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -56910,8 +56910,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 66,
         "z": 0.16,
         "n": 2,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Housekeeping stands out at +2% above the Mussoorie regional average."
@@ -56963,9 +56963,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 63,
         "competitive_gap": 0,
         "total_mentions": 3,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -56995,9 +56995,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 68,
         "competitive_gap": 0,
         "total_mentions": 3,
-        "classification": "Competitive Advantage",
-        "badge_color": "emerald",
-        "action_recommendation": "Key competitive differentiator in Food; feature prominently in direct marketing and protected tariff tiers.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Food; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -57123,9 +57123,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 62,
         "competitive_gap": -11,
         "total_mentions": 2,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 11%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -57155,9 +57155,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 64,
         "competitive_gap": 1,
         "total_mentions": 2,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Housekeeping offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Housekeeping; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -57444,8 +57444,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 63,
         "z": 0,
         "n": 3,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at 0% above the Mussoorie regional average."
@@ -57458,8 +57458,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 68,
         "z": 0,
         "n": 3,
-        "verdict_category": "lead",
-        "verdict": "Competitive Advantage",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Food stands out at 0% above the Mussoorie regional average."
@@ -57514,8 +57514,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 51,
         "z": -0.88,
         "n": 2,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -57528,8 +57528,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 65,
         "z": 0.08,
         "n": 2,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Housekeeping stands out at +1% above the Mussoorie regional average."
@@ -57581,9 +57581,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": 9,
         "total_mentions": 142,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -57759,9 +57759,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 66,
         "competitive_gap": -8,
         "total_mentions": 125,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 8%.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -58044,8 +58044,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 76,
         "z": 0.72,
         "n": 142,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +9% above the Nainital regional average."
@@ -58116,8 +58116,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 58,
         "z": -0.64,
         "n": 125,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -58183,9 +58183,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": 1,
         "total_mentions": 102,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -58343,9 +58343,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 66,
         "competitive_gap": -4,
         "total_mentions": 98,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 4%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -58628,8 +58628,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 68,
         "z": 0.08,
         "n": 102,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +1% above the Nainital regional average."
@@ -58698,8 +58698,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 62,
         "z": -0.32,
         "n": 98,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -58765,9 +58765,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": 13,
         "total_mentions": 88,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -58925,9 +58925,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 66,
         "competitive_gap": 6,
         "total_mentions": 85,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -59210,8 +59210,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 80,
         "z": 1.04,
         "n": 88,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +13% above the Nainital regional average."
@@ -59280,8 +59280,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0.48,
         "n": 85,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +6% above the Nainital regional average."
@@ -59347,9 +59347,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": -19,
         "total_mentions": 70,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 19%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -59411,9 +59411,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -20,
         "total_mentions": 78,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 20%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -59507,9 +59507,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 66,
         "competitive_gap": 6,
         "total_mentions": 72,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -59539,9 +59539,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 68,
         "competitive_gap": -19,
         "total_mentions": 53,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Housekeeping; competitors lead by 19%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -59792,8 +59792,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 48,
         "z": -1.52,
         "n": 70,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -59820,8 +59820,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 50,
         "z": -1.6,
         "n": 78,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -59862,8 +59862,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0.48,
         "n": 72,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +6% above the Nainital regional average."
@@ -59876,8 +59876,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 49,
         "z": -1.52,
         "n": 53,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -59929,9 +59929,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": 18,
         "total_mentions": 82,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Booking.com",
@@ -60089,9 +60089,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 66,
         "competitive_gap": -11,
         "total_mentions": 78,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 11%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -60374,8 +60374,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 85,
         "z": 1.44,
         "n": 82,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Professional service and clean rooms. Good chain hotel standards. Lake not directly visible from all rooms."
@@ -60444,8 +60444,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 55,
         "z": -0.88,
         "n": 78,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -60511,9 +60511,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": -2,
         "total_mentions": 75,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 2%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -60543,9 +60543,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": 0,
         "total_mentions": 82,
-        "classification": "Competitive Advantage",
-        "badge_color": "emerald",
-        "action_recommendation": "Key competitive differentiator in Food; feature prominently in direct marketing and protected tariff tiers.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Food; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -60671,9 +60671,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 66,
         "competitive_gap": 9,
         "total_mentions": 78,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -60735,9 +60735,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": 0,
         "total_mentions": 68,
-        "classification": "Competitive Advantage",
-        "badge_color": "emerald",
-        "action_recommendation": "Key competitive differentiator in Booking; feature prominently in direct marketing and protected tariff tiers.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Booking; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -60956,8 +60956,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 65,
         "z": -0.16,
         "n": 75,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -60970,8 +60970,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 70,
         "z": 0,
         "n": 82,
-        "verdict_category": "lead",
-        "verdict": "Competitive Advantage",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Charming vintage property near the lake. Good value and the restaurant serves excellent local cuisine."
@@ -61026,8 +61026,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 75,
         "z": 0.72,
         "n": 78,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +9% above the Nainital regional average."
@@ -61054,8 +61054,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 71,
         "z": 0,
         "n": 68,
-        "verdict_category": "lead",
-        "verdict": "Competitive Advantage",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Booking stands out at 0% above the Nainital regional average."
@@ -61093,9 +61093,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": 5,
         "total_mentions": 72,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -61253,9 +61253,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 66,
         "competitive_gap": 2,
         "total_mentions": 72,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -61538,8 +61538,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 72,
         "z": 0.4,
         "n": 72,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +5% above the Nainital regional average."
@@ -61608,8 +61608,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 68,
         "z": 0.16,
         "n": 72,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +2% above the Nainital regional average."
@@ -61675,9 +61675,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": 1,
         "total_mentions": 65,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -61739,9 +61739,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": 0,
         "total_mentions": 70,
-        "classification": "Competitive Advantage",
-        "badge_color": "emerald",
-        "action_recommendation": "Key competitive differentiator in Room; feature prominently in direct marketing and protected tariff tiers.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 0%.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -61835,9 +61835,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 66,
         "competitive_gap": 12,
         "total_mentions": 68,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -62120,8 +62120,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 68,
         "z": 0.08,
         "n": 65,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Clean rooms with lake view. Staff was very accommodating. Good breakfast spread."
@@ -62148,8 +62148,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 70,
         "z": 0,
         "n": 70,
-        "verdict_category": "lead",
-        "verdict": "Competitive Advantage",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "Clean rooms with lake view. Staff was very accommodating. Good breakfast spread."
@@ -62190,8 +62190,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 78,
         "z": 0.96,
         "n": 68,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +12% above the Nainital regional average."
@@ -62257,9 +62257,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": 21,
         "total_mentions": 62,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -62385,9 +62385,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": -16,
         "total_mentions": 52,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Location; competitors lead by 16%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor",
@@ -62702,8 +62702,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 88,
         "z": 1.68,
         "n": 62,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +21% above the Nainital regional average."
@@ -62758,8 +62758,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 55,
         "z": -1.28,
         "n": 52,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "A hidden gem on the hilltop. The rooms are exquisite with antique furniture. Panoramic lake view."
@@ -62839,9 +62839,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": 15,
         "total_mentions": 58,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Cleanliness; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -62999,9 +62999,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 66,
         "competitive_gap": -11,
         "total_mentions": 52,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Value; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Value; competitors lead by 11%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor",
@@ -63284,8 +63284,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 82,
         "z": 1.2,
         "n": 58,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Cleanliness stands out at +15% above the Nainital regional average."
@@ -63354,8 +63354,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 55,
         "z": -0.88,
         "n": 52,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [
             "A genuine heritage palace with stunning period furniture. Worth the premium for history lovers."
@@ -63421,9 +63421,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": -25,
         "total_mentions": 42,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Cleanliness; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 25%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -63453,9 +63453,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -18,
         "total_mentions": 55,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Food; competitors lead by 18%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -63485,9 +63485,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -22,
         "total_mentions": 52,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 22%.",
         "evidence_quotes": [
           {
             "platform": "MakeMyTrip",
@@ -63581,9 +63581,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 66,
         "competitive_gap": 4,
         "total_mentions": 48,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Value offers immediate market capture.",
+        "classification": "Competitive Advantage",
+        "badge_color": "emerald",
+        "action_recommendation": "Key competitive differentiator in Value; feature prominently in direct marketing and protected tariff tiers.",
         "evidence_quotes": [
           {
             "platform": "Google Places / MakeMyTrip",
@@ -63613,9 +63613,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 68,
         "competitive_gap": -24,
         "total_mentions": 32,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Housekeeping; competitors lead by 24%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -63866,8 +63866,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 42,
         "z": -2,
         "n": 42,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -63880,8 +63880,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 52,
         "z": -1.44,
         "n": 55,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -63894,8 +63894,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 48,
         "z": -1.76,
         "n": 52,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -63936,8 +63936,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 70,
         "z": 0.32,
         "n": 48,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "lead",
+        "verdict": "Competitive Advantage",
         "top_quotes": {
           "positive": [
             "Guest satisfaction for Value stands out at +4% above the Nainital regional average."
@@ -63950,8 +63950,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 44,
         "z": -1.92,
         "n": 32,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -64003,9 +64003,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 67,
         "competitive_gap": -32,
         "total_mentions": 42,
-        "classification": "Market Opportunity",
-        "badge_color": "cyan",
-        "action_recommendation": "Area where regional competitors struggle; investing in Cleanliness offers immediate market capture.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Cleanliness; competitors lead by 32%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -64035,9 +64035,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -28,
         "total_mentions": 52,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Food; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Food; competitors lead by 28%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -64067,9 +64067,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 70,
         "competitive_gap": -32,
         "total_mentions": 48,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Room; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Room; competitors lead by 32%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -64099,9 +64099,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": -19,
         "total_mentions": 48,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Staff; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Staff; competitors lead by 19%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -64131,9 +64131,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 71,
         "competitive_gap": -31,
         "total_mentions": 42,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Location; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Location; competitors lead by 31%.",
         "evidence_quotes": [
           {
             "platform": "Google",
@@ -64195,9 +64195,9 @@ window.CLUSTER_BENCHMARK = {
         "cluster_baseline": 68,
         "competitive_gap": -32,
         "total_mentions": 32,
-        "classification": "Market-Wide Problem",
-        "badge_color": "amber",
-        "action_recommendation": "Regional corridor constraint for Housekeeping; coordinate with local tourism administration.",
+        "classification": "Competitive Weakness",
+        "badge_color": "rose",
+        "action_recommendation": "Operational review required for Housekeeping; competitors lead by 32%.",
         "evidence_quotes": [
           {
             "platform": "TripAdvisor / Booking.com",
@@ -64448,8 +64448,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 35,
         "z": -2.56,
         "n": 42,
-        "verdict_category": "cluster_opportunity",
-        "verdict": "Market Opportunity",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -64462,8 +64462,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 42,
         "z": -2.24,
         "n": 52,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -64476,8 +64476,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 38,
         "z": -2.56,
         "n": 48,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -64490,8 +64490,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 52,
         "z": -1.52,
         "n": 48,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -64504,8 +64504,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 40,
         "z": -2.48,
         "n": 42,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
@@ -64532,8 +64532,8 @@ window.CLUSTER_BENCHMARK = {
         "score": 36,
         "z": -2.56,
         "n": 32,
-        "verdict_category": "market_wide",
-        "verdict": "Market-Wide Problem",
+        "verdict_category": "weakness",
+        "verdict": "Competitive Weakness",
         "top_quotes": {
           "positive": [],
           "negative": [
