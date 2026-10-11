@@ -2,7 +2,7 @@
 
 **Project:** Cluster Review Intelligence (CRI) & Competitive Benchmarking Platform  
 **Target Corridor:** Uttarakhand Regional Corridor (Mussoorie, Nainital, Bhimtal, Dehradun)  
-**Deployment URL:** [https://frontend-rosy-phi-23.vercel.app](https://frontend-rosy-phi-23.vercel.app)  
+**Deployment URL:** [https://frontend-rosy-phi-23.vercel.app](https://frontend-rosy-phi-23.vercel.app) | [https://adityajoshi202424-commits.github.io/clusteriq-hackathon/](https://adityajoshi202424-commits.github.io/clusteriq-hackathon/)  
 **Repository:** [https://github.com/adityajoshi202424-commits/clusteriq-hackathon](https://github.com/adityajoshi202424-commits/clusteriq-hackathon)  
 
 ---
