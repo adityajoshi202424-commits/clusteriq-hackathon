@@ -1,35 +1,35 @@
 /* ==========================================================================
    ClusterIQ - Cluster Review Intelligence (CRI)
-   Modern Executive Design System (Warm Titanium Glassmorphism & Joyful Accents)
+   Warm Spiced Espresso & Radiant Sunlit Gold Design Architecture
    ========================================================================== */
 
 :root {
-  --bg-primary: #121316;
-  --bg-secondary: #18191e;
-  --bg-card: rgba(28, 29, 35, 0.75);
-  --bg-card-hover: rgba(38, 40, 48, 0.85);
-  --border-glass: rgba(255, 255, 255, 0.08);
-  --border-focus: rgba(245, 158, 11, 0.6);
+  --bg-primary: #181412;        /* Rich warm roasted espresso (warm, cozy, zero cold blue) */
+  --bg-secondary: #231d19;      /* Roasted cocoa & dark chestnut mocha */
+  --bg-card: rgba(38, 30, 25, 0.82); /* Warm amber-bronze glass */
+  --bg-card-hover: rgba(52, 41, 34, 0.92);
+  --border-glass: rgba(245, 158, 11, 0.18);
+  --border-focus: rgba(245, 158, 11, 0.65);
 
-  --text-primary: #f8fafc;
-  --text-secondary: #a1a1aa;
-  --text-muted: #71717a;
+  --text-primary: #fdfaf6;      /* Luminous warm cream */
+  --text-secondary: #d6cbbf;    /* Warm cashmere sand */
+  --text-muted: #a39587;        /* Warm toasted almond */
 
-  /* Joyful & Uplifting Color Palette (Amber Sunburst, Fresh Emerald, Warm Sunset Coral) */
-  --accent-cyan: #f59e0b; /* Aliased to warm joyful amber for backward-compatibility */
-  --accent-cyan-glow: rgba(245, 158, 11, 0.25);
+  /* Joyful & Uplifting Color Palette (Sunburst Amber, Fresh Spring Emerald, Sunset Coral) */
+  --accent-cyan: #f59e0b; /* Aliased to warm joyful amber */
+  --accent-cyan-glow: rgba(245, 158, 11, 0.28);
   --accent-joy: #f59e0b;
   --accent-joy-light: #fbbf24;
-  --accent-joy-glow: rgba(245, 158, 11, 0.28);
+  --accent-joy-glow: rgba(245, 158, 11, 0.32);
   --accent-emerald: #10b981;
-  --accent-emerald-glow: rgba(16, 185, 129, 0.25);
+  --accent-emerald-glow: rgba(16, 185, 129, 0.28);
   --accent-amber: #f59e0b;
-  --accent-amber-glow: rgba(245, 158, 11, 0.25);
+  --accent-amber-glow: rgba(245, 158, 11, 0.28);
   --accent-coral: #f97316;
-  --accent-coral-glow: rgba(249, 115, 22, 0.25);
+  --accent-coral-glow: rgba(249, 115, 22, 0.28);
   --accent-rose: #f43f5e;
-  --accent-rose-glow: rgba(244, 63, 94, 0.25);
-  --accent-slate: #71717a;
+  --accent-rose-glow: rgba(244, 63, 94, 0.28);
+  --accent-slate: #a39587;
 
   --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --radius-sm: 6px;
@@ -40,26 +40,26 @@
 }
 
 [data-theme="light"] {
-  --bg-primary: #faf8f5;
-  --bg-secondary: #f4efe6;
-  --bg-card: rgba(255, 255, 255, 0.92);
-  --bg-card-hover: rgba(254, 252, 248, 0.98);
-  --border-glass: rgba(180, 150, 120, 0.16);
-  --border-focus: rgba(245, 158, 11, 0.8);
+  --bg-primary: #fbf7ee;        /* Sunlit honey cream - cheerful, warm, inviting */
+  --bg-secondary: #f4ecdc;      /* Warm golden almond / soft apricot cashmere */
+  --bg-card: rgba(255, 255, 255, 0.96); /* Clean luminous warm white card */
+  --bg-card-hover: #ffffff;
+  --border-glass: rgba(217, 119, 6, 0.18);
+  --border-focus: rgba(217, 119, 6, 0.7);
 
-  --text-primary: #1c1917;
-  --text-secondary: #57534e;
-  --text-muted: #78716c;
+  --text-primary: #1c1917;      /* Deep warm espresso - 100% visible, sharp contrast */
+  --text-secondary: #44403c;    /* Deep warm stone */
+  --text-muted: #78716c;        /* Warm taupe */
 
   --accent-cyan: #d97706;
-  --accent-cyan-glow: rgba(245, 158, 11, 0.15);
+  --accent-cyan-glow: rgba(217, 119, 6, 0.18);
   --accent-joy: #d97706;
-  --accent-joy-light: #f59e0b;
-  --accent-joy-glow: rgba(245, 158, 11, 0.18);
-  --accent-emerald-glow: rgba(16, 185, 129, 0.15);
-  --accent-amber-glow: rgba(245, 158, 11, 0.15);
-  --accent-coral-glow: rgba(249, 115, 22, 0.15);
-  --accent-rose-glow: rgba(244, 63, 94, 0.15);
+  --accent-joy-light: #b45309;
+  --accent-joy-glow: rgba(217, 119, 6, 0.22);
+  --accent-emerald-glow: rgba(5, 150, 105, 0.2);
+  --accent-amber-glow: rgba(217, 119, 6, 0.2);
+  --accent-coral-glow: rgba(234, 88, 12, 0.2);
+  --accent-rose-glow: rgba(225, 29, 72, 0.2);
 }
 
 * {
@@ -77,13 +77,20 @@ body {
   font-family: var(--font-family);
   background: var(--bg-primary);
   background-image: 
-    radial-gradient(circle at 15% 10%, rgba(245, 158, 11, 0.12) 0%, transparent 45%),
-    radial-gradient(circle at 85% 80%, rgba(16, 185, 129, 0.09) 0%, transparent 45%),
-    radial-gradient(circle at 50% 50%, rgba(249, 115, 22, 0.05) 0%, transparent 60%);
+    radial-gradient(circle at 12% 10%, rgba(245, 158, 11, 0.16) 0%, transparent 48%),
+    radial-gradient(circle at 88% 85%, rgba(16, 185, 129, 0.12) 0%, transparent 48%),
+    radial-gradient(circle at 50% 45%, rgba(249, 115, 22, 0.09) 0%, transparent 60%);
   color: var(--text-primary);
   line-height: 1.5;
   min-height: 100vh;
   overflow-x: clip;
+}
+
+[data-theme="light"] body {
+  background-image: 
+    radial-gradient(circle at 10% 12%, rgba(251, 191, 36, 0.22) 0%, transparent 52%),
+    radial-gradient(circle at 90% 88%, rgba(16, 185, 129, 0.14) 0%, transparent 52%),
+    radial-gradient(circle at 50% 50%, rgba(249, 115, 22, 0.11) 0%, transparent 62%);
 }
 
 /* Glass Card Utility */
@@ -98,7 +105,7 @@ body {
 }
 
 .glass-panel:hover {
-  border-color: rgba(245, 158, 11, 0.25);
+  border-color: rgba(245, 158, 11, 0.35);
 }
 
 /* Header & Top Navigation */
@@ -106,8 +113,9 @@ header.app-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(18, 19, 22, 0.88);
+  background: rgba(35, 29, 25, 0.94);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-glass);
   padding: 1rem 2rem;
   display: flex;
@@ -143,7 +151,7 @@ header.app-header {
   font-size: 1.35rem;
   font-weight: 800;
   letter-spacing: -0.02em;
-  background: linear-gradient(90deg, #fff, #94a3b8);
+  background: linear-gradient(90deg, var(--text-primary), var(--accent-joy-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -172,7 +180,7 @@ header.app-header {
 /* Mode Switcher Buttons */
 .mode-switcher {
   display: flex;
-  background: rgba(24, 25, 30, 0.85);
+  background: rgba(35, 29, 25, 0.85);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-full);
   padding: 0.3rem;
@@ -545,8 +553,8 @@ select.hotel-select.competitor-select:focus {
 }
 
 .aspect-bubble {
-  background: rgba(28, 29, 36, 0.65);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(42, 34, 28, 0.7);
+  border: 1px solid var(--border-glass);
   padding: 0.6rem 0.85rem;
   border-radius: var(--radius-sm);
   display: flex;
@@ -558,8 +566,8 @@ select.hotel-select.competitor-select:focus {
 }
 
 .aspect-bubble:hover {
-  background: rgba(30, 41, 59, 0.9);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(56, 44, 36, 0.95);
+  border-color: var(--accent-joy);
   transform: translateX(4px);
 }
 
@@ -598,7 +606,7 @@ select.hotel-select.competitor-select:focus {
   width: 520px;
   max-width: 90vw;
   height: 100vh;
-  background: #0f172a;
+  background: var(--bg-secondary);
   border-left: 1px solid var(--border-glass);
   box-shadow: -10px 0 40px rgba(0, 0, 0, 0.5);
   z-index: 101;
@@ -622,6 +630,7 @@ select.hotel-select.competitor-select:focus {
 .drawer-title {
   font-size: 1.15rem;
   font-weight: 700;
+  color: var(--text-primary);
 }
 
 .btn-close-drawer {
@@ -634,7 +643,7 @@ select.hotel-select.competitor-select:focus {
 }
 
 .btn-close-drawer:hover {
-  color: #fff;
+  color: var(--accent-joy);
 }
 
 .drawer-content {
@@ -647,7 +656,7 @@ select.hotel-select.competitor-select:focus {
 }
 
 .evidence-card {
-  background: rgba(30, 41, 59, 0.5);
+  background: var(--bg-card);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-sm);
   padding: 1rem;
@@ -664,7 +673,7 @@ select.hotel-select.competitor-select:focus {
 
 .evidence-quote {
   font-size: 0.85rem;
-  color: #e2e8f0;
+  color: var(--text-primary);
   font-style: italic;
   margin-bottom: 0.5rem;
   padding-left: 0.75rem;
@@ -859,7 +868,7 @@ select.hotel-select.competitor-select:focus {
 }
 
 .modal-dialog {
-  background: #0f172a;
+  background: var(--bg-secondary);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-md);
   width: 800px;
@@ -883,11 +892,11 @@ select.hotel-select.competitor-select:focus {
   overflow-y: auto;
   font-size: 0.9rem;
   line-height: 1.7;
-  color: #cbd5e1;
+  color: var(--text-secondary);
 }
 
 .modal-body h1, .modal-body h2, .modal-body h3, .modal-body h4 {
-  color: #fff;
+  color: var(--text-primary);
   margin: 1.5rem 0 0.5rem 0;
 }
 
@@ -1070,7 +1079,7 @@ select.hotel-select.competitor-select:focus {
   font-size: 2.1rem;
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #ffffff;
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -1086,7 +1095,7 @@ select.hotel-select.competitor-select:focus {
 
 .efficiency-formula {
   font-size: 0.88rem;
-  color: #94a3b8;
+  color: var(--text-muted);
   margin-top: 0.4rem;
 }
 
@@ -1094,7 +1103,7 @@ select.hotel-select.competitor-select:focus {
   background: rgba(0, 0, 0, 0.35);
   padding: 0.2rem 0.5rem;
   border-radius: 4px;
-  color: #f1f5f9;
+  color: var(--text-primary);
   font-family: monospace;
 }
 
@@ -1111,7 +1120,7 @@ select.hotel-select.competitor-select:focus {
 }
 
 .eff-stat-card {
-  background: rgba(28, 29, 36, 0.55);
+  background: var(--bg-card);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-sm);
   padding: 1rem;
@@ -1121,14 +1130,14 @@ select.hotel-select.competitor-select:focus {
 }
 
 .eff-stat-card:hover {
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(245, 158, 11, 0.35);
   transform: translateY(-2px);
 }
 
 .eff-stat-num {
   font-size: 1.45rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: var(--text-primary);
   line-height: 1.2;
 }
 
@@ -1143,13 +1152,13 @@ select.hotel-select.competitor-select:focus {
 .eff-stat-label {
   font-size: 0.8rem;
   font-weight: 600;
-  color: #cbd5e1;
+  color: var(--text-secondary);
   margin-top: 0.25rem;
 }
 
 .eff-stat-sub {
   font-size: 0.72rem;
-  color: #64748b;
+  color: var(--text-muted);
   margin-top: 0.2rem;
 }
 
@@ -1158,7 +1167,7 @@ select.hotel-select.competitor-select:focus {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 1.25rem;
-  background: rgba(28, 29, 36, 0.7);
+  background: var(--bg-card);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-sm);
   padding: 1.25rem;
@@ -1191,7 +1200,7 @@ select.hotel-select.competitor-select:focus {
 
 .raw-review-text {
   font-size: 0.92rem;
-  color: #f1f5f9;
+  color: var(--text-primary);
   line-height: 1.5;
   font-style: italic;
   margin-bottom: 0.75rem;
@@ -1203,7 +1212,7 @@ select.hotel-select.competitor-select:focus {
   padding: 0.5rem 0.75rem;
   border-radius: 0 6px 6px 0;
   font-size: 0.8rem;
-  color: #94a3b8;
+  color: var(--text-secondary);
   line-height: 1.4;
 }
 
@@ -1255,15 +1264,15 @@ select.hotel-select.competitor-select:focus {
 }
 
 .pill-badge.tag {
-  background: rgba(148, 163, 184, 0.15);
-  color: #cbd5e1;
-  border: 1px solid rgba(148, 163, 184, 0.3);
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-glass);
   font-family: monospace;
 }
 
 .pill-badge.confidence {
   background: rgba(255, 255, 255, 0.08);
-  color: #e2e8f0;
+  color: var(--text-secondary);
 }
 
 /* 5. One-Click Instant PDF Export Button */
@@ -1739,14 +1748,14 @@ select.hotel-select.competitor-select:focus {
   font-size: 1.65rem;
   font-weight: 800;
   letter-spacing: -0.02em;
-  color: #fff;
+  color: var(--text-primary);
   line-height: 1.25;
   margin-bottom: 0.85rem;
 }
 
 .stage-desc {
   font-size: 0.92rem;
-  color: #cbd5e1;
+  color: var(--text-secondary);
   line-height: 1.65;
   margin-bottom: 1.25rem;
 }
@@ -1760,7 +1769,7 @@ select.hotel-select.competitor-select:focus {
 .stage-metric {
   font-size: 0.75rem;
   font-weight: 600;
-  color: #94a3b8;
+  color: var(--text-muted);
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-glass);
   padding: 0.25rem 0.6rem;
@@ -1768,25 +1777,25 @@ select.hotel-select.competitor-select:focus {
 }
 
 [data-theme="light"] .stage-card {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82) 0%, rgba(241, 245, 249, 0.88) 100%);
-  border-color: rgba(0, 0, 0, 0.12);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(246, 239, 226, 0.92) 100%);
+  border-color: rgba(217, 119, 6, 0.2);
   box-shadow: 
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.95),
-    0 20px 45px -10px rgba(15, 23, 42, 0.12);
+    0 20px 45px -10px rgba(180, 83, 9, 0.12);
 }
 
 [data-theme="light"] .stage-media-pane {
-  background: rgba(255, 255, 255, 0.6);
-  border-color: rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(217, 119, 6, 0.2);
   box-shadow: 
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.95),
-    0 16px 36px rgba(15, 23, 42, 0.1);
+    0 16px 36px rgba(180, 83, 9, 0.1);
 }
 
 [data-theme="light"] .media-geo-pill {
-  background: rgba(255, 255, 255, 0.85);
-  color: #0f172a;
-  border-color: rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.92);
+  color: #1c1917;
+  border-color: rgba(217, 119, 6, 0.25);
 }
 
 @media (max-width: 980px) {
@@ -1816,7 +1825,7 @@ select.hotel-select.competitor-select:focus {
 .app-footer {
   margin-top: 4rem;
   border-top: 1px solid var(--border-glass);
-  background: rgba(18, 19, 22, 0.95);
+  background: var(--bg-secondary);
   padding: 2rem 0;
 }
 
@@ -1834,7 +1843,7 @@ select.hotel-select.competitor-select:focus {
 .footer-brand {
   font-size: 0.88rem;
   font-weight: 700;
-  color: #cbd5e1;
+  color: var(--text-primary);
 }
 
 .footer-links {
@@ -1850,7 +1859,7 @@ select.hotel-select.competitor-select:focus {
 }
 
 .footer-links a:hover {
-  color: #fff;
+  color: var(--accent-joy);
 }
 
 .footer-copy {
@@ -2652,4 +2661,416 @@ select.hotel-select.competitor-select:focus {
     display: none !important;
   }
 }
+
+/* ==========================================================================
+   Comprehensive Light Mode High-Contrast Rules (100% Visible & Legible)
+   ========================================================================== */
+[data-theme="light"] header.app-header {
+  background: rgba(251, 247, 238, 0.94);
+  border-bottom: 1px solid rgba(217, 119, 6, 0.18);
+  box-shadow: 0 4px 20px rgba(180, 83, 9, 0.06);
+}
+
+[data-theme="light"] .brand-title {
+  background: linear-gradient(90deg, #1c1917, #92400e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+[data-theme="light"] .mode-switcher {
+  background: rgba(244, 236, 220, 0.95);
+  border: 1px solid rgba(217, 119, 6, 0.22);
+}
+
+[data-theme="light"] .mode-btn {
+  color: #57534e;
+}
+
+[data-theme="light"] .mode-btn:hover {
+  color: #1c1917;
+}
+
+[data-theme="light"] .cache-toggle-wrapper {
+  background: rgba(244, 236, 220, 0.95);
+  border: 1px solid rgba(217, 119, 6, 0.22);
+}
+
+[data-theme="light"] .glass-panel {
+  box-shadow: 0 4px 20px rgba(180, 83, 9, 0.07);
+}
+
+[data-theme="light"] .b2b-onboarding-panel {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(254, 243, 199, 0.5) 100%);
+  border: 1px solid rgba(217, 119, 6, 0.3);
+  border-left: 4px solid var(--accent-joy);
+}
+
+[data-theme="light"] .b2b-cluster-dropdown,
+[data-theme="light"] .b2b-property-dropdown,
+[data-theme="light"] select.hotel-select {
+  background: #ffffff;
+  color: var(--text-primary);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .efficiency-hero-panel {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(254, 243, 199, 0.6) 100%);
+  border: 1px solid rgba(217, 119, 6, 0.35);
+  box-shadow: 0 10px 30px -10px rgba(217, 119, 6, 0.15);
+}
+
+[data-theme="light"] .efficiency-headline {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .eff-stat-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+[data-theme="light"] .eff-stat-num {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .eff-stat-label {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="light"] .eff-stat-sub {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="light"] .side-by-side-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+[data-theme="light"] .raw-review-text {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .translation-box {
+  background: rgba(254, 243, 199, 0.6);
+  color: var(--text-secondary) !important;
+  border-left: 3px solid #d97706;
+}
+
+[data-theme="light"] .aspect-bubble {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(217, 119, 6, 0.2);
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .aspect-bubble:hover {
+  background: rgba(254, 243, 199, 0.9);
+  border-color: var(--accent-joy);
+}
+
+[data-theme="light"] .b2g-hero-banner {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.22) 0%, rgba(244, 236, 220, 0.95) 100%);
+  border: 1px solid rgba(217, 119, 6, 0.3);
+}
+
+[data-theme="light"] .b2g-hero-banner h2 {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .b2g-hero-banner p {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="light"] .tester-box {
+  background: var(--bg-card);
+}
+
+[data-theme="light"] .tester-box h2 {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .tester-box p {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="light"] .tester-textarea {
+  background: #ffffff;
+  color: var(--text-primary) !important;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .preset-pill {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-secondary) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .preset-pill:hover {
+  background: rgba(16, 185, 129, 0.15);
+  color: #065f46 !important;
+}
+
+[data-theme="light"] .evidence-drawer {
+  background: #fbf7ee;
+  border-left: 1px solid rgba(217, 119, 6, 0.2);
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="light"] .drawer-title {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .btn-close-drawer {
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .btn-close-drawer:hover {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .evidence-card {
+  background: #ffffff;
+  border: 1px solid rgba(217, 119, 6, 0.2);
+}
+
+[data-theme="light"] .evidence-quote {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .modal-dialog {
+  background: #fbf7ee;
+  border: 1px solid rgba(217, 119, 6, 0.25);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+[data-theme="light"] .modal-header div {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .modal-body {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="light"] .modal-body h1,
+[data-theme="light"] .modal-body h2,
+[data-theme="light"] .modal-body h3,
+[data-theme="light"] .modal-body h4 {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .cross-city-table th {
+  background: #f4ecdc;
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .cross-city-table td {
+  color: var(--text-primary);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .cross-city-table tr:hover td {
+  background: rgba(245, 158, 11, 0.08);
+}
+
+[data-theme="light"] .app-footer {
+  background: #f4ecdc;
+  border-top: 1px solid rgba(217, 119, 6, 0.18);
+}
+
+[data-theme="light"] .footer-brand {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .footer-copy {
+  color: var(--text-muted);
+}
+
+[data-theme="light"] .footer-links a {
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .footer-links a:hover {
+  color: var(--text-primary);
+}
+
+[data-theme="light"] .scrolly-sticky-viewport {
+  background: #fbf7ee;
+}
+
+[data-theme="light"] .scrolly-hud {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .hud-phase {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .stage-title {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="light"] .stage-desc {
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="light"] .stage-metric {
+  color: var(--text-secondary) !important;
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .char-counter {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text-muted);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .pill-badge.tag {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-secondary) !important;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .pill-badge.confidence {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-secondary) !important;
+}
+
+[data-theme="light"] .prescription-detail-box {
+  background: rgba(245, 158, 11, 0.08) !important;
+  color: var(--text-secondary) !important;
+  border: 1px solid rgba(245, 158, 11, 0.2) !important;
+}
+
+[data-theme="light"] .tag-badge {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: var(--text-secondary);
+}
+
+[data-theme="light"] .aspect-table td {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .aspect-table tr:hover td {
+  background: rgba(245, 158, 11, 0.05);
+}
+
+[data-theme="light"] .btn-skip-to-dashboard {
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--text-primary);
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Light mode matrix quadrant adjustments */
+[data-theme="light"] .matrix-quadrant.advantage {
+  background: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.35);
+}
+[data-theme="light"] .matrix-quadrant.advantage .quadrant-title {
+  color: #047857 !important;
+}
+[data-theme="light"] .matrix-quadrant.advantage .quadrant-header span:last-child {
+  color: #065f46 !important;
+}
+
+[data-theme="light"] .matrix-quadrant.opportunity {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.35);
+}
+[data-theme="light"] .matrix-quadrant.opportunity .quadrant-title {
+  color: #b45309 !important;
+}
+[data-theme="light"] .matrix-quadrant.opportunity .quadrant-header span:last-child {
+  color: #92400e !important;
+}
+
+[data-theme="light"] .matrix-quadrant.weakness {
+  background: rgba(244, 63, 94, 0.08);
+  border-color: rgba(244, 63, 94, 0.35);
+}
+[data-theme="light"] .matrix-quadrant.weakness .quadrant-title {
+  color: #be123c !important;
+}
+[data-theme="light"] .matrix-quadrant.weakness .quadrant-header span:last-child {
+  color: #9f1239 !important;
+}
+
+[data-theme="light"] .matrix-quadrant.market-problem {
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.35);
+}
+[data-theme="light"] .matrix-quadrant.market-problem .quadrant-title {
+  color: #b45309 !important;
+}
+[data-theme="light"] .matrix-quadrant.market-problem .quadrant-header span:last-child {
+  color: #92400e !important;
+}
+
+/* Light mode aspect bubbles */
+[data-theme="light"] .aspect-bubble {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+[data-theme="light"] .aspect-bubble span:first-child {
+  color: var(--text-primary) !important;
+}
+[data-theme="light"] .aspect-bubble span:last-child {
+  color: var(--text-muted) !important;
+}
+
+/* Light mode classification badges */
+[data-theme="light"] .badge-classification.rose {
+  background: rgba(225, 29, 72, 0.12) !important;
+  border-color: rgba(225, 29, 72, 0.35) !important;
+  color: #9f1239 !important;
+}
+[data-theme="light"] .badge-classification.amber {
+  background: rgba(217, 119, 6, 0.12) !important;
+  border-color: rgba(217, 119, 6, 0.35) !important;
+  color: #92400e !important;
+}
+[data-theme="light"] .badge-classification.emerald {
+  background: rgba(16, 185, 129, 0.12) !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+  color: #047857 !important;
+}
+
+/* Light mode prescription buttons */
+[data-theme="light"] .btn-prescription-evidence[data-category="Cleanliness"],
+[data-theme="light"] .btn-prescription-evidence[data-category="Food"],
+[data-theme="light"] .btn-prescription-evidence[data-category="Housekeeping"],
+[data-theme="light"] .btn-prescription-evidence[data-category="Staff"] {
+  background: rgba(225, 29, 72, 0.12) !important;
+  border: 1px solid rgba(225, 29, 72, 0.35) !important;
+  color: #9f1239 !important;
+}
+[data-theme="light"] .btn-prescription-evidence[data-category="Room"],
+[data-theme="light"] .btn-prescription-evidence[data-category="Booking"],
+[data-theme="light"] .btn-prescription-evidence[data-category="Value"] {
+  background: rgba(217, 119, 6, 0.12) !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
+  color: #92400e !important;
+}
+
+/* Light mode headings inside glass cards */
+[data-theme="light"] .glass-panel h4[style*="#fb7185"] {
+  color: #be123c !important;
+}
+[data-theme="light"] .glass-panel h4[style*="#fbbf24"] {
+  color: #b45309 !important;
+}
+[data-theme="light"] .glass-panel h4[style*="#34d399"] {
+  color: #047857 !important;
+}
+
+/* Code box in light mode */
+[data-theme="light"] #api-tester-response {
+  background: #231d19 !important;
+  color: #fde68a !important;
+}
+
+
 

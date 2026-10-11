@@ -747,6 +747,8 @@ function renderRadarChart(aspects) {
     const svg = document.getElementById('radar-svg');
     svg.innerHTML = '';
 
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+
     const width = 360;
     const height = 320;
     const centerX = width / 2;
@@ -770,7 +772,7 @@ function renderRadarChart(aspects) {
         const poly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
         poly.setAttribute('points', polyPoints.join(' '));
         poly.setAttribute('fill', 'transparent');
-        poly.setAttribute('stroke', 'rgba(255, 255, 255, 0.08)');
+        poly.setAttribute('stroke', isLight ? 'rgba(0, 0, 0, 0.12)' : 'rgba(255, 255, 255, 0.08)');
         poly.setAttribute('stroke-width', '1');
         svg.appendChild(poly);
     });
@@ -786,7 +788,7 @@ function renderRadarChart(aspects) {
         line.setAttribute('y1', centerY);
         line.setAttribute('x2', x);
         line.setAttribute('y2', y);
-        line.setAttribute('stroke', 'rgba(255, 255, 255, 0.12)');
+        line.setAttribute('stroke', isLight ? 'rgba(0, 0, 0, 0.15)' : 'rgba(255, 255, 255, 0.12)');
         line.setAttribute('stroke-width', '1');
         svg.appendChild(line);
 
@@ -799,9 +801,9 @@ function renderRadarChart(aspects) {
         text.setAttribute('y', ly);
         text.setAttribute('text-anchor', 'middle');
         text.setAttribute('dominant-baseline', 'middle');
-        text.setAttribute('fill', '#94a3b8');
+        text.setAttribute('fill', isLight ? '#1c1917' : '#d6cbbf');
         text.setAttribute('font-size', '11');
-        text.setAttribute('font-weight', '600');
+        text.setAttribute('font-weight', '700');
         text.textContent = asp.category;
         svg.appendChild(text);
     });
@@ -911,7 +913,7 @@ function renderLeaderboardTable(aspects) {
                 </span>
             </td>
             <td>
-                <span style="color: #94a3b8;">${asp.cluster_baseline > 0 ? '+' : ''}${asp.cluster_baseline}</span>
+                <span style="color: var(--text-muted);">${asp.cluster_baseline > 0 ? '+' : ''}${asp.cluster_baseline}</span>
             </td>
             <td>
                 <span class="delta-badge ${isPos ? 'pos' : 'neg'}">
@@ -952,7 +954,7 @@ function renderOpportunityMatrix(aspects) {
         bubble.className = 'aspect-bubble';
         bubble.innerHTML = `
             <span><strong>${asp.category}</strong> (${asp.property_score > 0 ? '+' : ''}${asp.property_score})</span>
-            <span style="font-size: 0.75rem; color: #94a3b8;">Gap: ${asp.competitive_gap > 0 ? '+' : ''}${asp.competitive_gap}%</span>
+            <span style="font-size: 0.75rem; color: var(--text-muted);">Gap: ${asp.competitive_gap > 0 ? '+' : ''}${asp.competitive_gap}%</span>
         `;
         const quotes = asp.evidence_quotes || asp.quotes || [];
         bubble.addEventListener('click', () => {
@@ -972,7 +974,7 @@ function renderOpportunityMatrix(aspects) {
 
     [qAdvantage, qWeakness, qMarketProb, qOpportunity].forEach(q => {
         if (q.children.length === 0) {
-            q.innerHTML = '<div style="font-size: 0.8rem; color: #64748b; font-style: italic;">None identified</div>';
+            q.innerHTML = '<div style="font-size: 0.8rem; color: var(--text-muted); font-style: italic;">None identified</div>';
         }
     });
 }
@@ -983,6 +985,8 @@ function renderTimelineChart(monthlyTrend, propName) {
     svg.innerHTML = '';
     svg.setAttribute('viewBox', '0 0 850 200');
     svg.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
 
     const width = 850;
     const height = 200;
@@ -1049,7 +1053,7 @@ function renderTimelineChart(monthlyTrend, propName) {
         line.setAttribute('y1', y);
         line.setAttribute('x2', width - padding.right);
         line.setAttribute('y2', y);
-        line.setAttribute('stroke', 'rgba(255, 255, 255, 0.07)');
+        line.setAttribute('stroke', isLight ? 'rgba(0, 0, 0, 0.10)' : 'rgba(255, 255, 255, 0.07)');
         line.setAttribute('stroke-width', '1');
         svg.appendChild(line);
 
@@ -1058,7 +1062,7 @@ function renderTimelineChart(monthlyTrend, propName) {
         lbl.setAttribute('y', y + 3.5);
         lbl.setAttribute('text-anchor', 'end');
         lbl.setAttribute('font-size', '10');
-        lbl.setAttribute('fill', '#64748b');
+        lbl.setAttribute('fill', isLight ? '#78716c' : '#a39587');
         lbl.textContent = `${level}%`;
         svg.appendChild(lbl);
     });
@@ -1071,12 +1075,12 @@ function renderTimelineChart(monthlyTrend, propName) {
         '2026-01': "Jan '26", '2026-02': "Feb '26"
     };
 
-    // Cluster Average dashed line (slate grey)
+    // Competitor Benchmark dashed line
     let clusterPoints = trendData.map((m, i) => `${(padding.left + i * stepX).toFixed(1)},${valToY(m.cluster_sentiment ?? m.cluster_avg ?? 65).toFixed(1)}`);
     const clusterPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     clusterPath.setAttribute('d', `M ${clusterPoints.join(' L ')}`);
     clusterPath.setAttribute('fill', 'none');
-    clusterPath.setAttribute('stroke', '#94a3b8');
+    clusterPath.setAttribute('stroke', isLight ? '#059669' : '#10b981');
     clusterPath.setAttribute('stroke-width', '1.75');
     clusterPath.setAttribute('stroke-dasharray', '4 4');
     svg.appendChild(clusterPath);
@@ -1114,7 +1118,7 @@ function renderTimelineChart(monthlyTrend, propName) {
         monthLbl.setAttribute('y', height - 12);
         monthLbl.setAttribute('text-anchor', 'middle');
         monthLbl.setAttribute('font-size', '9');
-        monthLbl.setAttribute('fill', '#94a3b8');
+        monthLbl.setAttribute('fill', isLight ? '#44403c' : '#d6cbbf');
         monthLbl.textContent = monthNames[p.month] || p.month;
         svg.appendChild(monthLbl);
 
@@ -1209,8 +1213,8 @@ function renderActionPrescriptions(aspects, prop) {
                     </button>
                 </div>
             </div>
-            <p style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 0.75rem;">${w.action_recommendation}</p>
-            <div style="font-size: 0.78rem; color: #94a3b8; background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">${w.action_recommendation}</p>
+            <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
                 <strong>Expected Impact & ROI:</strong> Competitors maintain a <strong>${w.cluster_baseline > 0 ? '+' : ''}${w.cluster_baseline}%</strong> satisfaction baseline while you lag at <strong>${w.property_score}%</strong>. Addressing this gap protects an estimated <strong>₹45,000 - ₹95,000 / month</strong> in prevented booking cancellations.
             </div>
         `;
@@ -1242,8 +1246,8 @@ function renderActionPrescriptions(aspects, prop) {
                     </button>
                 </div>
             </div>
-            <p style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 0.75rem;">${o.action_recommendation}</p>
-            <div style="font-size: 0.78rem; color: #94a3b8; background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">${o.action_recommendation}</p>
+            <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
                 <strong>Market Edge & Revenue Impact:</strong> While nearby competitors struggle with guest complaints on ${o.category} (${o.cluster_baseline}%), your score reaches <strong>${o.property_score}%</strong>. Highlighting this in direct ad copy captures an estimated <strong>12% - 18% direct booking lift</strong>.
             </div>
         `;
@@ -1275,8 +1279,8 @@ function renderActionPrescriptions(aspects, prop) {
                     </button>
                 </div>
             </div>
-            <p style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 0.75rem;">${a.action_recommendation}</p>
-            <div style="font-size: 0.78rem; color: #94a3b8; background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">${a.action_recommendation}</p>
+            <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
                 <strong>Brand Value & Room Rate Defense:</strong> High guest satisfaction of <strong>${a.property_score}%</strong> supports your pricing integrity. Defends <strong>₹1,500 - ₹3,500 premium</strong> per room night over the local average.
             </div>
         `;
@@ -1308,8 +1312,8 @@ function renderActionPrescriptions(aspects, prop) {
                     </button>
                 </div>
             </div>
-            <p style="font-size: 0.85rem; color: #cbd5e1; margin-bottom: 0.75rem;">${m.action_recommendation}</p>
-            <div style="font-size: 0.78rem; color: #94a3b8; background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">${m.action_recommendation}</p>
+            <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
                 <strong>Destination Context:</strong> Both your hotel (${m.property_score}%) and the town average (${m.cluster_baseline}%) experience friction on ${m.category}. Setting clear expectations with guests before check-in reduces negative reviews by up to <strong>55%</strong>.
             </div>
         `;
@@ -1323,7 +1327,7 @@ function renderActionPrescriptions(aspects, prop) {
     });
 
     if (container.children.length === 0) {
-        container.innerHTML = '<p style="color: #94a3b8; font-style: italic; padding: 1rem;">No immediate operational risks detected. All key categories are on par with or exceeding competitor standards.</p>';
+        container.innerHTML = '<p style="color: var(--text-muted); font-style: italic; padding: 1rem;">No immediate operational risks detected. All key categories are on par with or exceeding competitor standards.</p>';
     }
 }
 
@@ -1351,7 +1355,7 @@ function openEvidenceDrawer(category, rawQuotes) {
     container.innerHTML = '';
 
     if (!quotes || quotes.length === 0) {
-        container.innerHTML = '<p style="color: #94a3b8; padding: 1rem;">No direct guest comments recorded for this category.</p>';
+        container.innerHTML = '<p style="color: var(--text-muted); padding: 1rem;">No direct guest comments recorded for this category.</p>';
     } else {
         quotes.forEach(q => {
             const card = document.createElement('div');
@@ -1365,7 +1369,7 @@ function openEvidenceDrawer(category, rawQuotes) {
                 <div class="evidence-quote ${isPos ? '' : 'neg'}">
                     "${q.quote || q.text || ''}"
                 </div>
-                <div style="font-size: 0.78rem; color: #cbd5e1; line-height: 1.4; margin-bottom: 0.5rem;">
+                <div style="font-size: 0.78rem; color: var(--text-secondary); line-height: 1.4; margin-bottom: 0.5rem;">
                     <strong>Full Context:</strong> ${q.full_text || q.quote || ''}
                 </div>
                 <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
@@ -1435,20 +1439,20 @@ function renderTourismDashboard(data) {
             <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
                 <div>
                     <span class="severity-pill ${sevClass}">${issue.severity} Priority</span>
-                    <h3 style="font-size: 1.1rem; font-weight: 700; margin-top: 0.35rem; color: #fff;">${issue.title}</h3>
+                    <h3 style="font-size: 1.1rem; font-weight: 700; margin-top: 0.35rem; color: var(--text-primary);">${issue.title}</h3>
                 </div>
                 <span style="font-size: 0.8rem; font-weight: 700; color: #fbbf24; background: rgba(245,158,11,0.15); padding: 0.25rem 0.65rem; border-radius: 4px;">
                     ${issue.impact_metric}
                 </span>
             </div>
-            <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 1rem;">${issue.description}</p>
-            <div style="background: rgba(28,29,36,0.65); padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); margin-bottom: 0.75rem;">
+            <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">${issue.description}</p>
+            <div style="background: var(--bg-card); padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid var(--border-glass); margin-bottom: 0.75rem;">
                 <div style="font-size: 0.82rem; color: #fbbf24; font-weight: 600; margin-bottom: 0.25rem;">
                     Recommended Authority Action:
                 </div>
-                <div style="font-size: 0.85rem; color: #f1f5f9;">${issue.recommended_authority_action}</div>
+                <div style="font-size: 0.85rem; color: var(--text-primary);">${issue.recommended_authority_action}</div>
             </div>
-            <div style="font-size: 0.75rem; color: #94a3b8; display: flex; justify-content: space-between;">
+            <div style="font-size: 0.75rem; color: var(--text-muted); display: flex; justify-content: space-between;">
                 <span><strong>Corridors Affected:</strong> ${issue.affected_corridors.join(', ')}</span>
                 <span><strong>Jurisdiction:</strong> ${issue.responsible_body}</span>
             </div>
@@ -1464,7 +1468,7 @@ function renderTourismDashboard(data) {
         item.style.padding = '1rem';
         item.style.marginBottom = '0.75rem';
         item.innerHTML = `
-            <div style="font-size: 0.75rem; color: #94a3b8; margin-bottom: 0.35rem; display: flex; justify-content: space-between;">
+            <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 0.35rem; display: flex; justify-content: space-between;">
                 <span><strong>${c.hotel}</strong> • ${c.platform}</span>
                 <span>${c.date}</span>
             </div>
@@ -1519,10 +1523,10 @@ Aggregated telemetry across 1,400+ public traveler reviews identifies 4 critical
         }
         
         let html = rawMarkdown
-            .replace(/^# (.*$)/gim, '<h1 style="color: #fff; font-size: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; margin-top: 1rem;">$1</h1>')
-            .replace(/^## (.*$)/gim, '<h2 style="color: #fbbf24; font-size: 1.25rem; margin-top: 1rem;">$1</h2>')
-            .replace(/^### (.*$)/gim, '<h3 style="color: #f1f5f9; font-size: 1.1rem; margin-top: 1rem;">$1</h3>')
-            .replace(/^#### (.*$)/gim, '<h4 style="color: #fbbf24; font-size: 1rem; margin-top: 0.85rem;">$1</h4>')
+            .replace(/^# (.*$)/gim, '<h1 style="color: var(--text-primary); font-size: 1.5rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 0.5rem; margin-top: 1rem;">$1</h1>')
+            .replace(/^## (.*$)/gim, '<h2 style="color: var(--accent-joy); font-size: 1.25rem; margin-top: 1rem;">$1</h2>')
+            .replace(/^### (.*$)/gim, '<h3 style="color: var(--text-primary); font-size: 1.1rem; margin-top: 1rem;">$1</h3>')
+            .replace(/^#### (.*$)/gim, '<h4 style="color: var(--accent-joy); font-size: 1rem; margin-top: 0.85rem;">$1</h4>')
             .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
             .replace(/\*(.*?)\*/gim, '<em>$1</em>')
             .replace(/^\* (.*$)/gim, '<li style="margin-left: 1.5rem; margin-bottom: 0.35rem;">$1</li>')
@@ -1828,7 +1832,7 @@ function initLiveTester() {
         jsonContainer.textContent = JSON.stringify(data, null, 2);
 
         if (!data.aspects || data.aspects.length === 0) {
-            resultsContainer.innerHTML = '<p style="color: #94a3b8; padding: 1rem;">No specific hospitality aspects identified. Heuristic baseline active.</p>';
+            resultsContainer.innerHTML = '<p style="color: var(--text-muted); padding: 1rem;">No specific hospitality aspects identified. Heuristic baseline active.</p>';
             return;
         }
 
@@ -1853,7 +1857,7 @@ function initLiveTester() {
                     </div>
                 </div>
                 <div class="classification-col">
-                    <div style="font-size: 0.72rem; text-transform: uppercase; color: #94a3b8; font-weight: 700; letter-spacing: 0.05em;">
+                    <div style="font-size: 0.72rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700; letter-spacing: 0.05em;">
                         Engine Extracted Metadata:
                     </div>
                     <div class="classification-pills-row">
@@ -1864,7 +1868,7 @@ function initLiveTester() {
                         <span class="pill-badge confidence">Conf: ${Math.round(asp.confidence * 100)}%</span>
                         ${isPublic ? '<span class="pill-badge" style="background: rgba(245,158,11,0.2); color: #fbbf24; border: 1px solid rgba(245,158,11,0.4);">Public Civil Infrastructure</span>' : '<span class="pill-badge" style="background: rgba(16,185,129,0.18); color: #34d399; border: 1px solid rgba(16,185,129,0.35);">Property Operational</span>'}
                     </div>
-                    <div style="font-size: 0.78rem; color: #cbd5e1; background: rgba(0,0,0,0.3); padding: 0.5rem 0.75rem; border-radius: 6px;">
+                    <div style="font-size: 0.78rem; color: var(--text-secondary); background: var(--bg-card); border: 1px solid var(--border-glass); padding: 0.5rem 0.75rem; border-radius: 6px;">
                         <strong>Evidence Citation:</strong> "${asp.evidence_snippet}"
                     </div>
                 </div>
@@ -2242,6 +2246,11 @@ function initThemeToggle() {
             localStorage.setItem('clusteriq-theme', 'light');
             iconSun.style.display = 'block';
             iconMoon.style.display = 'none';
+        }
+        // Re-render active views so all SVG charts and components adapt dynamically
+        const activeHotel = document.getElementById('b2b-property-select')?.value || 'JW Marriott Mussoorie Walnut Grove Resort & Spa';
+        if (typeof updateDashboard === 'function') {
+            updateDashboard(activeHotel);
         }
     });
 }
