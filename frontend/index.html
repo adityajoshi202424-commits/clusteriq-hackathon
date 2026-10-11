@@ -579,10 +579,13 @@
                             </select>
                         </div>
                         <div class="selector-field">
-                            <span class="selector-field-label">Compare vs Competitor</span>
-                            <select id="b2b-competitor-select" class="b2b-property-dropdown competitor-select" title="Select Competitor to Compare Against">
-                                <!-- Populated dynamically with competitors, excluding Your Hotel -->
-                            </select>
+                            <span class="selector-field-label">Benchmark Baseline</span>
+                            <div class="benchmark-baseline-badge" title="Automatically benchmarked against verified regional competitors">
+                                <span class="baseline-dot"></span>
+                                <span>Market Competitor Average</span>
+                            </div>
+                            <!-- Retained hidden select for JavaScript programmatic synchronization -->
+                            <select id="b2b-competitor-select" class="b2b-property-dropdown competitor-select" style="display: none;" aria-hidden="true" title="Competitor Baseline"></select>
                         </div>
                     </div>
                 </div>
@@ -857,7 +860,7 @@
                         <text x="288.8" y="188" text-anchor="middle" font-size="9" fill="#94a3b8">May '25</text>
                         <circle cx="288.8" cy="98.9" r="5.5" fill="#f43f5e" stroke="#ffffff" stroke-width="2" style="cursor:pointer;"><title>May '25: Hotel 47% vs Competitors 67% (Cleanliness Shift)</title></circle>
                         <g>
-                            <rect x="233.55" y="76.9" width="110.5" height="15" rx="4" fill="#2d221c" stroke="rgba(244, 63, 94, 0.6)" stroke-width="1" />
+                            <rect x="233.55" y="76.9" width="110.5" height="15" rx="4" fill="#361120" stroke="rgba(244, 63, 94, 0.6)" stroke-width="1" />
                             <text x="288.8" y="86.9" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fecdd3">Cleanliness Shift</text>
                         </g>
 
@@ -882,7 +885,7 @@
                         <text x="698.1" y="188" text-anchor="middle" font-size="9" fill="#94a3b8">Dec '25</text>
                         <circle cx="698.1" cy="95.0" r="5.5" fill="#f43f5e" stroke="#ffffff" stroke-width="2" style="cursor:pointer;"><title>Dec '25: Hotel 50% vs Competitors 66% (Room Gain)</title></circle>
                         <g>
-                            <rect x="663.1" y="73" width="70" height="15" rx="4" fill="#2d221c" stroke="rgba(244, 63, 94, 0.6)" stroke-width="1" />
+                            <rect x="663.1" y="73" width="70" height="15" rx="4" fill="#361120" stroke="rgba(244, 63, 94, 0.6)" stroke-width="1" />
                             <text x="698.1" y="83" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fecdd3">Room Gain</text>
                         </g>
 
