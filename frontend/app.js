@@ -50,44 +50,91 @@ if (document.readyState === 'loading') {
 
 // Mode Switching Controller
 function initModeSwitcher() {
-    const btnSearch = document.getElementById('btn-mode-search');
-    const btnHotel = document.getElementById('btn-mode-hotel');
-    const btnB2G = document.getElementById('btn-mode-b2g');
-    const btnLive = document.getElementById('btn-mode-live');
-
     const viewSearch = document.getElementById('view-search');
     const viewHotel = document.getElementById('view-hotel');
     const viewB2G = document.getElementById('view-b2g');
     const viewLive = document.getElementById('view-live');
-
-    btnHotel.addEventListener('click', () => setMode('hotel', true));
-    btnB2G.addEventListener('click', () => {
-        setMode('b2g', true);
-        if (!tourismData) loadTourismData();
-    });
-    btnSearch.addEventListener('click', () => setMode('search', true));
-    btnLive.addEventListener('click', () => setMode('live', true));
+    const activeModeTitle = document.getElementById('dashboard-active-mode-title');
 
     function setMode(mode, shouldScroll = false) {
-        btnSearch.className = `mode-btn ${mode === 'search' ? 'active' : ''}`;
-        btnHotel.className = `mode-btn ${mode === 'hotel' ? 'active' : ''}`;
-        btnB2G.className = `mode-btn ${mode === 'b2g' ? 'active b2g-active' : ''}`;
-        btnLive.className = `mode-btn ${mode === 'live' ? 'active play-active' : ''}`;
+        // Synchronize all mode buttons across the header and dashboard command bar
+        document.querySelectorAll('.mode-btn').forEach(btn => {
+            const btnMode = btn.getAttribute('data-mode') || 
+                (btn.id === 'btn-mode-hotel' ? 'hotel' : 
+                (btn.id === 'btn-mode-b2g' ? 'b2g' : 
+                (btn.id === 'btn-mode-live' ? 'live' : 'search')));
+            if (btnMode === mode) {
+                btn.className = `mode-btn active ${mode === 'b2g' ? 'b2g-active' : (mode === 'live' ? 'play-active' : '')}`;
+            } else {
+                btn.className = 'mode-btn';
+            }
+        });
 
-        viewSearch.className = `search-view ${mode === 'search' ? 'active' : ''}`;
-        viewHotel.className = `hotel-view ${mode === 'hotel' ? 'active' : ''}`;
-        viewB2G.className = `b2g-view ${mode === 'b2g' ? 'active' : ''}`;
-        viewLive.className = `live-view ${mode === 'live' ? 'active' : ''}`;
+        // Toggle active view panels
+        if (viewSearch) viewSearch.className = `search-view ${mode === 'search' ? 'active' : ''}`;
+        if (viewHotel) viewHotel.className = `hotel-view ${mode === 'hotel' ? 'active' : ''}`;
+        if (viewB2G) viewB2G.className = `b2g-view ${mode === 'b2g' ? 'active' : ''}`;
+        if (viewLive) viewLive.className = `live-view ${mode === 'live' ? 'active' : ''}`;
 
-        // Smooth scroll to selected view container only when triggered by explicit user click
+        // Update active title badge
+        if (activeModeTitle) {
+            const labels = {
+                'hotel': 'Hotel Manager View',
+                'search': 'City & Hotel Search',
+                'b2g': 'Tourism Board View (UTDB)',
+                'live': 'Live Review Tester'
+            };
+            activeModeTitle.textContent = labels[mode] || 'Hotel Manager View';
+        }
+
+        // Lazy load tourism data if switching to B2G
+        if (mode === 'b2g' && !tourismData && typeof loadTourismData === 'function') {
+            loadTourismData();
+        }
+
+        // Smooth scroll to selected view container or interactive workspace
         if (shouldScroll) {
-            const targetView = mode === 'search' ? viewSearch : (mode === 'hotel' ? viewHotel : (mode === 'b2g' ? viewB2G : viewLive));
-            if (targetView) {
-                targetView.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const workspace = document.getElementById('interactive-workspace');
+            if (workspace) {
+                workspace.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         }
     }
-    
+
+    // Attach click listeners to all mode buttons across the page
+    document.querySelectorAll('.mode-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const mode = btn.getAttribute('data-mode') || 
+                (btn.id === 'btn-mode-hotel' ? 'hotel' : 
+                (btn.id === 'btn-mode-b2g' ? 'b2g' : 
+                (btn.id === 'btn-mode-live' ? 'live' : 'search')));
+            setMode(mode, true);
+        });
+    });
+
+    // Explore Dashboard CTA buttons (Gateway and Header)
+    const btnExplore = document.getElementById('btn-explore-dashboard');
+    if (btnExplore) {
+        btnExplore.addEventListener('click', () => {
+            setMode('hotel', true);
+        });
+    }
+
+    const btnHeaderExplore = document.getElementById('header-btn-explore');
+    if (btnHeaderExplore) {
+        btnHeaderExplore.addEventListener('click', () => {
+            setMode('hotel', true);
+        });
+    }
+
+    // Gateway Mode Preview Cards
+    document.querySelectorAll('.gateway-mode-card').forEach(card => {
+        card.addEventListener('click', () => {
+            const mode = card.getAttribute('data-mode-card');
+            if (mode) setMode(mode, true);
+        });
+    });
+
     // Expose for external calls
     window.setMode = setMode;
 }

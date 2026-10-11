@@ -67,21 +67,28 @@
                     Refresh Hotel Data
                 </button>
             </div>
+            <button id="header-btn-explore" class="btn-header-explore" title="Jump to Interactive Dashboard Workspace">
+                <span>Explore Dashboard</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </button>
         </div>
 
-        <!-- Mode Switcher Toggle -->
-        <div class="mode-switcher">
-            <button id="btn-mode-search" class="mode-btn active">
+        <!-- Mode Switcher Toggle in Header -->
+        <div class="mode-switcher header-mode-switcher">
+            <button id="btn-mode-hotel" class="mode-btn active" data-mode="hotel" title="Switch to Hotel Manager View">
+                Hotel Manager
+            </button>
+            <button id="btn-mode-search" class="mode-btn" data-mode="search" title="Switch to City & Hotel Search">
                 City & Hotel Search
             </button>
-            <button id="btn-mode-hotel" class="mode-btn">
-                Hotel Manager View
+            <button id="btn-mode-b2g" class="mode-btn" data-mode="b2g" title="Switch to Tourism Board View">
+                Tourism Board
             </button>
-            <button id="btn-mode-b2g" class="mode-btn">
-                Tourism Board View
-            </button>
-            <button id="btn-mode-live" class="mode-btn">
-                Live Review Tester
+            <button id="btn-mode-live" class="mode-btn" data-mode="live" title="Switch to Live Review Tester">
+                Live Review
             </button>
         </div>
         <div id="global-scroll-progress" class="global-scroll-progress" aria-hidden="true"></div>
@@ -123,8 +130,8 @@
                 <button class="rail-tick" data-stage="5" title="City Infrastructure"></button>
             </div>
             <div class="scrolly-jump-bar">
-                <a href="#interactive-workspace" class="btn-skip-to-dashboard">
-                    Jump to Interactive Dashboards
+                <a href="#landing-gateway" class="btn-skip-to-dashboard">
+                    Explore Dashboard &rarr;
                 </a>
             </div>
         </div>
@@ -303,8 +310,89 @@
         </div>
     </section>
 
-    <!-- Main Content Container -->
+    <!-- =========================================================
+         LANDING GATEWAY: EXPLORE DASHBOARD CALL TO ACTION
+         ========================================================= -->
+    <section id="landing-gateway" class="landing-gateway-section reveal-on-scroll">
+        <div class="landing-gateway-card glass-panel">
+            <div class="gateway-eyebrow">Interactive Telemetry & Benchmarking</div>
+            <h2 class="gateway-headline">Explore the Regional Intelligence Workspace</h2>
+            <p class="gateway-subtext">
+                Transition from the regional corridor overview into the live operational engine. Benchmark 54 hotels across 4 destinations, inspect civic bottleneck registers, and analyze multi-lingual guest feedback in real time.
+            </p>
+            <div class="gateway-cta-wrapper">
+                <button id="btn-explore-dashboard" class="btn-explore-dashboard-main" title="Launch Interactive Intelligence Workspace">
+                    <span>Explore Dashboard</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="gateway-modes-grid">
+                <div class="gateway-mode-card" data-mode-card="hotel">
+                    <div class="mode-card-tag hotel">For Business Owners</div>
+                    <h3 class="mode-card-title">Hotel Manager</h3>
+                    <p class="mode-card-desc">Compare your hotel against market baselines, diagnose satisfaction deficits, and view revenue protection prescriptions.</p>
+                    <div class="mode-card-link">Open Hotel Manager &rarr;</div>
+                </div>
+
+                <div class="gateway-mode-card" data-mode-card="search">
+                    <div class="mode-card-tag search">Market Discovery</div>
+                    <h3 class="mode-card-title">City & Hotel Search</h3>
+                    <p class="mode-card-desc">Filter 54 hotels across Mussoorie, Nainital, Bhimtal, and Dehradun by aspect sentiment scores, price tiers, and data tiers.</p>
+                    <div class="mode-card-link">Explore Properties &rarr;</div>
+                </div>
+
+                <div class="gateway-mode-card" data-mode-card="b2g">
+                    <div class="mode-card-tag b2g">Governance & Policy</div>
+                    <h3 class="mode-card-title">Tourism Board (UTDB)</h3>
+                    <p class="mode-card-desc">Audit municipal infrastructure bottlenecks (roads, parking, water) and generate official District Magistrate policy briefs.</p>
+                    <div class="mode-card-link">View Civic Telemetry &rarr;</div>
+                </div>
+
+                <div class="gateway-mode-card" data-mode-card="live">
+                    <div class="mode-card-tag live">Real-Time NLP</div>
+                    <h3 class="mode-card-title">Live Review Tester</h3>
+                    <p class="mode-card-desc">Analyze guest reviews in English, Hindi, or conversational Hinglish with real-time heuristic parsing and aspect classification.</p>
+                    <div class="mode-card-link">Test Review Engine &rarr;</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Container: Interactive Dashboards -->
     <main id="interactive-workspace" class="container">
+
+        <!-- Dashboard Command Bar with 4 Modes -->
+        <div class="dashboard-command-bar glass-panel reveal-on-scroll">
+            <div class="command-bar-status">
+                <span class="status-pill">Interactive Workspace</span>
+                <span id="dashboard-active-mode-title" class="status-mode-name">Hotel Manager View</span>
+            </div>
+
+            <div class="mode-switcher dashboard-mode-switcher">
+                <button class="mode-btn active" data-mode="hotel" title="Switch to Hotel Manager View">
+                    Hotel Manager
+                </button>
+                <button class="mode-btn" data-mode="search" data-btn="search" title="Switch to City & Hotel Search">
+                    City & Hotel Search
+                </button>
+                <button class="mode-btn" data-mode="b2g" data-btn="b2g" title="Switch to Tourism Board View">
+                    Tourism Board
+                </button>
+                <button class="mode-btn" data-mode="live" data-btn="live" title="Switch to Live Review Tester">
+                    Live Review
+                </button>
+            </div>
+
+            <div class="command-bar-actions">
+                <a href="#scrolly-runway" class="btn-return-overview" title="Return to Regional Corridor Story">
+                    &uarr; Story Overview
+                </a>
+            </div>
+        </div>
 
         <!-- Efficiency Telemetry Panel -->
         <section class="efficiency-hero-panel reveal-on-scroll">
