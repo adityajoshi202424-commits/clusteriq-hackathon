@@ -92,6 +92,12 @@ function initModeSwitcher() {
             loadTourismData();
         }
 
+        // Ensure all elements in the newly activated view are immediately visible
+        const activeContainer = mode === 'hotel' ? viewHotel : (mode === 'b2g' ? viewB2G : (mode === 'live' ? viewLive : viewSearch));
+        if (activeContainer) {
+            activeContainer.querySelectorAll('.reveal-on-scroll').forEach(el => el.classList.add('revealed'));
+        }
+
         // Smooth scroll to selected view container or interactive workspace
         if (shouldScroll) {
             const workspace = document.getElementById('interactive-workspace');
@@ -2311,6 +2317,12 @@ function initScrollRevealEngine() {
 
     revealEls.forEach(el => observer.observe(el));
     window.clusterScrollObserver = observer;
+
+    // Immediately reveal elements inside the initially active view
+    const activeInit = document.querySelector('.hotel-view.active, .search-view.active, .b2g-view.active, .live-view.active');
+    if (activeInit) {
+        activeInit.querySelectorAll('.reveal-on-scroll').forEach(el => el.classList.add('revealed'));
+    }
 }
 
 // ==========================================================================

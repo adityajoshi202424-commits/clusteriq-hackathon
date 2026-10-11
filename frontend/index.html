@@ -547,72 +547,69 @@
         <!-- VIEW 1: B2B HOTEL OPERATOR DASHBOARD -->
         <div id="view-hotel" class="hotel-view">
 
-            <!-- B2B Find Your Hotel Onboarding Banner -->
-            <div class="b2b-onboarding-panel glass-panel reveal-on-scroll">
-                <div class="b2b-onboarding-info">
-                    <div class="onboarding-pill">HOTEL BENCHMARKING</div>
-                    <h3 class="onboarding-title">Benchmark Your Hotel Against Nearby Competitors</h3>
-                    <p class="onboarding-desc">Select your hotel across Mussoorie, Nainital, Bhimtal, or Dehradun to
-                        see how your service compares to competitors and uncover immediate revenue opportunities.</p>
-                </div>
-                <div class="b2b-onboarding-selector">
-                    <div class="selector-field">
-                        <span class="selector-field-label">Destination</span>
-                        <select id="b2b-cluster-select" class="b2b-cluster-dropdown" title="Filter by Destination">
-                            <option value="all">All Destinations</option>
-                            <option value="mussoorie">Mussoorie</option>
-                            <option value="nainital">Nainital</option>
-                            <option value="bhimtal">Bhimtal</option>
-                            <option value="dehradun">Dehradun</option>
-                        </select>
-                    </div>
-                    <div class="selector-field">
-                        <span class="selector-field-label">Your Hotel</span>
-                        <select id="b2b-quick-select" class="b2b-property-dropdown" title="Select Your Hotel">
-                            <!-- Populated dynamically -->
-                        </select>
-                    </div>
-                    <div class="selector-field">
-                        <span class="selector-field-label">Compare vs Competitor</span>
-                        <select id="b2b-competitor-select" class="b2b-property-dropdown competitor-select" title="Select Competitor to Compare Against">
-                            <!-- Populated dynamically with competitors, excluding Your Hotel -->
-                        </select>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Provenance & Data Quality Status Bar -->
-            <div id="property-provenance-bar" class="property-provenance-bar glass-panel reveal-on-scroll">
-                <span class="prov-item">Destination: <strong id="prov-cluster">Mussoorie</strong></span>
-                <span class="prov-divider">|</span>
-                <span class="prov-item">Property Type: <strong id="prov-segment">Leisure Resort</strong></span>
-                <span class="prov-divider">|</span>
-                <span class="prov-item">Data Coverage: <strong id="prov-coverage"
-                        class="badge-coverage coverage-multi">Multi-Platform Verified (150+ Reviews)</strong></span>
-                <span class="prov-divider">|</span>
-                <span class="prov-item">Reviews Analyzed: <strong id="prov-reviews">842 Verified Reviews</strong></span>
-                <span class="prov-divider">|</span>
-                <span class="prov-item">Platforms: <strong id="prov-platforms">Google Places, MMT, Booking.com,
-                        TripAdvisor</strong></span>
-                <span class="prov-divider">|</span>
-                <span class="prov-item">Last Updated: <strong id="prov-updated">Q1 2026</strong></span>
-            </div>
-
-            <!-- Property Info Toolbar & Telemetry Strip -->
-            <div class="glass-panel property-toolbar reveal-on-scroll">
-                <!-- Retained hidden selects for JavaScript programmatic synchronization -->
+            <!-- Unified B2B Hotel Benchmarking Console Header -->
+            <div class="b2b-onboarding-panel glass-panel">
+                <!-- Retained hidden elements for JavaScript programmatic synchronization -->
                 <select id="hotel-select" class="hotel-select" style="display: none;" aria-hidden="true" title="Selected Hotel"></select>
                 <select id="toolbar-competitor-select" class="hotel-select competitor-select" style="display: none;" aria-hidden="true" title="Benchmark Competitor"></select>
+                <strong id="active-hotel-display" style="display: none;" aria-hidden="true">Welcomhotel by ITC Hotels, The Savoy</strong>
 
-                <div class="property-active-status">
-                    <span class="active-status-label">Active Hotel:</span>
-                    <strong id="active-hotel-display" class="active-hotel-name">Welcomhotel by ITC Hotels, The Savoy</strong>
+                <div class="b2b-header-main">
+                    <div class="b2b-onboarding-info">
+                        <div class="onboarding-pill">HOTEL BENCHMARKING</div>
+                        <h3 class="onboarding-title">Benchmark Your Hotel Against Nearby Competitors</h3>
+                        <p class="onboarding-desc">Select your hotel across Mussoorie, Nainital, Bhimtal, or Dehradun to
+                            see how your service compares to competitors and uncover immediate revenue opportunities.</p>
+                    </div>
+                    <div class="b2b-onboarding-selector">
+                        <div class="selector-field">
+                            <span class="selector-field-label">Destination</span>
+                            <select id="b2b-cluster-select" class="b2b-cluster-dropdown" title="Filter by Destination">
+                                <option value="all">All Destinations</option>
+                                <option value="mussoorie">Mussoorie</option>
+                                <option value="nainital">Nainital</option>
+                                <option value="bhimtal">Bhimtal</option>
+                                <option value="dehradun">Dehradun</option>
+                            </select>
+                        </div>
+                        <div class="selector-field">
+                            <span class="selector-field-label">Your Hotel</span>
+                            <select id="b2b-quick-select" class="b2b-property-dropdown" title="Select Your Hotel">
+                                <!-- Populated dynamically -->
+                            </select>
+                        </div>
+                        <div class="selector-field">
+                            <span class="selector-field-label">Compare vs Competitor</span>
+                            <select id="b2b-competitor-select" class="b2b-property-dropdown competitor-select" title="Select Competitor to Compare Against">
+                                <!-- Populated dynamically with competitors, excluding Your Hotel -->
+                            </select>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Active Hotel Telemetry Strip -->
                 <div class="property-meta-tags">
-                    <span class="tag-badge">Location: <strong id="meta-location">Library Bazar, Mussoorie</strong></span>
-                    <span class="tag-badge">Rooms: <strong id="meta-rooms">121 Rooms</strong></span>
-                    <span class="tag-badge">Rate: <strong id="meta-price">₹22,000 - ₹45,000</strong></span>
-                    <span class="tag-badge">Proximity: <strong id="meta-mall-dist">150m to Mall Road</strong></span>
+                    <span class="tag-badge"><span class="badge-tag-label">Location:</span> <strong id="meta-location">Library Bazar, Mussoorie</strong></span>
+                    <span class="tag-badge"><span class="badge-tag-label">Rooms:</span> <strong id="meta-rooms">121 Rooms</strong></span>
+                    <span class="tag-badge"><span class="badge-tag-label">Rate:</span> <strong id="meta-price">₹22,000 - ₹45,000</strong></span>
+                    <span class="tag-badge"><span class="badge-tag-label">Proximity:</span> <strong id="meta-mall-dist">150m to Mall Road</strong></span>
+                </div>
+
+                <!-- Provenance & Multi-Platform Verification Status Strip -->
+                <div id="property-provenance-bar" class="property-provenance-bar">
+                    <span class="prov-item"><span class="prov-label">Destination:</span> <strong id="prov-cluster">Mussoorie</strong></span>
+                    <span class="prov-divider">|</span>
+                    <span class="prov-item"><span class="prov-label">Property Type:</span> <strong id="prov-segment">Leisure Resort</strong></span>
+                    <span class="prov-divider">|</span>
+                    <span class="prov-item"><span class="prov-label">Data Coverage:</span> <strong id="prov-coverage"
+                            class="badge-coverage coverage-multi">Multi-Platform Verified (150+ Reviews)</strong></span>
+                    <span class="prov-divider">|</span>
+                    <span class="prov-item"><span class="prov-label">Reviews Analyzed:</span> <strong id="prov-reviews">842 Verified Reviews</strong></span>
+                    <span class="prov-divider">|</span>
+                    <span class="prov-item"><span class="prov-label">Platforms:</span> <strong id="prov-platforms">Google Places, MMT, Booking.com,
+                            TripAdvisor</strong></span>
+                    <span class="prov-divider">|</span>
+                    <span class="prov-item"><span class="prov-label">Last Updated:</span> <strong id="prov-updated">Q1 2026</strong></span>
                 </div>
             </div>
 
