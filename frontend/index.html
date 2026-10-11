@@ -437,7 +437,7 @@
             <!-- Comparison Panel (hidden by default) -->
             <div id="comparison-panel" class="comparison-panel hidden glass-panel">
                 <div class="card-header"
-                    style="background: rgba(15,23,42,0.9); padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-glass); backdrop-filter: blur(10px);">
+                    style="background: var(--bg-secondary); padding: 1.5rem 2rem; border-bottom: 1px solid var(--border-glass); backdrop-filter: blur(10px);">
                     <div class="card-title">Head-to-Head Comparison</div>
                     <button id="btn-close-compare" class="alert-close-btn"
                         style="position: absolute; right: 2rem; top: 1.5rem; font-size: 1.5rem;">&times;</button>
@@ -502,25 +502,21 @@
                 <span class="prov-item">Last Updated: <strong id="prov-updated">Q1 2026</strong></span>
             </div>
 
-            <!-- Property Info Toolbar -->
+            <!-- Property Info Toolbar & Telemetry Strip -->
             <div class="glass-panel property-toolbar reveal-on-scroll">
-                <div class="property-selector-group">
-                    <span class="select-label">Your Hotel:</span>
-                    <select id="hotel-select" class="hotel-select" title="Select Your Hotel">
-                        <!-- Populated dynamically via JS -->
-                    </select>
-                </div>
-                <div class="competitor-selector-group">
-                    <span class="select-label">Benchmark vs:</span>
-                    <select id="toolbar-competitor-select" class="hotel-select competitor-select" title="Select Competitor to Benchmark Against">
-                        <!-- Populated dynamically via JS -->
-                    </select>
+                <!-- Retained hidden selects for JavaScript programmatic synchronization -->
+                <select id="hotel-select" class="hotel-select" style="display: none;" aria-hidden="true" title="Selected Hotel"></select>
+                <select id="toolbar-competitor-select" class="hotel-select competitor-select" style="display: none;" aria-hidden="true" title="Benchmark Competitor"></select>
+
+                <div class="property-active-status">
+                    <span class="active-status-label">Active Hotel:</span>
+                    <strong id="active-hotel-display" class="active-hotel-name">Welcomhotel by ITC Hotels, The Savoy</strong>
                 </div>
                 <div class="property-meta-tags">
-                    <span class="tag-badge">Location: <span id="meta-location">Library Bazar, Mussoorie</span></span>
-                    <span class="tag-badge">Rooms: <span id="meta-rooms">121 Rooms</span></span>
-                    <span class="tag-badge">Rate: <span id="meta-price">₹22,000 - ₹45,000</span></span>
-                    <span class="tag-badge">Proximity: <span id="meta-mall-dist">150m to Mall Road</span></span>
+                    <span class="tag-badge">Location: <strong id="meta-location">Library Bazar, Mussoorie</strong></span>
+                    <span class="tag-badge">Rooms: <strong id="meta-rooms">121 Rooms</strong></span>
+                    <span class="tag-badge">Rate: <strong id="meta-price">₹22,000 - ₹45,000</strong></span>
+                    <span class="tag-badge">Proximity: <strong id="meta-mall-dist">150m to Mall Road</strong></span>
                 </div>
             </div>
 
@@ -768,7 +764,7 @@
                         <text x="288.8" y="188" text-anchor="middle" font-size="9" fill="#94a3b8">May '25</text>
                         <circle cx="288.8" cy="98.9" r="5.5" fill="#f43f5e" stroke="#ffffff" stroke-width="2" style="cursor:pointer;"><title>May '25: Hotel 47% vs Competitors 67% (Cleanliness Shift)</title></circle>
                         <g>
-                            <rect x="233.55" y="76.9" width="110.5" height="15" rx="4" fill="rgba(28, 29, 36, 0.9)" stroke="rgba(244, 63, 94, 0.6)" stroke-width="1" />
+                            <rect x="233.55" y="76.9" width="110.5" height="15" rx="4" fill="#2d221c" stroke="rgba(244, 63, 94, 0.6)" stroke-width="1" />
                             <text x="288.8" y="86.9" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fecdd3">Cleanliness Shift</text>
                         </g>
 
@@ -793,7 +789,7 @@
                         <text x="698.1" y="188" text-anchor="middle" font-size="9" fill="#94a3b8">Dec '25</text>
                         <circle cx="698.1" cy="95.0" r="5.5" fill="#f43f5e" stroke="#ffffff" stroke-width="2" style="cursor:pointer;"><title>Dec '25: Hotel 50% vs Competitors 66% (Room Gain)</title></circle>
                         <g>
-                            <rect x="663.1" y="73" width="70" height="15" rx="4" fill="rgba(28, 29, 36, 0.9)" stroke="rgba(244, 63, 94, 0.6)" stroke-width="1" />
+                            <rect x="663.1" y="73" width="70" height="15" rx="4" fill="#2d221c" stroke="rgba(244, 63, 94, 0.6)" stroke-width="1" />
                             <text x="698.1" y="83" text-anchor="middle" font-size="9.5" font-weight="700" fill="#fecdd3">Room Gain</text>
                         </g>
 
@@ -1137,7 +1133,7 @@
                     </div>
                     <div class="card-body">
                         <pre id="live-json-preview"
-                            style="background: rgba(28,29,36,0.85); padding: 1rem; border-radius: 8px; color: #fbbf24; font-size: 0.8rem; overflow-x: auto; max-height: 400px;"></pre>
+                            style="background: var(--bg-card); border: 1px solid var(--border-glass); padding: 1rem; border-radius: 8px; color: #fbbf24; font-size: 0.8rem; overflow-x: auto; max-height: 400px;"></pre>
                     </div>
                 </div>
             </div>

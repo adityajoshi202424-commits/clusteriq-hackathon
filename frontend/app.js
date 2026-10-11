@@ -622,7 +622,9 @@ function renderHotelDashboard(data) {
     const cid = data.cluster_id || 'mussoorie';
     const cName = data.cluster_name || cid.charAt(0).toUpperCase() + cid.slice(1);
     
-    // Meta Toolbar
+    // Meta Toolbar & Telemetry
+    const activeDisplay = document.getElementById('active-hotel-display');
+    if (activeDisplay) activeDisplay.textContent = p.name;
     const locElem = document.getElementById('meta-location');
     if (locElem) locElem.textContent = p.location;
     const roomsElem = document.getElementById('meta-rooms');
@@ -1148,7 +1150,7 @@ function renderTimelineChart(monthlyTrend, propName) {
             rect.setAttribute('width', approxW);
             rect.setAttribute('height', '15');
             rect.setAttribute('rx', '4');
-            rect.setAttribute('fill', 'rgba(28, 29, 36, 0.95)');
+            rect.setAttribute('fill', isLight ? '#ffffff' : '#2d221c');
             rect.setAttribute('stroke', 'rgba(244, 63, 94, 0.6)');
             rect.setAttribute('stroke-width', '1');
 
@@ -2248,8 +2250,11 @@ function initThemeToggle() {
             iconMoon.style.display = 'none';
         }
         // Re-render active views so all SVG charts and components adapt dynamically
-        const activeHotel = document.getElementById('b2b-property-select')?.value || 'JW Marriott Mussoorie Walnut Grove Resort & Spa';
+        if (typeof loadPropertyBenchmark === 'function') {
+            loadPropertyBenchmark(currentPropertyId || 'welcomhotel_savoy', currentClusterId || 'mussoorie');
+        }
         if (typeof updateDashboard === 'function') {
+            const activeHotel = document.getElementById('b2b-quick-select')?.value || 'welcomhotel_savoy';
             updateDashboard(activeHotel);
         }
     });
