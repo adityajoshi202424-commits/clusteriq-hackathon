@@ -204,14 +204,15 @@ function showBrandedAlert(message, type = 'warning') {
     msgEl.textContent = message;
     banner.classList.remove('hidden');
 
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
     if (type === 'success') {
-        banner.style.background = 'linear-gradient(90deg, rgba(16, 185, 129, 0.2) 0%, rgba(14, 165, 233, 0.2) 100%)';
-        banner.style.borderColor = 'rgba(16, 185, 129, 0.4)';
-        msgEl.style.color = '#6ee7b7';
+        banner.style.background = isLight ? 'rgba(236, 253, 245, 0.95)' : 'linear-gradient(90deg, rgba(16, 185, 129, 0.2) 0%, rgba(14, 165, 233, 0.2) 100%)';
+        banner.style.borderColor = isLight ? 'rgba(16, 185, 129, 0.45)' : 'rgba(16, 185, 129, 0.4)';
+        msgEl.style.color = isLight ? '#065f46' : '#6ee7b7';
     } else {
-        banner.style.background = 'linear-gradient(90deg, rgba(245, 158, 11, 0.18) 0%, rgba(225, 29, 72, 0.15) 100%)';
-        banner.style.borderColor = 'rgba(245, 158, 11, 0.4)';
-        msgEl.style.color = '#fef08a';
+        banner.style.background = isLight ? 'rgba(254, 243, 199, 0.95)' : 'linear-gradient(90deg, rgba(245, 158, 11, 0.18) 0%, rgba(225, 29, 72, 0.15) 100%)';
+        banner.style.borderColor = isLight ? 'rgba(217, 119, 6, 0.45)' : 'rgba(245, 158, 11, 0.4)';
+        msgEl.style.color = isLight ? '#92400e' : '#fef08a';
     }
 }
 
@@ -957,12 +958,12 @@ function renderLeaderboardTable(aspects) {
                 <span class="badge-classification ${asp.badge_color || 'emerald'}">${displayClassification}</span>
             </td>
             <td>
-                <span style="font-weight: 700; color: ${asp.property_score >= 0 ? '#34d399' : '#fb7185'};">
+                <span class="score-val ${asp.property_score >= 0 ? 'score-pos' : 'score-neg'}">
                     ${asp.property_score > 0 ? '+' : ''}${asp.property_score}
                 </span>
             </td>
             <td>
-                <span style="color: var(--text-muted);">${asp.cluster_baseline > 0 ? '+' : ''}${asp.cluster_baseline}</span>
+                <span class="score-val score-baseline">${asp.cluster_baseline > 0 ? '+' : ''}${asp.cluster_baseline}</span>
             </td>
             <td>
                 <span class="delta-badge ${isPos ? 'pos' : 'neg'}">
@@ -1197,8 +1198,8 @@ function renderTimelineChart(monthlyTrend, propName) {
             rect.setAttribute('width', approxW);
             rect.setAttribute('height', '15');
             rect.setAttribute('rx', '4');
-            rect.setAttribute('fill', isLight ? '#ffffff' : '#2d221c');
-            rect.setAttribute('stroke', 'rgba(244, 63, 94, 0.6)');
+            rect.setAttribute('fill', isLight ? '#fff1f2' : '#2d221c');
+            rect.setAttribute('stroke', isLight ? 'rgba(190, 18, 60, 0.5)' : 'rgba(244, 63, 94, 0.6)');
             rect.setAttribute('stroke-width', '1');
 
             const annText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
@@ -1207,7 +1208,7 @@ function renderTimelineChart(monthlyTrend, propName) {
             annText.setAttribute('text-anchor', 'middle');
             annText.setAttribute('font-size', '9.5');
             annText.setAttribute('font-weight', '700');
-            annText.setAttribute('fill', '#fecdd3');
+            annText.setAttribute('fill', isLight ? '#be123c' : '#fecdd3');
             annText.textContent = p.ann;
 
             annGroup.appendChild(rect);
@@ -1254,16 +1255,16 @@ function renderActionPrescriptions(aspects, prop) {
         const quoteCount = quotes.length;
         card.innerHTML = `
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                <h4 style="font-size: 0.95rem; font-weight: 700; color: #fb7185;">Priority Operational Fix: ${w.category}</h4>
+                <h4 class="rx-heading rx-fix" style="font-size: 0.95rem; font-weight: 700;">Priority Operational Fix: ${w.category}</h4>
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
                     <span class="badge-classification rose">Deficit: ${w.competitive_gap}%</span>
-                    <button class="btn-prescription-evidence" data-category="${w.category}" style="background: rgba(244,63,94,0.15); border: 1px solid rgba(244,63,94,0.3); color: #fecdd3; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                    <button class="btn-prescription-evidence rx-btn-fix" data-category="${w.category}" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                         Read Comments (${quoteCount})
                     </button>
                 </div>
             </div>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">${w.action_recommendation}</p>
-            <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+            <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
                 <strong>Expected Impact & ROI:</strong> Competitors maintain a <strong>${w.cluster_baseline > 0 ? '+' : ''}${w.cluster_baseline}%</strong> satisfaction baseline while you lag at <strong>${w.property_score}%</strong>. Addressing this gap protects an estimated <strong>₹45,000 - ₹95,000 / month</strong> in prevented booking cancellations.
             </div>
         `;
@@ -1287,16 +1288,16 @@ function renderActionPrescriptions(aspects, prop) {
         const quoteCount = quotes.length;
         card.innerHTML = `
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                <h4 style="font-size: 0.95rem; font-weight: 700; color: #fbbf24;">Growth Opportunity: ${o.category}</h4>
+                <h4 class="rx-heading rx-opp" style="font-size: 0.95rem; font-weight: 700;">Growth Opportunity: ${o.category}</h4>
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
-                    <span class="badge-classification amber" style="background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.35);">Competitors Lag: +${Math.abs(o.competitive_gap)}%</span>
-                    <button class="btn-prescription-evidence" data-category="${o.category}" style="background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.35); color: #fbbf24; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                    <span class="badge-classification amber">Competitors Lag: +${Math.abs(o.competitive_gap)}%</span>
+                    <button class="btn-prescription-evidence rx-btn-opp" data-category="${o.category}" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                         Read Comments (${quoteCount})
                     </button>
                 </div>
             </div>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">${o.action_recommendation}</p>
-            <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+            <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
                 <strong>Market Edge & Revenue Impact:</strong> While nearby competitors struggle with guest complaints on ${o.category} (${o.cluster_baseline}%), your score reaches <strong>${o.property_score}%</strong>. Highlighting this in direct ad copy captures an estimated <strong>12% - 18% direct booking lift</strong>.
             </div>
         `;
@@ -1320,16 +1321,16 @@ function renderActionPrescriptions(aspects, prop) {
         const quoteCount = quotes.length;
         card.innerHTML = `
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                <h4 style="font-size: 0.95rem; font-weight: 700; color: #34d399;">Your Strength: ${a.category}</h4>
+                <h4 class="rx-heading rx-adv" style="font-size: 0.95rem; font-weight: 700;">Your Strength: ${a.category}</h4>
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
                     <span class="badge-classification emerald">Advantage: +${a.competitive_gap}%</span>
-                    <button class="btn-prescription-evidence" data-category="${a.category}" style="background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); color: #6ee7b7; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                    <button class="btn-prescription-evidence rx-btn-adv" data-category="${a.category}" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                         Read Comments (${quoteCount})
                     </button>
                 </div>
             </div>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">${a.action_recommendation}</p>
-            <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+            <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
                 <strong>Brand Value & Room Rate Defense:</strong> High guest satisfaction of <strong>${a.property_score}%</strong> supports your pricing integrity. Defends <strong>₹1,500 - ₹3,500 premium</strong> per room night over the local average.
             </div>
         `;
@@ -1353,16 +1354,16 @@ function renderActionPrescriptions(aspects, prop) {
         const quoteCount = quotes.length;
         card.innerHTML = `
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                <h4 style="font-size: 0.95rem; font-weight: 700; color: #fbbf24;">Town-Wide Challenge: ${m.category}</h4>
+                <h4 class="rx-heading rx-mkt" style="font-size: 0.95rem; font-weight: 700;">Town-Wide Challenge: ${m.category}</h4>
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
-                    <span class="badge-classification amber" style="background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3);">Town Average: ${m.cluster_baseline}%</span>
-                    <button class="btn-prescription-evidence" data-category="${m.category}" style="background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3); color: #fde68a; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                    <span class="badge-classification amber">Town Average: ${m.cluster_baseline}%</span>
+                    <button class="btn-prescription-evidence rx-btn-mkt" data-category="${m.category}" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                         Read Comments (${quoteCount})
                     </button>
                 </div>
             </div>
             <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">${m.action_recommendation}</p>
-            <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+            <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
                 <strong>Destination Context:</strong> Both your hotel (${m.property_score}%) and the town average (${m.cluster_baseline}%) experience friction on ${m.category}. Setting clear expectations with guests before check-in reduces negative reviews by up to <strong>55%</strong>.
             </div>
         `;
@@ -1490,13 +1491,13 @@ function renderTourismDashboard(data) {
                     <span class="severity-pill ${sevClass}">${issue.severity} Priority</span>
                     <h3 style="font-size: 1.1rem; font-weight: 700; margin-top: 0.35rem; color: var(--text-primary);">${issue.title}</h3>
                 </div>
-                <span style="font-size: 0.8rem; font-weight: 700; color: #fbbf24; background: rgba(245,158,11,0.15); padding: 0.25rem 0.65rem; border-radius: 4px;">
+                <span class="bottleneck-impact-badge" style="font-size: 0.8rem; font-weight: 700; padding: 0.25rem 0.65rem; border-radius: 4px;">
                     ${issue.impact_metric}
                 </span>
             </div>
             <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 1rem;">${issue.description}</p>
-            <div style="background: var(--bg-card); padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid var(--border-glass); margin-bottom: 0.75rem;">
-                <div style="font-size: 0.82rem; color: #fbbf24; font-weight: 600; margin-bottom: 0.25rem;">
+            <div class="bottleneck-detail-box" style="background: var(--bg-card); padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid var(--border-glass); margin-bottom: 0.75rem;">
+                <div class="bottleneck-action-label" style="font-size: 0.82rem; font-weight: 600; margin-bottom: 0.25rem;">
                     Recommended Authority Action:
                 </div>
                 <div style="font-size: 0.85rem; color: var(--text-primary);">${issue.recommended_authority_action}</div>
@@ -1521,7 +1522,7 @@ function renderTourismDashboard(data) {
                 <span><strong>${c.hotel}</strong> • ${c.platform}</span>
                 <span>${c.date}</span>
             </div>
-            <div style="font-size: 0.85rem; color: #fbbf24; font-style: italic;">
+            <div class="citation-quote-text" style="font-size: 0.85rem; font-style: italic;">
                 "${c.snippet}"
             </div>
         `;
@@ -1915,7 +1916,7 @@ function initLiveTester() {
                         <span class="pill-badge sub-issue">${asp.sub_issue}</span>
                         <span class="pill-badge tag">${asp.extracted_tag}</span>
                         <span class="pill-badge confidence">Conf: ${Math.round(asp.confidence * 100)}%</span>
-                        ${isPublic ? '<span class="pill-badge" style="background: rgba(245,158,11,0.2); color: #fbbf24; border: 1px solid rgba(245,158,11,0.4);">Public Civil Infrastructure</span>' : '<span class="pill-badge" style="background: rgba(16,185,129,0.18); color: #34d399; border: 1px solid rgba(16,185,129,0.35);">Property Operational</span>'}
+                        ${isPublic ? '<span class="pill-badge pill-infra-public">Public Civil Infrastructure</span>' : '<span class="pill-badge pill-infra-property">Property Operational</span>'}
                     </div>
                     <div style="font-size: 0.78rem; color: var(--text-secondary); background: var(--bg-card); border: 1px solid var(--border-glass); padding: 0.5rem 0.75rem; border-radius: 6px;">
                         <strong>Evidence Citation:</strong> "${asp.evidence_snippet}"
@@ -2010,6 +2011,45 @@ function initScrollytellingEngine() {
         return 0;
     }
 
+    // Instant viewport geometry sync so fast flick-scrolling activates visible cards with ZERO lag
+    function syncActiveStageFromViewport() {
+        const wh = window.innerHeight;
+        const viewportCenter = wh * 0.5;
+        let closestIdx = 0;
+        let minDistance = Infinity;
+
+        stages.forEach((stage, idx) => {
+            const rect = stage.getBoundingClientRect();
+            const stageCenter = rect.top + rect.height * 0.5;
+            const dist = Math.abs(stageCenter - viewportCenter);
+            if (dist < minDistance) {
+                minDistance = dist;
+                closestIdx = idx;
+            }
+            // Immediately activate card in central viewing area
+            if (dist < wh * 0.58) {
+                stage.classList.add('active');
+            } else {
+                stage.classList.remove('active');
+            }
+        });
+
+        // Immediately update rail ticks and HUD
+        railTicks.forEach((tick, idx) => {
+            tick.classList.toggle('active', idx === closestIdx);
+        });
+        if (hudLabel) {
+            hudLabel.textContent = stageDescriptions[closestIdx] || stageDescriptions[0];
+        }
+        const prog = calculateTargetProgress();
+        if (hudPct) {
+            hudPct.textContent = `${Math.round(prog * 100).toString().padStart(2, '0')}%`;
+        }
+        if (progressFill) {
+            progressFill.style.width = `${(prog * 100).toFixed(1)}%`;
+        }
+    }
+
     function renderFrame(progress) {
         if (!ctx) return;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -2035,13 +2075,11 @@ function initScrollytellingEngine() {
         // Active stage index with clean transition
         const activeStage = Math.round(floatIndex);
 
-        // Update active class on stage cards
+        // Update active class on stage cards if not already set by fast viewport sync
         stages.forEach((stage, idx) => {
             const dist = Math.abs(floatIndex - idx);
             if (dist < 0.5) {
                 stage.classList.add('active');
-            } else {
-                stage.classList.remove('active');
             }
         });
 
@@ -2049,8 +2087,6 @@ function initScrollytellingEngine() {
         railTicks.forEach((tick, idx) => {
             if (idx === activeStage) {
                 tick.classList.add('active');
-            } else {
-                tick.classList.remove('active');
             }
         });
 
@@ -2068,11 +2104,15 @@ function initScrollytellingEngine() {
         }
     }
 
-    // High-DPI 4K canvas configuration
+    // High-DPI 4K canvas configuration (supporting up to 3.0 DPR on UHD/Retina displays)
     function resizeCanvas() {
-        const dpr = Math.min(window.devicePixelRatio || 1, 2.5);
-        canvas.width = Math.round(window.innerWidth * dpr);
-        canvas.height = Math.round(window.innerHeight * dpr);
+        const dpr = Math.min(window.devicePixelRatio || 1, 3.0);
+        const dw = window.innerWidth;
+        const dh = window.innerHeight;
+        canvas.width = Math.round(dw * dpr);
+        canvas.height = Math.round(dh * dpr);
+        canvas.style.width = dw + 'px';
+        canvas.style.height = dh + 'px';
         if (ctx) {
             ctx.imageSmoothingEnabled = true;
             ctx.imageSmoothingQuality = 'high';
@@ -2096,10 +2136,14 @@ function initScrollytellingEngine() {
 
     resizeCanvas();
 
+    // 120 FPS Adaptive LERP Physics Engine
     function renderLoop() {
         const diff = targetProgress - currentProgress;
-        if (Math.abs(diff) > 0.0004) {
-            currentProgress += diff * 0.085; // Damped momentum interpolation
+        const absDiff = Math.abs(diff);
+        if (absDiff > 0.0003) {
+            // Adaptive LERP: silky smooth 0.14 for reading, accelerating up to 0.45 on rapid flick scrolling
+            const lerpFactor = Math.min(0.45, 0.14 + absDiff * 0.65);
+            currentProgress += diff * lerpFactor;
             renderFrame(currentProgress);
             animFrameId = requestAnimationFrame(renderLoop);
         } else {
@@ -2111,6 +2155,8 @@ function initScrollytellingEngine() {
 
     function onScrollUpdate() {
         targetProgress = calculateTargetProgress();
+        // Immediately trigger viewport sync so slide cards are crystal clear and active with 0ms delay
+        syncActiveStageFromViewport();
         if (!isRendering) {
             isRendering = true;
             animFrameId = requestAnimationFrame(renderLoop);
@@ -2122,6 +2168,7 @@ function initScrollytellingEngine() {
     // Initial render
     targetProgress = calculateTargetProgress();
     currentProgress = targetProgress;
+    syncActiveStageFromViewport();
     renderFrame(currentProgress);
 
     // Rail tick click navigation with smooth scroll
@@ -2303,6 +2350,15 @@ function initThemeToggle() {
         if (typeof updateDashboard === 'function') {
             const activeHotel = document.getElementById('b2b-quick-select')?.value || 'welcomhotel_savoy';
             updateDashboard(activeHotel);
+        }
+        if (typeof renderCitySelector === 'function') {
+            renderCitySelector();
+        }
+        if (typeof renderHotelsForCity === 'function') {
+            renderHotelsForCity(currentCityId || 'mussoorie');
+        }
+        if (typeof renderCrossCityComparison === 'function') {
+            renderCrossCityComparison();
         }
     });
 }

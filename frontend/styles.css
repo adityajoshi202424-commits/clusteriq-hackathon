@@ -4,19 +4,26 @@
    ========================================================================== */
 
 :root {
-  --bg-primary: #231a15;        /* Warm peaceful roasted terracotta chestnut (earthy, cozy, zero cold blue or charcoal) */
-  --bg-secondary: #2d221c;      /* Warm toasted cocoa pecan */
-  --bg-card: rgba(54, 42, 35, 0.88); /* Warm terracotta amber-bronze glass */
+  --bg-primary: #231a15;
+  /* Warm peaceful roasted terracotta chestnut (earthy, cozy, zero cold blue or charcoal) */
+  --bg-secondary: #2d221c;
+  /* Warm toasted cocoa pecan */
+  --bg-card: rgba(54, 42, 35, 0.88);
+  /* Warm terracotta amber-bronze glass */
   --bg-card-hover: rgba(70, 55, 46, 0.94);
   --border-glass: rgba(245, 158, 11, 0.25);
   --border-focus: rgba(245, 158, 11, 0.7);
 
-  --text-primary: #fffcf8;      /* Luminous warm cream */
-  --text-secondary: #dfd3c5;    /* Warm cashmere sand */
-  --text-muted: #b4a393;        /* Warm toasted almond */
+  --text-primary: #fffcf8;
+  /* Luminous warm cream */
+  --text-secondary: #dfd3c5;
+  /* Warm cashmere sand */
+  --text-muted: #b4a393;
+  /* Warm toasted almond */
 
   /* Joyful & Uplifting Color Palette (Sunburst Amber, Fresh Spring Emerald, Sunset Coral) */
-  --accent-cyan: #f59e0b; /* Aliased to warm joyful amber */
+  --accent-cyan: #f59e0b;
+  /* Aliased to warm joyful amber */
   --accent-cyan-glow: rgba(245, 158, 11, 0.28);
   --accent-joy: #f59e0b;
   --accent-joy-light: #fbbf24;
@@ -40,16 +47,22 @@
 }
 
 [data-theme="light"] {
-  --bg-primary: #faf6ee;        /* Peaceful warm sunlit linen cream - inviting and serene */
-  --bg-secondary: #f4ecdc;      /* Warm golden almond / soft apricot cashmere */
-  --bg-card: rgba(255, 255, 255, 0.98); /* Clean luminous warm white card */
+  --bg-primary: #faf6ee;
+  /* Peaceful warm sunlit linen cream - inviting and serene */
+  --bg-secondary: #f4ecdc;
+  /* Warm golden almond / soft apricot cashmere */
+  --bg-card: rgba(255, 255, 255, 0.98);
+  /* Clean luminous warm white card */
   --bg-card-hover: #ffffff;
   --border-glass: rgba(217, 119, 6, 0.22);
   --border-focus: rgba(217, 119, 6, 0.7);
 
-  --text-primary: #1c1917;      /* Deep warm espresso - 100% visible, sharp contrast */
-  --text-secondary: #44403c;    /* Deep warm stone */
-  --text-muted: #78716c;        /* Warm taupe */
+  --text-primary: #1c1917;
+  /* Deep warm espresso - 100% visible, sharp contrast */
+  --text-secondary: #44403c;
+  /* Deep warm stone */
+  --text-muted: #78716c;
+  /* Warm taupe */
 
   --accent-cyan: #d97706;
   --accent-cyan-glow: rgba(217, 119, 6, 0.18);
@@ -76,7 +89,7 @@ html {
 body {
   font-family: var(--font-family);
   background: var(--bg-primary);
-  background-image: 
+  background-image:
     radial-gradient(circle at 12% 10%, rgba(245, 158, 11, 0.22) 0%, transparent 52%),
     radial-gradient(circle at 88% 85%, rgba(234, 88, 12, 0.16) 0%, transparent 52%),
     radial-gradient(circle at 50% 45%, rgba(16, 185, 129, 0.12) 0%, transparent 62%);
@@ -87,7 +100,7 @@ body {
 }
 
 [data-theme="light"] body {
-  background-image: 
+  background-image:
     radial-gradient(circle at 10% 12%, rgba(251, 191, 36, 0.25) 0%, transparent 55%),
     radial-gradient(circle at 90% 88%, rgba(16, 185, 129, 0.16) 0%, transparent 55%),
     radial-gradient(circle at 50% 50%, rgba(249, 115, 22, 0.12) 0%, transparent 65%);
@@ -356,11 +369,25 @@ select.hotel-select.competitor-select:focus {
   height: 100%;
 }
 
-.kpi-card.score::before { background: var(--accent-joy); }
-.kpi-card.rank::before { background: var(--accent-emerald); }
-.kpi-card.lead::before { background: var(--accent-coral); }
-.kpi-card.lag::before { background: var(--accent-rose); }
-.kpi-card.reviews::before { background: var(--accent-joy-light); }
+.kpi-card.score::before {
+  background: var(--accent-joy);
+}
+
+.kpi-card.rank::before {
+  background: var(--accent-emerald);
+}
+
+.kpi-card.lead::before {
+  background: var(--accent-coral);
+}
+
+.kpi-card.lag::before {
+  background: var(--accent-rose);
+}
+
+.kpi-card.reviews::before {
+  background: var(--accent-joy-light);
+}
 
 .kpi-title {
   font-size: 0.78rem;
@@ -445,8 +472,15 @@ select.hotel-select.competitor-select:focus {
   border-radius: var(--radius-full);
 }
 
-.legend-dot.property { background: #f59e0b; box-shadow: 0 0 8px rgba(245, 158, 11, 0.7); }
-.legend-dot.cluster { background: #10b981; box-shadow: 0 0 8px rgba(16, 185, 129, 0.7); }
+.legend-dot.property {
+  background: #f59e0b;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.7);
+}
+
+.legend-dot.cluster {
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.7);
+}
 
 /* Aspect Leaderboard Table */
 .aspect-table {
@@ -493,20 +527,54 @@ select.hotel-select.competitor-select:focus {
   text-transform: uppercase;
 }
 
-.badge-classification.emerald { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
-.badge-classification.green { background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); }
-.badge-classification.amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
-.badge-classification.rose { background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.3); }
-.badge-classification.cyan { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
-.badge-classification.blue { background: rgba(249, 115, 22, 0.15); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.3); }
+.badge-classification.emerald {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-classification.green {
+  background: rgba(34, 197, 94, 0.15);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.badge-classification.amber {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-classification.rose {
+  background: rgba(244, 63, 94, 0.15);
+  color: #fb7185;
+  border: 1px solid rgba(244, 63, 94, 0.3);
+}
+
+.badge-classification.cyan {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-classification.blue {
+  background: rgba(249, 115, 22, 0.15);
+  color: #fb923c;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+}
 
 .delta-badge {
   font-weight: 800;
   font-size: 0.85rem;
 }
 
-.delta-badge.pos { color: #34d399; }
-.delta-badge.neg { color: #fb7185; }
+.delta-badge.pos {
+  color: #34d399;
+}
+
+.delta-badge.neg {
+  color: #fb7185;
+}
 
 .btn-view-evidence {
   background: rgba(245, 158, 11, 0.12);
@@ -803,9 +871,20 @@ select.hotel-select.competitor-select:focus {
   border-radius: var(--radius-full);
 }
 
-.severity-pill.critical { background: rgba(244, 63, 94, 0.2); color: #fb7185; }
-.severity-pill.high { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
-.severity-pill.medium { background: rgba(245, 158, 11, 0.2); color: #fbbf24; }
+.severity-pill.critical {
+  background: rgba(244, 63, 94, 0.2);
+  color: #fb7185;
+}
+
+.severity-pill.high {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
+
+.severity-pill.medium {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+}
 
 /* Live Tester Playground */
 .tester-box {
@@ -924,7 +1003,10 @@ select.hotel-select.competitor-select:focus {
   color: var(--text-secondary);
 }
 
-.modal-body h1, .modal-body h2, .modal-body h3, .modal-body h4 {
+.modal-body h1,
+.modal-body h2,
+.modal-body h3,
+.modal-body h4 {
   color: var(--text-primary);
   margin: 1.5rem 0 0.5rem 0;
 }
@@ -934,6 +1016,7 @@ select.hotel-select.competitor-select:focus {
   .analytics-row {
     grid-template-columns: 1fr;
   }
+
   .matrix-grid {
     grid-template-columns: 1fr;
   }
@@ -992,13 +1075,27 @@ select.hotel-select.competitor-select:focus {
 }
 
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes pulseIcon {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.15); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
 }
 
 /* 2. Top Header Controls: Warm Cache & Refresh Button */
@@ -1414,7 +1511,7 @@ select.hotel-select.competitor-select:focus {
 .scrolly-vignette {
   position: absolute;
   inset: 0;
-  background: 
+  background:
     radial-gradient(circle at center, rgba(18, 19, 22, 0.15) 0%, rgba(18, 19, 22, 0.65) 100%),
     linear-gradient(180deg, rgba(18, 19, 22, 0.7) 0%, rgba(18, 19, 22, 0.1) 25%, rgba(18, 19, 22, 0.1) 75%, rgba(18, 19, 22, 0.85) 100%);
   pointer-events: none;
@@ -1572,24 +1669,23 @@ select.hotel-select.competitor-select:focus {
   gap: 2.75rem;
   align-items: center;
   padding: 2.25rem 2.5rem;
-  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
-  backdrop-filter: blur(28px) saturate(190%);
-  -webkit-backdrop-filter: blur(28px) saturate(190%);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(35, 27, 22, 0.82);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
   border-radius: var(--radius-md);
-  box-shadow: 
+  box-shadow:
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.28),
-    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.4),
-    0 24px 56px -12px rgba(0, 0, 0, 0.85);
-  opacity: 0.16;
-  transform: translateY(44px) scale(0.95);
-  filter: blur(2px);
-  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), 
-              transform 0.55s cubic-bezier(0.16, 1, 0.3, 1), 
-              filter 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
-              border-color 0.4s ease, 
-              box-shadow 0.4s ease;
-  will-change: opacity, transform, filter;
+    inset 0 0 24px rgba(0, 0, 0, 0.35),
+    0 20px 48px -10px rgba(0, 0, 0, 0.75);
+  opacity: 0.90;
+  transform: translateY(10px) scale(0.985);
+  filter: none;
+  transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  will-change: transform, opacity;
 }
 
 .stage-card::before {
@@ -1618,14 +1714,13 @@ select.hotel-select.competitor-select:focus {
 .scrolly-stage.active .stage-card {
   opacity: 1;
   transform: translateY(0) scale(1);
-  filter: blur(0px);
-  border-color: rgba(245, 158, 11, 0.55);
-  background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
-  box-shadow: 
+  background: rgba(44, 34, 27, 0.92);
+  border-color: rgba(245, 158, 11, 0.65);
+  box-shadow:
     inset 0 1px 2px 0 rgba(255, 255, 255, 0.38),
-    inset 0 0 0 1px rgba(245, 158, 11, 0.22),
-    0 32px 80px -15px rgba(0, 0, 0, 0.95),
-    0 0 32px -6px rgba(245, 158, 11, 0.32);
+    inset 0 0 24px rgba(245, 158, 11, 0.12),
+    0 28px 72px -12px rgba(0, 0, 0, 0.9),
+    0 0 28px -4px rgba(245, 158, 11, 0.3);
 }
 
 /* Glassmorphic Media Pane Showcase */
@@ -1638,7 +1733,7 @@ select.hotel-select.competitor-select:focus {
   backdrop-filter: blur(20px) saturate(190%);
   -webkit-backdrop-filter: blur(20px) saturate(190%);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 
+  box-shadow:
     inset 0 1px 2px 0 rgba(255, 255, 255, 0.35),
     inset 0 0 18px rgba(255, 255, 255, 0.03),
     0 20px 48px -10px rgba(0, 0, 0, 0.75),
@@ -1652,13 +1747,11 @@ select.hotel-select.competitor-select:focus {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  background: linear-gradient(
-    130deg,
-    rgba(255, 255, 255, 0.22) 0%,
-    rgba(255, 255, 255, 0.06) 24%,
-    transparent 50%,
-    rgba(245, 158, 11, 0.05) 100%
-  );
+  background: linear-gradient(130deg,
+      rgba(255, 255, 255, 0.22) 0%,
+      rgba(255, 255, 255, 0.06) 24%,
+      transparent 50%,
+      rgba(245, 158, 11, 0.05) 100%);
   pointer-events: none;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
   z-index: 3;
@@ -1679,7 +1772,7 @@ select.hotel-select.competitor-select:focus {
 
 .scrolly-stage.active .stage-media-pane {
   border-color: rgba(245, 158, 11, 0.5);
-  box-shadow: 
+  box-shadow:
     inset 0 1px 2px 0 rgba(255, 255, 255, 0.48),
     inset 0 0 20px rgba(245, 158, 11, 0.08),
     0 24px 54px -10px rgba(0, 0, 0, 0.85),
@@ -1727,7 +1820,7 @@ select.hotel-select.competitor-select:focus {
   backdrop-filter: blur(16px) saturate(200%);
   -webkit-backdrop-filter: blur(16px) saturate(200%);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 
+  box-shadow:
     0 8px 20px rgba(0, 0, 0, 0.5),
     inset 0 1px 1px rgba(255, 255, 255, 0.35);
   padding: 0.35rem 0.75rem;
@@ -1744,7 +1837,7 @@ select.hotel-select.competitor-select:focus {
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   border: 1px solid rgba(245, 158, 11, 0.45);
-  box-shadow: 
+  box-shadow:
     0 6px 16px rgba(0, 0, 0, 0.4),
     inset 0 1px 1px rgba(255, 255, 255, 0.25);
   padding: 0.3rem 0.6rem;
@@ -1808,7 +1901,7 @@ select.hotel-select.competitor-select:focus {
 [data-theme="light"] .stage-card {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(246, 239, 226, 0.92) 100%);
   border-color: rgba(217, 119, 6, 0.2);
-  box-shadow: 
+  box-shadow:
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.95),
     0 20px 45px -10px rgba(180, 83, 9, 0.12);
 }
@@ -1816,7 +1909,7 @@ select.hotel-select.competitor-select:focus {
 [data-theme="light"] .stage-media-pane {
   background: rgba(255, 255, 255, 0.8);
   border-color: rgba(217, 119, 6, 0.2);
-  box-shadow: 
+  box-shadow:
     inset 0 1px 1px 0 rgba(255, 255, 255, 0.95),
     0 16px 36px rgba(180, 83, 9, 0.1);
 }
@@ -1831,20 +1924,24 @@ select.hotel-select.competitor-select:focus {
   .scrolly-stage {
     padding: 2rem 1.25rem;
   }
+
   .stage-card,
   .scrolly-stage:nth-child(even) .stage-card {
     grid-template-columns: 1fr;
     gap: 1.5rem;
     padding: 1.5rem;
   }
+
   .stage-media-pane,
   .scrolly-stage:nth-child(even) .stage-media-pane {
     order: 1 !important;
   }
+
   .stage-content-pane,
   .scrolly-stage:nth-child(even) .stage-content-pane {
     order: 2 !important;
   }
+
   .stage-featured-image {
     height: 240px;
   }
@@ -1899,10 +1996,17 @@ select.hotel-select.competitor-select:focus {
 /* ==========================================================================
    City Search & Compare View
    ========================================================================== */
-.search-view, .hotel-view, .b2g-view, .live-view {
+.search-view,
+.hotel-view,
+.b2g-view,
+.live-view {
   display: none;
 }
-.search-view.active, .hotel-view.active, .b2g-view.active, .live-view.active {
+
+.search-view.active,
+.hotel-view.active,
+.b2g-view.active,
+.live-view.active {
   display: block;
 }
 
@@ -1922,11 +2026,13 @@ select.hotel-select.competitor-select:focus {
   cursor: pointer;
   transition: var(--transition);
 }
+
 .city-card:hover {
   background: var(--bg-card-hover);
   border-color: var(--accent-joy);
   transform: translateY(-4px);
 }
+
 .city-card.active {
   border-color: var(--accent-joy);
   background: var(--accent-joy-glow);
@@ -1938,6 +2044,7 @@ select.hotel-select.competitor-select:focus {
   color: var(--text-primary);
   margin-bottom: 0.5rem;
 }
+
 .city-card p {
   font-size: 0.85rem;
   color: var(--text-secondary);
@@ -1961,8 +2068,13 @@ select.hotel-select.competitor-select:focus {
   cursor: pointer;
   transition: var(--transition);
 }
-[data-theme="light"] .filter-pill { background: rgba(255,255,255,0.7); }
-.filter-pill:hover, .filter-pill.active {
+
+[data-theme="light"] .filter-pill {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.filter-pill:hover,
+.filter-pill.active {
   border-color: var(--accent-joy);
   color: var(--accent-joy-light);
   background: var(--accent-joy-glow);
@@ -1984,6 +2096,7 @@ select.hotel-select.competitor-select:focus {
   display: flex;
   flex-direction: column;
 }
+
 .hotel-search-card:hover {
   border-color: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
@@ -2049,16 +2162,31 @@ select.hotel-select.competitor-select:focus {
   border-radius: 2px;
   overflow: hidden;
 }
-[data-theme="light"] .hotel-aspect-bar-bg { background: rgba(0,0,0,0.1); }
+
+[data-theme="light"] .hotel-aspect-bar-bg {
+  background: rgba(0, 0, 0, 0.1);
+}
 
 .hotel-aspect-bar-fill {
   height: 100%;
   border-radius: 2px;
 }
-.fill-excellent { background: var(--accent-emerald); }
-.fill-good { background: var(--accent-joy); }
-.fill-average { background: var(--accent-amber); }
-.fill-poor { background: var(--accent-rose); }
+
+.fill-excellent {
+  background: var(--accent-emerald);
+}
+
+.fill-good {
+  background: var(--accent-joy);
+}
+
+.fill-average {
+  background: var(--accent-amber);
+}
+
+.fill-poor {
+  background: var(--accent-rose);
+}
 
 .hotel-platforms {
   margin-top: auto;
@@ -2073,6 +2201,7 @@ select.hotel-select.competitor-select:focus {
   color: var(--text-secondary);
   margin-bottom: 0.25rem;
 }
+
 .platform-best {
   color: var(--accent-emerald);
   font-weight: 600;
@@ -2086,7 +2215,10 @@ select.hotel-select.competitor-select:focus {
   background: rgba(0, 0, 0, 0.2);
   border-top: 1px solid var(--border-glass);
 }
-[data-theme="light"] .hotel-search-actions { background: rgba(0,0,0,0.05); }
+
+[data-theme="light"] .hotel-search-actions {
+  background: rgba(0, 0, 0, 0.05);
+}
 
 .compare-checkbox-label {
   display: flex;
@@ -2107,6 +2239,7 @@ select.hotel-select.competitor-select:focus {
   cursor: pointer;
   transition: var(--transition);
 }
+
 .btn-view-dashboard:hover {
   background: var(--accent-joy-glow);
 }
@@ -2125,6 +2258,7 @@ select.hotel-select.competitor-select:focus {
   transform: translateY(100%);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .comparison-panel.show {
   transform: translateY(0);
 }
@@ -2143,7 +2277,10 @@ select.hotel-select.competitor-select:focus {
   border-radius: var(--radius-md);
   padding: 1.5rem;
 }
-[data-theme="light"] .compare-col { background: rgba(255,255,255,0.7); }
+
+[data-theme="light"] .compare-col {
+  background: rgba(255, 255, 255, 0.7);
+}
 
 .compare-metric {
   display: flex;
@@ -2152,20 +2289,26 @@ select.hotel-select.competitor-select:focus {
   padding: 0.75rem 0;
   border-bottom: 1px solid var(--border-glass);
 }
-.compare-metric:last-child { border-bottom: none; }
+
+.compare-metric:last-child {
+  border-bottom: none;
+}
 
 .compare-metric-label {
   font-size: 0.9rem;
   color: var(--text-secondary);
 }
+
 .compare-metric-val {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-primary);
 }
+
 .compare-winner .compare-metric-val {
   color: var(--accent-emerald);
 }
+
 .compare-winner::after {
   content: "Winner";
   font-size: 0.7rem;
@@ -2649,10 +2792,10 @@ select.hotel-select option {
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(26px);
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), 
-              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.4s ease,
-              box-shadow 0.4s ease;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
   will-change: opacity, transform;
 }
 
@@ -2662,10 +2805,21 @@ select.hotel-select option {
 }
 
 /* Stagger delays for cards and grids */
-.reveal-stagger-1 { transition-delay: 0.08s; }
-.reveal-stagger-2 { transition-delay: 0.16s; }
-.reveal-stagger-3 { transition-delay: 0.24s; }
-.reveal-stagger-4 { transition-delay: 0.32s; }
+.reveal-stagger-1 {
+  transition-delay: 0.08s;
+}
+
+.reveal-stagger-2 {
+  transition-delay: 0.16s;
+}
+
+.reveal-stagger-3 {
+  transition-delay: 0.24s;
+}
+
+.reveal-stagger-4 {
+  transition-delay: 0.32s;
+}
 
 /* Interactive pulse when stat cards enter the viewport */
 .stat-card-pulse {
@@ -2676,9 +2830,11 @@ select.hotel-select option {
   0% {
     box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.4);
   }
+
   70% {
     box-shadow: 0 0 0 8px rgba(245, 158, 11, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(245, 158, 11, 0);
   }
@@ -2704,48 +2860,628 @@ select.hotel-select option {
     transform: none !important;
     transition: none !important;
   }
+
   .global-scroll-progress {
     display: none !important;
   }
 }
 
+/* Semantic Typography and Scoring Classes (Dark mode defaults) */
+.rx-heading.rx-fix {
+  color: #fb7185;
+}
+
+.rx-heading.rx-opp {
+  color: #fbbf24;
+}
+
+.rx-heading.rx-adv {
+  color: #34d399;
+}
+
+.rx-heading.rx-mkt {
+  color: #fbbf24;
+}
+
+.btn-prescription-evidence.rx-btn-fix {
+  background: rgba(225, 29, 72, 0.18);
+  border: 1px solid rgba(244, 63, 94, 0.35);
+  color: #fecdd3;
+}
+
+.btn-prescription-evidence.rx-btn-opp,
+.btn-prescription-evidence.rx-btn-mkt {
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  color: #fbbf24;
+}
+
+.btn-prescription-evidence.rx-btn-adv {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #6ee7b7;
+}
+
+.prescription-detail-box {
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--text-secondary);
+}
+
+.score-val {
+  font-weight: 700;
+}
+
+.score-val.score-pos {
+  color: #34d399;
+}
+
+.score-val.score-neg {
+  color: #fb7185;
+}
+
+.score-val.score-baseline {
+  color: var(--text-muted);
+}
+
+.bottleneck-impact-badge {
+  color: #fbbf24;
+  background: rgba(245, 158, 11, 0.15);
+}
+
+.bottleneck-action-label {
+  color: #fbbf24;
+}
+
+.citation-quote-text {
+  color: #fbbf24;
+}
+
+.pill-badge.pill-infra-public {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.pill-badge.pill-infra-property {
+  background: rgba(16, 185, 129, 0.18);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+}
+
 /* ==========================================================================
    Comprehensive Light Mode High-Contrast Rules (100% Visible & Legible)
    ========================================================================== */
+
+/* 1. Header & Navigation Controls */
 [data-theme="light"] header.app-header {
-  background: rgba(251, 247, 238, 0.94);
-  border-bottom: 1px solid rgba(217, 119, 6, 0.18);
-  box-shadow: 0 4px 20px rgba(180, 83, 9, 0.06);
+  background: rgba(251, 247, 238, 0.96) !important;
+  border-bottom: 1px solid rgba(217, 119, 6, 0.22) !important;
+  box-shadow: 0 4px 20px rgba(180, 83, 9, 0.06) !important;
 }
 
 [data-theme="light"] .brand-title {
-  background: linear-gradient(90deg, #1c1917, #92400e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, #1c1917, #92400e) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+[data-theme="light"] .brand-subtitle {
+  color: #78716c !important;
+}
+
+[data-theme="light"] .geo-badge {
+  background: rgba(217, 119, 6, 0.12) !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
+  color: #92400e !important;
 }
 
 [data-theme="light"] .mode-switcher {
-  background: rgba(244, 236, 220, 0.95);
-  border: 1px solid rgba(217, 119, 6, 0.22);
+  background: rgba(244, 236, 220, 0.95) !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
 }
 
 [data-theme="light"] .mode-btn {
-  color: #57534e;
+  color: #57534e !important;
 }
 
 [data-theme="light"] .mode-btn:hover {
-  color: #1c1917;
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .mode-btn.active {
+  background: linear-gradient(135deg, #d97706, #b45309) !important;
+  color: #ffffff !important;
+  border-color: rgba(217, 119, 6, 0.4) !important;
 }
 
 [data-theme="light"] .cache-toggle-wrapper {
-  background: rgba(244, 236, 220, 0.95);
-  border: 1px solid rgba(217, 119, 6, 0.22);
+  background: rgba(244, 236, 220, 0.95) !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
 }
 
+[data-theme="light"] #btn-theme-toggle {
+  background: rgba(217, 119, 6, 0.12) !important;
+  color: #92400e !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
+}
+
+[data-theme="light"] #btn-theme-toggle:hover {
+  background: rgba(217, 119, 6, 0.22) !important;
+  color: #78350f !important;
+}
+
+[data-theme="light"] .btn-demo-toggle {
+  background: rgba(16, 185, 129, 0.12) !important;
+  color: #047857 !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+}
+
+[data-theme="light"] .btn-demo-toggle.live-mode {
+  background: rgba(217, 119, 6, 0.12) !important;
+  color: #92400e !important;
+  border-color: rgba(217, 119, 6, 0.35) !important;
+}
+
+[data-theme="light"] .btn-refresh-cluster {
+  background: rgba(217, 119, 6, 0.12) !important;
+  color: #92400e !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
+}
+
+[data-theme="light"] .btn-refresh-cluster:hover {
+  background: rgba(217, 119, 6, 0.22) !important;
+  color: #78350f !important;
+}
+
+[data-theme="light"] .branded-alert-banner {
+  background: linear-gradient(90deg, rgba(254, 243, 199, 0.92) 0%, rgba(254, 226, 226, 0.88) 100%) !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .branded-alert-banner .alert-icon {
+  color: #b45309 !important;
+}
+
+/* 2. Scrollytelling Visual Engine */
+[data-theme="light"] .scrolly-sticky-viewport {
+  background: #faf6ee !important;
+}
+
+[data-theme="light"] .scrolly-vignette {
+  background:
+    radial-gradient(circle at center, rgba(250, 246, 238, 0.05) 0%, rgba(250, 246, 238, 0.4) 100%),
+    linear-gradient(180deg, rgba(250, 246, 238, 0.5) 0%, rgba(250, 246, 238, 0.05) 25%, rgba(250, 246, 238, 0.05) 75%, rgba(250, 246, 238, 0.7) 100%) !important;
+}
+
+[data-theme="light"] .scrolly-progress-line {
+  background: rgba(217, 119, 6, 0.15) !important;
+}
+
+[data-theme="light"] .scrolly-hud {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+  box-shadow: 0 10px 25px rgba(217, 119, 6, 0.08) !important;
+}
+
+[data-theme="light"] .hud-tag {
+  color: #92400e !important;
+}
+
+[data-theme="light"] .hud-phase {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .hud-pct {
+  color: #047857 !important;
+  background: rgba(16, 185, 129, 0.12) !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+}
+
+[data-theme="light"] .scrolly-nav-rail {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+  box-shadow: 0 10px 25px rgba(217, 119, 6, 0.08) !important;
+}
+
+[data-theme="light"] .rail-tick {
+  background: rgba(0, 0, 0, 0.12) !important;
+  border: 1px solid rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-theme="light"] .rail-tick:hover {
+  background: rgba(217, 119, 6, 0.6) !important;
+  border-color: #d97706 !important;
+}
+
+[data-theme="light"] .rail-tick.active {
+  background: #d97706 !important;
+  border-color: #92400e !important;
+  box-shadow: 0 0 10px rgba(217, 119, 6, 0.5) !important;
+}
+
+[data-theme="light"] .stage-card {
+  background: rgba(255, 255, 255, 0.90) !important;
+  backdrop-filter: blur(24px) saturate(190%) !important;
+  -webkit-backdrop-filter: blur(24px) saturate(190%) !important;
+  border: 1.5px solid rgba(217, 119, 6, 0.25) !important;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 0.95),
+    0 16px 40px rgba(180, 83, 9, 0.08) !important;
+  opacity: 0.92 !important;
+  transform: translateY(10px) scale(0.985) !important;
+  filter: none !important;
+  transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.2s ease,
+    box-shadow 0.2s ease !important;
+}
+
+[data-theme="light"] .scrolly-stage.active .stage-card {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+  background: rgba(255, 255, 255, 0.97) !important;
+  border-color: #d97706 !important;
+  box-shadow: 
+    inset 0 1px 2px rgba(255, 255, 255, 1),
+    inset 0 0 20px rgba(217, 119, 6, 0.1),
+    0 24px 60px rgba(180, 83, 9, 0.16),
+    0 0 24px rgba(217, 119, 6, 0.2) !important;
+}
+
+[data-theme="light"] .stage-media-pane {
+  background: rgba(255, 255, 255, 0.85) !important;
+  border-color: rgba(217, 119, 6, 0.2) !important;
+}
+
+[data-theme="light"] .media-geo-pill {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #1c1917 !important;
+  border-color: rgba(217, 119, 6, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] .media-res-badge {
+  background: rgba(255, 255, 255, 0.95) !important;
+  color: #92400e !important;
+  border-color: rgba(217, 119, 6, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] .stage-badge {
+  background: rgba(217, 119, 6, 0.12) !important;
+  color: #92400e !important;
+  border-color: rgba(217, 119, 6, 0.35) !important;
+}
+
+[data-theme="light"] .stage-title {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .stage-desc {
+  color: #44403c !important;
+}
+
+[data-theme="light"] .stage-metric {
+  background: rgba(217, 119, 6, 0.08) !important;
+  color: #44403c !important;
+  border: 1px solid rgba(217, 119, 6, 0.2) !important;
+}
+
+[data-theme="light"] .btn-skip-to-dashboard {
+  background: #ffffff !important;
+  color: #1c1917 !important;
+  border: 1.5px solid rgba(217, 119, 6, 0.3) !important;
+  box-shadow: 0 4px 15px rgba(217, 119, 6, 0.1) !important;
+}
+
+[data-theme="light"] .btn-skip-to-dashboard:hover {
+  background: #fef3c7 !important;
+  color: #92400e !important;
+  border-color: #d97706 !important;
+}
+
+/* 3. General Glass Panels */
 [data-theme="light"] .glass-panel {
-  box-shadow: 0 4px 20px rgba(180, 83, 9, 0.07);
+  background: rgba(255, 255, 255, 0.98) !important;
+  border-color: rgba(217, 119, 6, 0.22) !important;
+  box-shadow: 0 4px 20px rgba(180, 83, 9, 0.07) !important;
 }
 
+[data-theme="light"] .glass-panel:hover {
+  border-color: rgba(217, 119, 6, 0.45) !important;
+}
+
+[data-theme="light"] .card-header {
+  border-bottom: 1px solid rgba(217, 119, 6, 0.18) !important;
+}
+
+[data-theme="light"] .card-title {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .card-subtitle {
+  color: #57534e !important;
+}
+
+/* 4. Efficiency Telemetry Hero Panel */
+[data-theme="light"] .efficiency-hero-panel {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(254, 243, 199, 0.6) 100%) !important;
+  border: 1.5px solid rgba(217, 119, 6, 0.35) !important;
+  box-shadow: 0 10px 30px -10px rgba(217, 119, 6, 0.15) !important;
+}
+
+[data-theme="light"] .efficiency-badge {
+  color: #92400e !important;
+  background: rgba(217, 119, 6, 0.12) !important;
+  border-color: rgba(217, 119, 6, 0.35) !important;
+}
+
+[data-theme="light"] .efficiency-headline {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .glow-text {
+  background: linear-gradient(135deg, #047857 0%, #b45309 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  text-shadow: none !important;
+}
+
+[data-theme="light"] .efficiency-formula {
+  color: #57534e !important;
+}
+
+[data-theme="light"] .efficiency-formula code {
+  background: rgba(217, 119, 6, 0.1) !important;
+  color: #92400e !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+}
+
+[data-theme="light"] .eff-stat-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+}
+
+[data-theme="light"] .eff-stat-num {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .eff-stat-num.highlight-cyan {
+  color: #b45309 !important;
+}
+
+[data-theme="light"] .eff-stat-num.highlight-emerald {
+  color: #047857 !important;
+}
+
+[data-theme="light"] .eff-stat-label {
+  color: #44403c !important;
+}
+
+[data-theme="light"] .eff-stat-sub {
+  color: #78716c !important;
+}
+
+/* 5. Global Search & Autocomplete Dropdown */
+[data-theme="light"] .global-search-bar {
+  background: #ffffff !important;
+  border: 1.5px solid rgba(217, 119, 6, 0.3) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-theme="light"] .global-search-input {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .global-search-input::placeholder {
+  color: #78716c !important;
+}
+
+[data-theme="light"] .search-autocomplete-dropdown {
+  background: #ffffff !important;
+  border: 1.5px solid rgba(217, 119, 6, 0.3) !important;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12) !important;
+}
+
+[data-theme="light"] .search-group-header {
+  color: #92400e !important;
+  border-bottom-color: rgba(217, 119, 6, 0.2) !important;
+}
+
+[data-theme="light"] .search-group-count {
+  color: #78716c !important;
+}
+
+[data-theme="light"] .search-item-title {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .search-item-meta {
+  color: #57534e !important;
+}
+
+[data-theme="light"] .search-item-badge {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: #44403c !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] .search-result-item:hover,
+[data-theme="light"] .search-result-item.selected {
+  background: rgba(245, 158, 11, 0.12) !important;
+}
+
+[data-theme="light"] .search-verdict-lead {
+  background: rgba(16, 185, 129, 0.12) !important;
+  color: #047857 !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+}
+
+[data-theme="light"] .search-verdict-lag {
+  background: rgba(225, 29, 72, 0.12) !important;
+  color: #be123c !important;
+  border: 1px solid rgba(225, 29, 72, 0.3) !important;
+}
+
+/* 6. Mode 0: City Search & Compare */
+[data-theme="light"] .city-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .city-card:hover {
+  background: #fffcf8 !important;
+  border-color: #d97706 !important;
+  box-shadow: 0 8px 20px rgba(217, 119, 6, 0.12) !important;
+}
+
+[data-theme="light"] .city-card.active {
+  background: rgba(254, 243, 199, 0.7) !important;
+  border-color: #d97706 !important;
+  box-shadow: 0 0 16px rgba(217, 119, 6, 0.2) !important;
+}
+
+[data-theme="light"] .city-card h3 {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .city-card p {
+  color: #44403c !important;
+}
+
+[data-theme="light"] .search-filters-bar {
+  background: #ffffff !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .filter-label {
+  color: #78716c !important;
+}
+
+[data-theme="light"] .filter-pill {
+  background: #f4ecdc !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+  color: #57534e !important;
+}
+
+[data-theme="light"] .filter-pill:hover,
+[data-theme="light"] .filter-pill.active {
+  background: #d97706 !important;
+  color: #ffffff !important;
+  border-color: #b45309 !important;
+}
+
+[data-theme="light"] .filter-select {
+  background: #ffffff !important;
+  color: #1c1917 !important;
+  border: 1.5px solid rgba(217, 119, 6, 0.35) !important;
+}
+
+[data-theme="light"] .filter-select option {
+  background: #ffffff !important;
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .hotel-search-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(217, 119, 6, 0.22) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .hotel-search-title {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .hotel-search-cat {
+  color: #92400e !important;
+}
+
+[data-theme="light"] .hotel-aspect-row {
+  color: #44403c !important;
+}
+
+[data-theme="light"] .hotel-aspect-bar-bg {
+  background: rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="light"] .hotel-platforms {
+  border-top-color: rgba(217, 119, 6, 0.18) !important;
+}
+
+[data-theme="light"] .platform-row {
+  color: #57534e !important;
+}
+
+[data-theme="light"] .platform-best {
+  color: #047857 !important;
+  font-weight: 700 !important;
+}
+
+[data-theme="light"] .hotel-search-actions {
+  background: rgba(244, 236, 220, 0.6) !important;
+  border-top-color: rgba(217, 119, 6, 0.2) !important;
+}
+
+[data-theme="light"] .compare-checkbox-label {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .btn-view-dashboard {
+  border-color: #d97706 !important;
+  color: #92400e !important;
+}
+
+[data-theme="light"] .btn-view-dashboard:hover {
+  background: #d97706 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .comparison-panel {
+  background: #faf6ee !important;
+  border-top: 2px solid rgba(217, 119, 6, 0.35) !important;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-theme="light"] .comparison-panel .card-header {
+  background: #f4ecdc !important;
+  border-bottom-color: rgba(217, 119, 6, 0.2) !important;
+}
+
+[data-theme="light"] .comparison-content {
+  background: #faf6ee !important;
+}
+
+[data-theme="light"] .compare-col {
+  background: #ffffff !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .compare-metric {
+  border-bottom-color: rgba(217, 119, 6, 0.18) !important;
+}
+
+[data-theme="light"] .compare-metric-label {
+  color: #57534e !important;
+}
+
+[data-theme="light"] .compare-metric-val {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .compare-winner .compare-metric-val {
+  color: #047857 !important;
+}
+
+[data-theme="light"] .compare-winner::after {
+  color: #047857 !important;
+  background: rgba(16, 185, 129, 0.15) !important;
+}
+
+/* 7. Mode 1: Hotel Benchmarking (B2B) */
 [data-theme="light"] .b2b-onboarding-panel {
   background: linear-gradient(135deg, #ffffff 0%, #fdf8ee 100%) !important;
   border: 1.5px solid rgba(217, 119, 6, 0.35) !important;
@@ -2842,364 +3578,628 @@ select.hotel-select option {
   border: 1px solid rgba(217, 119, 6, 0.35) !important;
 }
 
-[data-theme="light"] .efficiency-hero-panel {
-  background: linear-gradient(135deg, #ffffff 0%, rgba(254, 243, 199, 0.6) 100%);
-  border: 1px solid rgba(217, 119, 6, 0.35);
-  box-shadow: 0 10px 30px -10px rgba(217, 119, 6, 0.15);
+[data-theme="light"] .badge-coverage.coverage-limited {
+  background: rgba(217, 119, 6, 0.12) !important;
+  color: #92400e !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
 }
 
-[data-theme="light"] .efficiency-headline {
-  color: var(--text-primary) !important;
+/* KPI Cards in Light Mode */
+[data-theme="light"] .kpi-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(217, 119, 6, 0.22) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
 }
 
-[data-theme="light"] .eff-stat-card {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(217, 119, 6, 0.2);
+[data-theme="light"] .kpi-title {
+  color: #78716c !important;
 }
 
-[data-theme="light"] .eff-stat-num {
-  color: var(--text-primary) !important;
+[data-theme="light"] .kpi-value {
+  color: #1c1917 !important;
 }
 
-[data-theme="light"] .eff-stat-label {
-  color: var(--text-secondary) !important;
+[data-theme="light"] .kpi-subtext {
+  color: #57534e !important;
 }
 
-[data-theme="light"] .eff-stat-sub {
-  color: var(--text-muted) !important;
+/* Aspect Table in Light Mode */
+[data-theme="light"] .aspect-table th {
+  background: #f4ecdc !important;
+  color: #44403c !important;
+  border-bottom: 1px solid rgba(217, 119, 6, 0.2) !important;
 }
 
-[data-theme="light"] .side-by-side-card {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(217, 119, 6, 0.2);
+[data-theme="light"] .aspect-table td {
+  color: #1c1917 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
 }
 
-[data-theme="light"] .raw-review-text {
-  color: var(--text-primary) !important;
+[data-theme="light"] .aspect-table tr:hover td {
+  background: rgba(245, 158, 11, 0.06) !important;
 }
 
-[data-theme="light"] .translation-box {
-  background: rgba(254, 243, 199, 0.6);
-  color: var(--text-secondary) !important;
-  border-left: 3px solid #d97706;
+[data-theme="light"] .aspect-name span {
+  color: #1c1917 !important;
 }
 
-[data-theme="light"] .aspect-bubble {
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(217, 119, 6, 0.2);
-  color: var(--text-primary);
+[data-theme="light"] .score-val.score-pos {
+  color: #047857 !important;
 }
 
-[data-theme="light"] .aspect-bubble:hover {
-  background: rgba(254, 243, 199, 0.9);
-  border-color: var(--accent-joy);
+[data-theme="light"] .score-val.score-neg {
+  color: #be123c !important;
 }
 
-[data-theme="light"] .b2g-hero-banner {
-  background: linear-gradient(135deg, rgba(251, 191, 36, 0.22) 0%, rgba(244, 236, 220, 0.95) 100%);
-  border: 1px solid rgba(217, 119, 6, 0.3);
+[data-theme="light"] .score-baseline {
+  color: #78716c !important;
 }
 
-[data-theme="light"] .b2g-hero-banner h2 {
-  color: var(--text-primary) !important;
+[data-theme="light"] .delta-badge.pos {
+  color: #047857 !important;
+  background: rgba(16, 185, 129, 0.12) !important;
 }
 
-[data-theme="light"] .b2g-hero-banner p {
-  color: var(--text-secondary) !important;
+[data-theme="light"] .delta-badge.neg {
+  color: #be123c !important;
+  background: rgba(225, 29, 72, 0.12) !important;
 }
 
-[data-theme="light"] .tester-box {
-  background: var(--bg-card);
+[data-theme="light"] .btn-view-evidence {
+  border-color: rgba(217, 119, 6, 0.3) !important;
+  color: #78716c !important;
 }
 
-[data-theme="light"] .tester-box h2 {
-  color: var(--text-primary) !important;
+[data-theme="light"] .btn-view-evidence:hover {
+  border-color: #d97706 !important;
+  color: #1c1917 !important;
+  background: rgba(217, 119, 6, 0.12) !important;
 }
 
-[data-theme="light"] .tester-box p {
-  color: var(--text-secondary) !important;
+/* Matrix Quadrants in Light Mode */
+[data-theme="light"] .matrix-quadrant.advantage {
+  background: rgba(16, 185, 129, 0.08) !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
 }
 
-[data-theme="light"] .tester-textarea {
-  background: #ffffff;
-  color: var(--text-primary) !important;
-  border: 1px solid rgba(0, 0, 0, 0.15);
+[data-theme="light"] .matrix-quadrant.advantage .quadrant-title {
+  color: #047857 !important;
 }
 
-[data-theme="light"] .preset-pill {
-  background: rgba(0, 0, 0, 0.05);
-  color: var(--text-secondary) !important;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-[data-theme="light"] .preset-pill:hover {
-  background: rgba(16, 185, 129, 0.15);
+[data-theme="light"] .matrix-quadrant.advantage .quadrant-header span:last-child {
   color: #065f46 !important;
 }
 
+[data-theme="light"] .matrix-quadrant.opportunity {
+  background: rgba(245, 158, 11, 0.08) !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+
+[data-theme="light"] .matrix-quadrant.opportunity .quadrant-title {
+  color: #b45309 !important;
+}
+
+[data-theme="light"] .matrix-quadrant.opportunity .quadrant-header span:last-child {
+  color: #92400e !important;
+}
+
+[data-theme="light"] .matrix-quadrant.weakness {
+  background: rgba(244, 63, 94, 0.08) !important;
+  border-color: rgba(244, 63, 94, 0.35) !important;
+}
+
+[data-theme="light"] .matrix-quadrant.weakness .quadrant-title {
+  color: #be123c !important;
+}
+
+[data-theme="light"] .matrix-quadrant.weakness .quadrant-header span:last-child {
+  color: #9f1239 !important;
+}
+
+[data-theme="light"] .matrix-quadrant.market-problem {
+  background: rgba(245, 158, 11, 0.08) !important;
+  border-color: rgba(245, 158, 11, 0.35) !important;
+}
+
+[data-theme="light"] .matrix-quadrant.market-problem .quadrant-title {
+  color: #b45309 !important;
+}
+
+[data-theme="light"] .matrix-quadrant.market-problem .quadrant-header span:last-child {
+  color: #92400e !important;
+}
+
+[data-theme="light"] .aspect-bubble {
+  background: #ffffff !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .aspect-bubble:hover {
+  background: #fdf8ee !important;
+  border-color: #d97706 !important;
+  box-shadow: 0 4px 12px rgba(217, 119, 6, 0.12) !important;
+}
+
+[data-theme="light"] .aspect-bubble span:first-child {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .aspect-bubble span:last-child {
+  color: #78716c !important;
+}
+
+/* Actionable Recommendations in Light Mode */
+[data-theme="light"] .prescriptions-card .glass-panel {
+  background: #ffffff !important;
+  border: 1px solid rgba(217, 119, 6, 0.22) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .rx-heading.rx-fix {
+  color: #be123c !important;
+}
+
+[data-theme="light"] .rx-heading.rx-opp {
+  color: #b45309 !important;
+}
+
+[data-theme="light"] .rx-heading.rx-adv {
+  color: #047857 !important;
+}
+
+[data-theme="light"] .rx-heading.rx-mkt {
+  color: #b45309 !important;
+}
+
+[data-theme="light"] .btn-prescription-evidence {
+  background: rgba(217, 119, 6, 0.12) !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
+  color: #92400e !important;
+}
+
+[data-theme="light"] .btn-prescription-evidence.rx-btn-fix {
+  background: rgba(225, 29, 72, 0.12) !important;
+  border-color: rgba(225, 29, 72, 0.35) !important;
+  color: #9f1239 !important;
+}
+
+[data-theme="light"] .btn-prescription-evidence.rx-btn-opp,
+[data-theme="light"] .btn-prescription-evidence.rx-btn-mkt {
+  background: rgba(217, 119, 6, 0.12) !important;
+  border-color: rgba(217, 119, 6, 0.35) !important;
+  color: #92400e !important;
+}
+
+[data-theme="light"] .btn-prescription-evidence.rx-btn-adv {
+  background: rgba(16, 185, 129, 0.12) !important;
+  border-color: rgba(16, 185, 129, 0.35) !important;
+  color: #047857 !important;
+}
+
+[data-theme="light"] .prescription-detail-box {
+  background: rgba(245, 158, 11, 0.08) !important;
+  color: #44403c !important;
+  border: 1px solid rgba(217, 119, 6, 0.22) !important;
+}
+
+[data-theme="light"] .prescription-detail-box strong {
+  color: #1c1917 !important;
+}
+
+/* 8. Mode 2: Tourism Board (B2G) */
+[data-theme="light"] .b2g-hero-banner {
+  background: linear-gradient(135deg, rgba(251, 191, 36, 0.22) 0%, rgba(244, 236, 220, 0.95) 100%) !important;
+  border: 1px solid rgba(217, 119, 6, 0.3) !important;
+}
+
+[data-theme="light"] .b2g-hero-banner h2 {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .b2g-hero-banner p {
+  color: #44403c !important;
+}
+
+[data-theme="light"] .btn-export-pdf {
+  background: linear-gradient(135deg, #d97706, #059669) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .btn-export-brief {
+  background: linear-gradient(135deg, #d97706, #b45309) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .badge-cyan {
+  background: rgba(217, 119, 6, 0.12) !important;
+  color: #92400e !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
+}
+
+[data-theme="light"] .cross-city-table th {
+  background: #f4ecdc !important;
+  color: #44403c !important;
+  border-bottom: 1px solid rgba(217, 119, 6, 0.2) !important;
+}
+
+[data-theme="light"] .cross-city-table td {
+  color: #1c1917 !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+[data-theme="light"] .cross-city-table tr:hover td {
+  background: rgba(245, 158, 11, 0.06) !important;
+}
+
+[data-theme="light"] .city-pct-pill.pct-high {
+  background: rgba(225, 29, 72, 0.12) !important;
+  color: #be123c !important;
+}
+
+[data-theme="light"] .city-pct-pill.pct-med {
+  background: rgba(217, 119, 6, 0.12) !important;
+  color: #92400e !important;
+}
+
+[data-theme="light"] .city-pct-pill.pct-low {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: #57534e !important;
+}
+
+[data-theme="light"] .bottleneck-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(217, 119, 6, 0.22) !important;
+}
+
+[data-theme="light"] .severity-pill.critical {
+  background: rgba(225, 29, 72, 0.12) !important;
+  color: #be123c !important;
+}
+
+[data-theme="light"] .severity-pill.high {
+  background: rgba(217, 119, 6, 0.12) !important;
+  color: #92400e !important;
+}
+
+[data-theme="light"] .severity-pill.medium {
+  background: rgba(217, 119, 6, 0.12) !important;
+  color: #92400e !important;
+}
+
+[data-theme="light"] .bottleneck-impact-badge {
+  color: #92400e !important;
+  background: rgba(217, 119, 6, 0.12) !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
+}
+
+[data-theme="light"] .bottleneck-action-label {
+  color: #92400e !important;
+}
+
+[data-theme="light"] #bottlenecks-list-container div[style*="background: var(--bg-card)"] {
+  background: #faf6ee !important;
+  border-color: rgba(217, 119, 6, 0.25) !important;
+}
+
+[data-theme="light"] #b2g-citations-feed .glass-panel {
+  background: #ffffff !important;
+  border: 1px solid rgba(217, 119, 6, 0.22) !important;
+}
+
+[data-theme="light"] .citation-quote-text,
+[data-theme="light"] #b2g-citations-feed div[style*="font-style: italic"] {
+  color: #1c1917 !important;
+}
+
+/* 9. Mode 3: Live Review Tester */
+[data-theme="light"] .tester-box {
+  background: #ffffff !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .tester-box h2 {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .tester-box p {
+  color: #44403c !important;
+}
+
+[data-theme="light"] .preset-pill {
+  background: #f4ecdc !important;
+  color: #44403c !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+}
+
+[data-theme="light"] .preset-pill:hover {
+  background: rgba(217, 119, 6, 0.18) !important;
+  color: #78350f !important;
+  border-color: #d97706 !important;
+}
+
+[data-theme="light"] .tester-textarea {
+  background: #ffffff !important;
+  color: #1c1917 !important;
+  border: 1.5px solid rgba(217, 119, 6, 0.35) !important;
+}
+
+[data-theme="light"] .tester-textarea::placeholder {
+  color: #78716c !important;
+}
+
+[data-theme="light"] .sanitization-badge {
+  color: #047857 !important;
+}
+
+[data-theme="light"] .char-counter {
+  background: #ffffff !important;
+  color: #78716c !important;
+  border-color: rgba(217, 119, 6, 0.25) !important;
+}
+
+[data-theme="light"] .char-counter.warning {
+  color: #b45309 !important;
+  border-color: rgba(217, 119, 6, 0.45) !important;
+}
+
+[data-theme="light"] .side-by-side-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .review-badge-lang {
+  color: #92400e !important;
+  background: rgba(217, 119, 6, 0.12) !important;
+  border: 1px solid rgba(217, 119, 6, 0.3) !important;
+}
+
+[data-theme="light"] .raw-review-text {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .translation-box {
+  background: rgba(254, 243, 199, 0.7) !important;
+  color: #44403c !important;
+  border-left: 3px solid #d97706 !important;
+}
+
+[data-theme="light"] .translation-box strong {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] .pill-badge.aspect {
+  background: rgba(217, 119, 6, 0.12) !important;
+  color: #92400e !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
+}
+
+[data-theme="light"] .pill-badge.positive {
+  background: rgba(16, 185, 129, 0.12) !important;
+  color: #047857 !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+}
+
+[data-theme="light"] .pill-badge.negative {
+  background: rgba(225, 29, 72, 0.12) !important;
+  color: #be123c !important;
+  border: 1px solid rgba(225, 29, 72, 0.35) !important;
+}
+
+[data-theme="light"] .pill-badge.sub-issue {
+  background: rgba(217, 119, 6, 0.12) !important;
+  color: #92400e !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
+}
+
+[data-theme="light"] .pill-badge.tag {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: #44403c !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] .pill-badge.confidence {
+  background: rgba(0, 0, 0, 0.05) !important;
+  color: #44403c !important;
+}
+
+[data-theme="light"] .pill-badge.pill-infra-public {
+  background: rgba(217, 119, 6, 0.12) !important;
+  color: #92400e !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
+}
+
+[data-theme="light"] .pill-badge.pill-infra-property {
+  background: rgba(16, 185, 129, 0.12) !important;
+  color: #047857 !important;
+  border: 1px solid rgba(16, 185, 129, 0.35) !important;
+}
+
+[data-theme="light"] .bottleneck-detail-box {
+  background: #faf6ee !important;
+  border: 1px solid rgba(217, 119, 6, 0.25) !important;
+}
+
+[data-theme="light"] .classification-col div[style*="background: var(--bg-card)"] {
+  background: #faf6ee !important;
+  border-color: rgba(217, 119, 6, 0.25) !important;
+  color: #44403c !important;
+}
+
+[data-theme="light"] .classification-col div[style*="background: var(--bg-card)"] strong {
+  color: #1c1917 !important;
+}
+
+[data-theme="light"] #live-json-preview {
+  background: #231d19 !important;
+  color: #fef08a !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
+}
+
+/* 10. Modals & Slide-over Drawers */
+[data-theme="light"] .evidence-drawer-backdrop {
+  background: rgba(0, 0, 0, 0.45) !important;
+}
+
 [data-theme="light"] .evidence-drawer {
-  background: #fbf7ee;
-  border-left: 1px solid rgba(217, 119, 6, 0.2);
-  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
+  background: #faf6ee !important;
+  border-left: 1.5px solid rgba(217, 119, 6, 0.3) !important;
+  box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+[data-theme="light"] .drawer-header {
+  border-bottom: 1px solid rgba(217, 119, 6, 0.2) !important;
 }
 
 [data-theme="light"] .drawer-title {
-  color: var(--text-primary) !important;
+  color: #1c1917 !important;
 }
 
 [data-theme="light"] .btn-close-drawer {
-  color: var(--text-muted);
+  color: #78716c !important;
 }
 
 [data-theme="light"] .btn-close-drawer:hover {
-  color: var(--text-primary);
+  color: #1c1917 !important;
 }
 
 [data-theme="light"] .evidence-card {
-  background: #ffffff;
-  border: 1px solid rgba(217, 119, 6, 0.2);
+  background: #ffffff !important;
+  border: 1px solid rgba(217, 119, 6, 0.22) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04) !important;
+}
+
+[data-theme="light"] .evidence-meta {
+  color: #78716c !important;
+}
+
+[data-theme="light"] .evidence-meta strong {
+  color: #1c1917 !important;
 }
 
 [data-theme="light"] .evidence-quote {
-  color: var(--text-primary) !important;
+  color: #1c1917 !important;
+  border-left-color: #d97706 !important;
+}
+
+[data-theme="light"] .evidence-quote.neg {
+  border-left-color: #be123c !important;
+}
+
+[data-theme="light"] .modal-backdrop {
+  background: rgba(0, 0, 0, 0.45) !important;
 }
 
 [data-theme="light"] .modal-dialog {
-  background: #fbf7ee;
-  border: 1px solid rgba(217, 119, 6, 0.25);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  background: #faf6ee !important;
+  border: 1.5px solid rgba(217, 119, 6, 0.3) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2) !important;
+}
+
+[data-theme="light"] .modal-header {
+  border-bottom: 1px solid rgba(217, 119, 6, 0.2) !important;
 }
 
 [data-theme="light"] .modal-header div {
-  color: var(--text-primary) !important;
+  color: #1c1917 !important;
 }
 
 [data-theme="light"] .modal-body {
-  color: var(--text-secondary) !important;
+  color: #44403c !important;
+}
+
+[data-theme="light"] .modal-body strong {
+  color: #1c1917 !important;
 }
 
 [data-theme="light"] .modal-body h1,
 [data-theme="light"] .modal-body h2,
 [data-theme="light"] .modal-body h3,
 [data-theme="light"] .modal-body h4 {
-  color: var(--text-primary) !important;
+  color: #1c1917 !important;
 }
 
-[data-theme="light"] .cross-city-table th {
-  background: #f4ecdc;
-  color: var(--text-secondary);
+[data-theme="light"] .modal-body table th {
+  background: #f4ecdc !important;
+  color: #44403c !important;
 }
 
-[data-theme="light"] .cross-city-table td {
-  color: var(--text-primary);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+[data-theme="light"] .modal-body table td {
+  color: #1c1917 !important;
 }
 
-[data-theme="light"] .cross-city-table tr:hover td {
-  background: rgba(245, 158, 11, 0.08);
+[data-theme="light"] .modal-body pre,
+[data-theme="light"] .modal-body code {
+  background: #f4ecdc !important;
+  color: #1c1917 !important;
 }
 
+/* 11. Footer */
 [data-theme="light"] .app-footer {
-  background: #f4ecdc;
-  border-top: 1px solid rgba(217, 119, 6, 0.18);
+  background: #f4ecdc !important;
+  border-top: 1px solid rgba(217, 119, 6, 0.18) !important;
 }
 
 [data-theme="light"] .footer-brand {
-  color: var(--text-primary);
+  color: #1c1917 !important;
 }
 
 [data-theme="light"] .footer-copy {
-  color: var(--text-muted);
+  color: #78716c !important;
 }
 
 [data-theme="light"] .footer-links a {
-  color: var(--text-secondary);
+  color: #44403c !important;
 }
 
 [data-theme="light"] .footer-links a:hover {
-  color: var(--text-primary);
+  color: #d97706 !important;
 }
 
-[data-theme="light"] .scrolly-sticky-viewport {
-  background: #fbf7ee;
+/* 12. Universal Fallback Overrides for Low-Contrast Inline Colors */
+[data-theme="light"] [style*="#fb7185"],
+[data-theme="light"] [style*="rgb(251, 113, 133)"] {
+  color: #be123c !important;
 }
 
-[data-theme="light"] .scrolly-hud {
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+[data-theme="light"] [style*="#fbbf24"],
+[data-theme="light"] [style*="rgb(251, 191, 36)"] {
+  color: #b45309 !important;
 }
 
-[data-theme="light"] .hud-phase {
-  color: var(--text-primary) !important;
+[data-theme="light"] [style*="#34d399"],
+[data-theme="light"] [style*="rgb(52, 211, 153)"] {
+  color: #047857 !important;
 }
 
-[data-theme="light"] .stage-title {
-  color: var(--text-primary) !important;
+[data-theme="light"] [style*="#94a3b8"],
+[data-theme="light"] [style*="rgb(148, 163, 184)"] {
+  color: #57534e !important;
 }
 
-[data-theme="light"] .stage-desc {
-  color: var(--text-secondary) !important;
+[data-theme="light"] [style*="#fecdd3"],
+[data-theme="light"] [style*="rgb(254, 205, 211)"] {
+  color: #9f1239 !important;
 }
 
-[data-theme="light"] .stage-metric {
-  color: var(--text-secondary) !important;
-  background: rgba(0, 0, 0, 0.05);
-  border-color: rgba(0, 0, 0, 0.1);
+[data-theme="light"] [style*="#fde68a"],
+[data-theme="light"] [style*="rgb(253, 230, 138)"] {
+  color: #92400e !important;
 }
 
-[data-theme="light"] .char-counter {
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--text-muted);
-  border-color: rgba(0, 0, 0, 0.1);
+[data-theme="light"] [style*="#6ee7b7"],
+[data-theme="light"] [style*="rgb(110, 231, 183)"] {
+  color: #047857 !important;
 }
 
-[data-theme="light"] .pill-badge.tag {
-  background: rgba(0, 0, 0, 0.05);
-  color: var(--text-secondary) !important;
-  border-color: rgba(0, 0, 0, 0.1);
-}
-
-[data-theme="light"] .pill-badge.confidence {
-  background: rgba(0, 0, 0, 0.05);
-  color: var(--text-secondary) !important;
-}
-
-[data-theme="light"] .prescription-detail-box {
+[data-theme="light"] [style*="background: rgba(0,0,0,0.25)"],
+[data-theme="light"] [style*="background: rgba(0, 0, 0, 0.25)"] {
   background: rgba(245, 158, 11, 0.08) !important;
-  color: var(--text-secondary) !important;
-  border: 1px solid rgba(245, 158, 11, 0.2) !important;
+  color: #44403c !important;
 }
 
-[data-theme="light"] .tag-badge {
-  background: rgba(0, 0, 0, 0.05);
-  border-color: rgba(0, 0, 0, 0.1);
-  color: var(--text-secondary);
-}
-
-[data-theme="light"] .aspect-table td {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-[data-theme="light"] .aspect-table tr:hover td {
-  background: rgba(245, 158, 11, 0.05);
-}
-
-[data-theme="light"] .btn-skip-to-dashboard {
-  background: rgba(255, 255, 255, 0.92);
-  color: var(--text-primary);
-  border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-/* Light mode matrix quadrant adjustments */
-[data-theme="light"] .matrix-quadrant.advantage {
-  background: rgba(16, 185, 129, 0.08);
-  border-color: rgba(16, 185, 129, 0.35);
-}
-[data-theme="light"] .matrix-quadrant.advantage .quadrant-title {
-  color: #047857 !important;
-}
-[data-theme="light"] .matrix-quadrant.advantage .quadrant-header span:last-child {
-  color: #065f46 !important;
-}
-
-[data-theme="light"] .matrix-quadrant.opportunity {
-  background: rgba(245, 158, 11, 0.08);
-  border-color: rgba(245, 158, 11, 0.35);
-}
-[data-theme="light"] .matrix-quadrant.opportunity .quadrant-title {
-  color: #b45309 !important;
-}
-[data-theme="light"] .matrix-quadrant.opportunity .quadrant-header span:last-child {
-  color: #92400e !important;
-}
-
-[data-theme="light"] .matrix-quadrant.weakness {
-  background: rgba(244, 63, 94, 0.08);
-  border-color: rgba(244, 63, 94, 0.35);
-}
-[data-theme="light"] .matrix-quadrant.weakness .quadrant-title {
-  color: #be123c !important;
-}
-[data-theme="light"] .matrix-quadrant.weakness .quadrant-header span:last-child {
-  color: #9f1239 !important;
-}
-
-[data-theme="light"] .matrix-quadrant.market-problem {
-  background: rgba(245, 158, 11, 0.08);
-  border-color: rgba(245, 158, 11, 0.35);
-}
-[data-theme="light"] .matrix-quadrant.market-problem .quadrant-title {
-  color: #b45309 !important;
-}
-[data-theme="light"] .matrix-quadrant.market-problem .quadrant-header span:last-child {
-  color: #92400e !important;
-}
-
-/* Light mode aspect bubbles */
-[data-theme="light"] .aspect-bubble {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border-color: rgba(0, 0, 0, 0.12) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-}
-[data-theme="light"] .aspect-bubble span:first-child {
-  color: var(--text-primary) !important;
-}
-[data-theme="light"] .aspect-bubble span:last-child {
-  color: var(--text-muted) !important;
-}
-
-/* Light mode classification badges */
-[data-theme="light"] .badge-classification.rose {
-  background: rgba(225, 29, 72, 0.12) !important;
-  border-color: rgba(225, 29, 72, 0.35) !important;
-  color: #9f1239 !important;
-}
-[data-theme="light"] .badge-classification.amber {
-  background: rgba(217, 119, 6, 0.12) !important;
-  border-color: rgba(217, 119, 6, 0.35) !important;
-  color: #92400e !important;
-}
-[data-theme="light"] .badge-classification.emerald {
-  background: rgba(16, 185, 129, 0.12) !important;
-  border-color: rgba(16, 185, 129, 0.35) !important;
-  color: #047857 !important;
-}
-
-/* Light mode prescription buttons */
-[data-theme="light"] .btn-prescription-evidence[data-category="Cleanliness"],
-[data-theme="light"] .btn-prescription-evidence[data-category="Food"],
-[data-theme="light"] .btn-prescription-evidence[data-category="Housekeeping"],
-[data-theme="light"] .btn-prescription-evidence[data-category="Staff"] {
-  background: rgba(225, 29, 72, 0.12) !important;
-  border: 1px solid rgba(225, 29, 72, 0.35) !important;
-  color: #9f1239 !important;
-}
-[data-theme="light"] .btn-prescription-evidence[data-category="Room"],
-[data-theme="light"] .btn-prescription-evidence[data-category="Booking"],
-[data-theme="light"] .btn-prescription-evidence[data-category="Value"] {
-  background: rgba(217, 119, 6, 0.12) !important;
-  border: 1px solid rgba(217, 119, 6, 0.35) !important;
-  color: #92400e !important;
-}
-
-/* Light mode headings inside glass cards */
-[data-theme="light"] .glass-panel h4[style*="#fb7185"] {
-  color: #be123c !important;
-}
-[data-theme="light"] .glass-panel h4[style*="#fbbf24"] {
-  color: #b45309 !important;
-}
-[data-theme="light"] .glass-panel h4[style*="#34d399"] {
-  color: #047857 !important;
-}
-
-/* Code box in light mode */
-[data-theme="light"] #api-tester-response {
-  background: #231d19 !important;
-  color: #fde68a !important;
-}
 
 /* ==========================================================================
    Header Explore Dashboard Button
@@ -3452,6 +4452,7 @@ select.hotel-select option {
 }
 
 [data-theme="light"] .gateway-mode-card:hover {
+  background: #fffcf8 !important;
   border-color: #d97706 !important;
   box-shadow: 0 10px 25px rgba(217, 119, 6, 0.15) !important;
 }
@@ -3597,7 +4598,3 @@ select.hotel-select option {
   color: #1c1917 !important;
   border-color: #d97706 !important;
 }
-
-
-
-

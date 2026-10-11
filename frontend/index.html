@@ -11,6 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        (function() {
+            var savedTheme = localStorage.getItem('clusteriq-theme');
+            if (savedTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
 </head>
 
 <body>
@@ -689,64 +697,64 @@
                                 <tr>
                                     <td><div class="aspect-name"><span>Booking</span></div></td>
                                     <td><span class="badge-classification amber">Town-Wide Issue</span></td>
-                                    <td><span style="font-weight: 700; color: #34d399;">+17</span></td>
-                                    <td><span style="color: #94a3b8;">+21</span></td>
+                                    <td><span class="score-val score-pos">+17</span></td>
+                                    <td><span class="score-val score-baseline">+21</span></td>
                                     <td><span class="delta-badge neg">-4%</span></td>
                                     <td><button class="btn-view-evidence" data-category="Booking">Read Comments (2)</button></td>
                                 </tr>
                                 <tr>
                                     <td><div class="aspect-name"><span>Cleanliness</span></div></td>
                                     <td><span class="badge-classification rose">Fix Needed</span></td>
-                                    <td><span style="font-weight: 700; color: #34d399;">+70</span></td>
-                                    <td><span style="color: #94a3b8;">+70</span></td>
+                                    <td><span class="score-val score-pos">+70</span></td>
+                                    <td><span class="score-val score-baseline">+70</span></td>
                                     <td><span class="delta-badge pos">+0%</span></td>
                                     <td><button class="btn-view-evidence" data-category="Cleanliness">Read Comments (4)</button></td>
                                 </tr>
                                 <tr>
                                     <td><div class="aspect-name"><span>Food</span></div></td>
                                     <td><span class="badge-classification rose">Fix Needed</span></td>
-                                    <td><span style="font-weight: 700; color: #34d399;">+66</span></td>
-                                    <td><span style="color: #94a3b8;">+70</span></td>
+                                    <td><span class="score-val score-pos">+66</span></td>
+                                    <td><span class="score-val score-baseline">+70</span></td>
                                     <td><span class="delta-badge neg">-4%</span></td>
                                     <td><button class="btn-view-evidence" data-category="Food">Read Comments (2)</button></td>
                                 </tr>
                                 <tr>
                                     <td><div class="aspect-name"><span>Housekeeping</span></div></td>
                                     <td><span class="badge-classification rose">Fix Needed</span></td>
-                                    <td><span style="font-weight: 700; color: #34d399;">+66</span></td>
-                                    <td><span style="color: #94a3b8;">+67</span></td>
+                                    <td><span class="score-val score-pos">+66</span></td>
+                                    <td><span class="score-val score-baseline">+67</span></td>
                                     <td><span class="delta-badge neg">-1%</span></td>
                                     <td><button class="btn-view-evidence" data-category="Housekeeping">Read Comments (2)</button></td>
                                 </tr>
                                 <tr>
                                     <td><div class="aspect-name"><span>Location</span></div></td>
                                     <td><span class="badge-classification emerald">Your Advantage</span></td>
-                                    <td><span style="font-weight: 700; color: #34d399;">+43</span></td>
-                                    <td><span style="color: #94a3b8;">+42</span></td>
+                                    <td><span class="score-val score-pos">+43</span></td>
+                                    <td><span class="score-val score-baseline">+42</span></td>
                                     <td><span class="delta-badge pos">+1%</span></td>
                                     <td><button class="btn-view-evidence" data-category="Location">Read Comments (4)</button></td>
                                 </tr>
                                 <tr>
                                     <td><div class="aspect-name"><span>Room</span></div></td>
                                     <td><span class="badge-classification cyan">Market Opportunity</span></td>
-                                    <td><span style="font-weight: 700; color: #34d399;">+54</span></td>
-                                    <td><span style="color: #94a3b8;">+60</span></td>
+                                    <td><span class="score-val score-pos">+54</span></td>
+                                    <td><span class="score-val score-baseline">+60</span></td>
                                     <td><span class="delta-badge neg">-6%</span></td>
                                     <td><button class="btn-view-evidence" data-category="Room">Read Comments (4)</button></td>
                                 </tr>
                                 <tr>
                                     <td><div class="aspect-name"><span>Staff</span></div></td>
                                     <td><span class="badge-classification rose">Fix Needed</span></td>
-                                    <td><span style="font-weight: 700; color: #34d399;">+65</span></td>
-                                    <td><span style="color: #94a3b8;">+65</span></td>
+                                    <td><span class="score-val score-pos">+65</span></td>
+                                    <td><span class="score-val score-baseline">+65</span></td>
                                     <td><span class="delta-badge pos">+0%</span></td>
                                     <td><button class="btn-view-evidence" data-category="Staff">Read Comments (4)</button></td>
                                 </tr>
                                 <tr>
                                     <td><div class="aspect-name"><span>Value</span></div></td>
                                     <td><span class="badge-classification amber">Town-Wide Issue</span></td>
-                                    <td><span style="font-weight: 700; color: #34d399;">+51</span></td>
-                                    <td><span style="color: #94a3b8;">+54</span></td>
+                                    <td><span class="score-val score-pos">+51</span></td>
+                                    <td><span class="score-val score-baseline">+54</span></td>
                                     <td><span class="delta-badge neg">-3%</span></td>
                                     <td><button class="btn-view-evidence" data-category="Value">Read Comments (4)</button></td>
                                 </tr>
@@ -784,16 +792,16 @@
 
                         <div class="matrix-quadrant weakness">
                             <div class="quadrant-header">
-                                <span class="quadrant-title" style="color: #fb7185;">Priority Areas to Fix</span>
-                                <span style="font-size: 0.72rem; color: #fecdd3;">Competitors Are Performing Better</span>
+                                <span class="quadrant-title">Priority Areas to Fix</span>
+                                <span class="quadrant-subtitle">Competitors Are Performing Better</span>
                             </div>
                             <div id="quadrant-weakness" class="quadrant-items"></div>
                         </div>
 
                         <div class="matrix-quadrant market-problem">
                             <div class="quadrant-header">
-                                <span class="quadrant-title" style="color: #fbbf24;">Shared Destination Challenges</span>
-                                <span style="font-size: 0.72rem; color: #fef3c7;">Town-Wide Issues (Traffic, Roads)</span>
+                                <span class="quadrant-title">Shared Destination Challenges</span>
+                                <span class="quadrant-subtitle">Town-Wide Issues (Traffic, Roads)</span>
                             </div>
                             <div id="quadrant-market-prob" class="quadrant-items"></div>
                         </div>
@@ -901,128 +909,128 @@
                 <div id="prescriptions-container" class="card-body">
                     <div class="glass-panel" style="padding: 1.25rem; border-left: 4px solid #f43f5e; margin-bottom: 1rem;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: #fb7185;">Priority Operational Fix: Cleanliness</h4>
+                            <h4 class="rx-heading rx-fix" style="font-size: 0.95rem; font-weight: 700;">Priority Operational Fix: Cleanliness</h4>
                             <div style="display: flex; gap: 0.5rem; align-items: center;">
                                 <span class="badge-classification rose">Deficit: 0%</span>
-                                <button class="btn-prescription-evidence" data-category="Cleanliness" style="background: rgba(244,63,94,0.15); border: 1px solid rgba(244,63,94,0.3); color: #fecdd3; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                                <button class="btn-prescription-evidence rx-btn-fix" data-category="Cleanliness" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                                     Read Comments (4)
                                 </button>
                             </div>
                         </div>
                         <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Immediate operational review for Cleanliness; competitors in this town outperform you by 0%.</p>
-                        <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+                        <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
                             <strong>Expected Impact & ROI:</strong> Competitors maintain a <strong>+70%</strong> satisfaction baseline while you lag at <strong>70%</strong>. Addressing this gap protects an estimated <strong>₹45,000 - ₹95,000 / month</strong> in prevented booking cancellations.
                         </div>
                     </div>
 
                     <div class="glass-panel" style="padding: 1.25rem; border-left: 4px solid #f43f5e; margin-bottom: 1rem;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: #fb7185;">Priority Operational Fix: Food</h4>
+                            <h4 class="rx-heading rx-fix" style="font-size: 0.95rem; font-weight: 700;">Priority Operational Fix: Food</h4>
                             <div style="display: flex; gap: 0.5rem; align-items: center;">
                                 <span class="badge-classification rose">Deficit: -4%</span>
-                                <button class="btn-prescription-evidence" data-category="Food" style="background: rgba(244,63,94,0.15); border: 1px solid rgba(244,63,94,0.3); color: #fecdd3; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                                <button class="btn-prescription-evidence rx-btn-fix" data-category="Food" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                                     Read Comments (2)
                                 </button>
                             </div>
                         </div>
                         <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Immediate operational review for Food; competitors in this town outperform you by 4%.</p>
-                        <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+                        <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
                             <strong>Expected Impact & ROI:</strong> Competitors maintain a <strong>+70%</strong> satisfaction baseline while you lag at <strong>66%</strong>. Addressing this gap protects an estimated <strong>₹45,000 - ₹95,000 / month</strong> in prevented booking cancellations.
                         </div>
                     </div>
 
                     <div class="glass-panel" style="padding: 1.25rem; border-left: 4px solid #f43f5e; margin-bottom: 1rem;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: #fb7185;">Priority Operational Fix: Housekeeping</h4>
+                            <h4 class="rx-heading rx-fix" style="font-size: 0.95rem; font-weight: 700;">Priority Operational Fix: Housekeeping</h4>
                             <div style="display: flex; gap: 0.5rem; align-items: center;">
                                 <span class="badge-classification rose">Deficit: -1%</span>
-                                <button class="btn-prescription-evidence" data-category="Housekeeping" style="background: rgba(244,63,94,0.15); border: 1px solid rgba(244,63,94,0.3); color: #fecdd3; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                                <button class="btn-prescription-evidence rx-btn-fix" data-category="Housekeeping" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                                     Read Comments (2)
                                 </button>
                             </div>
                         </div>
                         <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Immediate operational review for Housekeeping; competitors in this town outperform you by 1%.</p>
-                        <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+                        <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
                             <strong>Expected Impact & ROI:</strong> Competitors maintain a <strong>+67%</strong> satisfaction baseline while you lag at <strong>66%</strong>. Addressing this gap protects an estimated <strong>₹45,000 - ₹95,000 / month</strong> in prevented booking cancellations.
                         </div>
                     </div>
 
                     <div class="glass-panel" style="padding: 1.25rem; border-left: 4px solid #f43f5e; margin-bottom: 1rem;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: #fb7185;">Priority Operational Fix: Staff</h4>
+                            <h4 class="rx-heading rx-fix" style="font-size: 0.95rem; font-weight: 700;">Priority Operational Fix: Staff</h4>
                             <div style="display: flex; gap: 0.5rem; align-items: center;">
                                 <span class="badge-classification rose">Deficit: 0%</span>
-                                <button class="btn-prescription-evidence" data-category="Staff" style="background: rgba(244,63,94,0.15); border: 1px solid rgba(244,63,94,0.3); color: #fecdd3; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                                <button class="btn-prescription-evidence rx-btn-fix" data-category="Staff" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                                     Read Comments (4)
                                 </button>
                             </div>
                         </div>
                         <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Immediate operational review for Staff; competitors in this town outperform you by 0%.</p>
-                        <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+                        <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
                             <strong>Expected Impact & ROI:</strong> Competitors maintain a <strong>+65%</strong> satisfaction baseline while you lag at <strong>65%</strong>. Addressing this gap protects an estimated <strong>₹45,000 - ₹95,000 / month</strong> in prevented booking cancellations.
                         </div>
                     </div>
 
                     <div class="glass-panel" style="padding: 1.25rem; border-left: 4px solid #f59e0b; margin-bottom: 1rem;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: #fbbf24;">Growth Opportunity: Room</h4>
+                            <h4 class="rx-heading rx-opp" style="font-size: 0.95rem; font-weight: 700;">Growth Opportunity: Room</h4>
                             <div style="display: flex; gap: 0.5rem; align-items: center;">
-                                <span class="badge-classification amber" style="background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.35);">Competitors Lag: +6%</span>
-                                <button class="btn-prescription-evidence" data-category="Room" style="background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.35); color: #fbbf24; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                                <span class="badge-classification amber">Competitors Lag: +6%</span>
+                                <button class="btn-prescription-evidence rx-btn-opp" data-category="Room" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                                     Read Comments (4)
                                 </button>
                             </div>
                         </div>
                         <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Competitors struggle with Room; investing here creates a clear differentiator to win bookings.</p>
-                        <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+                        <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
                             <strong>Market Edge & Revenue Impact:</strong> While nearby competitors struggle with guest complaints on Room (60%), your score reaches <strong>54%</strong>. Highlighting this in direct ad copy captures an estimated <strong>12% - 18% direct booking lift</strong>.
                         </div>
                     </div>
 
                     <div class="glass-panel" style="padding: 1.25rem; border-left: 4px solid #10b981; margin-bottom: 1rem;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: #34d399;">Your Strength: Location</h4>
+                            <h4 class="rx-heading rx-adv" style="font-size: 0.95rem; font-weight: 700;">Your Strength: Location</h4>
                             <div style="display: flex; gap: 0.5rem; align-items: center;">
                                 <span class="badge-classification emerald">Advantage: +1%</span>
-                                <button class="btn-prescription-evidence" data-category="Location" style="background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); color: #6ee7b7; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                                <button class="btn-prescription-evidence rx-btn-adv" data-category="Location" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                                     Read Comments (4)
                                 </button>
                             </div>
                         </div>
                         <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">High guest satisfaction in Location; protect these standards and feature them prominently in direct marketing.</p>
-                        <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+                        <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
                             <strong>Brand Value & Room Rate Defense:</strong> High guest satisfaction of <strong>43%</strong> supports your pricing integrity. Defends <strong>₹1,500 - ₹3,500 premium</strong> per room night over the local average.
                         </div>
                     </div>
 
                     <div class="glass-panel" style="padding: 1.25rem; border-left: 4px solid #f59e0b; margin-bottom: 1rem;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: #fbbf24;">Town-Wide Challenge: Booking</h4>
+                            <h4 class="rx-heading rx-mkt" style="font-size: 0.95rem; font-weight: 700;">Town-Wide Challenge: Booking</h4>
                             <div style="display: flex; gap: 0.5rem; align-items: center;">
-                                <span class="badge-classification amber" style="background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3);">Town Average: 21%</span>
-                                <button class="btn-prescription-evidence" data-category="Booking" style="background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3); color: #fde68a; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                                <span class="badge-classification amber">Town Average: 21%</span>
+                                <button class="btn-prescription-evidence rx-btn-mkt" data-category="Booking" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                                     Read Comments (2)
                                 </button>
                             </div>
                         </div>
                         <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Town-wide destination challenge for Booking; coordinate with local tourism administration rather than over-investing internally.</p>
-                        <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+                        <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
                             <strong>Destination Context:</strong> Both your hotel (17%) and the town average (21%) experience friction on Booking. Setting clear expectations with guests before check-in reduces negative reviews by up to <strong>55%</strong>.
                         </div>
                     </div>
 
                     <div class="glass-panel" style="padding: 1.25rem; border-left: 4px solid #f59e0b; margin-bottom: 1rem;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: #fbbf24;">Town-Wide Challenge: Value</h4>
+                            <h4 class="rx-heading rx-mkt" style="font-size: 0.95rem; font-weight: 700;">Town-Wide Challenge: Value</h4>
                             <div style="display: flex; gap: 0.5rem; align-items: center;">
-                                <span class="badge-classification amber" style="background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3);">Town Average: 54%</span>
-                                <button class="btn-prescription-evidence" data-category="Value" style="background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.3); color: #fde68a; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                                <span class="badge-classification amber">Town Average: 54%</span>
+                                <button class="btn-prescription-evidence rx-btn-mkt" data-category="Value" style="padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                                     Read Comments (4)
                                 </button>
                             </div>
                         </div>
                         <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 0.75rem;">Town-wide destination challenge for Value; coordinate with local tourism administration rather than over-investing internally.</p>
-                        <div class="prescription-detail-box" style="font-size: 0.78rem; color: var(--text-secondary); background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px;">
+                        <div class="prescription-detail-box" style="font-size: 0.78rem; padding: 0.5rem 0.75rem; border-radius: 6px;">
                             <strong>Destination Context:</strong> Both your hotel (51%) and the town average (54%) experience friction on Value. Setting clear expectations with guests before check-in reduces negative reviews by up to <strong>55%</strong>.
                         </div>
                     </div>
@@ -1204,7 +1212,7 @@
                         <div class="card-title">
                             Review Categories & English Translation
                         </div>
-                        <span style="font-size: 0.78rem; color: #34d399;">AI Analysis</span>
+                        <span style="font-size: 0.78rem; color: var(--accent-emerald);">AI Analysis</span>
                     </div>
                     <div id="live-absa-results" class="card-body">
                         <p style="color: var(--text-muted); font-style: italic;">Click "Analyze Review" or select a preset to view
@@ -1217,11 +1225,11 @@
                         <div class="card-title">
                             Structured Data Output (JSON)
                         </div>
-                        <span style="font-size: 0.78rem; color: #fbbf24;">API Response</span>
+                        <span style="font-size: 0.78rem; color: var(--accent-joy);">API Response</span>
                     </div>
                     <div class="card-body">
                         <pre id="live-json-preview"
-                            style="background: var(--bg-card); border: 1px solid var(--border-glass); padding: 1rem; border-radius: 8px; color: #fbbf24; font-size: 0.8rem; overflow-x: auto; max-height: 400px;"></pre>
+                            style="padding: 1rem; border-radius: 8px; font-size: 0.8rem; overflow-x: auto; max-height: 400px;"></pre>
                     </div>
                 </div>
             </div>
