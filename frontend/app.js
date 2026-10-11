@@ -56,6 +56,12 @@ function initModeSwitcher() {
     const viewLive = document.getElementById('view-live');
     const activeModeTitle = document.getElementById('dashboard-active-mode-title');
 
+    // On pages without interactive dashboard views (such as the storytelling landing page),
+    // standard links navigate directly to dashboard.html
+    if (!viewSearch && !viewHotel && !viewB2G && !viewLive) {
+        return;
+    }
+
     function setMode(mode, shouldScroll = false) {
         // Synchronize all mode buttons across the header and dashboard command bar
         document.querySelectorAll('.mode-btn').forEach(btn => {
@@ -1445,6 +1451,7 @@ function initDrawerClose() {
     const backdrop = document.getElementById('drawer-backdrop');
     const drawer = document.getElementById('evidence-drawer');
     const closeBtn = document.getElementById('btn-close-drawer');
+    if (!backdrop || !drawer || !closeBtn) return;
 
     closeBtn.addEventListener('click', close);
     backdrop.addEventListener('click', close);
@@ -1598,6 +1605,7 @@ Aggregated telemetry across 1,400+ public traveler reviews identifies 4 critical
 function initModalClose() {
     const modal = document.getElementById('modal-policy-brief');
     const closeBtn = document.getElementById('btn-close-modal');
+    if (!modal || !closeBtn) return;
 
     closeBtn.addEventListener('click', () => modal.classList.remove('open'));
     modal.addEventListener('click', (e) => {
@@ -1614,6 +1622,7 @@ function initLiveTester() {
     const resultsContainer = document.getElementById('live-absa-results');
     const jsonContainer = document.getElementById('live-json-preview');
     const charCounter = document.getElementById('char-counter');
+    if (!textarea || !btnAnalyze) return;
 
     // Real-time character counter (Max 300 Characters)
     textarea.addEventListener('input', () => {
@@ -2927,30 +2936,34 @@ function initB2BOnboarding() {
 
 function initHashRouting() {
     function handleHash() {
-        const hash = window.location.hash;
-        if (!hash || hash === '#' || hash === '#/hotel') {
-            if (window.setMode) window.setMode('hotel');
-            return;
-        }
-        if (hash === '#/search') {
-            if (window.setMode) window.setMode('search');
-            return;
-        }
-        if (hash === '#/b2g') {
-            if (window.setMode) window.setMode('b2g');
-            return;
-        }
-        if (hash === '#/live') {
-            if (window.setMode) window.setMode('live');
-            return;
+        const hash = window.location.hash || '';
+        const search = window.location.search || '';
+
+        let targetMode = null;
+        if (search.includes('mode=')) {
+            const m = search.match(/mode=([a-z0-9_-]+)/i);
+            if (m) targetMode = m[1].toLowerCase();
         }
 
-        // Match #/cluster/hotel-id
-        const parts = hash.replace(/^#\/?/, '').split('/');
-        if (parts.length >= 2) {
-            const cid = parts[0];
-            const hid = parts[1];
-            selectHotelAndBenchmark(cid, hid);
+        const cleanHash = hash.replace(/^#\/?/, '').toLowerCase();
+        if (!targetMode && cleanHash) {
+            if (cleanHash === 'hotel') targetMode = 'hotel';
+            else if (cleanHash === 'search') targetMode = 'search';
+            else if (cleanHash === 'b2g') targetMode = 'b2g';
+            else if (cleanHash === 'live') targetMode = 'live';
+            else if (cleanHash.includes('/')) {
+                const parts = cleanHash.split('/');
+                if (parts.length >= 2) {
+                    selectHotelAndBenchmark(parts[0], parts[1]);
+                    return;
+                }
+            }
+        }
+
+        if (targetMode && window.setMode) {
+            window.setMode(targetMode, false);
+        } else if (!hash && window.setMode) {
+            window.setMode('hotel', false);
         }
     }
 
