@@ -813,7 +813,7 @@ function renderRadarChart(aspects) {
         return Math.max(maxRadius * 0.15, maxRadius * (clamped / 100));
     }
 
-    // Competitor Benchmark Polygon (Vibrant Amber Dashed - High Contrast)
+    // Competitor Benchmark Polygon (Fresh Emerald Dashed)
     let clusterPoints = [];
     aspects.forEach((asp, i) => {
         const angle = i * angleStep - Math.PI / 2;
@@ -824,13 +824,13 @@ function renderRadarChart(aspects) {
     });
     const clusterPoly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
     clusterPoly.setAttribute('points', clusterPoints.join(' '));
-    clusterPoly.setAttribute('fill', 'rgba(245, 158, 11, 0.22)');
-    clusterPoly.setAttribute('stroke', '#f59e0b');
+    clusterPoly.setAttribute('fill', 'rgba(16, 185, 129, 0.20)');
+    clusterPoly.setAttribute('stroke', '#10b981');
     clusterPoly.setAttribute('stroke-width', '2.5');
     clusterPoly.setAttribute('stroke-dasharray', '5 4');
     svg.appendChild(clusterPoly);
 
-    // Selected Property Polygon (Glowing Cyan Solid)
+    // Selected Property Polygon (Radiant Warm Amber Solid)
     let propPoints = [];
     aspects.forEach((asp, i) => {
         const angle = i * angleStep - Math.PI / 2;
@@ -841,12 +841,12 @@ function renderRadarChart(aspects) {
     });
     const propPoly = document.createElementNS('http://www.w3.org/2000/svg', 'polygon');
     propPoly.setAttribute('points', propPoints.join(' '));
-    propPoly.setAttribute('fill', 'rgba(14, 165, 233, 0.28)');
-    propPoly.setAttribute('stroke', '#0ea5e9');
+    propPoly.setAttribute('fill', 'rgba(245, 158, 11, 0.28)');
+    propPoly.setAttribute('stroke', '#f59e0b');
     propPoly.setAttribute('stroke-width', '2.5');
     svg.appendChild(propPoly);
 
-    // Competitor vertex dots (amber dots with white border)
+    // Competitor vertex dots (emerald dots with white border)
     aspects.forEach((asp, i) => {
         const angle = i * angleStep - Math.PI / 2;
         const r = scoreToRadius(asp.cluster_baseline);
@@ -857,13 +857,13 @@ function renderRadarChart(aspects) {
         circle.setAttribute('cx', x);
         circle.setAttribute('cy', y);
         circle.setAttribute('r', '4');
-        circle.setAttribute('fill', '#f59e0b');
+        circle.setAttribute('fill', '#10b981');
         circle.setAttribute('stroke', '#ffffff');
         circle.setAttribute('stroke-width', '1.5');
         svg.appendChild(circle);
     });
 
-    // Property vertex dots (cyan dots with white border)
+    // Property vertex dots (radiant amber dots with white border)
     aspects.forEach((asp, i) => {
         const angle = i * angleStep - Math.PI / 2;
         const r = scoreToRadius(asp.property_score);
@@ -874,7 +874,7 @@ function renderRadarChart(aspects) {
         circle.setAttribute('cx', x);
         circle.setAttribute('cy', y);
         circle.setAttribute('r', '4.5');
-        circle.setAttribute('fill', '#0ea5e9');
+        circle.setAttribute('fill', '#f59e0b');
         circle.setAttribute('stroke', '#ffffff');
         circle.setAttribute('stroke-width', '1.5');
         svg.appendChild(circle);
@@ -1028,12 +1028,12 @@ function renderTimelineChart(monthlyTrend, propName) {
 
     const stop1 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
     stop1.setAttribute('offset', '0%');
-    stop1.setAttribute('stop-color', '#0ea5e9');
+    stop1.setAttribute('stop-color', '#f59e0b');
     stop1.setAttribute('stop-opacity', '0.22');
 
     const stop2 = document.createElementNS('http://www.w3.org/2000/svg', 'stop');
     stop2.setAttribute('offset', '100%');
-    stop2.setAttribute('stop-color', '#0ea5e9');
+    stop2.setAttribute('stop-color', '#f59e0b');
     stop2.setAttribute('stop-opacity', '0.0');
 
     grad.appendChild(stop1);
@@ -1099,11 +1099,11 @@ function renderTimelineChart(monthlyTrend, propName) {
     areaPath.setAttribute('fill', 'url(#timeline-area-grad)');
     svg.appendChild(areaPath);
 
-    // Property Sentiment solid line (cyan)
+    // Property Sentiment solid line (warm golden amber)
     const propPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
     propPath.setAttribute('d', `M ${validProp.map(p => `${p.x},${p.y}`).join(' L ')}`);
     propPath.setAttribute('fill', 'none');
-    propPath.setAttribute('stroke', '#0ea5e9');
+    propPath.setAttribute('stroke', '#f59e0b');
     propPath.setAttribute('stroke-width', '2.5');
     svg.appendChild(propPath);
 
@@ -1123,7 +1123,7 @@ function renderTimelineChart(monthlyTrend, propName) {
         dot.setAttribute('cx', p.x);
         dot.setAttribute('cy', p.y);
         dot.setAttribute('r', isAnn ? '5.5' : '3.5');
-        dot.setAttribute('fill', isAnn ? '#f43f5e' : '#0ea5e9');
+        dot.setAttribute('fill', isAnn ? '#f43f5e' : '#f59e0b');
         dot.setAttribute('stroke', '#ffffff');
         dot.setAttribute('stroke-width', isAnn ? '2' : '1.5');
         dot.style.cursor = 'pointer';
@@ -1144,7 +1144,7 @@ function renderTimelineChart(monthlyTrend, propName) {
             rect.setAttribute('width', approxW);
             rect.setAttribute('height', '15');
             rect.setAttribute('rx', '4');
-            rect.setAttribute('fill', 'rgba(15, 23, 42, 0.9)');
+            rect.setAttribute('fill', 'rgba(28, 29, 36, 0.95)');
             rect.setAttribute('stroke', 'rgba(244, 63, 94, 0.6)');
             rect.setAttribute('stroke-width', '1');
 
@@ -1228,16 +1228,16 @@ function renderActionPrescriptions(aspects, prop) {
         const card = document.createElement('div');
         card.className = 'glass-panel';
         card.style.padding = '1.25rem';
-        card.style.borderLeft = '4px solid #38bdf8';
+        card.style.borderLeft = '4px solid #f59e0b';
         card.style.marginBottom = '1rem';
         const quotes = o.evidence_quotes || o.quotes || [];
         const quoteCount = quotes.length;
         card.innerHTML = `
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
-                <h4 style="font-size: 0.95rem; font-weight: 700; color: #38bdf8;">Growth Opportunity: ${o.category}</h4>
+                <h4 style="font-size: 0.95rem; font-weight: 700; color: #fbbf24;">Growth Opportunity: ${o.category}</h4>
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
-                    <span class="badge-classification cyan" style="background: rgba(14,165,233,0.15); color: #38bdf8; border: 1px solid rgba(14,165,233,0.3);">Competitors Lag: +${Math.abs(o.competitive_gap)}%</span>
-                    <button class="btn-prescription-evidence" data-category="${o.category}" style="background: rgba(14,165,233,0.15); border: 1px solid rgba(14,165,233,0.3); color: #7dd3fc; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
+                    <span class="badge-classification amber" style="background: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.35);">Competitors Lag: +${Math.abs(o.competitive_gap)}%</span>
+                    <button class="btn-prescription-evidence" data-category="${o.category}" style="background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.35); color: #fbbf24; padding: 0.2rem 0.5rem; font-size: 0.75rem; border-radius: 4px; cursor: pointer;">
                         Read Comments (${quoteCount})
                     </button>
                 </div>
@@ -1442,8 +1442,8 @@ function renderTourismDashboard(data) {
                 </span>
             </div>
             <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 1rem;">${issue.description}</p>
-            <div style="background: rgba(15,23,42,0.6); padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); margin-bottom: 0.75rem;">
-                <div style="font-size: 0.82rem; color: #38bdf8; font-weight: 600; margin-bottom: 0.25rem;">
+            <div style="background: rgba(28,29,36,0.65); padding: 0.85rem 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06); margin-bottom: 0.75rem;">
+                <div style="font-size: 0.82rem; color: #fbbf24; font-weight: 600; margin-bottom: 0.25rem;">
                     Recommended Authority Action:
                 </div>
                 <div style="font-size: 0.85rem; color: #f1f5f9;">${issue.recommended_authority_action}</div>
@@ -1520,7 +1520,7 @@ Aggregated telemetry across 1,400+ public traveler reviews identifies 4 critical
         
         let html = rawMarkdown
             .replace(/^# (.*$)/gim, '<h1 style="color: #fff; font-size: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem; margin-top: 1rem;">$1</h1>')
-            .replace(/^## (.*$)/gim, '<h2 style="color: #38bdf8; font-size: 1.25rem; margin-top: 1rem;">$1</h2>')
+            .replace(/^## (.*$)/gim, '<h2 style="color: #fbbf24; font-size: 1.25rem; margin-top: 1rem;">$1</h2>')
             .replace(/^### (.*$)/gim, '<h3 style="color: #f1f5f9; font-size: 1.1rem; margin-top: 1rem;">$1</h3>')
             .replace(/^#### (.*$)/gim, '<h4 style="color: #fbbf24; font-size: 1rem; margin-top: 0.85rem;">$1</h4>')
             .replace(/\*\*(.*?)\*\*/gim, '<strong>$1</strong>')
@@ -1862,7 +1862,7 @@ function initLiveTester() {
                         <span class="pill-badge sub-issue">${asp.sub_issue}</span>
                         <span class="pill-badge tag">${asp.extracted_tag}</span>
                         <span class="pill-badge confidence">Conf: ${Math.round(asp.confidence * 100)}%</span>
-                        ${isPublic ? '<span class="pill-badge" style="background: rgba(245,158,11,0.2); color: #fbbf24; border: 1px solid rgba(245,158,11,0.4);">Public Civil Infrastructure</span>' : '<span class="pill-badge" style="background: rgba(14,165,233,0.15); color: #38bdf8; border: 1px solid rgba(14,165,233,0.3);">Property Operational</span>'}
+                        ${isPublic ? '<span class="pill-badge" style="background: rgba(245,158,11,0.2); color: #fbbf24; border: 1px solid rgba(245,158,11,0.4);">Public Civil Infrastructure</span>' : '<span class="pill-badge" style="background: rgba(16,185,129,0.18); color: #34d399; border: 1px solid rgba(16,185,129,0.35);">Property Operational</span>'}
                     </div>
                     <div style="font-size: 0.78rem; color: #cbd5e1; background: rgba(0,0,0,0.3); padding: 0.5rem 0.75rem; border-radius: 6px;">
                         <strong>Evidence Citation:</strong> "${asp.evidence_snippet}"
